@@ -1,0 +1,546 @@
+{
+  "expected": 40,
+  "present": 23,
+  "assets": [
+    {
+      "id": "lumi",
+      "name": "露弥",
+      "kind": "weapon",
+      "exists": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent": true,
+      "subjectBounds": [
+        54,
+        65,
+        1208,
+        1176
+      ],
+      "bytes": 1948724,
+      "subjectTouchesEdge": false
+    },
+    {
+      "id": "lumi",
+      "name": "露弥",
+      "kind": "true-form",
+      "exists": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent": true,
+      "subjectBounds": [
+        121,
+        47,
+        1145,
+        1175
+      ],
+      "bytes": 1776251,
+      "subjectTouchesEdge": false
+    },
+    {
+      "id": "lumi",
+      "name": "露弥",
+      "kind": "vessel",
+      "exists": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent": true,
+      "subjectBounds": [
+        48,
+        15,
+        1199,
+        1231
+      ],
+      "bytes": 2098813,
+      "subjectTouchesEdge": false
+    },
+    {
+      "id": "lumi",
+      "name": "露弥",
+      "kind": "origin",
+      "exists": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent": true,
+      "subjectBounds": [
+        145,
+        56,
+        1110,
+        1185
+      ],
+      "bytes": 1693834,
+      "subjectTouchesEdge": false
+    },
+    {
+      "id": "alden",
+      "name": "艾尔登",
+      "kind": "weapon",
+      "exists": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent": true,
+      "subjectBounds": [
+        341,
+        76,
+        904,
+        1178
+      ],
+      "bytes": 1048056,
+      "subjectTouchesEdge": false
+    },
+    {
+      "id": "alden",
+      "name": "艾尔登",
+      "kind": "true-form",
+      "exists": true,
+      "size": [
+        1230,
+        1278
+      ],
+      "transparent": true,
+      "subjectBounds": [
+        87,
+        18,
+        1164,
+        1251
+      ],
+      "bytes": 2131147,
+      "subjectTouchesEdge": false
+    },
+    {
+      "id": "alden",
+      "name": "艾尔登",
+      "kind": "vessel",
+      "exists": true,
+      "size": [
+        1222,
+        1287
+      ],
+      "transparent": true,
+      "subjectBounds": [
+        75,
+        8,
+        1149,
+        1277
+      ],
+      "bytes": 1992623,
+      "subjectTouchesEdge": false
+    },
+    {
+      "id": "alden",
+      "name": "艾尔登",
+      "kind": "origin",
+      "exists": true,
+      "size": [
+        1230,
+        1278
+      ],
+      "transparent": true,
+      "subjectBounds": [
+        115,
+        30,
+        1116,
+        1245
+      ],
+      "bytes": 1676541,
+      "subjectTouchesEdge": false
+    },
+    {
+      "id": "selene",
+      "name": "瑟琳",
+      "kind": "weapon",
+      "exists": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent": true,
+      "subjectBounds": [
+        461,
+        14,
+        811,
+        1232
+      ],
+      "bytes": 447935,
+      "subjectTouchesEdge": false
+    },
+    {
+      "id": "selene",
+      "name": "瑟琳",
+      "kind": "true-form",
+      "exists": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent": true,
+      "subjectBounds": [
+        209,
+        22,
+        1086,
+        1223
+      ],
+      "bytes": 1277048,
+      "subjectTouchesEdge": false
+    },
+    {
+      "id": "selene",
+      "name": "瑟琳",
+      "kind": "vessel",
+      "exists": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent": true,
+      "subjectBounds": [
+        374,
+        5,
+        879,
+        1224
+      ],
+      "bytes": 567706,
+      "subjectTouchesEdge": false
+    },
+    {
+      "id": "selene",
+      "name": "瑟琳",
+      "kind": "origin",
+      "exists": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent": true,
+      "subjectBounds": [
+        295,
+        21,
+        988,
+        1209
+      ],
+      "bytes": 1100472,
+      "subjectTouchesEdge": false
+    },
+    {
+      "id": "mira",
+      "name": "米菈",
+      "kind": "weapon",
+      "exists": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent": true,
+      "subjectBounds": [
+        51,
+        40,
+        1222,
+        1217
+      ],
+      "bytes": 2275691,
+      "subjectTouchesEdge": false
+    },
+    {
+      "id": "mira",
+      "name": "米菈",
+      "kind": "true-form",
+      "exists": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent": true,
+      "subjectBounds": [
+        115,
+        19,
+        1140,
+        1223
+      ],
+      "bytes": 1645501,
+      "subjectTouchesEdge": false
+    },
+    {
+      "id": "mira",
+      "name": "米菈",
+      "kind": "vessel",
+      "exists": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent": true,
+      "subjectBounds": [
+        2,
+        3,
+        1252,
+        1252
+      ],
+      "bytes": 2308905,
+      "subjectTouchesEdge": false
+    },
+    {
+      "id": "mira",
+      "name": "米菈",
+      "kind": "origin",
+      "exists": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent": true,
+      "subjectBounds": [
+        202,
+        10,
+        1056,
+        1219
+      ],
+      "bytes": 1383943,
+      "subjectTouchesEdge": false
+    },
+    {
+      "id": "noctis",
+      "name": "诺克缇娅",
+      "kind": "weapon",
+      "exists": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent": true,
+      "subjectBounds": [
+        375,
+        5,
+        879,
+        1247
+      ],
+      "bytes": 384881,
+      "subjectTouchesEdge": false
+    },
+    {
+      "id": "noctis",
+      "name": "诺克缇娅",
+      "kind": "true-form",
+      "exists": true,
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent": true,
+      "subjectBounds": [
+        169,
+        4,
+        1086,
+        1248
+      ],
+      "bytes": 1134535,
+      "subjectTouchesEdge": false
+    },
+    {
+      "id": "noctis",
+      "name": "诺克缇娅",
+      "kind": "vessel",
+      "exists": false
+    },
+    {
+      "id": "noctis",
+      "name": "诺克缇娅",
+      "kind": "origin",
+      "exists": false
+    },
+    {
+      "id": "kael",
+      "name": "凯尔",
+      "kind": "weapon",
+      "exists": true,
+      "size": [
+        1024,
+        1024
+      ],
+      "transparent": false,
+      "subjectBounds": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "bytes": 644982,
+      "subjectTouchesEdge": true
+    },
+    {
+      "id": "kael",
+      "name": "凯尔",
+      "kind": "true-form",
+      "exists": false
+    },
+    {
+      "id": "kael",
+      "name": "凯尔",
+      "kind": "vessel",
+      "exists": false
+    },
+    {
+      "id": "kael",
+      "name": "凯尔",
+      "kind": "origin",
+      "exists": false
+    },
+    {
+      "id": "astra",
+      "name": "星璃",
+      "kind": "weapon",
+      "exists": true,
+      "size": [
+        1024,
+        1024
+      ],
+      "transparent": false,
+      "subjectBounds": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "bytes": 860471,
+      "subjectTouchesEdge": true
+    },
+    {
+      "id": "astra",
+      "name": "星璃",
+      "kind": "true-form",
+      "exists": false
+    },
+    {
+      "id": "astra",
+      "name": "星璃",
+      "kind": "vessel",
+      "exists": false
+    },
+    {
+      "id": "astra",
+      "name": "星璃",
+      "kind": "origin",
+      "exists": false
+    },
+    {
+      "id": "xuanzhao",
+      "name": "玄照",
+      "kind": "weapon",
+      "exists": true,
+      "size": [
+        1024,
+        1024
+      ],
+      "transparent": false,
+      "subjectBounds": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "bytes": 648666,
+      "subjectTouchesEdge": true
+    },
+    {
+      "id": "xuanzhao",
+      "name": "玄照",
+      "kind": "true-form",
+      "exists": false
+    },
+    {
+      "id": "xuanzhao",
+      "name": "玄照",
+      "kind": "vessel",
+      "exists": false
+    },
+    {
+      "id": "xuanzhao",
+      "name": "玄照",
+      "kind": "origin",
+      "exists": false
+    },
+    {
+      "id": "canglan",
+      "name": "沧澜",
+      "kind": "weapon",
+      "exists": true,
+      "size": [
+        1024,
+        1024
+      ],
+      "transparent": false,
+      "subjectBounds": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "bytes": 639396,
+      "subjectTouchesEdge": true
+    },
+    {
+      "id": "canglan",
+      "name": "沧澜",
+      "kind": "true-form",
+      "exists": false
+    },
+    {
+      "id": "canglan",
+      "name": "沧澜",
+      "kind": "vessel",
+      "exists": false
+    },
+    {
+      "id": "canglan",
+      "name": "沧澜",
+      "kind": "origin",
+      "exists": false
+    },
+    {
+      "id": "yanhuang",
+      "name": "炎煌",
+      "kind": "weapon",
+      "exists": true,
+      "size": [
+        512,
+        512
+      ],
+      "transparent": false,
+      "subjectBounds": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "bytes": 347431,
+      "subjectTouchesEdge": true
+    },
+    {
+      "id": "yanhuang",
+      "name": "炎煌",
+      "kind": "true-form",
+      "exists": false
+    },
+    {
+      "id": "yanhuang",
+      "name": "炎煌",
+      "kind": "vessel",
+      "exists": false
+    },
+    {
+      "id": "yanhuang",
+      "name": "炎煌",
+      "kind": "origin",
+      "exists": false
+    }
+  ],
+  "note": "Pixel checks do not replace visual review of model accuracy and clean edges."
+}

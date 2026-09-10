@@ -1,0 +1,134 @@
+{
+  "generator": "GPT 内置 imagegen（工具不暴露固定版本号）",
+  "characterPromptTemplate": "Use case: stylized-concept. A premium highly detailed Chinese xuanhuan fantasy anime game character design sheet. Landscape 3072x1536. EXACTLY FOUR equally wide columns occupying x=0-25%,25-50%,50-75%,75-100%, on continuous warm ivory paper background. Column1: LARGE FULL BODY FRONT hero portrait, intricate crisp eyes, hands, fabrics, complete boots visible. Column2: same person FULL BODY THREE QUARTER SIDE VIEW. Column3: same person FULL BODY BACK VIEW, faithfully consistent costume construction. Column4: adorable CHIBI version of same person, 2.5 heads tall, occupies center lower 65% of fourth column, fully visible. One character only, identical identity, colors and outfit across views. Keep each silhouette wholly inside its column with generous small margins. Consistent professional painted anime linework, intricate gold filigree, silk texture, studio soft lighting. No typography, no labels, no text, no borders, no UI, no watermark. Main character: ",
+  "characters": [
+    [
+      "lumi",
+      "Lumi, adult female wind divine envoy and main-team courier, mint green hair long ponytail, green eyes, pointed elven ears, layered ivory emerald silk wuxia dress with dark green leather bodice, gold leaf embroidery, messenger pouch, jade bow, warm confident expression."
+    ],
+    [
+      "alden",
+      "Alden, adult male main-team oath guardian, blond swept hair, amber eyes, white gold heavy ceremonial armor with lion filigree, fur collar and long ivory cloak, broad gold shield and straight sword, dignified gentle face."
+    ],
+    [
+      "selene",
+      "Selene, adult female half-god of the tidal archive, long navy blue hair and blue eyes, midnight blue layered high-collar silk robes, translucent tidal sleeves, silver star chains, crescent-water staff, reserved scholarly expression."
+    ],
+    [
+      "mira",
+      "Mira, adult female main-team healer and flower grand venerable, rose pink braided hair, thin round glasses, burgundy high-collar dress under cream botanical physician robe, green medicine vials, intricate gold botanical embroidery, flower branch staff, intelligent kind face."
+    ],
+    [
+      "noctis",
+      "Noctis, adult female empress of the night court, long black hair, violet eyes, mature commanding presence, tailored black and purple long robes with raven feather mantle, gold knotwork, black glaive with violet crescent, dignified regal face."
+    ],
+    [
+      "kael",
+      "Kael, adult male main-team fire hunter, tousled auburn hair, amber eyes, red asymmetrical travel coat over black layered armor, belts with talismans, ember recurve bow, fiery ribbons, daring smile."
+    ],
+    [
+      "astra",
+      "Astra, adult female main protagonist, silver white long hair, lavender eyes, elaborate ivory and gold celestial armor, lavender ribbons, star-sword with floating small gold orbital blades, a human heroine choosing her own destiny, composed gentle expression."
+    ],
+    [
+      "xuanzhao",
+      "Xuanzhao, adult male primordial sun GOD, long flowing platinum hair, gold eyes, white crimson and antique gold celestial xianxia robes and layered armor, elaborate sun-disk halo, black-gold sun spear, powerful compassionate solemn face."
+    ],
+    [
+      "canglan",
+      "Canglan, adult female ocean GOD, long turquoise hair, luminous cyan eyes, pearl crown, layered teal ivory silk imperial xianxia robes embroidered waves, long translucent water ribbons, jade and pearl trident, serene commanding expression."
+    ],
+    [
+      "yanhuang",
+      "Yanhuang, adult male flame EMPEROR, long black hair streaked crimson, gold eyes, dark red imperial xianxia armor with bronze dragon embroidery, ember cape, long obsidian sword, powerful stern face."
+    ],
+    [
+      "jingxuan",
+      "Jingxuan, adult female mirror HALF-GOD, silver lilac bob hair, violet eyes, flowing violet white xianxia silk robes patterned with silver mirrors, floating octagonal moon mirror, slim jade sword, quiet thoughtful expression."
+    ],
+    [
+      "siming",
+      "Siming, adult male destiny DIVINE ENVOY, long black hair tied high, jade green eyes, ink blue white layered scholar robes, golden constellation embroidery, celestial scroll and jade ritual brush, elegant youthful face."
+    ],
+    [
+      "yueheng",
+      "Yueheng, adult female mountain GRAND VENERABLE, dark brown long hair with jade pins, amber eyes, bronze jade armor over cream martial robes, floating stone talismans, huge jade ceremonial shield, resolute protective expression."
+    ],
+    [
+      "saber",
+      "Artoria Saber, adult female King of Knights and time oath guardian, blond braided updo with signature expressive ahoge cowlick, emerald green eyes, regal silver steel cuirass gauntlets and greaves over royal blue layered gown with white pleated skirt, gold trim, holding Excalibur golden holy sword with swirling translucent invisible air and floating gold-blue Avalon scabbard shield, resolute noble chivalric expression."
+    ],
+    [
+      "sakura",
+      "Sakura Matou, adult female imaginary grail healer and time envoy, soft lavender long wavy hair tied with pink silk ribbon, violet eyes, graceful lilac and pearl white layered flowing dress, sheer floating imaginary ribbons with glowing purple grail crystal droplet, cherry blossom petals, gentle compassionate expression."
+    ],
+    [
+      "rin",
+      "Rin Tohsaka, adult female jewel magecraft master and time specialist, long black twin-tails tied with black ribbons, vivid sapphire blue eyes, fitted crimson turtleneck sweater over black pleated mini skirt, thigh-high black stockings, leather shoes, holding Jeweled Sword of Zelretch reflecting rainbow prismatic light, red Gandr cursed magic spark on fingertip, elegant confident smile."
+    ],
+    [
+      "archer",
+      "Archer EMIYA, adult male projection swordsman and time striker, spiked white hair, tanned skin, steely gray eyes, form-fitting black body armor with silver buckles under signature flowing crimson holy shroud red mantle coat, wielding paired Yin-Yang curved swords Kanshou and Bakuya (black turtle-shell and pure white mirrored blade) with red tassels, composed sharp gaze."
+    ],
+    [
+      "gilgamesh",
+      "Gilgamesh, adult male King of Heroes and time prime striker, spiked golden hair, crimson serpentine vertical slit eyes, ornate opulent polished gold plate armor, crimson inner lining, surrounded by multiple golden spatial ripple portals manifesting ancient swords and spears, holding the Sword of Rupture Ea with three counter-rotating black-gold cylindrical segments engraved with glowing crimson cuneiform glyphs, arrogant supreme majestic smirk."
+    ],
+    [
+      "yuno",
+      "Iuno, adult female Seven Hills oracle and end oath guardian, graceful cerulean blue tied long hair, gentle cyan eyes, noble classical oracle vestments with white-gold silk drapery, layered lunar ring arm-guards, holding the Annotation of All Existence heavy celestial scripture tome glowing with pure crescent moon wards, serene resolute protective expression."
+    ],
+    [
+      "shorekeeper",
+      "The Shorekeeper, adult female Black Shores guide and end star-order healer, long flowing crystalline iridescent turquoise and white hair, clear luminous blue eyes, elegant starry-sky ombre gradient translucent gowns with constellation patterns, floating stellar butterflies and floating multi-faceted Stellar Symphony geometric celestial core, compassionate transcendent expression."
+    ],
+    [
+      "phrolova",
+      "Phrolova, adult female Fractsidus conductor and end prime havoc striker, long dark purple hair with braided accents, intense violet eyes, stylish high-fashion black and dark magenta fitted conductor trench dress with asymmetric lace, floating violet havoc soundwave glyphs, summoning shadowy Hecate marionette silhouette, holding Lethean Elegy dark crystal music-core rectifier, enigmatic haughty expression."
+    ],
+    [
+      "cantarella",
+      "Cantarella, adult female deep-sea illusionist and end sub-striker, wavy deep indigo and ocean-blue long hair, captivating lavender-pink eyes, alluring translucent dark navy silk dress resembling bioluminescent jellyfish bell with flowing sea-foam ruffles, floating Whispers of the Sea glowing jellyfish sound resonator, mysterious playful seductive gaze."
+    ],
+    [
+      "xinyuehu",
+      "Xinyuehu, adult female Sentinel of Huanglong and end mystic specialist, long flowing snow-white hair, vivid crimson eyes, fluffy white fox ears and luminous fox tails, ornate vermilion and ivory imperial celestial robes with golden clockwork filigree, bare feet, floating Cassia Moon String celestial zither rectifier emitting electro-magnetic foxfire sparks, dignified mischievous celestial monarch smile."
+    ]
+  ],
+  "bosses": [
+    [
+      "inverse",
+      "a colossal silver and jade winged celestial griffin lord, antler crown, emerald wind storm, shattered floating pagodas"
+    ],
+    [
+      "memory",
+      "a majestic abyssal sea emperor sea-dragon, navy scales, luminous turquoise antlers, pearl armor, drowned palace and spectral tide"
+    ],
+    [
+      "flame",
+      "an enormous undead imperial Chinese dragon skeleton with obsidian armor and molten golden lava, crimson sky, shattered citadel"
+    ],
+    [
+      "desire",
+      "an ominous masked forest high priest in faded white robes and dead flower crown, half flowering branches half skeletal vines, plague garden"
+    ],
+    [
+      "dream",
+      "an imposing faceless celestial monarch made of ornate silver mirrors, violet long robes, orbiting mirror shards and endless illusion palace"
+    ],
+    [
+      "end",
+      "a headless mythic executioner titan with massive black gold armor and two-handed crescent axe, black violet imperial night court"
+    ],
+    [
+      "time",
+      "a monumental ancient celestial clock deity, concentric golden astrolabe rings surrounding blue jade mechanical divine humanoid, suspended timeline shards"
+    ],
+    [
+      "mortal",
+      "an imposing ancient primordial sky sovereign, bronze dragon mask, elaborate dark gold imperial armor, giant halo of broken worlds and floating mountain fragments"
+    ]
+  ],
+  "output": "public/assets/characters/{id}-sheet.png; public/assets/bosses/{id}.png",
+  "characterImageDimensions": "1774 × 887; 四栏角色设定图，网页按栏展示正面、侧面、背面、萌版"
+}

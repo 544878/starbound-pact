@@ -1,0 +1,526 @@
+{
+  "screen": "home",
+  "stamina": 86,
+  "crystals": 1280,
+  "gold": 24800,
+  "pityCharacter": 34,
+  "pityLimited": 0,
+  "limitedGuaranteed": false,
+  "pullHistory": [],
+  "pityWeapon": 12,
+  "playerLevel": 35,
+  "playerExp": 2450,
+  "companions": [
+    {
+      "id": "lumi",
+      "name": "露弥",
+      "title": "逐风信使",
+      "element": "wind",
+      "role": "support",
+      "rarity": "5星",
+      "level": 20,
+      "power": 3920,
+      "constellation": 1,
+      "accent": "#72b893",
+      "artPosition": "0% 0%",
+      "skills": [
+        "风刃回旋",
+        "澄空祷歌"
+      ],
+      "gender": "female",
+      "persona": "灵动精灵 · 可靠游侠",
+      "biography": "替失联者送信的边境游侠。笑着谈天气，却从不把任何一封求救信留到明天。",
+      "quotes": [
+        "“风从塔顶吹来的时候，旅途就要开始了哦。”",
+        "“只要有微风相伴，我的箭矢就不会偏离分毫。”",
+        "“指挥官，今天的天气真好，要去风语高塔走走吗？”",
+        "“风会记得每一次相遇，我也会一直守护在您身旁。”"
+      ]
+    },
+    {
+      "id": "alden",
+      "name": "艾尔登",
+      "title": "白昼誓盾",
+      "element": "light",
+      "role": "guardian",
+      "rarity": "4星",
+      "level": 20,
+      "power": 3540,
+      "constellation": 2,
+      "accent": "#d4aa57",
+      "artPosition": "16.666666666666668% 0%",
+      "skills": [
+        "圣盾重击",
+        "金辉壁垒"
+      ],
+      "gender": "male",
+      "persona": "克制绅士 · 守护骑士",
+      "biography": "卸下贵族姓氏的前近卫长。习惯先替队友整理披风，再独自站上最危险的位置。",
+      "quotes": [
+        "“以曜金之名，此盾必将抵御一切深渊狂澜。”",
+        "“任何胆敢阻拦星轨前行之敌，先越过我的圣剑！”",
+        "“坚守阵线，我永远是大家最可靠的壁垒。”"
+      ]
+    },
+    {
+      "id": "selene",
+      "name": "瑟琳",
+      "title": "溯海观测者",
+      "element": "water",
+      "role": "mystic",
+      "rarity": "5星",
+      "level": 20,
+      "power": 3860,
+      "constellation": 0,
+      "accent": "#67a9df",
+      "artPosition": "33.333333333333336% 0%",
+      "skills": [
+        "潮鸣",
+        "月海回声"
+      ],
+      "gender": "female",
+      "persona": "冷感学者 · 深海神秘",
+      "biography": "保管沉没文明记忆的海洋学者。对万事保持精确距离，唯独会为同伴打破自己的计算。",
+      "quotes": [
+        "“潮汐起伏，皆是星宿在水中的倒影。”",
+        "“静谧的大海之下，蕴藏着吞噬一切的力量。”",
+        "“听到了吗？这是深海为你鸣奏的战歌。”"
+      ]
+    },
+    {
+      "id": "mira",
+      "name": "米菈",
+      "title": "蔷薇处方",
+      "element": "flora",
+      "role": "support",
+      "rarity": "5星",
+      "level": 20,
+      "power": 3210,
+      "constellation": 3,
+      "accent": "#e990a4",
+      "artPosition": "50% 0%",
+      "skills": [
+        "花灵散",
+        "春息"
+      ],
+      "gender": "female",
+      "persona": "知性眼镜 · 理性医师",
+      "biography": "擅长毒理的花庭医生，温柔从不等于纵容。会用最平静的语气制止冒险，也会第一个奔向伤员。",
+      "quotes": [
+        "“不要硬撑哦，受伤了要第一时间告诉米菈！”",
+        "“花灵的芬芳，能抚平一切旅途中的疲惫。”",
+        "“采摘草药的时候，偶尔也会发现闪亮的小惊喜呢。”"
+      ]
+    },
+    {
+      "id": "noctis",
+      "name": "诺克缇娅",
+      "title": "缄夜执政官",
+      "element": "shadow",
+      "role": "striker",
+      "rarity": "5星",
+      "level": 20,
+      "power": 4020,
+      "constellation": 0,
+      "accent": "#776693",
+      "artPosition": "66.66666666666667% 0%",
+      "skills": [
+        "影袭",
+        "终夜裁断"
+      ],
+      "gender": "female",
+      "persona": "成熟御姐 · 夜鸦谋略",
+      "biography": "夜鸦情报网的掌舵者。优雅、从容，习惯替所有人预留退路，却不愿让任何人看见自己的疲惫。",
+      "quotes": [
+        "“黑暗不过是影子的延伸，而我就是黑夜本身。”",
+        "“目标已锁定，裁断将在眨眼之间完成。”",
+        "“在寂静中行动，在胜利后归隐。”"
+      ]
+    },
+    {
+      "id": "kael",
+      "name": "凯尔",
+      "title": "逆焰猎手",
+      "element": "fire",
+      "role": "striker",
+      "rarity": "4星",
+      "level": 18,
+      "power": 2980,
+      "constellation": 1,
+      "accent": "#d77957",
+      "artPosition": "83.33333333333333% 0%",
+      "skills": [
+        "焰牙",
+        "炽痕连击"
+      ],
+      "gender": "male",
+      "persona": "桀骜搭档 · 热血行动派",
+      "biography": "嘴上只谈报酬的年轻猎手，总会把最后一份口粮留给别人。越危险的委托，越能看见他的笑意。",
+      "quotes": [
+        "“灼热的烈焰，才是对敌人最痛快的回应！”",
+        "“想要比比谁更快解决掉对面的首领吗？”",
+        "“星火终将燎原，随我一起冲锋！”"
+      ]
+    },
+    {
+      "id": "astra",
+      "name": "星璃",
+      "title": "白星余响",
+      "element": "light",
+      "role": "striker",
+      "rarity": "5星",
+      "level": 20,
+      "power": 4010,
+      "constellation": 0,
+      "accent": "#b7b5ee",
+      "artPosition": "100% 0%",
+      "skills": [
+        "轨刃协同",
+        "白星解放"
+      ],
+      "gender": "female",
+      "persona": "温柔反差 · 机甲驾驶员",
+      "biography": "离开量产计划的星骸驾驶员，正在学习如何为自己做选择。喜欢收集日常的小物件，战斗时却有不容动摇的决断。",
+      "quotes": [
+        "“这一次，我想为自己选择要守护的人。”",
+        "“等战斗结束，一起去看真正的流星吧。”"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "id": "w-wind",
+      "name": "回风的诗章",
+      "rarity": "5星",
+      "level": 20,
+      "refinement": 1,
+      "ownerId": "lumi"
+    },
+    {
+      "id": "w-light",
+      "name": "晨星誓约",
+      "rarity": "4星",
+      "level": 20,
+      "refinement": 2,
+      "ownerId": "alden"
+    },
+    {
+      "id": "w-tide",
+      "name": "静海之杖",
+      "rarity": "5星",
+      "level": 20,
+      "refinement": 1,
+      "ownerId": "selene"
+    },
+    {
+      "id": "w-ember",
+      "name": "余烬猎弓",
+      "rarity": "4星",
+      "level": 10,
+      "refinement": 1
+    }
+  ],
+  "formation": [
+    "lumi",
+    "alden",
+    "selene",
+    "mira",
+    null,
+    null,
+    "noctis",
+    null,
+    null
+  ],
+  "selectedCompanionId": "lumi",
+  "battleSeed": 7,
+  "hasSeenTutorial": true,
+  "materials": {
+    "风灵花蜜": 12,
+    "曜金碎屑": 19,
+    "潮汐结晶": 26,
+    "森语种子": 33,
+    "影蚀粉尘": 40,
+    "赤焰芯核": 47,
+    "纯净星核": 3,
+    "折光棱晶": 8,
+    "战术经验书": 15
+  },
+  "mainStoryChapter": 1,
+  "mainStoryStageId": "1-3",
+  "completedStages": [
+    "1-1",
+    "1-2"
+  ],
+  "sideQuests": [
+    {
+      "id": "sq-1",
+      "title": "【角色·艾尔登】曜庭守誓者的旧誓",
+      "tag": "角色",
+      "description": "前往旧日守望哨塔收集散落的圣堂誓约铭牌，重铸晨星之剑。",
+      "targetCount": 2,
+      "progress": 1,
+      "rewardCrystals": 60,
+      "rewardGold": 3000,
+      "rewardMaterials": [
+        {
+          "name": "曜金碎屑",
+          "count": 3,
+          "icon": "✦"
+        }
+      ],
+      "claimed": false
+    },
+    {
+      "id": "sq-2",
+      "title": "【秘闻】失落星穹星仪观测台",
+      "tag": "秘闻",
+      "description": "在远征中击败星界傀儡，回收受损的星象仪齿轮轴承。",
+      "targetCount": 3,
+      "progress": 3,
+      "rewardCrystals": 80,
+      "rewardGold": 4000,
+      "rewardMaterials": [
+        {
+          "name": "折光棱晶",
+          "count": 2,
+          "icon": "✵"
+        }
+      ],
+      "claimed": false
+    },
+    {
+      "id": "sq-3",
+      "title": "【委托·米菈】百草春息的特殊调配",
+      "tag": "委托",
+      "description": "为伤员紧急调配一批草药，需在林地关卡中收集充足的草木样本。",
+      "targetCount": 5,
+      "progress": 5,
+      "rewardCrystals": 50,
+      "rewardGold": 2500,
+      "rewardMaterials": [
+        {
+          "name": "森语种子",
+          "count": 4,
+          "icon": "❧"
+        }
+      ],
+      "claimed": false
+    }
+  ],
+  "dailyTasks": [
+    {
+      "id": "dt-1",
+      "type": "daily",
+      "title": "星界每日签到",
+      "desc": "登入游戏与星轨共振，确认今日补给",
+      "target": 1,
+      "progress": 1,
+      "rewardCrystals": 30,
+      "rewardGold": 1000,
+      "rewardActivity": 20,
+      "claimed": false
+    },
+    {
+      "id": "dt-2",
+      "type": "daily",
+      "title": "日常巡逻探索",
+      "desc": "消耗 60 点体力参与关卡挑战",
+      "target": 60,
+      "progress": 60,
+      "rewardCrystals": 30,
+      "rewardGold": 1500,
+      "rewardActivity": 20,
+      "claimed": false
+    },
+    {
+      "id": "dt-3",
+      "type": "daily",
+      "title": "高塔试炼除恶",
+      "desc": "通关 2 次主线关卡或深塔层数",
+      "target": 2,
+      "progress": 2,
+      "rewardCrystals": 40,
+      "rewardGold": 2000,
+      "rewardActivity": 20,
+      "claimed": false
+    },
+    {
+      "id": "dt-4",
+      "type": "daily",
+      "title": "群星的召唤",
+      "desc": "进行 1 次角色契约祈愿或武器回响",
+      "target": 1,
+      "progress": 0,
+      "rewardCrystals": 20,
+      "rewardGold": 1000,
+      "rewardActivity": 20,
+      "claimed": false
+    },
+    {
+      "id": "dt-5",
+      "type": "daily",
+      "title": "精炼与突破",
+      "desc": "强化任意角色或武器等级 1 次",
+      "target": 1,
+      "progress": 1,
+      "rewardCrystals": 30,
+      "rewardGold": 1500,
+      "rewardActivity": 20,
+      "claimed": false
+    }
+  ],
+  "weeklyTasks": [
+    {
+      "id": "wt-1",
+      "type": "weekly",
+      "title": "周度远征备战",
+      "desc": "累计消耗 300 点远征体力",
+      "target": 300,
+      "progress": 180,
+      "rewardCrystals": 100,
+      "rewardGold": 10000,
+      "rewardActivity": 30,
+      "claimed": false
+    },
+    {
+      "id": "wt-2",
+      "type": "weekly",
+      "title": "深塔尖端攻坚",
+      "desc": "累计挑战或扫荡深塔 3 次",
+      "target": 3,
+      "progress": 2,
+      "rewardCrystals": 120,
+      "rewardGold": 12000,
+      "rewardActivity": 30,
+      "claimed": false
+    },
+    {
+      "id": "wt-3",
+      "type": "weekly",
+      "title": "委托达人",
+      "desc": "累计完成 10 次每日任务委托",
+      "target": 10,
+      "progress": 8,
+      "rewardCrystals": 150,
+      "rewardGold": 15000,
+      "rewardActivity": 30,
+      "claimed": false
+    },
+    {
+      "id": "wt-4",
+      "type": "weekly",
+      "title": "星穹回响祈愿",
+      "desc": "累计进行 10 次祈愿召唤",
+      "target": 10,
+      "progress": 4,
+      "rewardCrystals": 150,
+      "rewardGold": 15000,
+      "rewardActivity": 30,
+      "claimed": false
+    },
+    {
+      "id": "wt-5",
+      "type": "weekly",
+      "title": "材料大丰收",
+      "desc": "通过打怪掉落累计获得 20 件培养材料",
+      "target": 20,
+      "progress": 14,
+      "rewardCrystals": 120,
+      "rewardGold": 10000,
+      "rewardActivity": 30,
+      "claimed": false
+    }
+  ],
+  "monthlyTasks": [
+    {
+      "id": "mt-1",
+      "type": "monthly",
+      "title": "月度星辰长明",
+      "desc": "本月累计登录打卡达到 15 天",
+      "target": 15,
+      "progress": 7,
+      "rewardCrystals": 300,
+      "rewardGold": 30000,
+      "rewardActivity": 50,
+      "claimed": false
+    },
+    {
+      "id": "mt-2",
+      "type": "monthly",
+      "title": "征服深渊星塔",
+      "desc": "成功攻克深塔第 8 层及以上",
+      "target": 8,
+      "progress": 4,
+      "rewardCrystals": 350,
+      "rewardGold": 40000,
+      "rewardActivity": 50,
+      "claimed": false
+    },
+    {
+      "id": "mt-3",
+      "type": "monthly",
+      "title": "战术核心突破",
+      "desc": "拥有至少 3 名等级达到 20 级的角色",
+      "target": 3,
+      "progress": 3,
+      "rewardCrystals": 300,
+      "rewardGold": 35000,
+      "rewardActivity": 50,
+      "claimed": false
+    },
+    {
+      "id": "mt-4",
+      "type": "monthly",
+      "title": "星界海量储备",
+      "desc": "累计消耗体力达到 1500 点",
+      "target": 1500,
+      "progress": 680,
+      "rewardCrystals": 350,
+      "rewardGold": 50000,
+      "rewardActivity": 50,
+      "claimed": false
+    },
+    {
+      "id": "mt-5",
+      "type": "monthly",
+      "title": "璀璨祈愿大师",
+      "desc": "月度祈愿累计达到 30 次",
+      "target": 30,
+      "progress": 16,
+      "rewardCrystals": 400,
+      "rewardGold": 60000,
+      "rewardActivity": 50,
+      "claimed": false
+    }
+  ],
+  "dailyActivity": 60,
+  "weeklyActivity": 60,
+  "monthlyActivity": 100,
+  "claimedDailyChests": [
+    20,
+    40
+  ],
+  "claimedWeeklyChests": [
+    30
+  ],
+  "claimedMonthlyChests": [
+    50
+  ],
+  "towerFloor": 5,
+  "highestTowerFloor": 4,
+  "assistantQuoteIndex": 0,
+  "homestead": {
+    "comfort": 520,
+    "stationedCompanionIds": [
+      "lumi",
+      "mira",
+      "selene"
+    ],
+    "accumulatedStamina": 24,
+    "accumulatedGold": 4800,
+    "lastHarvestTimestamp": 1788870704402
+  },
+  "currencyWarsHighScore": 0,
+  "defenseHighScore": 5,
+  "pvpWins": 3
+}

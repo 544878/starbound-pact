@@ -1,0 +1,1752 @@
+/* Micro-garden defense: reference-led ivory, old gold, evergreen. */
+.screen-activities:has(.garden-operations) {
+  --garden-ivory: #f3f0e5;
+  --garden-gold: #b1a477;
+  --garden-green: #203c32;
+  font-family: "Microsoft YaHei", "Noto Serif SC", serif;
+}
+.screen-activities:has(.garden-operations) .topbar {
+  height: 56px;
+  padding: 0 25px;
+  background: linear-gradient(110deg, #f8f6ee, #e8e6dc);
+  border-bottom: 2px solid #b2a47b;
+}
+.screen-activities:has(.garden-operations) .brand-text {
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+.screen-activities:has(.garden-operations) .brand-text b {
+  font-size: 30px;
+  font-family: "STSong", "SimSun", serif;
+}
+.screen-activities:has(.garden-operations) .brand-text small {
+  font-size: 11px;
+}
+.screen-activities:has(.garden-operations) .brand-mark {
+  font-size: 39px;
+}
+.screen-activities:has(.garden-operations) .resources {
+  gap: 32px;
+}
+.screen-activities:has(.garden-operations) .resources span {
+  display: flex;
+  align-items: center;
+  font-family: Georgia, "SimSun", serif;
+  font-size: 13px;
+}
+.screen-activities:has(.garden-operations) .resources span:before {
+  content: "◈";
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  border: 1px solid #c8b680;
+  outline: 3px solid #dedccd;
+  border-radius: 50%;
+  background: radial-gradient(at 35% 30%, #fff7d0, #c6a45c);
+  color: #8a723c;
+  font-size: 23px;
+}
+.screen-activities:has(.garden-operations) .resources span:nth-child(2):before {
+  color: #3e8cac;
+  background: linear-gradient(125deg, #eafcff, #94bdd8);
+  content: "◇";
+  border-color: #b9c7c6;
+}
+.screen-activities:has(.garden-operations) .resources span:nth-child(3):before {
+  content: "✧";
+  background: none;
+  outline: 0;
+  border: 0;
+  font-size: 33px;
+}
+.screen-activities:has(.garden-operations) .screen-content {
+  inset: 56px 0 76px;
+  overflow: auto;
+  background: url("/assets/defense-garden-v4.png") center/cover;
+}
+.screen-activities:has(.garden-operations) .bottom-nav {
+  height: 76px;
+  padding: 8px 14%;
+  background: linear-gradient(105deg, #193a32, #2d4639 55%, #19342e);
+  border-top: 2px solid #b7aa7c;
+  box-shadow: inset 0 5px 0 #10271d70;
+}
+.screen-activities:has(.garden-operations) .bottom-nav button {
+  font:
+    21px "SimSun",
+    serif;
+  border-right: 1px solid #b4a87955;
+  border-radius: 2px;
+}
+.screen-activities:has(.garden-operations) .bottom-nav button svg {
+  width: 30px;
+  height: 30px;
+}
+.screen-activities:has(.garden-operations) .bottom-nav button.active {
+  color: #293b30;
+  background: linear-gradient(115deg, #d8cb9e, #fff9e7 40%, #e3d8b7);
+  border: 1px solid #c2af74;
+  box-shadow:
+    inset 0 0 0 4px #e1d6b4,
+    inset 0 0 0 5px #ab9b6855;
+  clip-path: polygon(
+    4% 0,
+    96% 0,
+    100% 12%,
+    100% 88%,
+    96% 100%,
+    4% 100%,
+    0 88%,
+    0 12%
+  );
+}
+.screen-activities:has(.garden-operations) .bottom-nav button.active:after {
+  display: none;
+}
+.garden-operations {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 12px;
+  height: 100%;
+  min-height: 640px;
+  padding: 18px 12px 14px;
+  background: linear-gradient(
+    90deg,
+    #19372b33,
+    transparent 20%,
+    transparent 80%,
+    #f0eedaaa
+  );
+}
+.garden-operations .mode-nav {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding: 15px 12px;
+  background:
+    linear-gradient(130deg, #203e35f5, #142e27f2),
+    url("/assets/defense-garden-v4.png") center/cover;
+  border: 1px solid #ab9e6a;
+  outline: 3px double #6b795a;
+  outline-offset: -6px;
+  color: #eeeadd;
+  position: relative;
+  min-height: 0;
+}
+.garden-operations .rail-title {
+  margin: 0 0 2px;
+  padding: 0 0 9px;
+  border-bottom: 1px solid #aa9b6866;
+  font:
+    700 17px "SimSun",
+    serif;
+  color: #f8f6df;
+  display: flex;
+  justify-content: space-between;
+}
+.garden-operations .rail-title span {
+  color: #b6a97c;
+  font-size: 14px;
+}
+.garden-operations .mode-nav > button {
+  width: 100%;
+  border: 1px solid #8d967a;
+  background: linear-gradient(110deg, #68816d30, #ffffff04);
+  color: #f0ecda;
+  padding: 12px 9px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  min-height: 69px;
+}
+.garden-operations .mode-nav > button i {
+  font:
+    36px Georgia,
+    serif;
+  font-style: normal;
+  color: #ded7ac;
+  width: 36px;
+  text-align: center;
+}
+.garden-operations .mode-nav > button span {
+  font:
+    700 17px "SimSun",
+    serif;
+}
+.garden-operations .mode-nav > button small {
+  display: block;
+  margin-top: 9px;
+  font:
+    11px "SimSun",
+    serif;
+  color: #c4c7b3;
+  letter-spacing: 0.04em;
+}
+.garden-operations .mode-nav > button.active {
+  background: linear-gradient(100deg, #55796099, #314e3caa);
+  border-color: #e3f9d6;
+  box-shadow:
+    0 0 9px #b6e4b9,
+    inset 0 0 8px #d9f4c9;
+  position: relative;
+}
+.garden-operations .mode-nav > button.active:after {
+  content: "♦";
+  position: absolute;
+  right: -5px;
+  color: #fffde6;
+}
+.garden-operations .mode-nav > button:nth-of-type(n + 4) {
+  min-height: 24px;
+  padding: 3px 6px;
+  border: 0;
+  color: #c9cbb5;
+  font-size: 11px;
+}
+.garden-operations .mode-nav > button:nth-of-type(n + 4) i,
+.garden-operations .mode-nav > button:nth-of-type(n + 4) small {
+  display: none;
+}
+.garden-operations .mode-nav > button:nth-of-type(n + 4) span {
+  font-size: 12px;
+}
+.garden-growth {
+  margin: 6px -3px 0;
+  padding-top: 12px;
+  border-top: 3px double #a89b6f;
+}
+.garden-operations .constellation-art {
+  position: relative;
+  display: block;
+  padding: 0;
+  width: 100%;
+  aspect-ratio: 1.15;
+  border: 0;
+  background: radial-gradient(ellipse, #61909a2b, transparent 68%);
+}
+.constellation-art .portrait {
+  position: absolute;
+  width: 54%;
+  height: 64%;
+  left: 23%;
+  top: 23%;
+  border: 0;
+  border-radius: 50%;
+  opacity: 0.62;
+  filter: sepia(0.5) saturate(0.5);
+  mask-image: radial-gradient(ellipse, #000 40%, transparent 73%);
+}
+.constellation-orbit {
+  position: absolute;
+  inset: 8% 8%;
+  border: 1px solid #b2a57577;
+  border-radius: 50%;
+  transform: rotate(20deg);
+  outline: 1px solid #a5a57133;
+  outline-offset: -14px;
+}
+.constellation-star {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  border: 1px solid #a89e70;
+  outline: 3px double #a99e7070;
+  border-radius: 50%;
+  color: #6f8178;
+  background: #1f3b32;
+  font-size: 22px;
+}
+.constellation-star.unlocked {
+  color: #fff4bb;
+  background: radial-gradient(#b7efff, #437f91 55%, #234e61);
+  box-shadow: 0 0 13px #b8dce24d;
+}
+.constellation-caption {
+  text-align: center;
+  color: #e3dfc8;
+  font:
+    13px "SimSun",
+    serif;
+  margin: 0 0 14px;
+}
+.constellation-caption strong {
+  display: block;
+  margin-top: 5px;
+  font-weight: normal;
+}
+.growth-equipment {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 8px;
+}
+.garden-operations .growth-equipment button {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 1px solid #a4966255;
+  padding: 7px;
+  background: #0e292530;
+  color: #eee9cf;
+  border-radius: 3px;
+  font-size: 10px;
+}
+.growth-equipment small {
+  font:
+    12px "SimSun",
+    serif;
+  text-align: left;
+}
+.growth-equipment b {
+  font:
+    10px "SimSun",
+    serif;
+  margin: 5px 0;
+}
+.weapon-sigil {
+  display: block;
+  font-size: 58px;
+  color: #b9c6c0;
+  text-shadow: 0 0 9px #a4c7ee;
+  transform: rotate(-15deg);
+}
+.mini-rings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 5px;
+  padding: 12px 0;
+}
+.mini-rings span {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px double #857b59;
+  color: #667c71;
+  font-size: 19px;
+}
+.mini-rings .unlocked {
+  color: #bddaf0;
+  border-color: #b9a266;
+  background: #365f71;
+  box-shadow: 0 0 0 2px #a4956255;
+}
+.garden-operations .operation-content {
+  min-height: 0;
+}
+.garden-defense {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 12px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  max-width: none;
+  color: #253c31;
+}
+.garden-main {
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: 44px 50px minmax(0, 1fr) 148px;
+}
+.garden-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 18px 6px;
+  background: linear-gradient(90deg, #f5f2e8ed, #f5f2e8a6, transparent);
+}
+.garden-heading h1 {
+  margin: 0;
+  font:
+    700 30px "SimSun",
+    serif;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+.garden-heading > span {
+  color: #b6a884;
+}
+.garden-heading p {
+  margin: 0;
+  color: #898873;
+  font:
+    11px "SimSun",
+    serif;
+  letter-spacing: 0.11em;
+}
+.garden-hud {
+  display: flex;
+  align-items: center;
+  padding: 5px 16px;
+  background: linear-gradient(110deg, #f9f7ebf5, #e6e7d9f2);
+  border: 1px solid #c9bea0;
+  box-shadow: inset 0 0 0 4px #fffff43d;
+  border-radius: 12px 3px 3px 12px;
+  position: relative;
+  z-index: 2;
+}
+.garden-hud > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 19px;
+  border-right: 1px solid #b4a88166;
+  white-space: nowrap;
+}
+.garden-hud > div:first-child {
+  padding-left: 0;
+}
+.garden-hud i {
+  font:
+    27px Georgia,
+    serif;
+  color: #515e4d;
+}
+.garden-hud .hud-leaf {
+  color: #6f9870;
+}
+.garden-hud .hud-heart {
+  color: #c97777;
+  text-shadow: 0 1px 1px #58392d;
+}
+.garden-hud span {
+  font:
+    12px "SimSun",
+    serif;
+}
+.garden-hud b {
+  font:
+    700 21px Georgia,
+    serif;
+}
+.garden-hud b small {
+  font:
+    17px Georgia,
+    serif;
+}
+.garden-hud > p {
+  margin: 0 0 0 auto;
+  padding-left: 12px;
+  font:
+    11px "SimSun",
+    serif;
+  text-align: right;
+}
+.garden-hud > p small {
+  display: block;
+  color: #868a77;
+  margin-top: 7px;
+  font-size: 9px;
+}
+.garden-stage {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+}
+.garden-battlefield {
+  width: 100%;
+  height: 100%;
+}
+.garden-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.garden-canvas .unit-art {
+  overflow: hidden;
+}
+.garden-tile {
+  cursor: pointer;
+  fill: #f2ddab08;
+  stroke: #b3a07155;
+  stroke-width: 0.7;
+  transition:
+    fill 0.15s,
+    stroke 0.15s;
+}
+.garden-tile.path-tile {
+  fill: #fff0c245;
+  stroke: #f8edcd88;
+}
+.garden-tile:hover,
+.garden-tile:focus-visible {
+  fill: #f6efb966;
+  stroke: #fffbd7;
+  stroke-width: 2;
+  outline: none;
+}
+.garden-tile.in-range {
+  fill: #8eba8860;
+}
+.garden-tile.selected-tile {
+  fill: #daffce70;
+  stroke: #faffd8;
+  stroke-width: 3;
+  filter: drop-shadow(0 0 4px #adf6bd);
+}
+.show-grid .garden-tile {
+  stroke: #3f624d99;
+  stroke-width: 1.2;
+}
+.tile-coordinate {
+  font:
+    9px Georgia,
+    serif;
+  fill: #3c5b46;
+  pointer-events: none;
+}
+.garden-route {
+  fill: none;
+  stroke: #e3ae8750;
+  stroke-width: 16;
+}
+.route-arrow {
+  fill: none;
+  stroke: #b35d4e;
+  stroke-width: 1.8;
+  opacity: 0.6;
+}
+.portal {
+  color: #c94d41;
+}
+.portal-blue {
+  color: #318ac7;
+}
+.portal-ring,
+.portal-inner {
+  fill: transparent;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  filter: drop-shadow(0 0 5px currentColor);
+}
+.portal-inner {
+  stroke-width: 3;
+  opacity: 0.6;
+  animation: portal-breathe 3s ease-in-out infinite;
+}
+.portal-flag {
+  fill: currentColor;
+  stroke: #e5d3a2;
+  stroke-width: 1.7;
+}
+.portal-star {
+  font:
+    22px Georgia,
+    serif;
+  fill: #ffedb9;
+}
+.portal-label {
+  font:
+    9px "SimSun",
+    serif;
+  fill: #f9f4de;
+  paint-order: stroke;
+  stroke: #294638;
+  stroke-width: 2;
+}
+.unit-circle {
+  fill: #83bba822;
+  stroke: var(--unit-color);
+  stroke-width: 1.5;
+}
+.unit-circle.skill-active {
+  stroke: #ebffd0;
+  filter: drop-shadow(0 0 6px #94e5a1);
+}
+.operator-sway {
+  animation: operator-breathe 4s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+.operator-strike {
+  animation: operator-strike 0.35s ease-out;
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+.enemy-walk {
+  animation: enemy-step 0.5s ease-in-out infinite alternate;
+}
+.skill-sparks {
+  fill: #ecffd3;
+  color: #ddffc3;
+  stroke: #d7efba;
+  animation: portal-breathe 1s infinite;
+}
+.skill-sparks ellipse {
+  fill: none;
+  stroke-width: 2;
+}
+.attack-trail {
+  fill: none;
+  stroke: #fff0ab;
+  stroke-width: 2.3;
+  filter: drop-shadow(0 0 4px #f4c852);
+  stroke-dasharray: 9 5;
+}
+.healing-trail {
+  stroke: #beffb9;
+  filter: drop-shadow(0 0 4px #75ea9a);
+}
+.garden-petal {
+  fill: #ffeff1;
+  opacity: 0.7;
+  animation: petal-drift 12s linear infinite;
+}
+.is-paused * {
+  animation-play-state: paused !important;
+}
+.garden-field-controls {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  pointer-events: none;
+}
+.garden-field-controls button {
+  pointer-events: auto;
+  background: #233e34df;
+  color: #f7f4df;
+  border: 1px solid #b9b18a;
+  border-radius: 3px;
+  height: 36px;
+  padding: 0 12px;
+  box-shadow: inset 0 0 0 2px #e5e8c811;
+  font-size: 15px;
+}
+.garden-field-controls button span {
+  font:
+    12px "SimSun",
+    serif;
+  margin-left: 5px;
+}
+.garden-field-controls button.active {
+  color: #213a2e;
+  background: #f0efd7;
+}
+.terrain-key {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font:
+    11px "SimSun",
+    serif;
+  color: #fbf8e8;
+  background: #203a30cc;
+  padding: 10px;
+  border-radius: 3px;
+}
+.terrain-key i {
+  width: 10px;
+  height: 10px;
+  background: #e9dbbb;
+  border: 1px solid #e5e5c3;
+}
+.terrain-key i:nth-of-type(2) {
+  background: #7d8e6c;
+  margin-left: 5px;
+}
+.playback-controls {
+  margin-left: auto;
+  display: flex;
+  gap: 7px;
+}
+.garden-roster-panel {
+  padding: 9px 18px 12px;
+  border: 1px solid #b8aa82;
+  outline: 3px double #d7ccac;
+  outline-offset: -5px;
+  background: linear-gradient(110deg, #fcf9f0f5, #ecebdded);
+  border-radius: 5px;
+  box-shadow: 0 -5px 20px #f2f1e377;
+  z-index: 2;
+  min-width: 0;
+}
+.garden-roster-panel header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.garden-roster-panel h2 {
+  font:
+    700 15px "SimSun",
+    serif;
+  margin: 0;
+}
+.garden-roster-panel header > span {
+  font-size: 10px;
+  color: #79816e;
+}
+.garden-roster-panel header i {
+  font-style: normal;
+  padding-left: 14px;
+  color: #a99d74;
+}
+.garden-roster {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+.garden-roster > button {
+  position: relative;
+  padding: 0 0 3px;
+  border: 1px solid #b9b69f;
+  border-radius: 3px;
+  text-align: left;
+  background: #f4f1e6;
+  min-width: 0;
+}
+.garden-roster > button.selected {
+  outline: 2px solid #8bb197;
+  outline-offset: 2px;
+  border-color: #f3fff0;
+  box-shadow: 0 0 8px #8db595;
+}
+.roster-image {
+  height: 76px;
+  position: relative;
+}
+.roster-image .portrait {
+  height: 100%;
+  width: 100%;
+  border: 0;
+  border-radius: 2px 2px 0 0;
+}
+.roster-image:after {
+  content: "";
+  position: absolute;
+  inset: 50% 0 0;
+  background: linear-gradient(transparent, #1c302b99);
+  pointer-events: none;
+}
+.roster-level {
+  position: absolute;
+  bottom: 2px;
+  left: 5px;
+  color: #ffffeb;
+  font:
+    14px Georgia,
+    serif;
+  z-index: 1;
+}
+.roster-cost {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2px 5px;
+  color: #fff5d7;
+  background: #21392fde;
+  font:
+    13px Georgia,
+    serif;
+  border-radius: 2px 0 3px 0;
+}
+.roster-element {
+  position: absolute;
+  bottom: -5px;
+  right: -3px;
+  border: 2px double #e7dfbc;
+  outline: 1px solid #a79970;
+  width: 25px;
+  height: 29px;
+  display: grid;
+  place-items: center;
+  color: #faf1c9;
+  background: #456d54;
+  font:
+    13px "SimSun",
+    serif;
+  border-radius: 45% 45% 45% 45%;
+  z-index: 2;
+}
+.element-light {
+  background: #a48a4e;
+}
+.element-water {
+  background: #497c99;
+}
+.element-flora {
+  background: #709079;
+}
+.element-shadow {
+  background: #706781;
+}
+.element-fire {
+  background: #a46a4d;
+}
+.roster-deployed {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  background: #315942d9;
+  color: #f8f4df;
+  padding: 2px 4px;
+  font-size: 9px;
+}
+.garden-roster > button > b {
+  display: inline-block;
+  font:
+    13px "SimSun",
+    serif;
+  padding: 5px 4px 0;
+}
+.garden-roster > button > small {
+  float: right;
+  font-size: 9px;
+  color: #7c8574;
+  padding: 6px 4px 0 0;
+}
+.garden-inspector {
+  position: relative;
+  background: linear-gradient(110deg, #f8f5eaf7, #eeece1f5);
+  border: 1px solid #b9ac81;
+  outline: 3px double #c8bb95;
+  outline-offset: -6px;
+  border-radius: 6px;
+  overflow: auto;
+  padding: 9px;
+  scrollbar-width: thin;
+}
+.inspector-art {
+  height: 190px;
+  position: relative;
+}
+.inspector-art > .portrait {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #cdc4a7;
+  border-radius: 2px;
+}
+.inspector-art:after {
+  content: "";
+  position: absolute;
+  inset: 60% 0 -1px;
+  background: linear-gradient(transparent, #f5f2e6);
+  pointer-events: none;
+}
+.inspector-element {
+  position: absolute;
+  right: 7px;
+  bottom: -5px;
+  width: 42px;
+  height: 50px;
+  background: #497052;
+  color: #f1ffd8;
+  border: 3px double #e6e2c4;
+  outline: 1px solid #aa9e75;
+  border-radius: 40% 40% 45% 45%;
+  font:
+    32px Georgia,
+    serif;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+}
+.inspector-element small {
+  position: absolute;
+  font:
+    9px "SimSun",
+    serif;
+  bottom: 3px;
+}
+.inspector-body {
+  padding: 0 8px;
+}
+.inspector-body h2 {
+  position: relative;
+  margin: 0 0 3px;
+  font:
+    700 23px "SimSun",
+    serif;
+}
+.character-title {
+  margin: 0 0 12px;
+  font:
+    13px "SimSun",
+    serif;
+}
+.character-role {
+  padding: 7px 0;
+  border-top: 1px solid #bbb99f;
+  font:
+    12px "SimSun",
+    serif;
+}
+.character-role > span {
+  float: right;
+  color: #828870;
+}
+.character-level {
+  font:
+    18px Georgia,
+    serif;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #b2ad96;
+}
+.character-level > span {
+  float: right;
+  font:
+    17px Georgia,
+    serif;
+  color: #bda46c;
+  letter-spacing: 1px;
+  text-shadow: 0.5px 0.5px #76663e;
+}
+.inspector-stats {
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+  padding: 9px 0 12px;
+}
+.inspector-stats dl {
+  flex: 1;
+  margin: 0;
+}
+.inspector-stats dl > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font:
+    12px "SimSun",
+    serif;
+  gap: 5px;
+}
+.inspector-stats dd {
+  margin: 0;
+  font:
+    13px Georgia,
+    serif;
+}
+.inspector-stats dt {
+  color: #69725e;
+}
+.range-preview > span {
+  font:
+    11px "SimSun",
+    serif;
+  display: block;
+  text-align: center;
+  margin-bottom: 6px;
+}
+.range-preview > div {
+  width: 77px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+.range-preview i {
+  height: 9px;
+  border: 1px solid #c8c6b7;
+  background: #eeebdf;
+}
+.range-preview .covered {
+  background: #d5a19a;
+  border-color: #c98c80;
+}
+.range-preview .origin {
+  background: #66816a;
+  border-color: #506e58;
+}
+.inspector-tabs {
+  display: flex;
+  border: 1px solid #c4bda7;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 11px;
+}
+.inspector-tabs button {
+  flex: 1;
+  background: none;
+  border: 0;
+  padding: 7px 0;
+  font:
+    12px "SimSun",
+    serif;
+}
+.inspector-tabs button.active {
+  background: linear-gradient(100deg, #294e3c, #4c6851);
+  color: #ffffe9;
+}
+.direction-label {
+  margin: 0 0 7px;
+  font:
+    12px "SimSun",
+    serif;
+}
+.direction-label > span {
+  float: right;
+  font-size: 9px;
+  color: #7a846e;
+}
+.garden-directions {
+  display: flex;
+  gap: 7px;
+}
+.garden-directions button {
+  flex: 1;
+  height: 44px;
+  padding: 0;
+  border: 1px solid #c7c1ad;
+  border-radius: 3px;
+  background: linear-gradient(#eae8dc, #dadbcc);
+  font:
+    700 27px Georgia,
+    serif;
+  color: #727969;
+}
+.garden-directions button.active {
+  background: linear-gradient(120deg, #3b654e, #213f33);
+  color: #fffde4;
+  outline: 2px solid #9fbea0;
+  outline-offset: 2px;
+  box-shadow: inset 0 0 6px #d1eac5;
+}
+.tile-status {
+  font:
+    10px "SimSun",
+    serif;
+  color: #72806b;
+  margin: 10px 0;
+  min-height: 12px;
+}
+.tile-status strong {
+  display: block;
+  color: #a2664b;
+  margin-top: 5px;
+}
+.garden-deploy-actions {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 8px;
+}
+.garden-deploy-actions button {
+  min-height: 54px;
+  border: 1px solid #beb696;
+  border-radius: 3px;
+  background: linear-gradient(130deg, #faf8ef, #e5e3d7);
+  padding: 5px;
+}
+.garden-deploy-actions b {
+  font:
+    700 19px "SimSun",
+    serif;
+  display: block;
+}
+.garden-deploy-actions small {
+  display: block;
+  font:
+    11px "SimSun",
+    serif;
+  margin-top: 6px;
+}
+.garden-deploy-actions .deploy-button {
+  color: #fffce5;
+  background: linear-gradient(115deg, #315d47, #506a51);
+}
+.garden-skill {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 11px;
+  padding: 10px;
+  background: linear-gradient(110deg, #1c392f, #425545);
+  border: 1px solid #899073;
+  box-shadow: inset 0 0 0 3px #d5d9b610;
+  border-radius: 3px;
+  color: #f9f6df;
+  text-align: left;
+}
+.garden-skill > span {
+  flex-shrink: 0;
+  width: 41px;
+  height: 41px;
+  border: 1px solid #e0ead0;
+  outline: 1px solid #a8bf9b;
+  outline-offset: 3px;
+  border-radius: 50%;
+  font:
+    34px Georgia,
+    serif;
+  text-align: center;
+  background: radial-gradient(#678b51, #254b39);
+}
+.garden-skill b {
+  font:
+    700 14px "SimSun",
+    serif;
+}
+.garden-skill small {
+  font:
+    10px/1.6 "SimSun",
+    serif;
+  display: block;
+  color: #c3cbb2;
+  margin-top: 5px;
+}
+.garden-skill:disabled {
+  opacity: 0.8;
+  filter: saturate(0.7);
+}
+.garden-feedback {
+  margin: 9px 0;
+  font:
+    10px/1.6 "SimSun",
+    serif;
+  color: #738169;
+  min-height: 16px;
+}
+.begin-wave {
+  width: 100%;
+  padding: 9px 12px;
+  background: linear-gradient(120deg, #ece2bb, #fff7dc);
+  border: 1px solid #bba777;
+  color: #3b503c;
+  font:
+    700 13px "SimSun",
+    serif;
+  border-radius: 2px;
+}
+.begin-wave span {
+  float: right;
+}
+.garden-help {
+  margin-top: 9px;
+  font:
+    10px/1.7 "SimSun",
+    serif;
+  color: #7d846f;
+}
+.garden-help summary {
+  cursor: pointer;
+}
+.garden-help p {
+  margin: 8px 0 0;
+}
+.skill-preview {
+  min-height: 65px;
+  background: #e4e7d8;
+  padding: 8px;
+}
+.skill-preview h3 {
+  margin: 0 0 6px;
+  font:
+    14px "SimSun",
+    serif;
+}
+.skill-preview p {
+  font:
+    11px/1.5 "SimSun",
+    serif;
+  margin: 0 0 4px;
+}
+.inspector-quote {
+  padding: 22px 13px 4px;
+  color: #91927d;
+  font:
+    13px/1.9 "SimSun",
+    serif;
+  margin: 0;
+}
+.inspector-quote span {
+  font-size: 11px;
+}
+.garden-result {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f6f1e9db;
+  backdrop-filter: blur(5px);
+  z-index: 8;
+}
+.garden-result > span {
+  color: #ad9661;
+  font-size: 70px;
+}
+.garden-result h2 {
+  font:
+    32px "SimSun",
+    serif;
+  margin: 10px;
+}
+.garden-result p {
+  font-size: 13px;
+  text-align: center;
+  padding: 0 20px;
+}
+.garden-result button {
+  border: 1px solid #a39262;
+  padding: 12px 35px;
+  background: #305640;
+  color: #fffde6;
+}
+@keyframes operator-breathe {
+  50% {
+    transform: rotate(1deg) translateY(-1.2px);
+  }
+}
+@keyframes operator-strike {
+  35% {
+    transform: translateX(5px) rotate(5deg);
+    filter: brightness(1.3);
+  }
+}
+@keyframes enemy-step {
+  to {
+    transform: translateY(-2px) rotate(2deg);
+  }
+}
+@keyframes portal-breathe {
+  50% {
+    opacity: 0.35;
+  }
+}
+@keyframes petal-drift {
+  0% {
+    transform: translate(-20px, -20px) rotate(-5deg);
+    opacity: 0;
+  }
+  20%,
+  70% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(70px, 65px) rotate(20deg);
+    opacity: 0;
+  }
+}
+@media (min-width: 1600px) {
+  .garden-operations {
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 16px;
+  }
+  .garden-defense {
+    grid-template-columns: minmax(0, 1fr) 290px;
+    gap: 16px;
+  }
+  .garden-main {
+    grid-template-rows: 48px 54px minmax(0, 1fr) 164px;
+  }
+  .roster-image {
+    height: 90px;
+  }
+  .inspector-art {
+    height: 220px;
+  }
+}
+@media (max-width: 1280px) and (min-width: 901px) {
+  .garden-operations {
+    grid-template-columns: 175px minmax(0, 1fr);
+    gap: 9px;
+    padding: 12px 8px;
+  }
+  .garden-defense {
+    grid-template-columns: minmax(0, 1fr) 224px;
+    gap: 9px;
+  }
+  .garden-operations .mode-nav {
+    padding: 12px 9px;
+    gap: 8px;
+  }
+  .garden-operations .mode-nav > button {
+    padding: 10px 6px;
+    gap: 7px;
+  }
+  .garden-operations .mode-nav > button span {
+    font-size: 15px;
+  }
+  .garden-operations .mode-nav > button small {
+    font-size: 9px;
+  }
+  .garden-heading {
+    padding-left: 10px;
+  }
+  .garden-heading h1 {
+    font-size: 25px;
+  }
+  .garden-heading p {
+    display: none;
+  }
+  .garden-hud {
+    padding: 5px 9px;
+  }
+  .garden-hud > div {
+    gap: 7px;
+    padding: 0 10px;
+  }
+  .garden-hud > p {
+    display: none;
+  }
+  .garden-hud b {
+    font-size: 18px;
+  }
+  .garden-hud b small {
+    font-size: 14px;
+  }
+  .garden-roster-panel {
+    padding: 9px 10px;
+  }
+  .garden-roster {
+    gap: 6px;
+  }
+  .garden-roster > button > b {
+    font-size: 11px;
+  }
+  .garden-roster > button > small {
+    display: none;
+  }
+  .inspector-art {
+    height: 150px;
+  }
+  .inspector-body {
+    padding: 0 5px;
+  }
+  .mini-rings {
+    gap: 8px 3px;
+  }
+  .mini-rings span {
+    width: 19px;
+    height: 19px;
+    font-size: 16px;
+  }
+  .weapon-sigil {
+    font-size: 46px;
+  }
+}
+@media (max-height: 800px) and (min-width: 901px) {
+  .garden-operations {
+    min-height: 600px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .garden-main {
+    grid-template-rows: 38px 44px minmax(0, 1fr) 128px;
+  }
+  .garden-heading h1 {
+    font-size: 25px;
+  }
+  .roster-image {
+    height: 62px;
+  }
+  .garden-roster-panel {
+    padding-top: 7px;
+  }
+  .inspector-art {
+    height: 133px;
+  }
+  .garden-inspector {
+    padding: 7px;
+  }
+  .character-title {
+    margin-bottom: 7px;
+  }
+  .inspector-stats {
+    padding: 7px 0;
+  }
+  .inspector-body h2 {
+    font-size: 20px;
+  }
+  .garden-directions button {
+    height: 36px;
+  }
+  .garden-skill {
+    padding: 8px;
+  }
+  .inspector-quote {
+    display: none;
+  }
+  .garden-operations .mode-nav > button {
+    min-height: 58px;
+    padding: 8px;
+  }
+  .garden-operations .mode-nav > button:nth-of-type(n + 4) {
+    min-height: 20px;
+    padding: 1px 5px;
+  }
+  .constellation-art {
+    max-height: 143px;
+  }
+  .garden-growth {
+    padding-top: 9px;
+    margin-top: 0;
+  }
+  .constellation-caption {
+    margin-bottom: 9px;
+  }
+}
+@media (max-width: 900px) {
+  .screen-activities:has(.garden-operations) .screen-content {
+    inset: 56px 0 64px;
+  }
+  .screen-activities:has(.garden-operations) .topbar {
+    padding: 0 12px;
+  }
+  .screen-activities:has(.garden-operations) .brand-text b {
+    font-size: 22px;
+  }
+  .screen-activities:has(.garden-operations) .brand-text small {
+    display: none;
+  }
+  .screen-activities:has(.garden-operations) .resources {
+    gap: 13px;
+  }
+  .screen-activities:has(.garden-operations) .resources span {
+    font-size: 0;
+  }
+  .screen-activities:has(.garden-operations) .resources b {
+    font-size: 12px;
+  }
+  .screen-activities:has(.garden-operations) .resources span:before {
+    width: 23px;
+    height: 23px;
+    font-size: 19px;
+    margin: 0;
+    outline: none;
+  }
+  .screen-activities:has(.garden-operations) .bottom-nav {
+    padding: 5px 3%;
+    height: 64px;
+  }
+  .screen-activities:has(.garden-operations) .bottom-nav button {
+    font-size: 15px;
+    gap: 7px;
+  }
+  .garden-operations {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100%;
+    padding: 8px;
+    gap: 8px;
+  }
+  .garden-operations .mode-nav {
+    flex-direction: row;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 7px;
+    flex-shrink: 0;
+  }
+  .garden-operations .mode-nav > button {
+    min-width: 110px;
+    width: auto;
+    flex-shrink: 0;
+    min-height: 40px;
+    padding: 7px;
+    gap: 6px;
+  }
+  .garden-operations .mode-nav > button i {
+    font-size: 20px;
+    width: 20px;
+  }
+  .garden-operations .mode-nav > button span {
+    font-size: 13px;
+  }
+  .garden-operations .mode-nav > button small,
+  .garden-operations .mode-nav > button:nth-of-type(n + 4),
+  .garden-growth,
+  .garden-operations .mode-nav > .rail-title {
+    display: none;
+  }
+  .garden-defense {
+    grid-template-columns: minmax(0, 1fr) 230px;
+    min-height: 680px;
+    height: auto;
+  }
+  .garden-main {
+    grid-template-rows: 40px 45px minmax(310px, 1fr) 132px;
+  }
+  .garden-heading {
+    padding-left: 8px;
+  }
+  .garden-heading h1 {
+    font-size: 23px;
+  }
+  .garden-heading > span,
+  .garden-heading p {
+    display: none;
+  }
+  .garden-hud {
+    padding: 5px 8px;
+  }
+  .garden-hud > div {
+    flex: 1;
+    padding: 0 6px;
+    gap: 5px;
+  }
+  .garden-hud i {
+    font-size: 18px;
+  }
+  .garden-hud b {
+    font-size: 16px;
+  }
+  .garden-hud b small {
+    font-size: 12px;
+  }
+  .garden-hud span {
+    font-size: 10px;
+  }
+  .garden-hud > p {
+    display: none;
+  }
+  .garden-roster-panel {
+    padding: 7px 9px;
+  }
+  .garden-roster {
+    gap: 5px;
+  }
+  .roster-image {
+    height: 65px;
+  }
+  .garden-roster > button > b {
+    font-size: 10px;
+  }
+  .garden-roster > button > small {
+    display: none;
+  }
+  .inspector-art {
+    height: 150px;
+  }
+  .inspector-quote {
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  .garden-defense {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .garden-main {
+    display: grid;
+    grid-template-rows: 42px 45px auto 133px;
+  }
+  .garden-stage {
+    aspect-ratio: 1.28;
+  }
+  .garden-roster-panel {
+    padding: 8px 9px;
+  }
+  .garden-roster {
+    overflow-x: auto;
+    grid-template-columns: repeat(6, minmax(71px, 1fr));
+    padding: 3px;
+  }
+  .garden-roster > button > b {
+    font-size: 12px;
+  }
+  .roster-image {
+    height: 62px;
+  }
+  .garden-hud > div {
+    padding: 0 7px;
+  }
+  .garden-hud > div:last-of-type {
+    border-right: 0;
+  }
+  .garden-hud span {
+    font-size: 9px;
+  }
+  .garden-hud b {
+    font-size: 17px;
+  }
+  .garden-inspector {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 12px;
+    padding: 12px;
+  }
+  .inspector-art {
+    height: 160px;
+    position: sticky;
+    top: 8px;
+  }
+  .inspector-art .portrait-image {
+    width: 145%;
+    left: -22%;
+  }
+  .inspector-element {
+    right: 4px;
+  }
+  .inspector-body {
+    min-width: 0;
+    padding: 0;
+  }
+  .inspector-stats {
+    gap: 8px;
+  }
+  .garden-field-controls {
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    gap: 5px;
+  }
+  .terrain-key {
+    display: none;
+  }
+  .garden-field-controls button {
+    padding: 0 10px;
+    height: 31px;
+  }
+  .garden-roster-panel header > span {
+    font-size: 9px;
+  }
+  .screen-activities:has(.garden-operations) .resources {
+    gap: 8px;
+  }
+  .screen-activities:has(.garden-operations) .resources span:last-child {
+    display: none;
+  }
+  .screen-activities:has(.garden-operations) .brand {
+    gap: 4px;
+  }
+  .screen-activities:has(.garden-operations) .brand-mark {
+    width: 29px;
+    font-size: 30px;
+  }
+  .screen-activities:has(.garden-operations) .brand-text b {
+    font-size: 20px;
+  }
+  .screen-activities:has(.garden-operations) .bottom-nav button svg {
+    width: 23px;
+    height: 23px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .garden-defense * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@media (min-width: 901px) {
+  .garden-operations {
+    min-height: 0;
+  }
+  .garden-operations .mode-nav {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #738068 transparent;
+  }
+}
+.garden-operations .weapon-sigil {
+  display: block;
+  width: 100%;
+  height: 110px;
+  font-size: 0;
+  background: url("/assets/defense-props-v4.png") 0% 100% / 300% 200% no-repeat;
+  transform: none;
+  filter: drop-shadow(0 0 5px #b3d8fa33);
+}
+.mini-rings span {
+  font-size: 0;
+  background: url("/assets/defense-props-v4.png") 50% 100% / 300% 200% no-repeat;
+  filter: grayscale(0.75);
+  opacity: 0.4;
+  border: 0;
+  box-shadow: none;
+}
+.mini-rings span.unlocked {
+  font-size: 0;
+  background: url("/assets/defense-props-v4.png") 50% 100% / 300% 200% no-repeat;
+  filter: none;
+  opacity: 1;
+  border: 0;
+  box-shadow: none;
+}
+@media (max-height: 800px) and (min-width: 901px) {
+  .garden-operations .weapon-sigil {
+    height: 75px;
+  }
+}
+.screen-activities:has(.garden-operations) {
+  font-synthesis: weight;
+}
+.rail-shortcuts {
+  display: flex;
+  gap: 4px;
+  padding: 3px 0;
+}
+.garden-operations .rail-shortcuts button {
+  flex: 1;
+  padding: 5px 1px;
+  min-width: 0;
+  font:
+    12px "SimSun",
+    serif;
+  color: #cbcdb8;
+  border: 0;
+  background: transparent;
+}
+.garden-operations .rail-shortcuts button:hover {
+  color: #fffce7;
+  background: #dae6c719;
+}
+@media (min-width: 1281px) and (max-width: 1599px) {
+  .garden-operations {
+    grid-template-columns: 250px minmax(0, 1fr);
+  }
+  .garden-defense {
+    grid-template-columns: minmax(0, 1fr) 270px;
+  }
+  .garden-main {
+    grid-template-rows: 48px 52px minmax(0, 1fr) 164px;
+  }
+  .roster-image {
+    height: 90px;
+  }
+}
+@media (min-width: 1281px) {
+  .garden-operations .mode-nav > button small {
+    font-size: 12px;
+  }
+  .garden-heading h1 {
+    font-size: 32px;
+  }
+  .garden-hud span {
+    font-size: 13px;
+  }
+  .inspector-tabs button,
+  .direction-label,
+  .character-role,
+  .inspector-stats dl > div {
+    font-size: 13px;
+  }
+  .garden-roster > button > b {
+    font-size: 14px;
+  }
+  .garden-skill b {
+    font-size: 16px;
+  }
+  .garden-skill small {
+    font-size: 11px;
+  }
+  .garden-growth {
+    margin-top: 10px;
+  }
+  .constellation-art {
+    margin: 10px 0;
+  }
+}
+@media (max-width: 900px) {
+  .garden-operations .rail-shortcuts {
+    display: none;
+  }
+}

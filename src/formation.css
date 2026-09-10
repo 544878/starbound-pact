@@ -1,0 +1,1357 @@
+/* ==========================================================================
+   星契纪元 · 战斗准备与乾坤阵法系统 (Formation Screen Deluxe)
+   ========================================================================== */
+
+:root {
+  --f-bg-card: rgba(18, 24, 34, 0.85);
+  --f-bg-card-hover: rgba(26, 36, 51, 0.95);
+  --f-bg-surface: #0e141d;
+  --f-border: rgba(148, 163, 184, 0.18);
+  --f-border-glow: rgba(212, 170, 87, 0.5);
+  --f-gold: #eab308;
+  --f-gold-light: #fef08a;
+  --f-jade: #10b981;
+  --f-cyan: #06b6d4;
+  --f-purple: #a855f7;
+  --f-crimson: #ef4444;
+  --f-text-bright: #f8fafc;
+  --f-text-dim: #94a3b8;
+  --f-text-muted: #64748b;
+}
+
+/* 页面整体容器 */
+.formation-deluxe-screen {
+  background: radial-gradient(circle at 50% 0%, #151f2e 0%, #0a0e14 70%, #06090d 100%);
+  color: var(--f-text-bright);
+  min-height: calc(100vh - 65px);
+  padding: 20px 2.5vw 36px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  box-sizing: border-box;
+}
+
+/* 顶部抬头 */
+.formation-deluxe-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--f-border);
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.formation-deluxe-header h1 {
+  margin: 4px 0 6px;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  background: linear-gradient(135deg, #fff 40%, #e2e8f0 70%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.formation-deluxe-header p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--f-text-dim);
+}
+
+.formation-deluxe-header .eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--f-gold);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.formation-team-count-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--f-border);
+  border-radius: 999px;
+  padding: 6px 18px;
+  font-size: 13px;
+  color: var(--f-text-dim);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.formation-team-count-badge b {
+  font-size: 22px;
+  color: var(--f-gold);
+  font-weight: 800;
+}
+
+.formation-team-count-badge.is-full b {
+  color: var(--f-jade);
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+}
+
+/* 三栏主布局 */
+.formation-deluxe-grid {
+  display: grid;
+  grid-template-columns: 270px minmax(460px, 1fr) 320px;
+  gap: 20px;
+  align-items: start;
+}
+
+/* ==========================================================================
+   左侧：首领战况情报卡
+   ========================================================================== */
+.formation-boss-panel {
+  background: var(--f-bg-card);
+  border: 1px solid var(--f-border);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.formation-boss-figure {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 14px;
+  background: #020617;
+}
+
+.formation-boss-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.formation-boss-figure:hover img {
+  transform: scale(1.04);
+}
+
+.formation-boss-weakness-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(239, 68, 68, 0.6);
+  color: #fca5a5;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.formation-boss-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: #f1f5f9;
+}
+
+.formation-boss-hint {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--f-text-dim);
+  margin: 0 0 12px;
+}
+
+.formation-boss-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 10px;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 16px;
+}
+
+.formation-boss-metrics div span {
+  display: block;
+  font-size: 10px;
+  color: var(--f-text-muted);
+  text-transform: uppercase;
+}
+
+.formation-boss-metrics div b {
+  font-size: 13px;
+  color: #e2e8f0;
+}
+
+/* 选中单位战力小卡 */
+.formation-selected-companion-box {
+  border-top: 1px solid var(--f-border);
+  padding-top: 14px;
+}
+
+.formation-selected-companion-box .box-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--f-gold);
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.formation-selected-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.formation-stat-cell {
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 6px;
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.formation-stat-cell small {
+  display: block;
+  font-size: 11px;
+  color: var(--f-text-muted);
+}
+
+.formation-stat-cell b {
+  font-size: 14px;
+  color: #38bdf8;
+}
+
+/* ==========================================================================
+   中间：9预设切换器、九宫格阵台、八大专属阵法
+   ========================================================================== */
+.formation-center-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+/* 9个阵容预设控制器（单行紧凑美观，不堆叠） */
+.formation-preset-control-bar {
+  background: var(--f-bg-card);
+  border: 1px solid var(--f-border);
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.preset-control-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.preset-control-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--f-gold);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+/* 9个单行胶囊按钮 */
+.preset-pills-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 2px 0;
+}
+
+.preset-pill-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 38px;
+  border-radius: 7px;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+  position: relative;
+}
+
+.preset-pill-btn:hover {
+  background: rgba(51, 65, 85, 0.8);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.preset-pill-btn[aria-pressed="true"] {
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.3) 0%, rgba(202, 138, 4, 0.15) 100%);
+  border-color: var(--f-gold);
+  color: var(--f-gold-light);
+  box-shadow: 0 0 12px rgba(234, 179, 8, 0.35);
+}
+
+.preset-saved-pip {
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin-top: 2px;
+  background: var(--f-jade);
+  box-shadow: 0 0 6px var(--f-jade);
+}
+
+.preset-empty-pip {
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin-top: 2px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.preset-control-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.preset-action-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--f-border);
+  background: rgba(30, 41, 59, 0.6);
+  color: #e2e8f0;
+}
+
+.preset-action-btn:hover {
+  background: rgba(51, 65, 85, 0.8);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.preset-action-btn.save-btn {
+  background: linear-gradient(135deg, #ca8a04 0%, #a16207 100%);
+  border-color: #eab308;
+  color: #fff;
+}
+
+.preset-action-btn.save-btn:hover {
+  filter: brightness(1.15);
+  box-shadow: 0 0 10px rgba(234, 179, 8, 0.4);
+}
+
+/* 预设提示条 */
+.preset-status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+  font-size: 11px;
+  color: var(--f-text-dim);
+}
+
+.preset-status-bar span.active-info {
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* 乾坤九宫阵位大盘 */
+.formation-epic-board-deluxe {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 16px;
+  background: radial-gradient(circle at 50% 50%, #151d29 0%, #0c1118 100%);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 12px;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.7), 0 8px 24px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+/* 九宫阵位按钮卡 */
+.formation-slot-card {
+  position: relative;
+  min-height: 128px;
+  border-radius: 8px;
+  background: rgba(18, 26, 38, 0.7);
+  border: 1px dashed rgba(148, 163, 184, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 10px 8px;
+  overflow: hidden;
+  color: inherit;
+}
+
+.formation-slot-card:hover {
+  background: rgba(26, 36, 52, 0.9);
+  border-color: rgba(234, 179, 8, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.formation-slot-card.is-target-focus {
+  outline: 2px solid var(--f-cyan);
+  box-shadow: 0 0 14px rgba(6, 182, 212, 0.5);
+}
+
+/* 阵位编号 */
+.formation-slot-index {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: monospace;
+  color: var(--f-text-muted);
+  letter-spacing: 0.05em;
+  z-index: 2;
+}
+
+/* 空位状态 */
+.slot-empty-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--f-text-muted);
+}
+
+.slot-empty-rune {
+  font-size: 26px;
+  font-weight: 200;
+  opacity: 0.6;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.formation-slot-card:hover .slot-empty-rune {
+  transform: scale(1.2);
+  opacity: 1;
+  color: var(--f-gold);
+}
+
+.slot-empty-hint {
+  font-size: 10px;
+  color: var(--f-text-muted);
+}
+
+/* 占位角色展示 */
+.formation-slot-card.occupied {
+  border-style: solid;
+  border-color: rgba(148, 163, 184, 0.25);
+  background: linear-gradient(180deg, rgba(28, 38, 54, 0.8) 0%, rgba(15, 23, 34, 0.95) 100%);
+}
+
+/* 阵法专精光环效果 */
+.formation-slot-card.occupied.resonance-specialty {
+  border-color: rgba(234, 179, 8, 0.7);
+  box-shadow: 0 0 16px rgba(234, 179, 8, 0.3), inset 0 0 12px rgba(234, 179, 8, 0.15);
+}
+
+.formation-slot-card.occupied.resonance-adapted {
+  border-color: rgba(6, 182, 212, 0.7);
+  box-shadow: 0 0 14px rgba(6, 182, 212, 0.25), inset 0 0 10px rgba(6, 182, 212, 0.1);
+}
+
+.slot-companion-avatar-wrap {
+  position: relative;
+  width: 52px;
+  height: 60px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.slot-companion-avatar-wrap .portrait {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+
+/* 体系共鸣微标 */
+.slot-resonance-badge {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 5px;
+  border-radius: 4px;
+  z-index: 3;
+}
+
+.slot-resonance-badge.specialty {
+  background: rgba(202, 138, 4, 0.9);
+  color: #fff;
+  box-shadow: 0 0 8px rgba(234, 179, 8, 0.6);
+}
+
+.slot-resonance-badge.adapted {
+  background: rgba(8, 145, 178, 0.9);
+  color: #fff;
+  box-shadow: 0 0 8px rgba(6, 182, 212, 0.6);
+}
+
+.slot-companion-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #f8fafc;
+  line-height: 1.2;
+}
+
+.slot-companion-tags {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 3px;
+}
+
+.slot-role-tag {
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: rgba(51, 65, 85, 0.6);
+  color: #94a3b8;
+}
+
+/* 快速移除按钮 */
+.slot-remove-btn {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(239, 68, 68, 0.25);
+  border: 1px solid rgba(239, 68, 68, 0.6);
+  color: #fca5a5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+  z-index: 4;
+}
+
+.formation-slot-card:hover .slot-remove-btn {
+  opacity: 1;
+}
+
+.slot-remove-btn:hover {
+  background: rgba(239, 68, 68, 0.8);
+  color: #fff;
+  transform: scale(1.15);
+}
+
+/* ==========================================================================
+   专属阵法选择矩阵（8大专属阵法与特效）
+   ========================================================================== */
+.formation-paths-section {
+  background: var(--f-bg-card);
+  border: 1px solid var(--f-border);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.formation-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.formation-section-head h2 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--f-gold);
+  letter-spacing: 0.06em;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.formation-synergy-summary {
+  font-size: 11px;
+  color: var(--f-text-dim);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.formation-synergy-summary b {
+  color: var(--f-gold);
+}
+
+/* 8个阵法卡网格 */
+.formation-paths-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.formation-path-card {
+  position: relative;
+  background: rgba(24, 32, 45, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left;
+}
+
+.formation-path-card:hover {
+  background: rgba(36, 48, 66, 0.85);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.formation-path-card[aria-pressed="true"] {
+  background: var(--path-bg, rgba(234, 179, 8, 0.15));
+  border-color: var(--path-color, #eab308);
+  box-shadow: 0 0 16px var(--path-glow, rgba(234, 179, 8, 0.4)), inset 0 0 10px var(--path-glow, rgba(234, 179, 8, 0.2));
+}
+
+.path-card-rune {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.path-card-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.path-card-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #f1f5f9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.formation-path-card[aria-pressed="true"] .path-card-name {
+  color: var(--path-color, #fef08a);
+}
+
+.path-card-formation {
+  font-size: 10px;
+  color: var(--f-text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.path-card-count {
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.4);
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.path-card-count.has-resonance {
+  background: var(--path-color, #eab308);
+  color: #0b0f17;
+}
+
+/* 阵法罗盘与特性详情栏 */
+.formation-astrolabe-details-panel {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 12px;
+  background: rgba(15, 23, 34, 0.7);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.astrolabe-diagram-wrap {
+  width: 130px;
+  height: 108px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.astrolabe-diagram-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* 阵法罗盘旋转动画 */
+.astrolabe-ring-spin-cw {
+  transform-origin: 60px 50px;
+  animation: spinCw 36s linear infinite;
+}
+
+.astrolabe-ring-spin-ccw {
+  transform-origin: 60px 50px;
+  animation: spinCcw 28s linear infinite;
+}
+
+@keyframes spinCw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinCcw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+/* 能量流行动画 */
+.astrolabe-energy-flow {
+  animation: energyFlow 3.5s linear infinite;
+}
+
+@keyframes energyFlow {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -28; }
+}
+
+.astrolabe-pulse-beacon {
+  transform-origin: center;
+  animation: beaconPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes beaconPulse {
+  0%, 100% {
+    transform: scale(0.95);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+}
+
+.formation-details-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.formation-details-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.formation-details-header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.formation-details-header span {
+  font-size: 11px;
+  color: var(--f-cyan);
+}
+
+.formation-details-passive {
+  font-size: 12px;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin: 2px 0 0;
+}
+
+.formation-details-sub {
+  font-size: 10px;
+  color: var(--f-text-muted);
+}
+
+/* 一键编入体系队区域 */
+.formation-quick-team-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  background: rgba(15, 23, 34, 0.6);
+  border: 1px solid var(--f-border);
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.quick-team-text {
+  font-size: 11px;
+  color: var(--f-text-dim);
+}
+
+.quick-team-text b {
+  color: #fff;
+}
+
+.quick-team-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.quick-team-btn:hover:not(:disabled) {
+  background: #0284c7;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+}
+
+/* 底部操作区 */
+.formation-bottom-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.btn-boss-optimal-recommend {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.15) 0%, rgba(202, 138, 4, 0.28) 100%);
+  border: 1px solid rgba(234, 179, 8, 0.45);
+  color: var(--f-gold-light);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+}
+
+.btn-boss-optimal-recommend:hover {
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.3) 0%, rgba(202, 138, 4, 0.45) 100%);
+  border-color: var(--f-gold);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(234, 179, 8, 0.3);
+}
+
+.recommend-icon {
+  font-size: 18px;
+  filter: drop-shadow(0 0 4px rgba(234, 179, 8, 0.5));
+}
+
+.recommend-btn-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.recommend-btn-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--f-gold-light);
+  line-height: 1.25;
+}
+
+.recommend-btn-sub {
+  font-size: 10px;
+  color: #cbd5e1;
+  opacity: 0.85;
+  line-height: 1.2;
+}
+
+.btn-enter-battle {
+  padding: 10px 28px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border: 1px solid #34d399;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-enter-battle:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
+  filter: brightness(1.1);
+}
+
+.btn-enter-battle:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   右侧：同行者检索与选择面板（选角色更方便、查找不同体系）
+   ========================================================================== */
+.formation-roster-panel {
+  background: var(--f-bg-card);
+  border: 1px solid var(--f-border);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: calc(100vh - 120px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.formation-roster-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.formation-roster-title h2 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--f-gold);
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+.formation-roster-title span {
+  font-size: 11px;
+  color: var(--f-text-muted);
+}
+
+/* 搜索框 */
+.formation-search-box {
+  position: relative;
+  width: 100%;
+}
+
+.formation-search-box input {
+  width: 100%;
+  padding: 8px 30px 8px 10px;
+  border-radius: 6px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid var(--f-border);
+  color: #fff;
+  font-size: 12px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.formation-search-box input:focus {
+  outline: none;
+  border-color: var(--f-cyan);
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+}
+
+.formation-search-clear {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--f-text-muted);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px 4px;
+}
+
+/* 体系筛选标签条：换行平铺，杜绝滑动条遮挡选项 */
+.system-filter-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  overflow: visible;
+  padding-bottom: 2px;
+  scrollbar-width: none;
+}
+
+.system-filter-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.system-filter-pill {
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  background: rgba(30, 41, 59, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.system-filter-pill:hover {
+  background: rgba(51, 65, 85, 0.85);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.system-filter-pill.is-active {
+  background: rgba(234, 179, 8, 0.22);
+  border-color: var(--f-gold);
+  color: var(--f-gold-light);
+  box-shadow: 0 0 8px rgba(234, 179, 8, 0.35);
+}
+
+.system-filter-pill.highlight-current {
+  background: rgba(6, 182, 212, 0.22);
+  border-color: var(--f-cyan);
+  color: #67e8f9;
+}
+
+/* 辅助过滤与排序控制行 */
+.formation-filter-secondary-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.formation-filter-secondary-row select {
+  width: 100%;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid var(--f-border);
+  color: #cbd5e1;
+  font-size: 11px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* 同行者卡片滚动列表：精细化滚动条，不遮挡卡片 */
+.formation-companions-scroll-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  padding-right: 4px;
+  flex: 1;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.3) rgba(15, 23, 42, 0.5);
+}
+
+.formation-companions-scroll-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.formation-companions-scroll-list::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 4px;
+}
+
+.formation-companions-scroll-list::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+}
+
+.formation-companions-scroll-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+.formation-companion-card {
+  position: relative;
+  background: rgba(24, 32, 45, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.formation-companion-card:hover {
+  background: rgba(36, 48, 66, 0.9);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateX(2px);
+}
+
+.formation-companion-card.is-selected {
+  outline: 1px solid var(--f-gold);
+  background: rgba(234, 179, 8, 0.12);
+  border-color: var(--f-gold);
+}
+
+.formation-companion-card.is-in-team {
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.roster-card-avatar {
+  position: relative;
+  width: 44px;
+  height: 50px;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.roster-card-avatar .portrait {
+  width: 100%;
+  height: 100%;
+}
+
+.roster-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.roster-card-top-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.roster-card-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.roster-card-rarity {
+  font-size: 10px;
+  color: #fbbf24;
+}
+
+.roster-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  color: var(--f-text-dim);
+}
+
+/* 体系展示徽章：专精与适配体系 */
+.roster-card-systems {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.system-badge {
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.system-badge.primary {
+  background: rgba(234, 179, 8, 0.2);
+  color: #fef08a;
+  border: 1px solid rgba(234, 179, 8, 0.4);
+}
+
+.system-badge.adapted {
+  background: rgba(6, 182, 212, 0.2);
+  color: #a5f3fc;
+  border: 1px solid rgba(6, 182, 212, 0.4);
+}
+
+/* 卡片操作按钮 */
+.roster-card-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.in-team-badge {
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(16, 185, 129, 0.2);
+  color: #6ee7b7;
+  border: 1px solid rgba(16, 185, 129, 0.5);
+  white-space: nowrap;
+}
+
+.quick-deploy-btn {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  background: rgba(234, 179, 8, 0.15);
+  border: 1px solid rgba(234, 179, 8, 0.5);
+  color: #fef08a;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quick-deploy-btn:hover {
+  background: #eab308;
+  color: #0b0f17;
+}
+
+/* 首领克制优势徽章与属性标签 */
+.system-badge.boss-advantage {
+  font-weight: 700;
+  border: 1px solid;
+}
+
+.system-badge.boss-advantage.is-weakness {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.5);
+  color: #fca5a5;
+}
+
+.system-badge.boss-advantage.is-counter {
+  background: rgba(234, 179, 8, 0.2);
+  border-color: rgba(234, 179, 8, 0.5);
+  color: #fde047;
+}
+
+.roster-meta-element {
+  color: #93c5fd;
+  font-weight: 600;
+}
+
+.slot-element-tag {
+  color: #93c5fd;
+  font-weight: 600;
+}
+
+/* 左侧首领最优克制情报卡 */
+.formation-boss-tactic-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(234, 179, 8, 0.3);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  backdrop-filter: blur(8px);
+}
+
+.boss-tactic-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tactic-title-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--f-gold);
+}
+
+.tactic-path-pill {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.boss-tactic-reason {
+  font-size: 11px;
+  line-height: 1.45;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+.boss-tactic-core-row {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-size: 10px;
+  flex-wrap: wrap;
+}
+
+.boss-tactic-core-row .core-label {
+  color: var(--f-text-dim);
+  flex-shrink: 0;
+}
+
+.boss-tactic-core-row .core-names {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+  .formation-deluxe-grid {
+    grid-template-columns: 240px 1fr 280px;
+    gap: 14px;
+  }
+  .formation-paths-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 960px) {
+  .formation-deluxe-grid {
+    grid-template-columns: 1fr;
+  }
+  .formation-roster-panel {
+    max-height: 480px;
+  }
+}

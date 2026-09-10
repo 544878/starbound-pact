@@ -1,0 +1,17 @@
+node_modules/
+dist/
+tmp/
+*.log
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+.DS_Store
+.npm-cache/
+unity/**/Library/
+unity/**/Temp/
+unity/**/Obj/
+unity/**/Logs/
+unity/**/UserSettings/
+unity/**/Builds/
+unity/**/*.csproj
+unity/**/*.sln

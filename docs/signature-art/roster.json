@@ -1,0 +1,119 @@
+[
+  {
+    "id": "lumi",
+    "name": "露弥",
+    "title": "逐风信使",
+    "soulName": "不归之风",
+    "gender": "female",
+    "accent": "#72b893",
+    "persona": "灵动精灵 · 坚毅游侠",
+    "biography": "穿梭于天穹裂隙与边境焦土的风之信使。虽然总是笑盈盈地与人聊起今天的天气，但包裹里每一封沾血的求救信，她都誓死送达。风神不渡的苦难，由她来飞渡。",
+    "weapon": "回风的诗章",
+    "weaponModelDesc": null
+  },
+  {
+    "id": "alden",
+    "name": "艾尔登",
+    "title": "白昼誓盾",
+    "soulName": "凡人不退",
+    "gender": "male",
+    "accent": "#d4aa57",
+    "persona": "克制绅士 · 逆神誓盾",
+    "biography": "卸下曜庭近卫勋贵姓氏的赎罪骑士。曾亲历圣堂以神谕之名封杀难民的暴行，毅然以盾击碎圣堂金门叛逃。他习惯先细心替同伴整好防具披风，再面无表情地独自站上最绝望的死线阵地。",
+    "weapon": "晨星誓约",
+    "weaponModelDesc": null
+  },
+  {
+    "id": "selene",
+    "name": "瑟琳",
+    "title": "溯海观测者",
+    "soulName": "万潮归忆",
+    "gender": "female",
+    "accent": "#67a9df",
+    "persona": "冷感学者 · 溯忆守灯",
+    "biography": "守护沉没古代海国记忆的冷冽学者。终年以海潮留声仪记录被神史彻底抹除的凡人文明。她用绝对的理智推演每一步生机，对神明的虚伪保持警惕，却一次次甘愿为同伴推翻自己的最优生还概率。",
+    "weapon": "静海之杖",
+    "weaponModelDesc": null
+  },
+  {
+    "id": "mira",
+    "name": "米菈",
+    "title": "蔷薇处方",
+    "soulName": "众生春息",
+    "gender": "female",
+    "accent": "#e990a4",
+    "persona": "知性眼镜 · 济世仁医",
+    "biography": "精研上古毒理与生机造化的花庭大医。神庭曾降下法令逼迫医馆只救神裔贵戚，她当夜将密藏的救命药方公开抄满全城砖墙。她的温柔藏在严苛的药理嘱咐之下，哪怕只剩一口气，也会毫不犹豫扑向血泊中的伤者。",
+    "weapon": "万生药典",
+    "weaponModelDesc": null
+  },
+  {
+    "id": "noctis",
+    "name": "诺克缇娅",
+    "title": "缄夜执政官",
+    "soulName": "无冕终夜",
+    "gender": "female",
+    "accent": "#776693",
+    "persona": "成熟女帝 · 破夜断席",
+    "biography": "掌控缄夜密网的无冕女帝。以冷酷绝顶的秩序庇护战乱中的城邦，却在发觉绝对秩序亦沦为扼杀生机的牢笼后，亲手向城民开放议会、废除禁令。她习惯在暗影中替所有人安排好退路，唯独把最凶险的刺刀留给自己。",
+    "weapon": "终夜裁衡",
+    "weaponModelDesc": null
+  },
+  {
+    "id": "kael",
+    "name": "凯尔",
+    "title": "逆焰猎手",
+    "soulName": "逆焰不熄",
+    "gender": "male",
+    "accent": "#d77957",
+    "persona": "桀骜不羁 · 热血逆火",
+    "biography": "游走在赤原烈火与废墟边缘的年轻猎手。平日里玩世不恭，嘴上总计较着酬金与赏额，实则把猎获的每一口粮食都塞给饥饿的流民。越是九死一生的凶险战局，他的眼底越会燃起不服输的野性烈焰。",
+    "weapon": "余烬猎弓",
+    "weaponModelDesc": null
+  },
+  {
+    "id": "astra",
+    "name": "星璃",
+    "title": "白星余响",
+    "soulName": "自由白星",
+    "gender": "female",
+    "accent": "#b7b5ee",
+    "persona": "坚毅反差 · 觉醒白星",
+    "biography": "从旧神量产的“神骸容器”工程中苏醒的觉醒少女。曾被剥夺所有记忆与情感，被赋予成为献祭神核的既定命运。在握紧同伴双手、听见自己真正心跳的那一刻，她悍然拔出断天轨刃，立誓要以凡人之躯亲手夺回属于自己的明天。",
+    "weapon": "问天·白星",
+    "weaponModelDesc": null
+  },
+  {
+    "id": "xuanzhao",
+    "name": "玄照",
+    "title": "太初照世神",
+    "soulName": "太初日轮",
+    "gender": "male",
+    "accent": "#b99545",
+    "biography": "太初执掌日轮的不灭古神。目睹旧天庭以百万凡人魂火填补天之裂痕的惨象后，他毅然折断神杖，带着一身焚骨天罚走入人间。如今他收敛万丈神光，甘愿化作一柄照世长戈，为星璃与世人挡住苍天冰冷的视线。",
+    "weapon": "照世长戈",
+    "weaponModelDesc": null
+  },
+  {
+    "id": "canglan",
+    "name": "沧澜",
+    "title": "万潮归墟神",
+    "soulName": "归墟万象",
+    "gender": "female",
+    "accent": "#328f98",
+    "biography": "统御归墟惊涛的万潮海神。千年前她曾引动滔天神迹独力封印海渊裂隙，却也令沉没的文明被神史彻底抹煞、海民陷入无休止的祭神依附。如今她走下神坛成为同行者，是为了打破神迹的枷锁，将守护波涛的权利亲手交还人间。",
+    "weapon": "万潮神戟",
+    "weaponModelDesc": null
+  },
+  {
+    "id": "yanhuang",
+    "name": "炎煌",
+    "title": "赤霄焚天帝",
+    "soulName": "焚天帝心",
+    "gender": "male",
+    "accent": "#ba6549",
+    "biography": "以布衣之身横扫八荒登临帝位的赤原狂帝。当旧朝元老与神使逼他签发‘焦土焚城令’以阻灾厄时，他斩碎帝印抗命而起。他与凯尔在火场并肩浴血，虽言语刻薄互不相让，但每逢绝境，他宽阔的战袍总是率先挡在最脆弱的人面前。",
+    "weapon": "赤霄断岳",
+    "weaponModelDesc": null
+  }
+]

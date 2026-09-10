@@ -1,0 +1,483 @@
+[
+  {
+    "id": "lumi",
+    "file": "public\\assets\\weapons\\lumi.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "1408be402953f17dd8e4d6b21b4e4e6275817dccaa95910d3c46eaaf29260e0a"
+  },
+  {
+    "id": "lumi",
+    "file": "public\\assets\\signature-v2\\lumi\\origin.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "97b113d8d914372c4ef010f8a21eab84031579f7e5fc4daa55cc1c0c039efea8"
+  },
+  {
+    "id": "lumi",
+    "file": "public\\assets\\signature-v2\\lumi\\true-form.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "d2ba249655a150f6f71efe9788ab786ca044c50014a76aa71c390c94e34e3999"
+  },
+  {
+    "id": "lumi",
+    "file": "public\\assets\\signature-v2\\lumi\\vessel.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "20d470b7d65d57bc8979426aeb02a017cc5218c738671dbb2dc3c8e4c01796e8"
+  },
+  {
+    "id": "lumi",
+    "file": "public\\assets\\signature-v2\\lumi\\weapon.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "62ed646b0d7631e3ae8599055059d8a6fbf773f1da0064a4698c4b8b0b54bb88"
+  },
+  {
+    "id": "lumi",
+    "file": "public\\assets\\signature-v3\\lumi\\origin.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "730223400b4233d543845d790b0dcf12b1fc807144bc1b4eacfdfb547ed9144e"
+  },
+  {
+    "id": "lumi",
+    "file": "public\\assets\\signature-v3\\lumi\\true-form.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "57d43daa1655d668cf733918cb83044ff4c7fea4bd6369392edc148f1225ed38"
+  },
+  {
+    "id": "lumi",
+    "file": "public\\assets\\signature-v3\\lumi\\vessel.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "d30fbb06c26e7d9cf57714263dfb738a3c02ddb6fe7c300c80ae96c15205f916"
+  },
+  {
+    "id": "lumi",
+    "file": "public\\assets\\signature-v3\\lumi\\weapon.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "b08f8fa1f8efa3f15b0de13b805150e1b3fd60549e1e3e86936b2e2e887efbf1"
+  },
+  {
+    "id": "alden",
+    "file": "public\\assets\\weapons\\alden.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "5a5414ff4fc4c6b47db051abd13f52e01bc62b9d2a055e616791a47b3eb87d3c"
+  },
+  {
+    "id": "alden",
+    "file": "public\\assets\\signature-v2\\alden\\origin.png",
+    "size": [
+      1230,
+      1278
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "a054a9732c5ca6c991452d20b9e195527f4884139e4c5fc3d2b416b4318935e5"
+  },
+  {
+    "id": "alden",
+    "file": "public\\assets\\signature-v2\\alden\\true-form.png",
+    "size": [
+      1230,
+      1278
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "a9deabebf34a2adaad40784e1f4d0d307b3fdfb1fdc3794ef90ed40635c6e314"
+  },
+  {
+    "id": "alden",
+    "file": "public\\assets\\signature-v2\\alden\\vessel.png",
+    "size": [
+      1222,
+      1287
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "de62fc5c0274f6e7708ba2aac4e66ffa7298117f2a8b3f478c396d02d6d4f44e"
+  },
+  {
+    "id": "alden",
+    "file": "public\\assets\\signature-v2\\alden\\weapon.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "d89e7e7ec00d8f5419b17b4c9a11ee33278b4f7d23db8e8717c2c95690d9b2e5"
+  },
+  {
+    "id": "alden",
+    "file": "public\\assets\\signature-v3\\alden\\origin.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "54cfd9be5734096bb9e0d219989a7c9449fef824e5d3c5516fd50b6b1b970a9c"
+  },
+  {
+    "id": "alden",
+    "file": "public\\assets\\signature-v3\\alden\\true-form.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "5be8ab5b141b1a0d19368a73b3bb7764c3cf24246d24bf9786feba78b47dd8f1"
+  },
+  {
+    "id": "alden",
+    "file": "public\\assets\\signature-v3\\alden\\vessel.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "46d4a7171583207b11203a178837ffb55e8599e0c6c8da27cf56526414de8cc2"
+  },
+  {
+    "id": "alden",
+    "file": "public\\assets\\signature-v3\\alden\\weapon.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "db6c5ddf2df73e2aa8afb7f0a4f7083655fd2d980e219d05a8915c952a3e09e0"
+  },
+  {
+    "id": "selene",
+    "file": "public\\assets\\weapons\\selene.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "c772a04ba485df8786d23d6617e2e11b093231367d4888d5b3a1df6d7b269f36"
+  },
+  {
+    "id": "selene",
+    "file": "public\\assets\\signature-v2\\selene\\origin.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "187d0f28b22a7a7010c24d5aef5eebac9f61565f1d5e62a857a9f07660fd57da"
+  },
+  {
+    "id": "selene",
+    "file": "public\\assets\\signature-v2\\selene\\true-form.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "7d086d951ad92a9695b4cf3a118282fac1bbe45b977686e4243b39cc8ae5ba99"
+  },
+  {
+    "id": "selene",
+    "file": "public\\assets\\signature-v2\\selene\\vessel.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "6598fb493107c475026906e2d796164ba9c2a2889e5830a0083f0a71985124a3"
+  },
+  {
+    "id": "selene",
+    "file": "public\\assets\\signature-v2\\selene\\weapon.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "1c1fc23288dd3bdc0f43f2ff9cb20d2bed9f84393cf3e5af373daa7a08ce0875"
+  },
+  {
+    "id": "mira",
+    "file": "public\\assets\\weapons\\mira.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "590b3001f1aa0d48d4f23270631cd3511d64b0f26b9e7ac7431e8d85fd832b0e"
+  },
+  {
+    "id": "mira",
+    "file": "public\\assets\\signature-v2\\mira\\origin.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "34ff2c9cc3370ff957ce021dddabbe75956ec394ac201b288fe8bc900e6ecdf9"
+  },
+  {
+    "id": "mira",
+    "file": "public\\assets\\signature-v2\\mira\\true-form.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "bf1b35a5b8f5f18def136bc3ef07b89cf1c3efcadb5dc3487f987a0d21bea8b7"
+  },
+  {
+    "id": "mira",
+    "file": "public\\assets\\signature-v2\\mira\\vessel.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "65f863e287d5c1ccf92909b653555b4591b887df8e64d3a16d10dfdc7d4180e2"
+  },
+  {
+    "id": "mira",
+    "file": "public\\assets\\signature-v2\\mira\\weapon.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "b485eb29e594a1373ef2eccc31b2c378957a97ee6db4ae9c817b30b93a8fb9c8"
+  },
+  {
+    "id": "mira",
+    "file": "public\\assets\\signature-v3\\mira\\vessel.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "c5bdc6f803390b397395a4cacff23dd22e02e3f2d67fed8ed0d1e0735103dff8"
+  },
+  {
+    "id": "noctis",
+    "file": "public\\assets\\weapons\\noctis.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "d9eb8e59b6b2b519a631f5601aa95eb72092909792f3ceec09401c26978d1d0d"
+  },
+  {
+    "id": "noctis",
+    "file": "public\\assets\\signature-v2\\noctis\\true-form.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "c757969c6b72e43f70e8854715e8f942462b492c5b3383bbb22af646af36af29"
+  },
+  {
+    "id": "noctis",
+    "file": "public\\assets\\signature-v2\\noctis\\weapon.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "b7ab17df7fdd472251eeeb6c69dbaec8f4ad8c215759cb1e3224b142418122ac"
+  },
+  {
+    "id": "kael",
+    "file": "public\\assets\\weapons\\kael.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "962560b17d787d01385d7e76f800688025a0812fffe3af58ff3677df30f4d0e8"
+  },
+  {
+    "id": "astra",
+    "file": "public\\assets\\weapons\\astra.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "21981a7f8c7f8a2a9de6b8b0901dcb5ee5d2d274fc005cdf0b458c4e7456de4d"
+  },
+  {
+    "id": "xuanzhao",
+    "file": "public\\assets\\weapons\\xuanzhao.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "8bf8d0c6c2659d7ec5001dcb3e07dfa69f4899f3c3eb4508c8fd17372cf9df23"
+  },
+  {
+    "id": "canglan",
+    "file": "public\\assets\\weapons\\canglan.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "2bfc859b333634aa612d6125c03b75fb67e676d1cc23bfb34865c3af64b72bed"
+  },
+  {
+    "id": "yanhuang",
+    "file": "public\\assets\\weapons\\yanhuang.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha": [
+      255,
+      255
+    ],
+    "sha256": "325c38ed647333bffd1f15502ef913982fc1cabbb5acea8eb53b61b59096bb01"
+  }
+]

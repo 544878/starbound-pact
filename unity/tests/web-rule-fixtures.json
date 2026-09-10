@@ -1,0 +1,6673 @@
+{
+  "stats": [
+    {
+      "hp": 960,
+      "attack": 139,
+      "defense": 28,
+      "interval": 1,
+      "effects": [
+        "regeneration",
+        "execute",
+        "guard"
+      ],
+      "healing": 1
+    },
+    {
+      "hp": 1310,
+      "attack": 151,
+      "defense": 53,
+      "interval": 1,
+      "effects": [
+        "regeneration",
+        "execute",
+        "guard"
+      ],
+      "healing": 1
+    },
+    {
+      "hp": 960,
+      "attack": 132,
+      "defense": 28,
+      "interval": 1,
+      "effects": [
+        "regeneration",
+        "execute",
+        "guard"
+      ],
+      "healing": 1
+    },
+    {
+      "hp": 960,
+      "attack": 128,
+      "defense": 28,
+      "interval": 1,
+      "effects": [
+        "regeneration",
+        "execute",
+        "guard"
+      ],
+      "healing": 1
+    },
+    {
+      "hp": 960,
+      "attack": 107,
+      "defense": 28,
+      "interval": 1,
+      "effects": [
+        "regeneration",
+        "execute",
+        "guard"
+      ],
+      "healing": 1
+    },
+    {
+      "hp": 936,
+      "attack": 110,
+      "defense": 18,
+      "interval": 1,
+      "effects": [
+        "regeneration",
+        "execute"
+      ],
+      "healing": 1
+    },
+    {
+      "hp": 960,
+      "attack": 107,
+      "defense": 28,
+      "interval": 1,
+      "effects": [
+        "regeneration",
+        "execute",
+        "guard"
+      ],
+      "healing": 1
+    }
+  ],
+  "astral": [
+    {
+      "path": "inverse",
+      "outcome": "win",
+      "steps": [
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 1,
+          "bossHp": 10454,
+          "points": 2,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            50,
+            50,
+            50,
+            50
+          ],
+          "damage": 40,
+          "pursuit": 5,
+          "dot": 1,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 1,
+          "bossHp": 10423,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            50,
+            50,
+            50
+          ],
+          "damage": 28,
+          "pursuit": 3,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 1,
+          "bossHp": 9795,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            50,
+            50
+          ],
+          "damage": 586,
+          "pursuit": 38,
+          "dot": 4,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 4,
+          "round": 1,
+          "bossHp": 9422,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            75,
+            50
+          ],
+          "damage": 331,
+          "pursuit": 38,
+          "dot": 4,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 5,
+          "round": 1,
+          "bossHp": 9360,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            75,
+            85
+          ],
+          "damage": 55,
+          "pursuit": 6,
+          "dot": 1,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 2,
+          "bossHp": 9189,
+          "points": 0,
+          "hp": [
+            2644,
+            1117,
+            925,
+            925,
+            1021
+          ],
+          "energy": [
+            97,
+            97,
+            97,
+            87,
+            97
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 1,
+          "round": 2,
+          "bossHp": 9143,
+          "points": 1,
+          "hp": [
+            2645,
+            1117,
+            925,
+            925,
+            1021
+          ],
+          "energy": [
+            100,
+            97,
+            97,
+            87,
+            97
+          ],
+          "damage": 40,
+          "pursuit": 5,
+          "dot": 1,
+          "healing": 1
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 2,
+          "bossHp": 9111,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            97,
+            87,
+            97
+          ],
+          "damage": 28,
+          "pursuit": 3,
+          "dot": 1,
+          "healing": 377
+        },
+        {
+          "command": "basic",
+          "active": 3,
+          "round": 2,
+          "bossHp": 8690,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            87,
+            97
+          ],
+          "damage": 370,
+          "pursuit": 42,
+          "dot": 9,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 4,
+          "round": 2,
+          "bossHp": 7999,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            97
+          ],
+          "damage": 640,
+          "pursuit": 42,
+          "dot": 9,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 5,
+          "round": 2,
+          "bossHp": 7937,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 55,
+          "pursuit": 6,
+          "dot": 1,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 3,
+          "bossHp": 7504,
+          "points": 1,
+          "hp": [
+            2449,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 1,
+          "round": 3,
+          "bossHp": 7385,
+          "points": 1,
+          "hp": [
+            2451,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            0,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 112,
+          "pursuit": 5,
+          "dot": 2,
+          "healing": 2
+        },
+        {
+          "command": "ultimate",
+          "active": 2,
+          "round": 3,
+          "bossHp": 7302,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            100,
+            100,
+            100
+          ],
+          "damage": 79,
+          "pursuit": 3,
+          "dot": 1,
+          "healing": 687
+        },
+        {
+          "command": "ultimate",
+          "active": 3,
+          "round": 3,
+          "bossHp": 6313,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            100,
+            100
+          ],
+          "damage": 938,
+          "pursuit": 38,
+          "dot": 13,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 4,
+          "round": 3,
+          "bossHp": 5336,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            0,
+            100
+          ],
+          "damage": 926,
+          "pursuit": 38,
+          "dot": 13,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 5,
+          "round": 3,
+          "bossHp": 5174,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damage": 154,
+          "pursuit": 6,
+          "dot": 2,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 4,
+          "bossHp": 4792,
+          "points": 1,
+          "hp": [
+            2501,
+            1096,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 4,
+          "bossHp": 4745,
+          "points": 0,
+          "hp": [
+            2502,
+            1096,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            12,
+            12,
+            12,
+            12
+          ],
+          "damage": 40,
+          "pursuit": 5,
+          "dot": 2,
+          "healing": 1
+        },
+        {
+          "command": "basic",
+          "active": 2,
+          "round": 4,
+          "bossHp": 4713,
+          "points": 1,
+          "hp": [
+            2502,
+            1097,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            12,
+            12,
+            12
+          ],
+          "damage": 28,
+          "pursuit": 3,
+          "dot": 1,
+          "healing": 1
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 4,
+          "bossHp": 4009,
+          "points": 0,
+          "hp": [
+            2502,
+            1097,
+            917,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            12,
+            12
+          ],
+          "damage": 648,
+          "pursuit": 42,
+          "dot": 14,
+          "healing": 14
+        },
+        {
+          "command": "basic",
+          "active": 4,
+          "round": 4,
+          "bossHp": 3587,
+          "points": 1,
+          "hp": [
+            2502,
+            1097,
+            917,
+            911,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            37,
+            12
+          ],
+          "damage": 366,
+          "pursuit": 42,
+          "dot": 14,
+          "healing": 8
+        },
+        {
+          "command": "skill",
+          "active": 5,
+          "round": 4,
+          "bossHp": 3524,
+          "points": 0,
+          "hp": [
+            2502,
+            1097,
+            917,
+            911,
+            1001
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            37,
+            47
+          ],
+          "damage": 55,
+          "pursuit": 6,
+          "dot": 2,
+          "healing": 1
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 5,
+          "bossHp": 3286,
+          "points": 0,
+          "hp": [
+            2350,
+            1097,
+            911,
+            905,
+            998
+          ],
+          "energy": [
+            59,
+            49,
+            59,
+            49,
+            59
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 211
+        },
+        {
+          "command": "basic",
+          "active": 1,
+          "round": 5,
+          "bossHp": 3239,
+          "points": 1,
+          "hp": [
+            2351,
+            1097,
+            911,
+            905,
+            998
+          ],
+          "energy": [
+            84,
+            49,
+            59,
+            49,
+            59
+          ],
+          "damage": 40,
+          "pursuit": 5,
+          "dot": 2,
+          "healing": 1
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 5,
+          "bossHp": 3207,
+          "points": 0,
+          "hp": [
+            2870,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            59,
+            49,
+            59
+          ],
+          "damage": 28,
+          "pursuit": 3,
+          "dot": 1,
+          "healing": 736
+        },
+        {
+          "command": "basic",
+          "active": 3,
+          "round": 5,
+          "bossHp": 2781,
+          "points": 1,
+          "hp": [
+            2870,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            84,
+            49,
+            59
+          ],
+          "damage": 370,
+          "pursuit": 42,
+          "dot": 14,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 4,
+          "round": 5,
+          "bossHp": 2085,
+          "points": 0,
+          "hp": [
+            2870,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            84,
+            84,
+            59
+          ],
+          "damage": 640,
+          "pursuit": 42,
+          "dot": 14,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 5,
+          "round": 5,
+          "bossHp": 2022,
+          "points": 1,
+          "hp": [
+            2870,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            84,
+            84,
+            84
+          ],
+          "damage": 55,
+          "pursuit": 6,
+          "dot": 2,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 6,
+          "bossHp": 1589,
+          "points": 1,
+          "hp": [
+            2449,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            96,
+            96,
+            96,
+            96,
+            96
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 12
+        },
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 6,
+          "bossHp": 1542,
+          "points": 0,
+          "hp": [
+            2450,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            96,
+            96,
+            96,
+            96
+          ],
+          "damage": 40,
+          "pursuit": 5,
+          "dot": 2,
+          "healing": 1
+        },
+        {
+          "command": "basic",
+          "active": 2,
+          "round": 6,
+          "bossHp": 1510,
+          "points": 1,
+          "hp": [
+            2450,
+            1089,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            96,
+            96,
+            96
+          ],
+          "damage": 28,
+          "pursuit": 3,
+          "dot": 1,
+          "healing": 1
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 6,
+          "bossHp": 873,
+          "points": 0,
+          "hp": [
+            2450,
+            1089,
+            908,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            96,
+            96
+          ],
+          "damage": 586,
+          "pursuit": 38,
+          "dot": 13,
+          "healing": 12
+        },
+        {
+          "command": "basic",
+          "active": 4,
+          "round": 6,
+          "bossHp": 491,
+          "points": 1,
+          "hp": [
+            2450,
+            1089,
+            908,
+            903,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            96
+          ],
+          "damage": 331,
+          "pursuit": 38,
+          "dot": 13,
+          "healing": 7
+        },
+        {
+          "command": "skill",
+          "active": 5,
+          "round": 6,
+          "bossHp": 428,
+          "points": 0,
+          "hp": [
+            2450,
+            1089,
+            908,
+            903,
+            993
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 55,
+          "pursuit": 6,
+          "dot": 2,
+          "healing": 1
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 7,
+          "bossHp": 46,
+          "points": 0,
+          "hp": [
+            2155,
+            1068,
+            880,
+            875,
+            969
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 211
+        },
+        {
+          "command": "ultimate",
+          "active": 1,
+          "round": 7,
+          "bossHp": 0,
+          "points": 0,
+          "hp": [
+            2156,
+            1068,
+            880,
+            875,
+            969
+          ],
+          "energy": [
+            0,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 46,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 1
+        }
+      ]
+    },
+    {
+      "path": "mortal",
+      "outcome": "win",
+      "steps": [
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 1,
+          "bossHp": 10439,
+          "points": 2,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            50,
+            50,
+            50,
+            50
+          ],
+          "damage": 50,
+          "pursuit": 9,
+          "dot": 2,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 1,
+          "bossHp": 10397,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            50,
+            50,
+            50
+          ],
+          "damage": 35,
+          "pursuit": 6,
+          "dot": 1,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 1,
+          "bossHp": 9590,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            50,
+            50
+          ],
+          "damage": 718,
+          "pursuit": 73,
+          "dot": 16,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 4,
+          "round": 1,
+          "bossHp": 9098,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            75,
+            50
+          ],
+          "damage": 405,
+          "pursuit": 72,
+          "dot": 15,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 5,
+          "round": 1,
+          "bossHp": 9014,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            75,
+            85
+          ],
+          "damage": 69,
+          "pursuit": 12,
+          "dot": 3,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 2,
+          "bossHp": 8983,
+          "points": 0,
+          "hp": [
+            2644,
+            1117,
+            925,
+            925,
+            1021
+          ],
+          "energy": [
+            97,
+            97,
+            97,
+            87,
+            97
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 1,
+          "round": 2,
+          "bossHp": 8920,
+          "points": 1,
+          "hp": [
+            2650,
+            1117,
+            925,
+            925,
+            1021
+          ],
+          "energy": [
+            100,
+            97,
+            97,
+            87,
+            97
+          ],
+          "damage": 50,
+          "pursuit": 9,
+          "dot": 4,
+          "healing": 6
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 2,
+          "bossHp": 8876,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            97,
+            87,
+            97
+          ],
+          "damage": 35,
+          "pursuit": 6,
+          "dot": 3,
+          "healing": 372
+        },
+        {
+          "command": "basic",
+          "active": 3,
+          "round": 2,
+          "bossHp": 8310,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            87,
+            97
+          ],
+          "damage": 452,
+          "pursuit": 80,
+          "dot": 34,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 4,
+          "round": 2,
+          "bossHp": 7417,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            97
+          ],
+          "damage": 780,
+          "pursuit": 79,
+          "dot": 34,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 5,
+          "round": 2,
+          "bossHp": 7331,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 69,
+          "pursuit": 12,
+          "dot": 5,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 3,
+          "bossHp": 7276,
+          "points": 1,
+          "hp": [
+            2449,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 1,
+          "round": 3,
+          "bossHp": 7121,
+          "points": 1,
+          "hp": [
+            2464,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            0,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 140,
+          "pursuit": 9,
+          "dot": 6,
+          "healing": 15
+        },
+        {
+          "command": "ultimate",
+          "active": 2,
+          "round": 3,
+          "bossHp": 7012,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            100,
+            100,
+            100
+          ],
+          "damage": 99,
+          "pursuit": 6,
+          "dot": 4,
+          "healing": 674
+        },
+        {
+          "command": "ultimate",
+          "active": 3,
+          "round": 3,
+          "bossHp": 5743,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            100,
+            100
+          ],
+          "damage": 1149,
+          "pursuit": 73,
+          "dot": 47,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 4,
+          "round": 3,
+          "bossHp": 4491,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            0,
+            100
+          ],
+          "damage": 1134,
+          "pursuit": 72,
+          "dot": 46,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 5,
+          "round": 3,
+          "bossHp": 4277,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damage": 194,
+          "pursuit": 12,
+          "dot": 8,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 4,
+          "bossHp": 4229,
+          "points": 1,
+          "hp": [
+            2501,
+            1096,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 4,
+          "bossHp": 4164,
+          "points": 0,
+          "hp": [
+            2507,
+            1096,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            12,
+            12,
+            12,
+            12
+          ],
+          "damage": 50,
+          "pursuit": 9,
+          "dot": 6,
+          "healing": 6
+        },
+        {
+          "command": "basic",
+          "active": 2,
+          "round": 4,
+          "bossHp": 4119,
+          "points": 1,
+          "hp": [
+            2507,
+            1100,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            12,
+            12,
+            12
+          ],
+          "damage": 35,
+          "pursuit": 6,
+          "dot": 4,
+          "healing": 4
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 4,
+          "bossHp": 3197,
+          "points": 0,
+          "hp": [
+            2507,
+            1100,
+            960,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            12,
+            12
+          ],
+          "damage": 790,
+          "pursuit": 80,
+          "dot": 52,
+          "healing": 57
+        },
+        {
+          "command": "basic",
+          "active": 4,
+          "round": 4,
+          "bossHp": 2621,
+          "points": 1,
+          "hp": [
+            2507,
+            1100,
+            960,
+            956,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            37,
+            12
+          ],
+          "damage": 446,
+          "pursuit": 79,
+          "dot": 51,
+          "healing": 53
+        },
+        {
+          "command": "skill",
+          "active": 5,
+          "round": 4,
+          "bossHp": 2532,
+          "points": 0,
+          "hp": [
+            2507,
+            1100,
+            960,
+            956,
+            1008
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            37,
+            47
+          ],
+          "damage": 69,
+          "pursuit": 12,
+          "dot": 8,
+          "healing": 8
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 5,
+          "bossHp": 2501,
+          "points": 0,
+          "hp": [
+            2355,
+            1100,
+            925,
+            925,
+            1005
+          ],
+          "energy": [
+            59,
+            49,
+            59,
+            49,
+            59
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 157
+        },
+        {
+          "command": "basic",
+          "active": 1,
+          "round": 5,
+          "bossHp": 2436,
+          "points": 1,
+          "hp": [
+            2361,
+            1100,
+            925,
+            925,
+            1005
+          ],
+          "energy": [
+            84,
+            49,
+            59,
+            49,
+            59
+          ],
+          "damage": 50,
+          "pursuit": 9,
+          "dot": 6,
+          "healing": 6
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 5,
+          "bossHp": 2391,
+          "points": 0,
+          "hp": [
+            2880,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            59,
+            49,
+            59
+          ],
+          "damage": 35,
+          "pursuit": 6,
+          "dot": 4,
+          "healing": 692
+        },
+        {
+          "command": "basic",
+          "active": 3,
+          "round": 5,
+          "bossHp": 1807,
+          "points": 1,
+          "hp": [
+            2880,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            84,
+            49,
+            59
+          ],
+          "damage": 452,
+          "pursuit": 80,
+          "dot": 52,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 4,
+          "round": 5,
+          "bossHp": 897,
+          "points": 0,
+          "hp": [
+            2880,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            84,
+            84,
+            59
+          ],
+          "damage": 780,
+          "pursuit": 79,
+          "dot": 51,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 5,
+          "round": 5,
+          "bossHp": 808,
+          "points": 1,
+          "hp": [
+            2880,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            84,
+            84,
+            84
+          ],
+          "damage": 69,
+          "pursuit": 12,
+          "dot": 8,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 6,
+          "bossHp": 753,
+          "points": 1,
+          "hp": [
+            2449,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            96,
+            96,
+            96,
+            96,
+            96
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 2
+        },
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 6,
+          "bossHp": 688,
+          "points": 0,
+          "hp": [
+            2455,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            96,
+            96,
+            96,
+            96
+          ],
+          "damage": 50,
+          "pursuit": 9,
+          "dot": 6,
+          "healing": 6
+        },
+        {
+          "command": "basic",
+          "active": 2,
+          "round": 6,
+          "bossHp": 643,
+          "points": 1,
+          "hp": [
+            2455,
+            1092,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            96,
+            96,
+            96
+          ],
+          "damage": 35,
+          "pursuit": 6,
+          "dot": 4,
+          "healing": 4
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 6,
+          "bossHp": 0,
+          "points": 0,
+          "hp": [
+            2455,
+            1092,
+            960,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            96,
+            96
+          ],
+          "damage": 643,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 64
+        }
+      ]
+    },
+    {
+      "path": "desire",
+      "outcome": "win",
+      "steps": [
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 1,
+          "bossHp": 10434,
+          "points": 2,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            50,
+            50,
+            50,
+            50
+          ],
+          "damage": 56,
+          "pursuit": 8,
+          "dot": 2,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 1,
+          "bossHp": 10388,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            50,
+            50,
+            50
+          ],
+          "damage": 39,
+          "pursuit": 6,
+          "dot": 1,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 1,
+          "bossHp": 9488,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            50,
+            50
+          ],
+          "damage": 818,
+          "pursuit": 66,
+          "dot": 16,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 4,
+          "round": 1,
+          "bossHp": 8945,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            75,
+            50
+          ],
+          "damage": 462,
+          "pursuit": 65,
+          "dot": 16,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 5,
+          "round": 1,
+          "bossHp": 8854,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            75,
+            85
+          ],
+          "damage": 77,
+          "pursuit": 11,
+          "dot": 3,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 2,
+          "bossHp": 8845,
+          "points": 0,
+          "hp": [
+            2644,
+            1117,
+            925,
+            925,
+            1021
+          ],
+          "energy": [
+            97,
+            97,
+            97,
+            87,
+            97
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 1,
+          "round": 2,
+          "bossHp": 8777,
+          "points": 1,
+          "hp": [
+            2660,
+            1117,
+            925,
+            925,
+            1021
+          ],
+          "energy": [
+            100,
+            97,
+            97,
+            87,
+            97
+          ],
+          "damage": 56,
+          "pursuit": 8,
+          "dot": 4,
+          "healing": 16
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 2,
+          "bossHp": 8729,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            97,
+            87,
+            97
+          ],
+          "damage": 39,
+          "pursuit": 6,
+          "dot": 3,
+          "healing": 362
+        },
+        {
+          "command": "basic",
+          "active": 3,
+          "round": 2,
+          "bossHp": 8103,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            87,
+            97
+          ],
+          "damage": 517,
+          "pursuit": 73,
+          "dot": 36,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 4,
+          "round": 2,
+          "bossHp": 7102,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            97
+          ],
+          "damage": 893,
+          "pursuit": 72,
+          "dot": 36,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 5,
+          "round": 2,
+          "bossHp": 7009,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 77,
+          "pursuit": 11,
+          "dot": 5,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 3,
+          "bossHp": 6996,
+          "points": 1,
+          "hp": [
+            2449,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 1,
+          "round": 3,
+          "bossHp": 6807,
+          "points": 1,
+          "hp": [
+            2495,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            0,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 175,
+          "pursuit": 8,
+          "dot": 6,
+          "healing": 46
+        },
+        {
+          "command": "ultimate",
+          "active": 2,
+          "round": 3,
+          "bossHp": 6673,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            100,
+            100,
+            100
+          ],
+          "damage": 124,
+          "pursuit": 6,
+          "dot": 4,
+          "healing": 643
+        },
+        {
+          "command": "ultimate",
+          "active": 3,
+          "round": 3,
+          "bossHp": 5138,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            100,
+            100
+          ],
+          "damage": 1420,
+          "pursuit": 66,
+          "dot": 49,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 4,
+          "round": 3,
+          "bossHp": 3622,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            0,
+            100
+          ],
+          "damage": 1402,
+          "pursuit": 65,
+          "dot": 49,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 5,
+          "round": 3,
+          "bossHp": 3361,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damage": 242,
+          "pursuit": 11,
+          "dot": 8,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 4,
+          "bossHp": 3349,
+          "points": 1,
+          "hp": [
+            2501,
+            1096,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 4,
+          "bossHp": 3273,
+          "points": 0,
+          "hp": [
+            2519,
+            1096,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            12,
+            12,
+            12,
+            12
+          ],
+          "damage": 62,
+          "pursuit": 8,
+          "dot": 6,
+          "healing": 18
+        },
+        {
+          "command": "basic",
+          "active": 2,
+          "round": 4,
+          "bossHp": 3219,
+          "points": 1,
+          "hp": [
+            2519,
+            1109,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            12,
+            12,
+            12
+          ],
+          "damage": 44,
+          "pursuit": 6,
+          "dot": 4,
+          "healing": 13
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 4,
+          "bossHp": 2118,
+          "points": 0,
+          "hp": [
+            2519,
+            1109,
+            960,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            12,
+            12
+          ],
+          "damage": 974,
+          "pursuit": 73,
+          "dot": 54,
+          "healing": 57
+        },
+        {
+          "command": "basic",
+          "active": 4,
+          "round": 4,
+          "bossHp": 1443,
+          "points": 1,
+          "hp": [
+            2519,
+            1109,
+            960,
+            960,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            37,
+            12
+          ],
+          "damage": 549,
+          "pursuit": 72,
+          "dot": 54,
+          "healing": 57
+        },
+        {
+          "command": "skill",
+          "active": 5,
+          "round": 4,
+          "bossHp": 1338,
+          "points": 0,
+          "hp": [
+            2519,
+            1109,
+            960,
+            960,
+            1024
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            37,
+            47
+          ],
+          "damage": 86,
+          "pursuit": 11,
+          "dot": 8,
+          "healing": 24
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 5,
+          "bossHp": 1329,
+          "points": 0,
+          "hp": [
+            2367,
+            1109,
+            925,
+            925,
+            1021
+          ],
+          "energy": [
+            59,
+            49,
+            59,
+            49,
+            59
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 153
+        },
+        {
+          "command": "basic",
+          "active": 1,
+          "round": 5,
+          "bossHp": 1253,
+          "points": 1,
+          "hp": [
+            2385,
+            1109,
+            925,
+            925,
+            1021
+          ],
+          "energy": [
+            84,
+            49,
+            59,
+            49,
+            59
+          ],
+          "damage": 62,
+          "pursuit": 8,
+          "dot": 6,
+          "healing": 18
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 5,
+          "bossHp": 1199,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            59,
+            49,
+            59
+          ],
+          "damage": 44,
+          "pursuit": 6,
+          "dot": 4,
+          "healing": 645
+        },
+        {
+          "command": "basic",
+          "active": 3,
+          "round": 5,
+          "bossHp": 515,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            84,
+            49,
+            59
+          ],
+          "damage": 557,
+          "pursuit": 73,
+          "dot": 54,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 4,
+          "round": 5,
+          "bossHp": 0,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            84,
+            84,
+            59
+          ],
+          "damage": 515,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        }
+      ]
+    },
+    {
+      "path": "flame",
+      "outcome": "win",
+      "steps": [
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 1,
+          "bossHp": 10450,
+          "points": 2,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            50,
+            50,
+            50,
+            50
+          ],
+          "damage": 40,
+          "pursuit": 2,
+          "dot": 8,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 1,
+          "bossHp": 10415,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            50,
+            50,
+            50
+          ],
+          "damage": 28,
+          "pursuit": 1,
+          "dot": 6,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 1,
+          "bossHp": 9744,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            50,
+            50
+          ],
+          "damage": 586,
+          "pursuit": 16,
+          "dot": 69,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 4,
+          "round": 1,
+          "bossHp": 9329,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            75,
+            50
+          ],
+          "damage": 331,
+          "pursuit": 16,
+          "dot": 68,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 5,
+          "round": 1,
+          "bossHp": 9260,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            75,
+            85
+          ],
+          "damage": 55,
+          "pursuit": 3,
+          "dot": 11,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 2,
+          "bossHp": 9251,
+          "points": 0,
+          "hp": [
+            2644,
+            1117,
+            925,
+            925,
+            1021
+          ],
+          "energy": [
+            97,
+            97,
+            97,
+            87,
+            97
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 1,
+          "round": 2,
+          "bossHp": 9193,
+          "points": 1,
+          "hp": [
+            2645,
+            1117,
+            925,
+            925,
+            1021
+          ],
+          "energy": [
+            100,
+            97,
+            97,
+            87,
+            97
+          ],
+          "damage": 40,
+          "pursuit": 2,
+          "dot": 16,
+          "healing": 1
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 2,
+          "bossHp": 9152,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            97,
+            87,
+            97
+          ],
+          "damage": 28,
+          "pursuit": 1,
+          "dot": 12,
+          "healing": 377
+        },
+        {
+          "command": "basic",
+          "active": 3,
+          "round": 2,
+          "bossHp": 8611,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            87,
+            97
+          ],
+          "damage": 370,
+          "pursuit": 18,
+          "dot": 153,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 4,
+          "round": 2,
+          "bossHp": 7803,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            97
+          ],
+          "damage": 640,
+          "pursuit": 17,
+          "dot": 151,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 5,
+          "round": 2,
+          "bossHp": 7722,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 55,
+          "pursuit": 3,
+          "dot": 23,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 3,
+          "bossHp": 7709,
+          "points": 1,
+          "hp": [
+            2449,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 1,
+          "round": 3,
+          "bossHp": 7563,
+          "points": 1,
+          "hp": [
+            2452,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            0,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 112,
+          "pursuit": 2,
+          "dot": 32,
+          "healing": 3
+        },
+        {
+          "command": "ultimate",
+          "active": 2,
+          "round": 3,
+          "bossHp": 7460,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            100,
+            100,
+            100
+          ],
+          "damage": 79,
+          "pursuit": 1,
+          "dot": 23,
+          "healing": 686
+        },
+        {
+          "command": "ultimate",
+          "active": 3,
+          "round": 3,
+          "bossHp": 6255,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            100,
+            100
+          ],
+          "damage": 938,
+          "pursuit": 16,
+          "dot": 251,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 4,
+          "round": 3,
+          "bossHp": 5065,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            0,
+            100
+          ],
+          "damage": 926,
+          "pursuit": 16,
+          "dot": 248,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 5,
+          "round": 3,
+          "bossHp": 4864,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damage": 154,
+          "pursuit": 3,
+          "dot": 44,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 4,
+          "bossHp": 4852,
+          "points": 1,
+          "hp": [
+            2501,
+            1096,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 4,
+          "bossHp": 4778,
+          "points": 0,
+          "hp": [
+            2502,
+            1096,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            12,
+            12,
+            12,
+            12
+          ],
+          "damage": 40,
+          "pursuit": 2,
+          "dot": 32,
+          "healing": 1
+        },
+        {
+          "command": "basic",
+          "active": 2,
+          "round": 4,
+          "bossHp": 4726,
+          "points": 1,
+          "hp": [
+            2502,
+            1097,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            12,
+            12,
+            12
+          ],
+          "damage": 28,
+          "pursuit": 1,
+          "dot": 23,
+          "healing": 1
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 4,
+          "bossHp": 3787,
+          "points": 0,
+          "hp": [
+            2502,
+            1097,
+            923,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            12,
+            12
+          ],
+          "damage": 648,
+          "pursuit": 18,
+          "dot": 273,
+          "healing": 20
+        },
+        {
+          "command": "basic",
+          "active": 4,
+          "round": 4,
+          "bossHp": 3134,
+          "points": 1,
+          "hp": [
+            2502,
+            1097,
+            923,
+            914,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            37,
+            12
+          ],
+          "damage": 366,
+          "pursuit": 17,
+          "dot": 270,
+          "healing": 11
+        },
+        {
+          "command": "skill",
+          "active": 5,
+          "round": 4,
+          "bossHp": 3032,
+          "points": 0,
+          "hp": [
+            2502,
+            1097,
+            923,
+            914,
+            1002
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            37,
+            47
+          ],
+          "damage": 55,
+          "pursuit": 3,
+          "dot": 44,
+          "healing": 2
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 5,
+          "bossHp": 3023,
+          "points": 0,
+          "hp": [
+            2350,
+            1097,
+            917,
+            908,
+            999
+          ],
+          "energy": [
+            59,
+            49,
+            59,
+            49,
+            59
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 211
+        },
+        {
+          "command": "basic",
+          "active": 1,
+          "round": 5,
+          "bossHp": 2949,
+          "points": 1,
+          "hp": [
+            2351,
+            1097,
+            917,
+            908,
+            999
+          ],
+          "energy": [
+            84,
+            49,
+            59,
+            49,
+            59
+          ],
+          "damage": 40,
+          "pursuit": 2,
+          "dot": 32,
+          "healing": 1
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 5,
+          "bossHp": 2897,
+          "points": 0,
+          "hp": [
+            2870,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            59,
+            49,
+            59
+          ],
+          "damage": 28,
+          "pursuit": 1,
+          "dot": 23,
+          "healing": 726
+        },
+        {
+          "command": "basic",
+          "active": 3,
+          "round": 5,
+          "bossHp": 2236,
+          "points": 1,
+          "hp": [
+            2870,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            84,
+            49,
+            59
+          ],
+          "damage": 370,
+          "pursuit": 18,
+          "dot": 273,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 4,
+          "round": 5,
+          "bossHp": 1309,
+          "points": 0,
+          "hp": [
+            2870,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            84,
+            84,
+            59
+          ],
+          "damage": 640,
+          "pursuit": 17,
+          "dot": 270,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 5,
+          "round": 5,
+          "bossHp": 1207,
+          "points": 1,
+          "hp": [
+            2870,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            84,
+            84,
+            84
+          ],
+          "damage": 55,
+          "pursuit": 3,
+          "dot": 44,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 6,
+          "bossHp": 1194,
+          "points": 1,
+          "hp": [
+            2449,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            96,
+            96,
+            96,
+            96,
+            96
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 12
+        },
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 6,
+          "bossHp": 1120,
+          "points": 0,
+          "hp": [
+            2450,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            96,
+            96,
+            96,
+            96
+          ],
+          "damage": 40,
+          "pursuit": 2,
+          "dot": 32,
+          "healing": 1
+        },
+        {
+          "command": "basic",
+          "active": 2,
+          "round": 6,
+          "bossHp": 1068,
+          "points": 1,
+          "hp": [
+            2450,
+            1089,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            96,
+            96,
+            96
+          ],
+          "damage": 28,
+          "pursuit": 1,
+          "dot": 23,
+          "healing": 1
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 6,
+          "bossHp": 215,
+          "points": 0,
+          "hp": [
+            2450,
+            1089,
+            914,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            96,
+            96
+          ],
+          "damage": 586,
+          "pursuit": 16,
+          "dot": 251,
+          "healing": 18
+        },
+        {
+          "command": "basic",
+          "active": 4,
+          "round": 6,
+          "bossHp": 0,
+          "points": 1,
+          "hp": [
+            2450,
+            1089,
+            914,
+            902,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            96
+          ],
+          "damage": 215,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 6
+        }
+      ]
+    },
+    {
+      "path": "dream",
+      "outcome": "win",
+      "steps": [
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 1,
+          "bossHp": 10416,
+          "points": 2,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            50,
+            50,
+            50,
+            50
+          ],
+          "damage": 78,
+          "pursuit": 5,
+          "dot": 1,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 1,
+          "bossHp": 10358,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            50,
+            50,
+            50
+          ],
+          "damage": 55,
+          "pursuit": 3,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 1,
+          "bossHp": 9201,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            50,
+            50
+          ],
+          "damage": 1111,
+          "pursuit": 41,
+          "dot": 5,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 4,
+          "round": 1,
+          "bossHp": 8530,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            75,
+            50
+          ],
+          "damage": 627,
+          "pursuit": 40,
+          "dot": 4,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 5,
+          "round": 1,
+          "bossHp": 8414,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            75,
+            85
+          ],
+          "damage": 108,
+          "pursuit": 7,
+          "dot": 1,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 2,
+          "bossHp": 8414,
+          "points": 0,
+          "hp": [
+            2644,
+            1117,
+            925,
+            925,
+            1021
+          ],
+          "energy": [
+            97,
+            97,
+            97,
+            87,
+            97
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 1,
+          "round": 2,
+          "bossHp": 8330,
+          "points": 1,
+          "hp": [
+            2648,
+            1117,
+            925,
+            925,
+            1021
+          ],
+          "energy": [
+            100,
+            97,
+            97,
+            87,
+            97
+          ],
+          "damage": 78,
+          "pursuit": 5,
+          "dot": 1,
+          "healing": 4
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 2,
+          "bossHp": 8271,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            97,
+            87,
+            97
+          ],
+          "damage": 55,
+          "pursuit": 3,
+          "dot": 1,
+          "healing": 374
+        },
+        {
+          "command": "basic",
+          "active": 3,
+          "round": 2,
+          "bossHp": 7519,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            87,
+            97
+          ],
+          "damage": 697,
+          "pursuit": 45,
+          "dot": 10,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 4,
+          "round": 2,
+          "bossHp": 6261,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            97
+          ],
+          "damage": 1203,
+          "pursuit": 45,
+          "dot": 10,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 5,
+          "round": 2,
+          "bossHp": 6145,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 108,
+          "pursuit": 7,
+          "dot": 1,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 3,
+          "bossHp": 6145,
+          "points": 1,
+          "hp": [
+            2449,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 1,
+          "round": 3,
+          "bossHp": 5919,
+          "points": 1,
+          "hp": [
+            2460,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            0,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 219,
+          "pursuit": 5,
+          "dot": 2,
+          "healing": 11
+        },
+        {
+          "command": "ultimate",
+          "active": 2,
+          "round": 3,
+          "bossHp": 5760,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            100,
+            100,
+            100
+          ],
+          "damage": 155,
+          "pursuit": 3,
+          "dot": 1,
+          "healing": 678
+        },
+        {
+          "command": "ultimate",
+          "active": 3,
+          "round": 3,
+          "bossHp": 3927,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            100,
+            100
+          ],
+          "damage": 1778,
+          "pursuit": 41,
+          "dot": 14,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 4,
+          "round": 3,
+          "bossHp": 2120,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            0,
+            100
+          ],
+          "damage": 1754,
+          "pursuit": 40,
+          "dot": 13,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 5,
+          "round": 3,
+          "bossHp": 1809,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damage": 302,
+          "pursuit": 7,
+          "dot": 2,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 4,
+          "bossHp": 1809,
+          "points": 1,
+          "hp": [
+            2501,
+            1096,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 4,
+          "bossHp": 1724,
+          "points": 0,
+          "hp": [
+            2505,
+            1096,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            12,
+            12,
+            12,
+            12
+          ],
+          "damage": 78,
+          "pursuit": 5,
+          "dot": 2,
+          "healing": 4
+        },
+        {
+          "command": "basic",
+          "active": 2,
+          "round": 4,
+          "bossHp": 1665,
+          "points": 1,
+          "hp": [
+            2505,
+            1099,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            12,
+            12,
+            12
+          ],
+          "damage": 55,
+          "pursuit": 3,
+          "dot": 1,
+          "healing": 3
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 4,
+          "bossHp": 386,
+          "points": 0,
+          "hp": [
+            2505,
+            1099,
+            960,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            12,
+            12
+          ],
+          "damage": 1219,
+          "pursuit": 45,
+          "dot": 15,
+          "healing": 57
+        },
+        {
+          "command": "basic",
+          "active": 4,
+          "round": 4,
+          "bossHp": 0,
+          "points": 1,
+          "hp": [
+            2505,
+            1099,
+            960,
+            922,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            37,
+            12
+          ],
+          "damage": 386,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 19
+        }
+      ]
+    },
+    {
+      "path": "memory",
+      "outcome": "win",
+      "steps": [
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 1,
+          "bossHp": 10447,
+          "points": 2,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            50,
+            50,
+            50,
+            50
+          ],
+          "damage": 44,
+          "pursuit": 8,
+          "dot": 1,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 1,
+          "bossHp": 10409,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            50,
+            50,
+            50
+          ],
+          "damage": 31,
+          "pursuit": 6,
+          "dot": 1,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 1,
+          "bossHp": 9680,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            50,
+            50
+          ],
+          "damage": 649,
+          "pursuit": 71,
+          "dot": 9,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 4,
+          "round": 1,
+          "bossHp": 9235,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            75,
+            50
+          ],
+          "damage": 366,
+          "pursuit": 70,
+          "dot": 9,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 5,
+          "round": 1,
+          "bossHp": 9161,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            75,
+            85
+          ],
+          "damage": 61,
+          "pursuit": 12,
+          "dot": 1,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 2,
+          "bossHp": 9147,
+          "points": 0,
+          "hp": [
+            2644,
+            1117,
+            925,
+            925,
+            1021
+          ],
+          "energy": [
+            97,
+            97,
+            97,
+            87,
+            97
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 1,
+          "round": 2,
+          "bossHp": 9084,
+          "points": 1,
+          "hp": [
+            2647,
+            1117,
+            925,
+            925,
+            1021
+          ],
+          "energy": [
+            100,
+            97,
+            97,
+            87,
+            97
+          ],
+          "damage": 44,
+          "pursuit": 17,
+          "dot": 2,
+          "healing": 3
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 2,
+          "bossHp": 9040,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            97,
+            87,
+            97
+          ],
+          "damage": 31,
+          "pursuit": 12,
+          "dot": 1,
+          "healing": 375
+        },
+        {
+          "command": "basic",
+          "active": 3,
+          "round": 2,
+          "bossHp": 8454,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            87,
+            97
+          ],
+          "damage": 410,
+          "pursuit": 157,
+          "dot": 19,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 4,
+          "round": 2,
+          "bossHp": 7572,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            97
+          ],
+          "damage": 708,
+          "pursuit": 155,
+          "dot": 19,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 5,
+          "round": 2,
+          "bossHp": 7485,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 61,
+          "pursuit": 23,
+          "dot": 3,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 3,
+          "bossHp": 7456,
+          "points": 1,
+          "hp": [
+            2449,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 1,
+          "round": 3,
+          "bossHp": 7296,
+          "points": 1,
+          "hp": [
+            2457,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            0,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 124,
+          "pursuit": 33,
+          "dot": 3,
+          "healing": 8
+        },
+        {
+          "command": "ultimate",
+          "active": 2,
+          "round": 3,
+          "bossHp": 7184,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            100,
+            100,
+            100
+          ],
+          "damage": 87,
+          "pursuit": 23,
+          "dot": 2,
+          "healing": 681
+        },
+        {
+          "command": "ultimate",
+          "active": 3,
+          "round": 3,
+          "bossHp": 5862,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            100,
+            100
+          ],
+          "damage": 1038,
+          "pursuit": 258,
+          "dot": 26,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 4,
+          "round": 3,
+          "bossHp": 4556,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            0,
+            100
+          ],
+          "damage": 1025,
+          "pursuit": 255,
+          "dot": 26,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 5,
+          "round": 3,
+          "bossHp": 4335,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damage": 171,
+          "pursuit": 46,
+          "dot": 4,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 4,
+          "bossHp": 4312,
+          "points": 1,
+          "hp": [
+            2501,
+            1096,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 4,
+          "bossHp": 4232,
+          "points": 0,
+          "hp": [
+            2505,
+            1096,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            12,
+            12,
+            12,
+            12
+          ],
+          "damage": 44,
+          "pursuit": 33,
+          "dot": 3,
+          "healing": 4
+        },
+        {
+          "command": "basic",
+          "active": 2,
+          "round": 4,
+          "bossHp": 4176,
+          "points": 1,
+          "hp": [
+            2505,
+            1099,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            12,
+            12,
+            12
+          ],
+          "damage": 31,
+          "pursuit": 23,
+          "dot": 2,
+          "healing": 3
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 4,
+          "bossHp": 3148,
+          "points": 0,
+          "hp": [
+            2505,
+            1099,
+            953,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            12,
+            12
+          ],
+          "damage": 718,
+          "pursuit": 281,
+          "dot": 29,
+          "healing": 50
+        },
+        {
+          "command": "basic",
+          "active": 4,
+          "round": 4,
+          "bossHp": 2437,
+          "points": 1,
+          "hp": [
+            2505,
+            1099,
+            953,
+            937,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            37,
+            12
+          ],
+          "damage": 405,
+          "pursuit": 277,
+          "dot": 29,
+          "healing": 34
+        },
+        {
+          "command": "skill",
+          "active": 5,
+          "round": 4,
+          "bossHp": 2326,
+          "points": 0,
+          "hp": [
+            2505,
+            1099,
+            953,
+            937,
+            1005
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            37,
+            47
+          ],
+          "damage": 61,
+          "pursuit": 46,
+          "dot": 4,
+          "healing": 5
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 5,
+          "bossHp": 2312,
+          "points": 0,
+          "hp": [
+            2353,
+            1099,
+            925,
+            925,
+            1002
+          ],
+          "energy": [
+            59,
+            49,
+            59,
+            49,
+            59
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 183
+        },
+        {
+          "command": "basic",
+          "active": 1,
+          "round": 5,
+          "bossHp": 2232,
+          "points": 1,
+          "hp": [
+            2357,
+            1099,
+            925,
+            925,
+            1002
+          ],
+          "energy": [
+            84,
+            49,
+            59,
+            49,
+            59
+          ],
+          "damage": 44,
+          "pursuit": 33,
+          "dot": 3,
+          "healing": 4
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 5,
+          "bossHp": 2176,
+          "points": 0,
+          "hp": [
+            2876,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            59,
+            49,
+            59
+          ],
+          "damage": 31,
+          "pursuit": 23,
+          "dot": 2,
+          "healing": 696
+        },
+        {
+          "command": "basic",
+          "active": 3,
+          "round": 5,
+          "bossHp": 1456,
+          "points": 1,
+          "hp": [
+            2876,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            84,
+            49,
+            59
+          ],
+          "damage": 410,
+          "pursuit": 281,
+          "dot": 29,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 4,
+          "round": 5,
+          "bossHp": 442,
+          "points": 0,
+          "hp": [
+            2876,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            84,
+            84,
+            59
+          ],
+          "damage": 708,
+          "pursuit": 277,
+          "dot": 29,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 5,
+          "round": 5,
+          "bossHp": 331,
+          "points": 1,
+          "hp": [
+            2876,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            84,
+            84,
+            84
+          ],
+          "damage": 61,
+          "pursuit": 46,
+          "dot": 4,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 6,
+          "bossHp": 302,
+          "points": 1,
+          "hp": [
+            2449,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            96,
+            96,
+            96,
+            96,
+            96
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 6
+        },
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 6,
+          "bossHp": 222,
+          "points": 0,
+          "hp": [
+            2453,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            96,
+            96,
+            96,
+            96
+          ],
+          "damage": 44,
+          "pursuit": 33,
+          "dot": 3,
+          "healing": 4
+        },
+        {
+          "command": "basic",
+          "active": 2,
+          "round": 6,
+          "bossHp": 166,
+          "points": 1,
+          "hp": [
+            2453,
+            1091,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            96,
+            96,
+            96
+          ],
+          "damage": 31,
+          "pursuit": 23,
+          "dot": 2,
+          "healing": 3
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 6,
+          "bossHp": 0,
+          "points": 0,
+          "hp": [
+            2453,
+            1091,
+            904,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            96,
+            96
+          ],
+          "damage": 166,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 8
+        }
+      ]
+    },
+    {
+      "path": "end",
+      "outcome": "win",
+      "steps": [
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 1,
+          "bossHp": 10448,
+          "points": 2,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            50,
+            50,
+            50,
+            50
+          ],
+          "damage": 48,
+          "pursuit": 3,
+          "dot": 1,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 1,
+          "bossHp": 10411,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            50,
+            50,
+            50
+          ],
+          "damage": 34,
+          "pursuit": 2,
+          "dot": 1,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 1,
+          "bossHp": 9673,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            50,
+            50
+          ],
+          "damage": 705,
+          "pursuit": 25,
+          "dot": 8,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 4,
+          "round": 1,
+          "bossHp": 9242,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            75,
+            50
+          ],
+          "damage": 398,
+          "pursuit": 25,
+          "dot": 8,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 5,
+          "round": 1,
+          "bossHp": 9171,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            75,
+            85
+          ],
+          "damage": 66,
+          "pursuit": 4,
+          "dot": 1,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 2,
+          "bossHp": 9162,
+          "points": 0,
+          "hp": [
+            2644,
+            1117,
+            925,
+            925,
+            1021
+          ],
+          "energy": [
+            97,
+            97,
+            97,
+            87,
+            97
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 1,
+          "round": 2,
+          "bossHp": 9109,
+          "points": 1,
+          "hp": [
+            2645,
+            1117,
+            925,
+            925,
+            1021
+          ],
+          "energy": [
+            100,
+            97,
+            97,
+            87,
+            97
+          ],
+          "damage": 48,
+          "pursuit": 3,
+          "dot": 2,
+          "healing": 1
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 2,
+          "bossHp": 9072,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            97,
+            87,
+            97
+          ],
+          "damage": 34,
+          "pursuit": 2,
+          "dot": 1,
+          "healing": 377
+        },
+        {
+          "command": "basic",
+          "active": 3,
+          "round": 2,
+          "bossHp": 8579,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            87,
+            97
+          ],
+          "damage": 446,
+          "pursuit": 28,
+          "dot": 19,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 4,
+          "round": 2,
+          "bossHp": 7764,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            97
+          ],
+          "damage": 769,
+          "pursuit": 28,
+          "dot": 18,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 5,
+          "round": 2,
+          "bossHp": 7691,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 66,
+          "pursuit": 4,
+          "dot": 3,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 3,
+          "bossHp": 7678,
+          "points": 1,
+          "hp": [
+            2449,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 1,
+          "round": 3,
+          "bossHp": 7537,
+          "points": 1,
+          "hp": [
+            2452,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            0,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 135,
+          "pursuit": 3,
+          "dot": 3,
+          "healing": 3
+        },
+        {
+          "command": "ultimate",
+          "active": 2,
+          "round": 3,
+          "bossHp": 7438,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            100,
+            100,
+            100
+          ],
+          "damage": 95,
+          "pursuit": 2,
+          "dot": 2,
+          "healing": 686
+        },
+        {
+          "command": "ultimate",
+          "active": 3,
+          "round": 3,
+          "bossHp": 6260,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            100,
+            100
+          ],
+          "damage": 1128,
+          "pursuit": 25,
+          "dot": 25,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 4,
+          "round": 3,
+          "bossHp": 5097,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            0,
+            100
+          ],
+          "damage": 1113,
+          "pursuit": 25,
+          "dot": 25,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 5,
+          "round": 3,
+          "bossHp": 4903,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damage": 186,
+          "pursuit": 4,
+          "dot": 4,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 4,
+          "bossHp": 4891,
+          "points": 1,
+          "hp": [
+            2501,
+            1096,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 4,
+          "bossHp": 4827,
+          "points": 0,
+          "hp": [
+            2502,
+            1096,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            12,
+            12,
+            12,
+            12
+          ],
+          "damage": 58,
+          "pursuit": 3,
+          "dot": 3,
+          "healing": 1
+        },
+        {
+          "command": "basic",
+          "active": 2,
+          "round": 4,
+          "bossHp": 4782,
+          "points": 1,
+          "hp": [
+            2502,
+            1097,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            12,
+            12,
+            12
+          ],
+          "damage": 41,
+          "pursuit": 2,
+          "dot": 2,
+          "healing": 1
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 4,
+          "bossHp": 3847,
+          "points": 0,
+          "hp": [
+            2502,
+            1097,
+            921,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            12,
+            12
+          ],
+          "damage": 879,
+          "pursuit": 28,
+          "dot": 28,
+          "healing": 18
+        },
+        {
+          "command": "basic",
+          "active": 4,
+          "round": 4,
+          "bossHp": 3295,
+          "points": 1,
+          "hp": [
+            2502,
+            1097,
+            921,
+            913,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            37,
+            12
+          ],
+          "damage": 496,
+          "pursuit": 28,
+          "dot": 28,
+          "healing": 10
+        },
+        {
+          "command": "skill",
+          "active": 5,
+          "round": 4,
+          "bossHp": 3207,
+          "points": 0,
+          "hp": [
+            2502,
+            1097,
+            921,
+            913,
+            1002
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            37,
+            47
+          ],
+          "damage": 80,
+          "pursuit": 4,
+          "dot": 4,
+          "healing": 2
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 5,
+          "bossHp": 3198,
+          "points": 0,
+          "hp": [
+            2350,
+            1097,
+            915,
+            907,
+            999
+          ],
+          "energy": [
+            59,
+            49,
+            59,
+            49,
+            59
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 211
+        },
+        {
+          "command": "basic",
+          "active": 1,
+          "round": 5,
+          "bossHp": 3134,
+          "points": 1,
+          "hp": [
+            2351,
+            1097,
+            915,
+            907,
+            999
+          ],
+          "energy": [
+            84,
+            49,
+            59,
+            49,
+            59
+          ],
+          "damage": 58,
+          "pursuit": 3,
+          "dot": 3,
+          "healing": 1
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 5,
+          "bossHp": 3089,
+          "points": 0,
+          "hp": [
+            2870,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            59,
+            49,
+            59
+          ],
+          "damage": 41,
+          "pursuit": 2,
+          "dot": 2,
+          "healing": 729
+        },
+        {
+          "command": "basic",
+          "active": 3,
+          "round": 5,
+          "bossHp": 2531,
+          "points": 1,
+          "hp": [
+            2870,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            84,
+            49,
+            59
+          ],
+          "damage": 502,
+          "pursuit": 28,
+          "dot": 28,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 4,
+          "round": 5,
+          "bossHp": 1608,
+          "points": 0,
+          "hp": [
+            2870,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            84,
+            84,
+            59
+          ],
+          "damage": 867,
+          "pursuit": 28,
+          "dot": 28,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 5,
+          "round": 5,
+          "bossHp": 1520,
+          "points": 1,
+          "hp": [
+            2870,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            84,
+            84,
+            84
+          ],
+          "damage": 80,
+          "pursuit": 4,
+          "dot": 4,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 6,
+          "bossHp": 1507,
+          "points": 1,
+          "hp": [
+            2449,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            96,
+            96,
+            96,
+            96,
+            96
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 12
+        },
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 6,
+          "bossHp": 1431,
+          "points": 0,
+          "hp": [
+            2450,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            96,
+            96,
+            96,
+            96
+          ],
+          "damage": 70,
+          "pursuit": 3,
+          "dot": 3,
+          "healing": 1
+        },
+        {
+          "command": "basic",
+          "active": 2,
+          "round": 6,
+          "bossHp": 1378,
+          "points": 1,
+          "hp": [
+            2450,
+            1089,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            96,
+            96,
+            96
+          ],
+          "damage": 49,
+          "pursuit": 2,
+          "dot": 2,
+          "healing": 1
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 6,
+          "bossHp": 399,
+          "points": 0,
+          "hp": [
+            2450,
+            1089,
+            915,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            96,
+            96
+          ],
+          "damage": 929,
+          "pursuit": 25,
+          "dot": 25,
+          "healing": 19
+        },
+        {
+          "command": "basic",
+          "active": 4,
+          "round": 6,
+          "bossHp": 0,
+          "points": 1,
+          "hp": [
+            2450,
+            1089,
+            915,
+            904,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            96
+          ],
+          "damage": 399,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 8
+        }
+      ]
+    },
+    {
+      "path": "time",
+      "outcome": "win",
+      "steps": [
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 1,
+          "bossHp": 10436,
+          "points": 2,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            50,
+            50,
+            50,
+            50
+          ],
+          "damage": 46,
+          "pursuit": 16,
+          "dot": 2,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 1,
+          "bossHp": 10392,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            50,
+            50,
+            50
+          ],
+          "damage": 32,
+          "pursuit": 11,
+          "dot": 1,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 1,
+          "bossHp": 9571,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            50,
+            50
+          ],
+          "damage": 675,
+          "pursuit": 131,
+          "dot": 15,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 4,
+          "round": 1,
+          "bossHp": 9045,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            75,
+            50
+          ],
+          "damage": 381,
+          "pursuit": 130,
+          "dot": 15,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 5,
+          "round": 1,
+          "bossHp": 8956,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            85,
+            85,
+            85,
+            75,
+            85
+          ],
+          "damage": 64,
+          "pursuit": 22,
+          "dot": 3,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 2,
+          "bossHp": 8947,
+          "points": 0,
+          "hp": [
+            2644,
+            1117,
+            925,
+            925,
+            1021
+          ],
+          "energy": [
+            97,
+            97,
+            97,
+            87,
+            97
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 1,
+          "round": 2,
+          "bossHp": 8881,
+          "points": 1,
+          "hp": [
+            2647,
+            1117,
+            925,
+            925,
+            1021
+          ],
+          "energy": [
+            100,
+            97,
+            97,
+            87,
+            97
+          ],
+          "damage": 46,
+          "pursuit": 16,
+          "dot": 4,
+          "healing": 3
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 2,
+          "bossHp": 8835,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            97,
+            87,
+            97
+          ],
+          "damage": 32,
+          "pursuit": 11,
+          "dot": 3,
+          "healing": 375
+        },
+        {
+          "command": "basic",
+          "active": 3,
+          "round": 2,
+          "bossHp": 8230,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            87,
+            97
+          ],
+          "damage": 426,
+          "pursuit": 145,
+          "dot": 34,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 4,
+          "round": 2,
+          "bossHp": 7318,
+          "points": 0,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            97
+          ],
+          "damage": 736,
+          "pursuit": 143,
+          "dot": 33,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 5,
+          "round": 2,
+          "bossHp": 7227,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 64,
+          "pursuit": 22,
+          "dot": 5,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 3,
+          "bossHp": 7214,
+          "points": 1,
+          "hp": [
+            2449,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 1,
+          "round": 3,
+          "bossHp": 6999,
+          "points": 1,
+          "hp": [
+            2460,
+            1088,
+            896,
+            896,
+            992
+          ],
+          "energy": [
+            0,
+            100,
+            100,
+            100,
+            100
+          ],
+          "damage": 187,
+          "pursuit": 23,
+          "dot": 5,
+          "healing": 11
+        },
+        {
+          "command": "ultimate",
+          "active": 2,
+          "round": 3,
+          "bossHp": 6847,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            100,
+            100,
+            100
+          ],
+          "damage": 132,
+          "pursuit": 16,
+          "dot": 4,
+          "healing": 678
+        },
+        {
+          "command": "ultimate",
+          "active": 3,
+          "round": 3,
+          "bossHp": 5206,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            100,
+            100
+          ],
+          "damage": 1422,
+          "pursuit": 173,
+          "dot": 46,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 4,
+          "round": 3,
+          "bossHp": 3587,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            0,
+            100
+          ],
+          "damage": 1403,
+          "pursuit": 171,
+          "dot": 45,
+          "healing": 0
+        },
+        {
+          "command": "ultimate",
+          "active": 5,
+          "round": 3,
+          "bossHp": 3290,
+          "points": 1,
+          "hp": [
+            2882,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damage": 258,
+          "pursuit": 31,
+          "dot": 8,
+          "healing": 0
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 4,
+          "bossHp": 3278,
+          "points": 1,
+          "hp": [
+            2501,
+            1096,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 1,
+          "round": 4,
+          "bossHp": 3211,
+          "points": 0,
+          "hp": [
+            2504,
+            1096,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            12,
+            12,
+            12,
+            12
+          ],
+          "damage": 46,
+          "pursuit": 16,
+          "dot": 5,
+          "healing": 3
+        },
+        {
+          "command": "basic",
+          "active": 2,
+          "round": 4,
+          "bossHp": 3164,
+          "points": 1,
+          "hp": [
+            2504,
+            1098,
+            903,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            12,
+            12,
+            12
+          ],
+          "damage": 32,
+          "pursuit": 11,
+          "dot": 4,
+          "healing": 2
+        },
+        {
+          "command": "skill",
+          "active": 3,
+          "round": 4,
+          "bossHp": 2222,
+          "points": 0,
+          "hp": [
+            2504,
+            1098,
+            948,
+            903,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            12,
+            12
+          ],
+          "damage": 746,
+          "pursuit": 145,
+          "dot": 51,
+          "healing": 45
+        },
+        {
+          "command": "basic",
+          "active": 4,
+          "round": 4,
+          "bossHp": 1608,
+          "points": 1,
+          "hp": [
+            2504,
+            1098,
+            948,
+            931,
+            1000
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            37,
+            12
+          ],
+          "damage": 421,
+          "pursuit": 143,
+          "dot": 50,
+          "healing": 28
+        },
+        {
+          "command": "skill",
+          "active": 5,
+          "round": 4,
+          "bossHp": 1514,
+          "points": 0,
+          "hp": [
+            2504,
+            1098,
+            948,
+            931,
+            1004
+          ],
+          "energy": [
+            47,
+            37,
+            47,
+            37,
+            47
+          ],
+          "damage": 64,
+          "pursuit": 22,
+          "dot": 8,
+          "healing": 4
+        },
+        {
+          "command": "basic",
+          "active": 0,
+          "round": 5,
+          "bossHp": 1505,
+          "points": 0,
+          "hp": [
+            2352,
+            1098,
+            925,
+            925,
+            1001
+          ],
+          "energy": [
+            59,
+            49,
+            59,
+            49,
+            59
+          ],
+          "damage": 0,
+          "pursuit": 0,
+          "dot": 0,
+          "healing": 194
+        },
+        {
+          "command": "basic",
+          "active": 1,
+          "round": 5,
+          "bossHp": 1438,
+          "points": 1,
+          "hp": [
+            2355,
+            1098,
+            925,
+            925,
+            1001
+          ],
+          "energy": [
+            84,
+            49,
+            59,
+            49,
+            59
+          ],
+          "damage": 46,
+          "pursuit": 16,
+          "dot": 5,
+          "healing": 3
+        },
+        {
+          "command": "skill",
+          "active": 2,
+          "round": 5,
+          "bossHp": 1391,
+          "points": 0,
+          "hp": [
+            2874,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            59,
+            49,
+            59
+          ],
+          "damage": 32,
+          "pursuit": 11,
+          "dot": 4,
+          "healing": 698
+        },
+        {
+          "command": "basic",
+          "active": 3,
+          "round": 5,
+          "bossHp": 769,
+          "points": 1,
+          "hp": [
+            2874,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            84,
+            49,
+            59
+          ],
+          "damage": 426,
+          "pursuit": 145,
+          "dot": 51,
+          "healing": 0
+        },
+        {
+          "command": "skill",
+          "active": 4,
+          "round": 5,
+          "bossHp": 0,
+          "points": 0,
+          "hp": [
+            2874,
+            1152,
+            960,
+            960,
+            1056
+          ],
+          "energy": [
+            84,
+            84,
+            84,
+            84,
+            59
+          ],
+          "damage": 736,
+          "pursuit": 33,
+          "dot": 0,
+          "healing": 0
+        }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "health": 10,
+      "wave": 1,
+      "phase": "running",
+      "kills": 0,
+      "dp": 2.000000000000003,
+      "ops": [
+        {
+          "id": "alden",
+          "hp": 1310
+        },
+        {
+          "id": "selene",
+          "hp": 960
+        }
+      ],
+      "enemies": [
+        {
+          "id": 1,
+          "hp": 186,
+          "progress": 0.49999999999999994
+        }
+      ]
+    },
+    {
+      "health": 10,
+      "wave": 1,
+      "phase": "running",
+      "kills": 1,
+      "dp": 2.9999999999999996,
+      "ops": [
+        {
+          "id": "alden",
+          "hp": 1310
+        },
+        {
+          "id": "selene",
+          "hp": 960
+        }
+      ],
+      "enemies": []
+    },
+    {
+      "health": 10,
+      "wave": 1,
+      "phase": "running",
+      "kills": 1,
+      "dp": 3.999999999999996,
+      "ops": [
+        {
+          "id": "alden",
+          "hp": 1310
+        },
+        {
+          "id": "selene",
+          "hp": 960
+        }
+      ],
+      "enemies": [
+        {
+          "id": 2,
+          "hp": 186,
+          "progress": 0.49999999999999994
+        }
+      ]
+    },
+    {
+      "health": 10,
+      "wave": 1,
+      "phase": "running",
+      "kills": 2,
+      "dp": 4.999999999999993,
+      "ops": [
+        {
+          "id": "alden",
+          "hp": 1310
+        },
+        {
+          "id": "selene",
+          "hp": 960
+        }
+      ],
+      "enemies": []
+    },
+    {
+      "health": 10,
+      "wave": 1,
+      "phase": "running",
+      "kills": 2,
+      "dp": 5.999999999999989,
+      "ops": [
+        {
+          "id": "alden",
+          "hp": 1310
+        },
+        {
+          "id": "selene",
+          "hp": 960
+        }
+      ],
+      "enemies": [
+        {
+          "id": 3,
+          "hp": 186,
+          "progress": 0.49999999999999994
+        }
+      ]
+    },
+    {
+      "health": 10,
+      "wave": 1,
+      "phase": "running",
+      "kills": 3,
+      "dp": 6.999999999999986,
+      "ops": [
+        {
+          "id": "alden",
+          "hp": 1310
+        },
+        {
+          "id": "selene",
+          "hp": 960
+        }
+      ],
+      "enemies": []
+    },
+    {
+      "health": 10,
+      "wave": 1,
+      "phase": "running",
+      "kills": 3,
+      "dp": 7.999999999999982,
+      "ops": [
+        {
+          "id": "alden",
+          "hp": 1310
+        },
+        {
+          "id": "selene",
+          "hp": 960
+        }
+      ],
+      "enemies": [
+        {
+          "id": 4,
+          "hp": 186,
+          "progress": 0.49999999999999994
+        }
+      ]
+    },
+    {
+      "health": 10,
+      "wave": 1,
+      "phase": "running",
+      "kills": 4,
+      "dp": 8.999999999999979,
+      "ops": [
+        {
+          "id": "alden",
+          "hp": 1310
+        },
+        {
+          "id": "selene",
+          "hp": 960
+        }
+      ],
+      "enemies": []
+    },
+    {
+      "health": 10,
+      "wave": 1,
+      "phase": "running",
+      "kills": 4,
+      "dp": 9.999999999999975,
+      "ops": [
+        {
+          "id": "alden",
+          "hp": 1310
+        },
+        {
+          "id": "selene",
+          "hp": 960
+        }
+      ],
+      "enemies": [
+        {
+          "id": 5,
+          "hp": 186,
+          "progress": 0.49999999999999994
+        }
+      ]
+    },
+    {
+      "health": 10,
+      "wave": 1,
+      "phase": "running",
+      "kills": 5,
+      "dp": 10.999999999999972,
+      "ops": [
+        {
+          "id": "alden",
+          "hp": 1310
+        },
+        {
+          "id": "selene",
+          "hp": 960
+        }
+      ],
+      "enemies": []
+    },
+    {
+      "health": 10,
+      "wave": 1,
+      "phase": "running",
+      "kills": 5,
+      "dp": 11.999999999999968,
+      "ops": [
+        {
+          "id": "alden",
+          "hp": 1310
+        },
+        {
+          "id": "selene",
+          "hp": 960
+        }
+      ],
+      "enemies": [
+        {
+          "id": 6,
+          "hp": 406,
+          "progress": 0.3499999999999998
+        }
+      ]
+    },
+    {
+      "health": 10,
+      "wave": 1,
+      "phase": "running",
+      "kills": 5,
+      "dp": 12.999999999999964,
+      "ops": [
+        {
+          "id": "alden",
+          "hp": 1310
+        },
+        {
+          "id": "selene",
+          "hp": 960
+        }
+      ],
+      "enemies": [
+        {
+          "id": 6,
+          "hp": 287,
+          "progress": 0.7000000000000005
+        }
+      ]
+    },
+    {
+      "health": 10,
+      "wave": 1,
+      "phase": "running",
+      "kills": 5,
+      "dp": 13.999999999999961,
+      "ops": [
+        {
+          "id": "alden",
+          "hp": 1310
+        },
+        {
+          "id": "selene",
+          "hp": 960
+        }
+      ],
+      "enemies": [
+        {
+          "id": 6,
+          "hp": 12,
+          "progress": 1.0500000000000018
+        }
+      ]
+    }
+  ],
+  "war": {
+    "round": 1,
+    "gold": 19,
+    "health": 30,
+    "rank": 2,
+    "phase": "result"
+  },
+  "duel": [
+    {
+      "actor": "0:lumi",
+      "target": "1:alden",
+      "team": 0,
+      "round": 1,
+      "hp": [
+        960,
+        1310,
+        960,
+        960,
+        960,
+        1310,
+        960,
+        960,
+        960,
+        936
+      ]
+    }
+  ]
+}

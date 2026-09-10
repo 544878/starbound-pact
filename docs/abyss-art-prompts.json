@@ -1,0 +1,112 @@
+{
+  "generator": "built-in image_gen",
+  "newArtCount": 18,
+  "existingUniqueBossArtCount": 8,
+  "records": [
+    {
+      "floor": 1,
+      "name": "巡游幻蝶侍卒",
+      "file": "public/assets/abyss/floor-1.png",
+      "prompt": "ONE standalone premium Chinese dark fantasy RPG enemy illustration, portrait 1024x1536. 巡游幻蝶侍卒: slender jade insect knight with translucent butterfly wings, curved spear, moonlit emerald forest. Painterly realistic fantasy gacha splash artwork, rich detailed materials, graceful cinematic lighting, dark navy shadows antique gold accents. Single full figure centered head and weapon fully in frame occupies 80% height, atmospheric dark edges. No UI lettering watermark collage."
+    },
+    {
+      "floor": 2,
+      "name": "聚散魔裔先锋",
+      "file": "public/assets/abyss/floor-2.png",
+      "prompt": "ONE standalone premium Chinese dark fantasy RPG enemy illustration, portrait 1024x1536. 聚散魔裔先锋: translucent liquid blue demon, coral spear, drowned shrine. Painterly realistic fantasy gacha splash art, rich detailed materials graceful cinematic light, navy shadows antique gold accents. One full figure centered head and weapon in frame occupies 80% height. Atmospheric environment dark edges. No UI lettering watermark collage."
+    },
+    {
+      "floor": 3,
+      "name": "伪神执事·从灵唤偶",
+      "file": "public/assets/abyss/floor-3.png",
+      "prompt": "ONE standalone premium Chinese dark fantasy RPG enemy illustration, portrait 1024x1536. 伪神执事·从灵唤偶: masked botanical puppeteer with branching antlers and thorn marionettes, forest altar. Painterly realistic fantasy gacha splash art, rich detailed materials graceful cinematic light, navy shadows antique gold accents. One full figure centered head and weapon in frame occupies 80% height. Atmospheric environment dark edges. No UI lettering watermark collage."
+    },
+    {
+      "floor": 4,
+      "name": "幻海魔尊·近卫统领",
+      "file": "public/assets/abyss/floor-4.png",
+      "prompt": "ONE standalone premium Chinese dark fantasy RPG enemy illustration, portrait 1024x1536. 幻海魔尊·近卫统领: pearl armored sea captain, gold mirror shield silver trident, submerged palace. Painterly realistic fantasy gacha splash art, rich detailed materials graceful cinematic light, navy shadows antique gold accents. One full figure centered head and weapon in frame occupies 80% height. Atmospheric environment dark edges. No UI lettering watermark collage."
+    },
+    {
+      "floor": 5,
+      "name": "极意魔尊·拟态化身",
+      "file": "public/assets/abyss/floor-5.png",
+      "prompt": "ONE standalone premium Chinese dark fantasy RPG enemy illustration, portrait 1024x1536. 极意魔尊·拟态化身: elegant sinister silver masked humanoid, long silver hair, black jade robes, violet wind blades shattered mirrors. Painterly realistic fantasy gacha splash art, rich detailed materials graceful cinematic light, navy shadows antique gold accents. One full figure centered head and weapon in frame occupies 80% height. Atmospheric environment dark edges. No UI lettering watermark collage."
+    },
+    {
+      "floor": 7,
+      "name": "炽焰重铠侍卫",
+      "file": "public/assets/abyss/floor-7.png",
+      "prompt": "ONE standalone premium Chinese dark fantasy RPG enemy illustration, portrait 1024x1536. 炽焰重铠侍卫: massive faceless furnace armor sentinel, molten seams, rectangular tower shield, obsidian temple. Painterly realistic fantasy gacha splash art, rich detailed materials graceful cinematic light, navy shadows antique gold accents. One full figure centered head and weapon in frame occupies 80% height. Atmospheric environment dark edges. No UI lettering watermark collage."
+    },
+    {
+      "floor": 8,
+      "name": "断罪执行官·神卫",
+      "file": "public/assets/abyss/floor-8.png",
+      "prompt": "ONE standalone premium Chinese dark fantasy RPG enemy illustration, portrait 1024x1536. 断罪执行官·神卫: gold hooded judicial knight white visor, execution halberd, ruined tribunal. Painterly realistic fantasy gacha splash art, rich detailed materials graceful cinematic light, navy shadows antique gold accents. One full figure centered head and weapon in frame occupies 80% height. Atmospheric environment dark edges. No UI lettering watermark collage."
+    },
+    {
+      "floor": 9,
+      "name": "时空劫夺者·虚影魔尊",
+      "file": "public/assets/abyss/floor-9.png",
+      "prompt": "ONE standalone premium Chinese dark fantasy RPG enemy illustration, portrait 1024x1536. 时空劫夺者·虚影魔尊: hooded spectral time thief, hourglass staff, floating clock fragments, cosmic corridor. Painterly realistic fantasy gacha splash art, rich detailed materials graceful cinematic light, navy shadows antique gold accents. One full figure centered head and weapon in frame occupies 80% height. Atmospheric environment dark edges. No UI lettering watermark collage."
+    },
+    {
+      "floor": 10,
+      "name": "灭世炎灵·大主教",
+      "file": "public/assets/abyss/floor-10.png",
+      "prompt": "ONE standalone premium Chinese dark fantasy RPG enemy illustration, portrait 1024x1536. 灭世炎灵·大主教: crimson ceremonial archbishop, flame mitre and five fire seals, volcanic cathedral. Painterly realistic fantasy gacha splash art, rich detailed materials graceful cinematic light, navy shadows antique gold accents. One full figure centered head and weapon in frame occupies 80% height. Atmospheric environment dark edges. No UI lettering watermark collage."
+    },
+    {
+      "floor": 11,
+      "name": "残灭执刑官·伪神本相",
+      "file": "public/assets/abyss/floor-11.png",
+      "prompt": "ONE standalone premium Chinese dark fantasy RPG enemy illustration, portrait 1024x1536. 残灭执刑官·伪神本相: porcelain masked executioner, crimson sash giant curved blade, ash storm. Painterly realistic fantasy gacha splash art, rich detailed materials graceful cinematic light, navy shadows antique gold accents. One full figure centered head and weapon in frame occupies 80% height. Atmospheric environment dark edges. No UI lettering watermark collage."
+    },
+    {
+      "floor": 13,
+      "name": "蚀心暗夜幽魂",
+      "file": "public/assets/abyss/floor-13.png",
+      "prompt": "ONE standalone premium Chinese dark fantasy RPG enemy illustration, portrait 1024x1536. 蚀心暗夜幽魂: floating female violet wraith, glowing hollow heart, spectral veils, moonlit graves. Painterly realistic fantasy gacha splash art, rich detailed materials graceful cinematic light, navy shadows antique gold accents. One full figure centered head and weapon in frame occupies 80% height. Atmospheric environment dark edges. No UI lettering watermark collage."
+    },
+    {
+      "floor": 14,
+      "name": "覆天石偶·重压者",
+      "file": "public/assets/abyss/floor-14.png",
+      "prompt": "ONE standalone premium Chinese dark fantasy RPG enemy illustration, portrait 1024x1536. 覆天石偶·重压者: hulking squat basalt golem, square stone face, gravity rings and boulders, mossy chasm. Painterly realistic fantasy gacha splash art, rich detailed materials graceful cinematic light, navy shadows antique gold accents. One full figure centered head and weapon in frame occupies 80% height. Atmospheric environment dark edges. No UI lettering watermark collage."
+    },
+    {
+      "floor": 15,
+      "name": "枯萎魔尊·咒毒使者",
+      "file": "public/assets/abyss/floor-15.png",
+      "prompt": "ONE standalone premium Chinese dark fantasy RPG enemy illustration, portrait 1024x1536. 枯萎魔尊·咒毒使者: skeletal plague noble, raven mantle jade poison censer, withered garden. Painterly realistic fantasy gacha splash art, rich detailed materials graceful cinematic light, navy shadows antique gold accents. One full figure centered head and weapon in frame occupies 80% height. Atmospheric environment dark edges. No UI lettering watermark collage."
+    },
+    {
+      "floor": 16,
+      "name": "万念魔偶·无相伪神",
+      "file": "public/assets/abyss/floor-16.png",
+      "prompt": "ONE standalone premium Chinese dark fantasy RPG enemy illustration, portrait 1024x1536. 万念魔偶·无相伪神: levitating porcelain puppet with orbiting masks and silk strings, purple mind palace. Painterly realistic fantasy gacha splash art, rich detailed materials graceful cinematic light, navy shadows antique gold accents. One full figure centered head and weapon in frame occupies 80% height. Atmospheric environment dark edges. No UI lettering watermark collage."
+    },
+    {
+      "floor": 17,
+      "name": "沉沦极恶·魔尊真影",
+      "file": "public/assets/abyss/floor-17.png",
+      "prompt": "ONE standalone premium Chinese dark fantasy RPG enemy illustration, portrait 1024x1536. 沉沦极恶·魔尊真影: black horned demon monarch, fractured crown, eclipse and black armor, collapsing cosmic gate. Painterly realistic fantasy gacha splash art, rich detailed materials graceful cinematic light, navy shadows antique gold accents. One full figure centered head and weapon in frame occupies 80% height. Atmospheric environment dark edges. No UI lettering watermark collage."
+    },
+    {
+      "id": "thorn",
+      "file": "public/assets/abyss/thorn.png",
+      "prompt": "One standalone portrait 1024x1536 premium Chinese fantasy game enemy art: 自爆藤灵: tiny coiled thorn vine spirit, glowing amber seed core, wooden limbs and white flowers, forest altar. Painterly realistic gacha art, graceful intricate materials navy and antique gold accents. Single creature full body centered, large figure 80% of frame, cinematic light dark atmospheric edges. No words UI collage watermark."
+    },
+    {
+      "id": "mirror",
+      "file": "public/assets/abyss/mirror.png",
+      "prompt": "One standalone portrait 1024x1536 premium Chinese fantasy game enemy art: 镜影幻卒: slender faceless silver mirror soldier, reflective glass body and curved blade, drowned blue palace. Painterly realistic gacha art, graceful intricate materials navy and antique gold accents. Single creature full body centered, large figure 80% of frame, cinematic light dark atmospheric edges. No words UI collage watermark."
+    },
+    {
+      "id": "phantom",
+      "file": "public/assets/abyss/phantom.png",
+      "prompt": "One standalone portrait 1024x1536 premium Chinese fantasy game enemy art: 风灵幻影: flowing sentient pale turquoise wind spirit, serpentine ribbon body and owl-like silver mask, swirling floating shards in starry black void. Painterly realistic gacha art, graceful intricate materials navy and antique gold accents. Single creature full body centered, large figure 80% of frame, cinematic light dark atmospheric edges. No words UI collage watermark."
+    }
+  ]
+}

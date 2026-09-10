@@ -1,0 +1,102 @@
+[
+  {
+    "id": "saber",
+    "name": "阿尔托莉雅",
+    "file": "public/assets/characters/scenic/saber.png",
+    "tool": "built-in image_gen",
+    "reference": "public/assets/characters/fgo-atlas-v2.png",
+    "referenceColumn": 1,
+    "direction": "wind-swept ruined castle courtyard at dawn; holding her gold sword with both hands in a ready stance",
+    "prompt": "Create ONE individual character production triptych using the supplied multi-character atlas as the identity reference. ONLY depict column 1 of5, 阿尔托莉雅. Do not include any other characters. Preserve this character's exact recognizable hair color and style, eye color, face identity, costume design, gender, signature accessories and weapon from that column. Improve refined hand-painted anime face detail, eyes and atmospheric lighting without changing identity. Scene and pose: wind-swept ruined castle courtyard at dawn; holding her gold sword with both hands in a ready stance. Output landscape1536x1024, exactly THREE EQUAL WIDTH vertical panels no gaps: LEFT THIRD a large front-facing full-body illustrated scene, head and feet inside panel with slim margins, expressive natural pose facing viewer, completely painted background and foreground; MIDDLE THIRD a matching large head-and-shoulders portrait with same scenery fully painted behind; RIGHT THIRD cute matching chibi fullbody with same scenery and lively pose, head and feet fully inside the central70% of the panel height (15% top and bottom margin). All three views have same precise identity and clothing. No white/ivory blank background, no transparency, no text, no labels, no UI, no side or back view, no other characters. Each panel fills its entire third with an immersive environment; no cross-panel overlap. Premium polished hand-painted anime RPG illustration, preserving the reference's visual identity."
+  },
+  {
+    "id": "sakura",
+    "name": "间桐樱",
+    "file": "public/assets/characters/scenic/sakura.png",
+    "tool": "built-in image_gen",
+    "reference": "public/assets/characters/fgo-atlas-v2.png",
+    "referenceColumn": 2,
+    "direction": "peaceful cherry blossom garden at soft lavender dusk; gently catching a falling petal with one hand",
+    "prompt": "Create ONE individual character production triptych using the supplied multi-character atlas as the identity reference. ONLY depict column 2 of5, 间桐樱. Do not include any other characters. Preserve this character's exact recognizable hair color and style, eye color, face identity, costume design, gender, signature accessories and weapon from that column. Improve refined hand-painted anime face detail, eyes and atmospheric lighting without changing identity. Scene and pose: peaceful cherry blossom garden at soft lavender dusk; gently catching a falling petal with one hand. Output landscape1536x1024, exactly THREE EQUAL WIDTH vertical panels no gaps: LEFT THIRD a large front-facing full-body illustrated scene, head and feet inside panel with slim margins, expressive natural pose facing viewer, completely painted background and foreground; MIDDLE THIRD a matching large head-and-shoulders portrait with same scenery fully painted behind; RIGHT THIRD cute matching chibi fullbody with same scenery and lively pose, head and feet fully inside the central70% of the panel height (15% top and bottom margin). All three views have same precise identity and clothing. No white/ivory blank background, no transparency, no text, no labels, no UI, no side or back view, no other characters. Each panel fills its entire third with an immersive environment; no cross-panel overlap. Premium polished hand-painted anime RPG illustration, preserving the reference's visual identity."
+  },
+  {
+    "id": "rin",
+    "name": "远坂凛",
+    "file": "public/assets/characters/scenic/rin.png",
+    "tool": "built-in image_gen",
+    "reference": "public/assets/characters/fgo-atlas-v2.png",
+    "referenceColumn": 3,
+    "direction": "red-brick academy clocktower terrace at twilight; stepping forward while raising a small red gemstone in one hand",
+    "prompt": "Create ONE individual character production triptych using the supplied multi-character atlas as the identity reference. ONLY depict column 3 of5, 远坂凛. Do not include any other characters. Preserve this character's exact recognizable hair color and style, eye color, face identity, costume design, gender, signature accessories and weapon from that column. Improve refined hand-painted anime face detail, eyes and atmospheric lighting without changing identity. Scene and pose: red-brick academy clocktower terrace at twilight; stepping forward while raising a small red gemstone in one hand. Output landscape1536x1024, exactly THREE EQUAL WIDTH vertical panels no gaps: LEFT THIRD a large front-facing full-body illustrated scene, head and feet inside panel with slim margins, expressive natural pose facing viewer, completely painted background and foreground; MIDDLE THIRD a matching large head-and-shoulders portrait with same scenery fully painted behind; RIGHT THIRD cute matching chibi fullbody with same scenery and lively pose, head and feet fully inside the central70% of the panel height (15% top and bottom margin). All three views have same precise identity and clothing. No white/ivory blank background, no transparency, no text, no labels, no UI, no side or back view, no other characters. Each panel fills its entire third with an immersive environment; no cross-panel overlap. Premium polished hand-painted anime RPG illustration, preserving the reference's visual identity."
+  },
+  {
+    "id": "archer",
+    "name": "卫宫",
+    "file": "public/assets/characters/scenic/archer.png",
+    "tool": "built-in image_gen",
+    "reference": "public/assets/characters/fgo-atlas-v2.png",
+    "referenceColumn": 4,
+    "direction": "burnished wasteland of distant swords under a red sunset; holding twin blades in a guarded angled stance facing viewer",
+    "prompt": "Create ONE individual character production triptych using the supplied multi-character atlas as the identity reference. ONLY depict column 4 of5, 卫宫. Do not include any other characters. Preserve this character's exact recognizable hair color and style, eye color, face identity, costume design, gender, signature accessories and weapon from that column. Improve refined hand-painted anime face detail, eyes and atmospheric lighting without changing identity. Scene and pose: burnished wasteland of distant swords under a red sunset; holding twin blades in a guarded angled stance facing viewer. Output landscape1536x1024, exactly THREE EQUAL WIDTH vertical panels no gaps: LEFT THIRD a large front-facing full-body illustrated scene, head and feet inside panel with slim margins, expressive natural pose facing viewer, completely painted background and foreground; MIDDLE THIRD a matching large head-and-shoulders portrait with same scenery fully painted behind; RIGHT THIRD cute matching chibi fullbody with same scenery and lively pose, head and feet fully inside the central70% of the panel height (15% top and bottom margin). All three views have same precise identity and clothing. No white/ivory blank background, no transparency, no text, no labels, no UI, no side or back view, no other characters. Each panel fills its entire third with an immersive environment; no cross-panel overlap. Premium polished hand-painted anime RPG illustration, preserving the reference's visual identity."
+  },
+  {
+    "id": "gilgamesh",
+    "name": "吉尔伽美什",
+    "file": "public/assets/characters/scenic/gilgamesh.png",
+    "tool": "built-in image_gen",
+    "reference": "public/assets/characters/fgo-atlas-v2.png",
+    "referenceColumn": 5,
+    "direction": "ancient golden stone palace terrace at sunset; one hand on hip and the other extended with assured expression",
+    "prompt": "Create ONE individual character production triptych using the supplied multi-character atlas as the identity reference. ONLY depict column 5 of5, 吉尔伽美什. Do not include any other characters. Preserve this character's exact recognizable hair color and style, eye color, face identity, costume design, gender, signature accessories and weapon from that column. Improve refined hand-painted anime face detail, eyes and atmospheric lighting without changing identity. Scene and pose: ancient golden stone palace terrace at sunset; one hand on hip and the other extended with assured expression. Output landscape1536x1024, exactly THREE EQUAL WIDTH vertical panels no gaps: LEFT THIRD a large front-facing full-body illustrated scene, head and feet inside panel with slim margins, expressive natural pose facing viewer, completely painted background and foreground; MIDDLE THIRD a matching large head-and-shoulders portrait with same scenery fully painted behind; RIGHT THIRD cute matching chibi fullbody with same scenery and lively pose, head and feet fully inside the central70% of the panel height (15% top and bottom margin). All three views have same precise identity and clothing. No white/ivory blank background, no transparency, no text, no labels, no UI, no side or back view, no other characters. Each panel fills its entire third with an immersive environment; no cross-panel overlap. Premium polished hand-painted anime RPG illustration, preserving the reference's visual identity."
+  },
+  {
+    "id": "yuno",
+    "name": "优诺",
+    "file": "public/assets/characters/scenic/yuno.png",
+    "tool": "built-in image_gen",
+    "reference": "public/assets/characters/wuwa-atlas-v1.png",
+    "referenceColumn": 1,
+    "direction": "moonlit coastal observatory with reflected stars and stone terraces; turning toward viewer with a small luminous orb in palm",
+    "prompt": "Create ONE individual character production triptych using the supplied multi-character atlas as the identity reference. ONLY depict column 1 of5, 优诺. Do not include any other characters. Preserve this character's exact recognizable hair color and style, eye color, face identity, costume design, gender, signature accessories and weapon from that column. Improve refined hand-painted anime face detail, eyes and atmospheric lighting without changing identity. Scene and pose: moonlit coastal observatory with reflected stars and stone terraces; turning toward viewer with a small luminous orb in palm. Output landscape1536x1024, exactly THREE EQUAL WIDTH vertical panels no gaps: LEFT THIRD a large front-facing full-body illustrated scene, head and feet inside panel with slim margins, expressive natural pose facing viewer, completely painted background and foreground; MIDDLE THIRD a matching large head-and-shoulders portrait with same scenery fully painted behind; RIGHT THIRD cute matching chibi fullbody with same scenery and lively pose, head and feet fully inside the central70% of the panel height (15% top and bottom margin). All three views have same precise identity and clothing. No white/ivory blank background, no transparency, no text, no labels, no UI, no side or back view, no other characters. Each panel fills its entire third with an immersive environment; no cross-panel overlap. Premium polished hand-painted anime RPG illustration, preserving the reference's visual identity."
+  },
+  {
+    "id": "shorekeeper",
+    "name": "守岸人",
+    "file": "public/assets/characters/scenic/shorekeeper.png",
+    "tool": "built-in image_gen",
+    "reference": "public/assets/characters/wuwa-atlas-v1.png",
+    "referenceColumn": 2,
+    "direction": "quiet luminous blue shore with butterflies and distant white stone ruins; leaning forward to offer a hand",
+    "prompt": "Create ONE individual character production triptych using the supplied multi-character atlas as the identity reference. ONLY depict column 2 of5, 守岸人. Do not include any other characters. Preserve this character's exact recognizable hair color and style, eye color, face identity, costume design, gender, signature accessories and weapon from that column. Improve refined hand-painted anime face detail, eyes and atmospheric lighting without changing identity. Scene and pose: quiet luminous blue shore with butterflies and distant white stone ruins; leaning forward to offer a hand. Output landscape1536x1024, exactly THREE EQUAL WIDTH vertical panels no gaps: LEFT THIRD a large front-facing full-body illustrated scene, head and feet inside panel with slim margins, expressive natural pose facing viewer, completely painted background and foreground; MIDDLE THIRD a matching large head-and-shoulders portrait with same scenery fully painted behind; RIGHT THIRD cute matching chibi fullbody with same scenery and lively pose, head and feet fully inside the central70% of the panel height (15% top and bottom margin). All three views have same precise identity and clothing. No white/ivory blank background, no transparency, no text, no labels, no UI, no side or back view, no other characters. Each panel fills its entire third with an immersive environment; no cross-panel overlap. Premium polished hand-painted anime RPG illustration, preserving the reference's visual identity."
+  },
+  {
+    "id": "phrolova",
+    "name": "弗洛洛",
+    "file": "public/assets/characters/scenic/phrolova.png",
+    "tool": "built-in image_gen",
+    "reference": "public/assets/characters/wuwa-atlas-v1.png",
+    "referenceColumn": 3,
+    "direction": "abandoned opera theater with deep crimson curtains and shafts of violet light; conducting with raised baton and graceful hand",
+    "prompt": "Create ONE individual character production triptych using the supplied multi-character atlas as the identity reference. ONLY depict column 3 of5, 弗洛洛. Do not include any other characters. Preserve this character's exact recognizable hair color and style, eye color, face identity, costume design, gender, signature accessories and weapon from that column. Improve refined hand-painted anime face detail, eyes and atmospheric lighting without changing identity. Scene and pose: abandoned opera theater with deep crimson curtains and shafts of violet light; conducting with raised baton and graceful hand. Output landscape1536x1024, exactly THREE EQUAL WIDTH vertical panels no gaps: LEFT THIRD a large front-facing full-body illustrated scene, head and feet inside panel with slim margins, expressive natural pose facing viewer, completely painted background and foreground; MIDDLE THIRD a matching large head-and-shoulders portrait with same scenery fully painted behind; RIGHT THIRD cute matching chibi fullbody with same scenery and lively pose, head and feet fully inside the central70% of the panel height (15% top and bottom margin). All three views have same precise identity and clothing. No white/ivory blank background, no transparency, no text, no labels, no UI, no side or back view, no other characters. Each panel fills its entire third with an immersive environment; no cross-panel overlap. Premium polished hand-painted anime RPG illustration, preserving the reference's visual identity."
+  },
+  {
+    "id": "cantarella",
+    "name": "坎特雷拉",
+    "file": "public/assets/characters/scenic/cantarella.png",
+    "tool": "built-in image_gen",
+    "reference": "public/assets/characters/wuwa-atlas-v1.png",
+    "referenceColumn": 4,
+    "direction": "misty purple seaside garden with glowing jellyfish beyond the water; seated elegantly with violet parasol tilted over shoulder",
+    "prompt": "Create ONE individual character production triptych using the supplied multi-character atlas as the identity reference. ONLY depict column 4 of5, 坎特雷拉. Do not include any other characters. Preserve this character's exact recognizable hair color and style, eye color, face identity, costume design, gender, signature accessories and weapon from that column. Improve refined hand-painted anime face detail, eyes and atmospheric lighting without changing identity. Scene and pose: misty purple seaside garden with glowing jellyfish beyond the water; seated elegantly with violet parasol tilted over shoulder. Output landscape1536x1024, exactly THREE EQUAL WIDTH vertical panels no gaps: LEFT THIRD a large front-facing full-body illustrated scene, head and feet inside panel with slim margins, expressive natural pose facing viewer, completely painted background and foreground; MIDDLE THIRD a matching large head-and-shoulders portrait with same scenery fully painted behind; RIGHT THIRD cute matching chibi fullbody with same scenery and lively pose, head and feet fully inside the central70% of the panel height (15% top and bottom margin). All three views have same precise identity and clothing. No white/ivory blank background, no transparency, no text, no labels, no UI, no side or back view, no other characters. Each panel fills its entire third with an immersive environment; no cross-panel overlap. Premium polished hand-painted anime RPG illustration, preserving the reference's visual identity."
+  },
+  {
+    "id": "xinyuehu",
+    "name": "心月狐",
+    "file": "public/assets/characters/scenic/xinyuehu.png",
+    "tool": "built-in image_gen",
+    "reference": "public/assets/characters/wuwa-atlas-v1.png",
+    "referenceColumn": 5,
+    "direction": "moonlit shrine courtyard with red wooden arches and soft lanterns; stepping across stone path with fox tails flowing and a small moon orb in hand",
+    "prompt": "Create ONE individual character production triptych using the supplied multi-character atlas as the identity reference. ONLY depict column 5 of5, 心月狐. Do not include any other characters. Preserve this character's exact recognizable hair color and style, eye color, face identity, costume design, gender, signature accessories and weapon from that column. Improve refined hand-painted anime face detail, eyes and atmospheric lighting without changing identity. Scene and pose: moonlit shrine courtyard with red wooden arches and soft lanterns; stepping across stone path with fox tails flowing and a small moon orb in hand. Output landscape1536x1024, exactly THREE EQUAL WIDTH vertical panels no gaps: LEFT THIRD a large front-facing full-body illustrated scene, head and feet inside panel with slim margins, expressive natural pose facing viewer, completely painted background and foreground; MIDDLE THIRD a matching large head-and-shoulders portrait with same scenery fully painted behind; RIGHT THIRD cute matching chibi fullbody with same scenery and lively pose, head and feet fully inside the central70% of the panel height (15% top and bottom margin). All three views have same precise identity and clothing. No white/ivory blank background, no transparency, no text, no labels, no UI, no side or back view, no other characters. Each panel fills its entire third with an immersive environment; no cross-panel overlap. Premium polished hand-painted anime RPG illustration, preserving the reference's visual identity."
+  }
+]

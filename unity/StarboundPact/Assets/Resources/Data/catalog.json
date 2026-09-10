@@ -1,0 +1,1080 @@
+{
+  "companions": [
+    {
+      "id": "lumi",
+      "name": "露弥",
+      "title": "逐风信使",
+      "element": "wind",
+      "role": "support",
+      "rarity": "5星",
+      "level": 20,
+      "power": 3920,
+      "constellation": 1,
+      "accent": "#72b893",
+      "artPosition": "0% 0%",
+      "skills": [
+        "风刃回旋",
+        "澄空祷歌"
+      ],
+      "gender": "female",
+      "persona": "灵动精灵 · 可靠游侠",
+      "biography": "替失联者送信的边境游侠。笑着谈天气，却从不把任何一封求救信留到明天。",
+      "quotes": [
+        "“风从塔顶吹来的时候，旅途就要开始了哦。”",
+        "“只要有微风相伴，我的箭矢就不会偏离分毫。”",
+        "“指挥官，今天的天气真好，要去风语高塔走走吗？”",
+        "“风会记得每一次相遇，我也会一直守护在您身旁。”"
+      ]
+    },
+    {
+      "id": "alden",
+      "name": "艾尔登",
+      "title": "白昼誓盾",
+      "element": "light",
+      "role": "guardian",
+      "rarity": "4星",
+      "level": 20,
+      "power": 3540,
+      "constellation": 2,
+      "accent": "#d4aa57",
+      "artPosition": "16.666666666666668% 0%",
+      "skills": [
+        "圣盾重击",
+        "金辉壁垒"
+      ],
+      "gender": "male",
+      "persona": "克制绅士 · 守护骑士",
+      "biography": "卸下贵族姓氏的前近卫长。习惯先替队友整理披风，再独自站上最危险的位置。",
+      "quotes": [
+        "“以曜金之名，此盾必将抵御一切深渊狂澜。”",
+        "“任何胆敢阻拦星轨前行之敌，先越过我的圣剑！”",
+        "“坚守阵线，我永远是大家最可靠的壁垒。”"
+      ]
+    },
+    {
+      "id": "selene",
+      "name": "瑟琳",
+      "title": "溯海观测者",
+      "element": "water",
+      "role": "mystic",
+      "rarity": "5星",
+      "level": 20,
+      "power": 3860,
+      "constellation": 0,
+      "accent": "#67a9df",
+      "artPosition": "33.333333333333336% 0%",
+      "skills": [
+        "潮鸣",
+        "月海回声"
+      ],
+      "gender": "female",
+      "persona": "冷感学者 · 深海神秘",
+      "biography": "保管沉没文明记忆的海洋学者。对万事保持精确距离，唯独会为同伴打破自己的计算。",
+      "quotes": [
+        "“潮汐起伏，皆是星宿在水中的倒影。”",
+        "“静谧的大海之下，蕴藏着吞噬一切的力量。”",
+        "“听到了吗？这是深海为你鸣奏的战歌。”"
+      ]
+    },
+    {
+      "id": "mira",
+      "name": "米菈",
+      "title": "蔷薇处方",
+      "element": "flora",
+      "role": "support",
+      "rarity": "5星",
+      "level": 20,
+      "power": 3210,
+      "constellation": 3,
+      "accent": "#e990a4",
+      "artPosition": "50% 0%",
+      "skills": [
+        "花灵散",
+        "春息"
+      ],
+      "gender": "female",
+      "persona": "知性眼镜 · 理性医师",
+      "biography": "擅长毒理的花庭医生，温柔从不等于纵容。会用最平静的语气制止冒险，也会第一个奔向伤员。",
+      "quotes": [
+        "“不要硬撑哦，受伤了要第一时间告诉米菈！”",
+        "“花灵的芬芳，能抚平一切旅途中的疲惫。”",
+        "“采摘草药的时候，偶尔也会发现闪亮的小惊喜呢。”"
+      ]
+    },
+    {
+      "id": "noctis",
+      "name": "诺克缇娅",
+      "title": "缄夜执政官",
+      "element": "shadow",
+      "role": "striker",
+      "rarity": "5星",
+      "level": 20,
+      "power": 4020,
+      "constellation": 0,
+      "accent": "#776693",
+      "artPosition": "66.66666666666667% 0%",
+      "skills": [
+        "影袭",
+        "终夜裁断"
+      ],
+      "gender": "female",
+      "persona": "成熟御姐 · 夜鸦谋略",
+      "biography": "夜鸦情报网的掌舵者。优雅、从容，习惯替所有人预留退路，却不愿让任何人看见自己的疲惫。",
+      "quotes": [
+        "“黑暗不过是影子的延伸，而我就是黑夜本身。”",
+        "“目标已锁定，裁断将在眨眼之间完成。”",
+        "“在寂静中行动，在胜利后归隐。”"
+      ]
+    },
+    {
+      "id": "kael",
+      "name": "凯尔",
+      "title": "逆焰猎手",
+      "element": "fire",
+      "role": "striker",
+      "rarity": "4星",
+      "level": 18,
+      "power": 2980,
+      "constellation": 1,
+      "accent": "#d77957",
+      "artPosition": "83.33333333333333% 0%",
+      "skills": [
+        "焰牙",
+        "炽痕连击"
+      ],
+      "gender": "male",
+      "persona": "桀骜搭档 · 热血行动派",
+      "biography": "嘴上只谈报酬的年轻猎手，总会把最后一份口粮留给别人。越危险的委托，越能看见他的笑意。",
+      "quotes": [
+        "“灼热的烈焰，才是对敌人最痛快的回应！”",
+        "“想要比比谁更快解决掉对面的首领吗？”",
+        "“星火终将燎原，随我一起冲锋！”"
+      ]
+    },
+    {
+      "id": "astra",
+      "name": "星璃",
+      "title": "白星余响",
+      "element": "light",
+      "role": "striker",
+      "rarity": "5星",
+      "level": 20,
+      "power": 4010,
+      "constellation": 0,
+      "accent": "#b7b5ee",
+      "artPosition": "100% 0%",
+      "skills": [
+        "轨刃协同",
+        "白星解放"
+      ],
+      "gender": "female",
+      "persona": "温柔反差 · 机甲驾驶员",
+      "biography": "离开量产计划的星骸驾驶员，正在学习如何为自己做选择。喜欢收集日常的小物件，战斗时却有不容动摇的决断。",
+      "quotes": [
+        "“这一次，我想为自己选择要守护的人。”",
+        "“等战斗结束，一起去看真正的流星吧。”"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "id": "w-wind",
+      "name": "回风的诗章",
+      "rarity": "5星",
+      "level": 20,
+      "refinement": 1,
+      "ownerId": "lumi"
+    },
+    {
+      "id": "w-light",
+      "name": "晨星誓约",
+      "rarity": "4星",
+      "level": 20,
+      "refinement": 2,
+      "ownerId": "alden"
+    },
+    {
+      "id": "w-tide",
+      "name": "静海之杖",
+      "rarity": "5星",
+      "level": 20,
+      "refinement": 1,
+      "ownerId": "selene"
+    },
+    {
+      "id": "w-ember",
+      "name": "余烬猎弓",
+      "rarity": "4星",
+      "level": 10,
+      "refinement": 1
+    }
+  ],
+  "rings": [
+    {
+      "id": "vitality",
+      "name": "生息",
+      "stat": "生命",
+      "value": 120,
+      "effect": "regeneration",
+      "description": "每次行动后恢复最大生命的 2%"
+    },
+    {
+      "id": "edge",
+      "name": "锋芒",
+      "stat": "攻击",
+      "value": 12,
+      "effect": "execute",
+      "description": "对半血以下目标额外造成 15% 伤害"
+    },
+    {
+      "id": "bastion",
+      "name": "磐石",
+      "stat": "防御",
+      "value": 10,
+      "effect": "guard",
+      "description": "受到伤害降低 8%"
+    },
+    {
+      "id": "echo",
+      "name": "回响",
+      "stat": "攻击",
+      "value": 10,
+      "effect": "echo",
+      "description": "每第三次攻击追加 25% 伤害"
+    },
+    {
+      "id": "spring",
+      "name": "春潮",
+      "stat": "生命",
+      "value": 100,
+      "effect": "healing",
+      "description": "治疗效果提高 20%"
+    },
+    {
+      "id": "swift",
+      "name": "疾风",
+      "stat": "攻击",
+      "value": 8,
+      "effect": "haste",
+      "description": "塔防攻击间隔缩短 10%，回合战伤害提高 10%"
+    },
+    {
+      "id": "common-7",
+      "name": "坚韧之环",
+      "stat": "生命",
+      "value": 150,
+      "effect": "guard",
+      "description": "受到伤害降低 8%"
+    },
+    {
+      "id": "common-8",
+      "name": "破阵之环",
+      "stat": "攻击",
+      "value": 15,
+      "effect": "execute",
+      "description": "对半血以下目标额外造成 15% 伤害"
+    },
+    {
+      "id": "common-9",
+      "name": "余音之环",
+      "stat": "防御",
+      "value": 12,
+      "effect": "echo",
+      "description": "每第三次攻击追加 25% 伤害"
+    },
+    {
+      "id": "exclusive-7",
+      "name": "专属·星命",
+      "stat": "生命",
+      "value": 220,
+      "effect": "regeneration",
+      "description": "每次行动后恢复最大生命的 2%"
+    },
+    {
+      "id": "exclusive-8",
+      "name": "专属·星刃",
+      "stat": "攻击",
+      "value": 24,
+      "effect": "pierce",
+      "description": "攻击无视目标 35% 防御"
+    },
+    {
+      "id": "exclusive-9",
+      "name": "专属·星魂",
+      "stat": "防御",
+      "value": 20,
+      "effect": "leech",
+      "description": "恢复本次造成伤害的 15%"
+    }
+  ],
+  "chapters": [
+    {
+      "id": 1,
+      "title": "第一章：风从塔顶来",
+      "subtitle": "高塔的钟声与初醒之风",
+      "description": "巡礼者的长弓已然搭满，高塔之上的风之紊流正在召唤命中注定的同伴。",
+      "stages": [
+        {
+          "id": "1-1",
+          "chapterId": 1,
+          "stageNum": "1-1",
+          "title": "林地哨站的求援",
+          "synopsis": "遭遇失控的机械斥候与原野傀儡，护送风鸣旅者前往哨站。",
+          "recommendedPower": 2200,
+          "staminaCost": 6,
+          "cleared": true,
+          "stars": 3,
+          "firstClearRewards": {
+            "crystals": 50,
+            "gold": 2000,
+            "items": [
+              {
+                "name": "风灵花蜜",
+                "count": 5,
+                "icon": "❀"
+              }
+            ]
+          }
+        },
+        {
+          "id": "1-2",
+          "chapterId": 1,
+          "stageNum": "1-2",
+          "title": "逆风回廊的阻截",
+          "synopsis": "穿越古老风蚀走廊，击退阻碍前进的深渊构造体。",
+          "recommendedPower": 2800,
+          "staminaCost": 6,
+          "cleared": true,
+          "stars": 3,
+          "firstClearRewards": {
+            "crystals": 60,
+            "gold": 2500,
+            "items": [
+              {
+                "name": "战术经验书",
+                "count": 3,
+                "icon": "📜"
+              }
+            ]
+          }
+        },
+        {
+          "id": "1-3",
+          "chapterId": 1,
+          "stageNum": "1-3",
+          "title": "高塔枢纽的紊流",
+          "synopsis": "塔心枢纽出现元素暴动，击败守护枢纽的暴风守卫，稳固星轨。",
+          "recommendedPower": 3400,
+          "staminaCost": 8,
+          "cleared": false,
+          "stars": 0,
+          "firstClearRewards": {
+            "crystals": 80,
+            "gold": 3200,
+            "items": [
+              {
+                "name": "折光棱晶",
+                "count": 2,
+                "icon": "✵"
+              }
+            ]
+          }
+        },
+        {
+          "id": "1-4",
+          "chapterId": 1,
+          "stageNum": "1-4",
+          "title": "风暴领主的誓约",
+          "synopsis": "直面第一章关底首领「苍穹暴风领主」，完成星契共鸣！",
+          "recommendedPower": 4200,
+          "staminaCost": 10,
+          "cleared": false,
+          "stars": 0,
+          "firstClearRewards": {
+            "crystals": 120,
+            "gold": 5000,
+            "items": [
+              {
+                "name": "纯净星核",
+                "count": 1,
+                "icon": "◈"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "第二章：潮汐深渊的叹息",
+      "subtitle": "静海的回声与古老盟约",
+      "description": "穿过风鸣谷，前方是泛着幽蓝微光的沉没神殿与深海巨澜。",
+      "stages": [
+        {
+          "id": "2-1",
+          "chapterId": 2,
+          "stageNum": "2-1",
+          "title": "潮音港口的迷雾",
+          "synopsis": "海港被浓重雾气笼罩，幽暗的海魂生物正在蠢蠢欲动。",
+          "recommendedPower": 4600,
+          "staminaCost": 8,
+          "cleared": false,
+          "stars": 0,
+          "firstClearRewards": {
+            "crystals": 80,
+            "gold": 3500,
+            "items": [
+              {
+                "name": "潮汐结晶",
+                "count": 3,
+                "icon": "◇"
+              }
+            ]
+          }
+        },
+        {
+          "id": "2-2",
+          "chapterId": 2,
+          "stageNum": "2-2",
+          "title": "淹没圣殿的残响",
+          "synopsis": "探索海底大圣殿遗迹，解开千年前深海歌者的封印。",
+          "recommendedPower": 5200,
+          "staminaCost": 10,
+          "cleared": false,
+          "stars": 0,
+          "firstClearRewards": {
+            "crystals": 100,
+            "gold": 4500,
+            "items": [
+              {
+                "name": "曜金碎屑",
+                "count": 4,
+                "icon": "✦"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "floors": [
+    {
+      "floor": 1,
+      "title": "初启回音",
+      "recommendedPower": 2000,
+      "modifierName": "微风共振",
+      "modifierDesc": "全队角色造成的风属性伤害提升20%",
+      "bossName": "暴风斥候",
+      "bossElement": "wind",
+      "cleared": true,
+      "firstClearRewards": {
+        "crystals": 60,
+        "gold": 2000,
+        "materials": [
+          {
+            "name": "风灵花蜜",
+            "count": 3,
+            "icon": "❀"
+          }
+        ]
+      },
+      "sweepRewards": {
+        "gold": 800,
+        "materials": [
+          {
+            "name": "风灵花蜜",
+            "count": 1,
+            "icon": "❀"
+          }
+        ]
+      }
+    },
+    {
+      "floor": 2,
+      "title": "曜金回廊",
+      "recommendedPower": 2600,
+      "modifierName": "神圣祷言",
+      "modifierDesc": "全队防御力提升15%，受到的伤害减少10%",
+      "bossName": "圣殿武士",
+      "bossElement": "light",
+      "cleared": true,
+      "firstClearRewards": {
+        "crystals": 70,
+        "gold": 2500,
+        "materials": [
+          {
+            "name": "曜金碎屑",
+            "count": 3,
+            "icon": "✦"
+          }
+        ]
+      },
+      "sweepRewards": {
+        "gold": 1000,
+        "materials": [
+          {
+            "name": "曜金碎屑",
+            "count": 1,
+            "icon": "✦"
+          }
+        ]
+      }
+    },
+    {
+      "floor": 3,
+      "title": "静海深境",
+      "recommendedPower": 3200,
+      "modifierName": "潮汐漫溢",
+      "modifierDesc": "行动时有25%概率触发额外连携水刃",
+      "bossName": "潮汐巡礼者",
+      "bossElement": "water",
+      "cleared": true,
+      "firstClearRewards": {
+        "crystals": 80,
+        "gold": 3000,
+        "materials": [
+          {
+            "name": "潮汐结晶",
+            "count": 2,
+            "icon": "◇"
+          }
+        ]
+      },
+      "sweepRewards": {
+        "gold": 1200,
+        "materials": [
+          {
+            "name": "潮汐结晶",
+            "count": 1,
+            "icon": "◇"
+          }
+        ]
+      }
+    },
+    {
+      "floor": 4,
+      "title": "森罗幻阵",
+      "recommendedPower": 3800,
+      "modifierName": "自然生机",
+      "modifierDesc": "每回合结束时恢复已损失生命值的10%",
+      "bossName": "古代森语者",
+      "bossElement": "flora",
+      "cleared": true,
+      "firstClearRewards": {
+        "crystals": 90,
+        "gold": 3500,
+        "materials": [
+          {
+            "name": "森语种子",
+            "count": 3,
+            "icon": "❧"
+          }
+        ]
+      },
+      "sweepRewards": {
+        "gold": 1500,
+        "materials": [
+          {
+            "name": "森语种子",
+            "count": 1,
+            "icon": "❧"
+          }
+        ]
+      }
+    },
+    {
+      "floor": 5,
+      "title": "疾风与幻影",
+      "recommendedPower": 4500,
+      "modifierName": "风暴绝域",
+      "modifierDesc": "风与暗属性角色伤害提升35%，暴击率提升15%",
+      "bossName": "裂风巨翼魔",
+      "bossElement": "wind",
+      "cleared": false,
+      "firstClearRewards": {
+        "crystals": 120,
+        "gold": 5000,
+        "materials": [
+          {
+            "name": "折光棱晶",
+            "count": 2,
+            "icon": "✵"
+          },
+          {
+            "name": "纯净星核",
+            "count": 1,
+            "icon": "◈"
+          }
+        ]
+      },
+      "sweepRewards": {
+        "gold": 2000,
+        "materials": [
+          {
+            "name": "折光棱晶",
+            "count": 1,
+            "icon": "✵"
+          }
+        ]
+      }
+    },
+    {
+      "floor": 6,
+      "title": "暗夜撕裂者",
+      "recommendedPower": 5200,
+      "modifierName": "暗蚀领域",
+      "modifierDesc": "暗属性伤害提升40%，敌方防御力削减20%",
+      "bossName": "夜鸦影裔",
+      "bossElement": "shadow",
+      "cleared": false,
+      "firstClearRewards": {
+        "crystals": 150,
+        "gold": 6000,
+        "materials": [
+          {
+            "name": "影蚀粉尘",
+            "count": 3,
+            "icon": "◆"
+          }
+        ]
+      },
+      "sweepRewards": {
+        "gold": 2200,
+        "materials": [
+          {
+            "name": "影蚀粉尘",
+            "count": 1,
+            "icon": "◆"
+          }
+        ]
+      }
+    },
+    {
+      "floor": 7,
+      "title": "不灭炽焰核",
+      "recommendedPower": 6000,
+      "modifierName": "熔火之心",
+      "modifierDesc": "火属性伤害提升45%，敌人受到灼烧持续损血",
+      "bossName": "熔岩巨人",
+      "bossElement": "fire",
+      "cleared": false,
+      "firstClearRewards": {
+        "crystals": 180,
+        "gold": 7000,
+        "materials": [
+          {
+            "name": "赤焰芯核",
+            "count": 3,
+            "icon": "✺"
+          }
+        ]
+      },
+      "sweepRewards": {
+        "gold": 2500,
+        "materials": [
+          {
+            "name": "赤焰芯核",
+            "count": 1,
+            "icon": "✺"
+          }
+        ]
+      }
+    },
+    {
+      "floor": 8,
+      "title": "群星之顶 · 幻境",
+      "recommendedPower": 7000,
+      "modifierName": "星界共鸣",
+      "modifierDesc": "所有角色技能冷却减半，全属性克制倍率提升",
+      "bossName": "星穹主宰·虚影",
+      "bossElement": "light",
+      "cleared": false,
+      "firstClearRewards": {
+        "crystals": 260,
+        "gold": 10000,
+        "materials": [
+          {
+            "name": "纯净星核",
+            "count": 3,
+            "icon": "◈"
+          },
+          {
+            "name": "折光棱晶",
+            "count": 4,
+            "icon": "✵"
+          }
+        ]
+      },
+      "sweepRewards": {
+        "gold": 3500,
+        "materials": [
+          {
+            "name": "纯净星核",
+            "count": 1,
+            "icon": "◈"
+          }
+        ]
+      }
+    }
+  ],
+  "milestones": {
+    "daily": [
+      {
+        "points": 20,
+        "rewardCrystals": 20,
+        "rewardGold": 1000,
+        "rewardItem": {
+          "name": "风灵花蜜",
+          "count": 2,
+          "icon": "❀"
+        }
+      },
+      {
+        "points": 40,
+        "rewardCrystals": 20,
+        "rewardGold": 2000,
+        "rewardItem": {
+          "name": "战术经验书",
+          "count": 2,
+          "icon": "📜"
+        }
+      },
+      {
+        "points": 60,
+        "rewardCrystals": 20,
+        "rewardGold": 3000,
+        "rewardItem": {
+          "name": "曜金碎屑",
+          "count": 2,
+          "icon": "✦"
+        }
+      },
+      {
+        "points": 80,
+        "rewardCrystals": 30,
+        "rewardGold": 4000,
+        "rewardItem": {
+          "name": "折光棱晶",
+          "count": 1,
+          "icon": "✵"
+        }
+      },
+      {
+        "points": 100,
+        "rewardCrystals": 50,
+        "rewardGold": 5000,
+        "rewardItem": {
+          "name": "纯净星核",
+          "count": 1,
+          "icon": "◈"
+        }
+      }
+    ],
+    "weekly": [
+      {
+        "points": 30,
+        "rewardCrystals": 60,
+        "rewardGold": 5000,
+        "rewardItem": {
+          "name": "战术经验书",
+          "count": 5,
+          "icon": "📜"
+        }
+      },
+      {
+        "points": 60,
+        "rewardCrystals": 80,
+        "rewardGold": 8000,
+        "rewardItem": {
+          "name": "潮汐结晶",
+          "count": 3,
+          "icon": "◇"
+        }
+      },
+      {
+        "points": 90,
+        "rewardCrystals": 100,
+        "rewardGold": 12000,
+        "rewardItem": {
+          "name": "折光棱晶",
+          "count": 3,
+          "icon": "✵"
+        }
+      },
+      {
+        "points": 120,
+        "rewardCrystals": 120,
+        "rewardGold": 16000,
+        "rewardItem": {
+          "name": "影蚀粉尘",
+          "count": 3,
+          "icon": "◆"
+        }
+      },
+      {
+        "points": 150,
+        "rewardCrystals": 200,
+        "rewardGold": 25000,
+        "rewardItem": {
+          "name": "纯净星核",
+          "count": 2,
+          "icon": "◈"
+        }
+      }
+    ],
+    "monthly": [
+      {
+        "points": 50,
+        "rewardCrystals": 150,
+        "rewardGold": 20000,
+        "rewardItem": {
+          "name": "战术经验书",
+          "count": 10,
+          "icon": "📜"
+        }
+      },
+      {
+        "points": 100,
+        "rewardCrystals": 200,
+        "rewardGold": 30000,
+        "rewardItem": {
+          "name": "赤焰芯核",
+          "count": 5,
+          "icon": "✺"
+        }
+      },
+      {
+        "points": 150,
+        "rewardCrystals": 250,
+        "rewardGold": 40000,
+        "rewardItem": {
+          "name": "折光棱晶",
+          "count": 5,
+          "icon": "✵"
+        }
+      },
+      {
+        "points": 200,
+        "rewardCrystals": 300,
+        "rewardGold": 50000,
+        "rewardItem": {
+          "name": "纯净星核",
+          "count": 3,
+          "icon": "◈"
+        }
+      },
+      {
+        "points": 250,
+        "rewardCrystals": 500,
+        "rewardGold": 80000,
+        "rewardItem": {
+          "name": "纯净星核",
+          "count": 5,
+          "icon": "◈"
+        }
+      }
+    ]
+  },
+  "paths": [
+    {
+      "id": "inverse",
+      "name": "逆道",
+      "strengths": "反伤、防御；承受直接攻击后反击",
+      "weaknesses": "低暴击、低主动爆发；敌方低频攻击时收益低",
+      "stats": {
+        "attack": 880,
+        "hp": 12000,
+        "defense": 650,
+        "crit": 0.1,
+        "critDamage": 1.5,
+        "pursuit": 0.12,
+        "dot": 0.04,
+        "vulnerability": 0.05,
+        "reflect": 0.45,
+        "lifesteal": 0.02
+      }
+    },
+    {
+      "id": "mortal",
+      "name": "红尘",
+      "strengths": "生命、稳定输出、均衡续航",
+      "weaknesses": "爆发和单一伤害通道上限低",
+      "stats": {
+        "attack": 900,
+        "hp": 13000,
+        "defense": 450,
+        "crit": 0.25,
+        "critDamage": 1.65,
+        "pursuit": 0.2,
+        "dot": 0.14,
+        "vulnerability": 0.1,
+        "reflect": 0.08,
+        "lifesteal": 0.1
+      }
+    },
+    {
+      "id": "desire",
+      "name": "色欲",
+      "strengths": "易伤、吸血；依靠主动攻击续航",
+      "weaknesses": "低生命防御；惧怕禁疗与瞬间爆发",
+      "stats": {
+        "attack": 840,
+        "hp": 9500,
+        "defense": 300,
+        "crit": 0.2,
+        "critDamage": 1.7,
+        "pursuit": 0.16,
+        "dot": 0.12,
+        "vulnerability": 0.35,
+        "reflect": 0.02,
+        "lifesteal": 0.25
+      }
+    },
+    {
+      "id": "flame",
+      "name": "极炎",
+      "strengths": "持续伤害；三层灼烧后持续输出高",
+      "weaknesses": "启动慢、暴击收益低；惧怕持续伤害抗性",
+      "stats": {
+        "attack": 900,
+        "hp": 10500,
+        "defense": 350,
+        "crit": 0.1,
+        "critDamage": 1.5,
+        "pursuit": 0.05,
+        "dot": 0.65,
+        "vulnerability": 0.05,
+        "reflect": 0.02,
+        "lifesteal": 0.03
+      }
+    },
+    {
+      "id": "dream",
+      "name": "梦境",
+      "strengths": "暴击率与爆伤；直接伤害强",
+      "weaknesses": "持续伤害弱、身板脆；惧怕暴击压制",
+      "stats": {
+        "attack": 760,
+        "hp": 10000,
+        "defense": 300,
+        "crit": 0.6,
+        "critDamage": 2.2,
+        "pursuit": 0.12,
+        "dot": 0.04,
+        "vulnerability": 0.12,
+        "reflect": 0,
+        "lifesteal": 0.05
+      }
+    },
+    {
+      "id": "memory",
+      "name": "记忆",
+      "strengths": "追击；行动积累三层回响",
+      "weaknesses": "首轮弱；惧怕追击抗性",
+      "stats": {
+        "attack": 820,
+        "hp": 11000,
+        "defense": 400,
+        "crit": 0.2,
+        "critDamage": 1.65,
+        "pursuit": 0.65,
+        "dot": 0.08,
+        "vulnerability": 0.08,
+        "reflect": 0.04,
+        "lifesteal": 0.05
+      }
+    },
+    {
+      "id": "end",
+      "name": "终末",
+      "strengths": "高攻击爆伤；目标生命低于30%时直接伤害提高25%",
+      "weaknesses": "低暴击率、低续航；斩杀阶段之前效率低",
+      "stats": {
+        "attack": 1040,
+        "hp": 10000,
+        "defense": 300,
+        "crit": 0.25,
+        "critDamage": 2.1,
+        "pursuit": 0.08,
+        "dot": 0.08,
+        "vulnerability": 0.04,
+        "reflect": 0.02,
+        "lifesteal": 0.02
+      }
+    },
+    {
+      "id": "time",
+      "name": "时序",
+      "strengths": "追击与周期爆发；每三轮直接伤害提高45%",
+      "weaknesses": "普通轮输出低；伤害依赖周期",
+      "stats": {
+        "attack": 800,
+        "hp": 10500,
+        "defense": 400,
+        "crit": 0.25,
+        "critDamage": 1.7,
+        "pursuit": 0.4,
+        "dot": 0.14,
+        "vulnerability": 0.08,
+        "reflect": 0.02,
+        "lifesteal": 0.05
+      }
+    }
+  ],
+  "materialCatalog": {
+    "风灵花蜜": {
+      "name": "风灵花蜜",
+      "icon": "❀",
+      "rarity": "4星",
+      "desc": "采集自风鸣谷的花蜜，蕴含纯净风元素，用于风系角色突破"
+    },
+    "曜金碎屑": {
+      "name": "曜金碎屑",
+      "icon": "✦",
+      "rarity": "4星",
+      "desc": "古代金辉圣殿剥落的结晶，坚硬而光洁，用于光系角色突破"
+    },
+    "潮汐结晶": {
+      "name": "潮汐结晶",
+      "icon": "◇",
+      "rarity": "4星",
+      "desc": "凝聚静海潮鸣的珍稀晶体，用于水系与灵术角色突破"
+    },
+    "森语种子": {
+      "name": "森语种子",
+      "icon": "❧",
+      "rarity": "4星",
+      "desc": "汲取大地之息的生机之种，用于森系角色技能提升"
+    },
+    "影蚀粉尘": {
+      "name": "影蚀粉尘",
+      "icon": "◆",
+      "rarity": "4星",
+      "desc": "深渊夜影溢散的物质残片，用于暗系强攻角色突破"
+    },
+    "赤焰芯核": {
+      "name": "赤焰芯核",
+      "icon": "✺",
+      "rarity": "4星",
+      "desc": "不灭炽焰凝结的核心，用于火系角色爆发技能升阶"
+    },
+    "纯净星核": {
+      "name": "纯净星核",
+      "icon": "◈",
+      "rarity": "5星",
+      "desc": "星神遗留的高纯度源石，可用于全系角色突破至极限"
+    },
+    "折光棱晶": {
+      "name": "折光棱晶",
+      "icon": "✵",
+      "rarity": "4星",
+      "desc": "折射万千星芒的稀有晶体，深塔高层产出的重要物资"
+    },
+    "战术经验书": {
+      "name": "战术经验书",
+      "icon": "📜",
+      "rarity": "4星",
+      "desc": "记载星契战术的指南，提供大量角色培养经验"
+    }
+  }
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "file": "public/assets/characters/expansion-views-1.png",
+    "characters": [
+      "霜砚 silver blue female frost sword",
+      "南絮 brown haired gold male scholar",
+      "绯棠 pink haired rose female mage",
+      "烬羽 black red male flame archer"
+    ],
+    "tool": "built-in image_gen",
+    "reference": "public/assets/expansion-portraits.png",
+    "prompt": "Create a production character turnaround atlas for an existing Chinese fantasy RPG. Reference attached atlas for exact face, hair, costume colors and character identity. This output covers reference characters 1 through 4, reading reference left to right top to bottom. Output a perfectly regular FOUR ROW by FOUR COLUMN grid, 16 equal cells, portrait canvas ratio 1:2. Each ROW is ONE character, in this order: 霜砚 silver blue female frost sword; 南絮 brown haired gold male scholar; 绯棠 pink haired rose female mage; 烬羽 black red male flame archer. Each row columns: 1 front full body, 2 side full body, 3 back full body, 4 cute chibi full body. All figures including feet and head entirely inside their own cell with 8% margin. Single centered figure per cell, no overlap, no text, no labels, no borders. Consistent exquisitely detailed anime Chinese fantasy painted style with gold jewelry and flowing costumes. Flat warm ivory background in every cell. The four views per row depict the SAME character faithfully. Full body boots visible. Crisp polished game assets."
+  },
+  {
+    "file": "public/assets/characters/expansion-views-2.png",
+    "characters": [
+      "眠鸢 purple butterfly female mage",
+      "汐辞 teal long haired male water mage",
+      "暮刃 masked purple female assassin",
+      "晷宁 blue haired gold clock male swordsman"
+    ],
+    "tool": "built-in image_gen",
+    "reference": "public/assets/expansion-portraits.png",
+    "prompt": "Create a production character turnaround atlas for an existing Chinese fantasy RPG. Reference attached atlas for exact face, hair, costume colors and character identity. This output covers reference characters 5 through 8, reading reference left to right top to bottom. Output a perfectly regular FOUR ROW by FOUR COLUMN grid, 16 equal cells, portrait canvas ratio 1:2. Each ROW is ONE character, in this order: 眠鸢 purple butterfly female mage; 汐辞 teal long haired male water mage; 暮刃 masked purple female assassin; 晷宁 blue haired gold clock male swordsman. Each row columns: 1 front full body, 2 side full body, 3 back full body, 4 cute chibi full body. All figures including feet and head entirely inside their own cell with 8% margin. Single centered figure per cell, no overlap, no text, no labels, no borders. Consistent exquisitely detailed anime Chinese fantasy painted style with gold jewelry and flowing costumes. Flat warm ivory background in every cell. The four views per row depict the SAME character faithfully. Full body boots visible. Crisp polished game assets."
+  },
+  {
+    "file": "public/assets/characters/expansion-views-3.png",
+    "characters": [
+      "砺川 silver female ice guardian",
+      "灯禾 brown gold male harp musician",
+      "绛音 pink blossom female healer",
+      "焰笙 black red male flute musician"
+    ],
+    "tool": "built-in image_gen",
+    "reference": "public/assets/expansion-portraits.png",
+    "prompt": "Create a production character turnaround atlas for an existing Chinese fantasy RPG. Reference attached atlas for exact face, hair, costume colors and character identity. This output covers reference characters 9 through 12, reading reference left to right top to bottom. Output a perfectly regular FOUR ROW by FOUR COLUMN grid, 16 equal cells, portrait canvas ratio 1:2. Each ROW is ONE character, in this order: 砺川 silver female ice guardian; 灯禾 brown gold male harp musician; 绛音 pink blossom female healer; 焰笙 black red male flute musician. Each row columns: 1 front full body, 2 side full body, 3 back full body, 4 cute chibi full body. All figures including feet and head entirely inside their own cell with 8% margin. Single centered figure per cell, no overlap, no text, no labels, no borders. Consistent exquisitely detailed anime Chinese fantasy painted style with gold jewelry and flowing costumes. Flat warm ivory background in every cell. The four views per row depict the SAME character faithfully. Full body boots visible. Crisp polished game assets."
+  },
+  {
+    "file": "public/assets/characters/expansion-views-4.png",
+    "characters": [
+      "镜弦 purple female mirror sorceress",
+      "忆澜 silver teal male ocean mage",
+      "磐舟 silver blue female shield guardian",
+      "赤垒 black red male armored guardian"
+    ],
+    "tool": "built-in image_gen",
+    "reference": "public/assets/expansion-portraits.png",
+    "prompt": "Create a production character turnaround atlas for an existing Chinese fantasy RPG. Reference attached atlas for exact face, hair, costume colors and character identity. This output covers reference characters 13 through 16, reading reference left to right top to bottom. Output a perfectly regular FOUR ROW by FOUR COLUMN grid, 16 equal cells, portrait canvas ratio 1:2. Each ROW is ONE character, in this order: 镜弦 purple female mirror sorceress; 忆澜 silver teal male ocean mage; 磐舟 silver blue female shield guardian; 赤垒 black red male armored guardian. Each row columns: 1 front full body, 2 side full body, 3 back full body, 4 cute chibi full body. All figures including feet and head entirely inside their own cell with 8% margin. Single centered figure per cell, no overlap, no text, no labels, no borders. Consistent exquisitely detailed anime Chinese fantasy painted style with gold jewelry and flowing costumes. Flat warm ivory background in every cell. The four views per row depict the SAME character faithfully. Full body boots visible. Crisp polished game assets."
+  },
+  {
+    "file": "public/assets/characters/expansion-views-5.png",
+    "characters": [
+      "梦珀 purple butterfly female guardian",
+      "春蘅 brown pink blossom male healer",
+      "雨织 teal female rain healer",
+      "岁安 blue gold male clock healer"
+    ],
+    "tool": "built-in image_gen",
+    "reference": "public/assets/expansion-portraits.png",
+    "prompt": "Create a production character turnaround atlas for an existing Chinese fantasy RPG. Reference attached atlas for exact face, hair, costume colors and character identity. This output covers reference characters 17 through 20, reading reference left to right top to bottom. Output a perfectly regular FOUR ROW by FOUR COLUMN grid, 16 equal cells, portrait canvas ratio 1:2. Each ROW is ONE character, in this order: 梦珀 purple butterfly female guardian; 春蘅 brown pink blossom male healer; 雨织 teal female rain healer; 岁安 blue gold male clock healer. Each row columns: 1 front full body, 2 side full body, 3 back full body, 4 cute chibi full body. All figures including feet and head entirely inside their own cell with 8% margin. Single centered figure per cell, no overlap, no text, no labels, no borders. Consistent exquisitely detailed anime Chinese fantasy painted style with gold jewelry and flowing costumes. Flat warm ivory background in every cell. The four views per row depict the SAME character faithfully. Full body boots visible. Crisp polished game assets."
+  },
+  {
+    "file": "public/assets/characters/expansion-views-6.png",
+    "characters": [
+      "朔衡 silver blue female ice queen",
+      "尘歌 brown gold male harp sovereign",
+      "绯月 pink rose female moon queen",
+      "曜烬 black red male phoenix sovereign"
+    ],
+    "tool": "built-in image_gen",
+    "reference": "public/assets/expansion-portraits.png",
+    "prompt": "Create a production character turnaround atlas for an existing Chinese fantasy RPG. Reference attached atlas for exact face, hair, costume colors and character identity. This output covers reference characters 21 through 24, reading reference left to right top to bottom. Output a perfectly regular FOUR ROW by FOUR COLUMN grid, 16 equal cells, portrait canvas ratio 1:2. Each ROW is ONE character, in this order: 朔衡 silver blue female ice queen; 尘歌 brown gold male harp sovereign; 绯月 pink rose female moon queen; 曜烬 black red male phoenix sovereign. Each row columns: 1 front full body, 2 side full body, 3 back full body, 4 cute chibi full body. All figures including feet and head entirely inside their own cell with 8% margin. Single centered figure per cell, no overlap, no text, no labels, no borders. Consistent exquisitely detailed anime Chinese fantasy painted style with gold jewelry and flowing costumes. Flat warm ivory background in every cell. The four views per row depict the SAME character faithfully. Full body boots visible. Crisp polished game assets."
+  },
+  {
+    "file": "public/assets/characters/expansion-views-7.png",
+    "characters": [
+      "梦璃 purple moon female queen",
+      "溯白 blue gold male ocean sovereign",
+      "终祈 purple black female death queen",
+      "时珩 white gold male time sovereign"
+    ],
+    "tool": "built-in image_gen",
+    "reference": "public/assets/expansion-portraits.png",
+    "prompt": "Create a production character turnaround atlas for an existing Chinese fantasy RPG. Reference attached atlas for exact face, hair, costume colors and character identity. This output covers reference characters 25 through 28, reading reference left to right top to bottom. Output a perfectly regular FOUR ROW by FOUR COLUMN grid, 16 equal cells, portrait canvas ratio 1:2. Each ROW is ONE character, in this order: 梦璃 purple moon female queen; 溯白 blue gold male ocean sovereign; 终祈 purple black female death queen; 时珩 white gold male time sovereign. Each row columns: 1 front full body, 2 side full body, 3 back full body, 4 cute chibi full body. All figures including feet and head entirely inside their own cell with 8% margin. Single centered figure per cell, no overlap, no text, no labels, no borders. Consistent exquisitely detailed anime Chinese fantasy painted style with gold jewelry and flowing costumes. Flat warm ivory background in every cell. The four views per row depict the SAME character faithfully. Full body boots visible. Crisp polished game assets."
+  }
+]

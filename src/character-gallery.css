@@ -1,0 +1,1774 @@
+/* Character gallery: viewport composition, scenic art, compact celestial controls. */
+.scenic-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.portrait > .scenic-art {
+  position: absolute;
+  inset: 0;
+}
+.screen-companions {
+  min-height: 0;
+  background: #0d111a;
+}
+.screen-companions .topbar {
+  height: 64px;
+  background: #0b1019f5;
+  border-bottom: 1px solid #ad987d42;
+  box-shadow: none;
+  padding: 0 22px;
+}
+.screen-companions .brand-mark {
+  color: #d6bea1;
+}
+.screen-companions .brand-text b {
+  color: #e2ceb3;
+}
+.screen-companions .brand-text small {
+  color: #9e9283;
+}
+.screen-companions .resources {
+  color: #a7a6ae;
+  font-size: 11px;
+}
+.screen-companions .resources b {
+  color: #e1cfb3;
+}
+.screen-companions .bottom-nav {
+  z-index: 55;
+  top: 0;
+  bottom: auto;
+  left: 26%;
+  right: 32%;
+  height: 64px;
+  display: flex;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+.screen-companions .bottom-nav button {
+  flex: 1;
+  min-width: 0;
+  font-family: "SimSun", serif;
+  font-size: 16px;
+  color: #b1aeba;
+  border: 0;
+  background: none;
+}
+.screen-companions .bottom-nav svg,
+.screen-companions .bottom-nav::before,
+.screen-companions .bottom-nav::after {
+  display: none;
+}
+.screen-companions .bottom-nav button.active {
+  color: #f2dfb7;
+  background: linear-gradient(0deg, #d4b57820, transparent 70%);
+}
+.screen-companions .bottom-nav button.active::after {
+  background: #d8bd8c;
+  box-shadow: 0 -2px 10px #d8bd8c77;
+}
+.screen-companions .screen-content {
+  inset: 64px 0 0;
+  padding: 0;
+  overflow: hidden;
+}
+.soul-growth-screen {
+  height: 100%;
+  min-height: 0;
+  padding: 8px;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 65% 30%, #1b2637 0, #0c111b 72%);
+  color: #e7e2da;
+}
+.soul-growth-screen .codex-layout {
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: clamp(150px, 14.5vw, 220px) minmax(0, 0.88fr) minmax(
+      0,
+      1.12fr
+    );
+  gap: 0;
+  align-items: stretch;
+}
+.soul-growth-screen .codex-roster {
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: 36px 36px 32px minmax(0, 1fr) 34px;
+  gap: 6px;
+  padding: 10px;
+  border: 1px solid #c5a87c55;
+  border-radius: 3px;
+  background: #0e1521d9;
+  min-height: 0;
+}
+.roster-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.roster-heading h1 {
+  font:
+    18px "SimSun",
+    serif;
+  margin: 0;
+  color: #ece6dd;
+}
+.roster-heading > span {
+  font:
+    13px Georgia,
+    serif;
+  color: #b7b6bc;
+}
+.soul-growth-screen .codex-roster input,
+.soul-growth-screen .codex-roster select {
+  margin: 0;
+  padding: 5px 8px;
+  min-height: 0;
+  height: 100%;
+  background: #0d1420;
+  border: 1px solid #6f738055;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.soul-growth-screen .codex-roster-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(var(--roster-rows, 5), minmax(0, 1fr));
+  gap: 8px;
+  padding: 3px;
+  max-height: none;
+  min-height: 0;
+  overflow: hidden;
+}
+.soul-growth-screen .codex-roster-list > button {
+  position: relative;
+  display: block;
+  padding: 0;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid #a8a6aa66;
+  border-radius: 3px;
+  background: #182435;
+}
+.soul-growth-screen .codex-roster-list > button.chosen {
+  outline: 2px solid #e7cc94;
+  outline-offset: 0;
+  box-shadow: 0 0 13px #e7cc9466;
+}
+.soul-growth-screen .codex-roster-list .portrait {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+.soul-growth-screen .codex-roster-list button > span {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  gap: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 4px 4px;
+  background: linear-gradient(transparent, #050a13ee);
+  color: #fff;
+}
+.soul-growth-screen .codex-roster-list b {
+  font:
+    12px "SimSun",
+    serif;
+  white-space: nowrap;
+}
+.soul-growth-screen .codex-roster-list small {
+  font:
+    10px Georgia,
+    serif;
+  color: #f3e5cb;
+  white-space: nowrap;
+}
+.soul-growth-screen .codex-roster-list i {
+  position: absolute;
+  left: 4px;
+  top: 3px;
+  color: #f5d697;
+  font-size: 17px;
+  text-shadow: 0 1px 4px #000;
+}
+.roster-empty {
+  grid-column: 1/-1;
+  font-size: 12px;
+  color: #a6adba;
+}
+.page-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  color: #c2b89f;
+  font:
+    12px Georgia,
+    serif;
+}
+.page-controls button {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 28px;
+  border: 1px solid #9d886355;
+  background: #111c2b;
+  color: #e1d2b5;
+  font:
+    22px/1 Georgia,
+    serif;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.soul-growth-screen .codex-art {
+  position: relative;
+  top: 0;
+  padding: 0;
+  border: 0;
+  height: 100%;
+  min-height: 0;
+  display: block;
+  overflow: hidden;
+  background: #142131;
+  isolation: isolate;
+}
+.soul-growth-screen .art-stage-button {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+}
+.soul-growth-screen .art-stage-button .character-art {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  border: 0;
+  background: transparent;
+}
+.soul-growth-screen .codex-art::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    #08111aed,
+    transparent 32%,
+    transparent 87%,
+    #0a111b77
+  );
+  pointer-events: none;
+}
+.soul-growth-screen .art-view-controls {
+  position: absolute;
+  z-index: 3;
+  top: 12px;
+  left: 14px;
+  margin: 0;
+  gap: 2px;
+  border: 1px solid #dec9a96b;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #0a1326ad;
+  backdrop-filter: blur(12px);
+}
+.soul-growth-screen .art-view-controls button {
+  padding: 7px 13px;
+  font:
+    12px "SimSun",
+    serif;
+  border: 0;
+  background: transparent;
+  color: #ece3d7;
+}
+.soul-growth-screen .art-view-controls button[aria-pressed="true"] {
+  background: #d4bd8d;
+  color: #1c2027;
+}
+.soul-growth-screen .art-expand {
+  position: absolute;
+  z-index: 3;
+  right: 14px;
+  top: 14px;
+  margin: 0;
+  color: #f4e8d0;
+  padding: 7px;
+  text-shadow: 0 2px 4px #000;
+  background: #101a2980;
+  border-radius: 2px;
+}
+.soul-growth-screen .codex-name {
+  position: absolute;
+  z-index: 2;
+  bottom: 20px;
+  left: 26px;
+  right: 25px;
+  margin: 0;
+  text-align: left;
+  pointer-events: none;
+}
+.soul-growth-screen .codex-name h2 {
+  font:
+    clamp(28px, 3.7vw, 58px) "SimSun",
+    serif;
+  color: #f5ebdc;
+  margin: 8px 0 14px;
+  letter-spacing: 0.15em;
+  text-shadow: 0 2px 9px #0008;
+}
+.soul-growth-screen .codex-name span {
+  font-size: 12px;
+  color: #e2d3b4;
+}
+.soul-growth-screen .codex-name p {
+  font:
+    13px/1.9 "SimSun",
+    serif;
+  color: #d4d9e2;
+  margin: 0;
+  max-width: 30em;
+}
+.soul-growth-screen .codex-detail {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 20px 18px 10px;
+  overflow: hidden;
+  background: linear-gradient(120deg, #0b111bee, #0c121b99);
+  border: 1px solid #bfa77d44;
+}
+.detail-tags {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+.detail-tags > span {
+  padding: 3px 9px;
+  font:
+    13px "SimSun",
+    serif;
+  border: 1px solid #9295a233;
+  border-radius: 3px;
+  color: #d7d7e5;
+  background: #24304833;
+}
+.biography-button {
+  margin-left: auto;
+  border: 1px solid #9295a244;
+  padding: 5px 9px;
+  background: #1c2635;
+  color: #cbcbd4;
+  font-size: 11px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.soul-growth-screen .detail-intro .growth-identity {
+  margin: 13px 0 7px;
+  align-items: baseline;
+}
+.growth-identity > span {
+  font:
+    22px Georgia,
+    serif;
+  color: #d4cdd0;
+}
+.growth-identity b {
+  font-size: 44px;
+  color: #f4ede2;
+  font-weight: 400;
+}
+.growth-identity > small {
+  font:
+    11px "SimSun",
+    serif;
+  color: #baab8d;
+}
+.detail-intro > progress,
+.ring-inspector > progress {
+  display: block;
+  width: 100%;
+  height: 5px;
+  accent-color: #d2b686;
+}
+.soul-growth-screen .epic-stats {
+  flex: none;
+  border: 0;
+  margin: 15px 0 13px;
+  padding: 0;
+  gap: 8px;
+}
+.soul-growth-screen .epic-stats > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 12px 10px;
+  border: 1px solid #8e94a14a;
+  border-radius: 2px;
+  background: linear-gradient(120deg, #29334344, transparent);
+}
+.soul-growth-screen .epic-stats small {
+  font:
+    13px "SimSun",
+    serif;
+  color: #bfc1ca;
+}
+.soul-growth-screen .epic-stats b {
+  font:
+    20px Georgia,
+    serif;
+  color: #eae3d9;
+  white-space: nowrap;
+}
+.soul-growth-screen .detail-tabs {
+  flex: none;
+  margin: 0;
+  border: 1px solid #bba37b55;
+}
+.soul-growth-screen .detail-tabs button {
+  padding: 12px 3px;
+  font:
+    18px "SimSun",
+    serif;
+}
+.character-tab-panel {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #bda37466 transparent;
+}
+.soul-growth-screen .section-label {
+  flex: none;
+  margin: 0;
+  padding: 12px 0 4px;
+}
+.soul-growth-screen .section-label h3 {
+  margin: 0;
+  font:
+    14px "SimSun",
+    serif;
+}
+.soul-growth-screen .section-label > span {
+  font-size: 10px;
+  color: #8f98ab;
+}
+.soul-constellation {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ring-workspace {
+  flex: 1;
+  min-height: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(166px, 0.82fr);
+  align-items: center;
+  gap: 10px;
+}
+.ring-workspace .ring-map {
+  width: 100%;
+  max-height: none;
+  aspect-ratio: 1;
+  margin: 0;
+}
+.ring-workspace .ring-map::before {
+  width: 74%;
+  height: 74%;
+  aspect-ratio: auto;
+  top: 13%;
+  left: 13%;
+}
+.ring-workspace .ring-map::after {
+  width: 48%;
+  height: 48%;
+  aspect-ratio: auto;
+  top: 26%;
+  left: 26%;
+}
+.ring-workspace .soul-node.locked {
+  opacity: 0.66;
+}
+.ring-map-core {
+  top: 50%;
+}
+.ring-map-core strong {
+  font-size: 35px;
+}
+.ring-map-core span {
+  font:
+    11px "SimSun",
+    serif;
+  letter-spacing: 0.06em;
+}
+.ring-workspace .soul-node {
+  width: 66px;
+  gap: 2px;
+}
+.ring-workspace .soul-node .equipment-art {
+  width: 46px;
+  height: 46px;
+  outline: 1px solid #b19c6c66;
+  outline-offset: 3px;
+}
+.ring-workspace .soul-node b {
+  font:
+    11px "SimSun",
+    serif;
+}
+.ring-workspace .soul-node small {
+  font:
+    9px Georgia,
+    serif;
+}
+.ring-workspace .soul-node.selected .equipment-art {
+  outline: 2px solid #f6dd99;
+  outline-offset: 4px;
+  box-shadow: 0 0 20px #d6bb8655;
+}
+.ring-inspector {
+  align-self: center;
+  padding: 14px 12px 7px;
+  border: 1px solid #bda37466;
+  border-radius: 4px;
+  background: linear-gradient(140deg, #202a3580, #0b111ae8);
+  color: #ddd9d2;
+}
+.ring-inspector-heading {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.ring-inspector-heading .equipment-art {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  min-height: 0;
+  border-radius: 50%;
+  border: 1px solid #c8ad79;
+}
+.ring-inspector h3 {
+  margin: 0 0 5px;
+  font:
+    17px "SimSun",
+    serif;
+}
+.ring-inspector-heading small {
+  font:
+    10px "SimSun",
+    serif;
+  color: #9cacc6;
+}
+.ring-full-name {
+  font:
+    10px/1.6 "SimSun",
+    serif;
+  color: #b4b9c3;
+  margin: 10px 0;
+}
+.ring-level {
+  font:
+    13px Georgia,
+    serif;
+  margin: 9px 0;
+}
+.ring-level strong {
+  font-size: 27px;
+  font-weight: 400;
+}
+.ring-inspector .soul-affixes {
+  margin: 8px 0 10px;
+}
+.ring-inspector .soul-affixes > div {
+  padding: 8px 0;
+  font:
+    12px "SimSun",
+    serif;
+}
+.ring-inspector .soul-affixes b {
+  font:
+    16px Georgia,
+    serif;
+}
+.ring-inspector .soul-affixes .main-affix b {
+  font-size: 22px;
+}
+.ring-inspector .soul-affixes small {
+  font:
+    9px/1.4 "SimSun",
+    serif;
+}
+.ring-inspector .soul-actions {
+  margin: 5px 0;
+}
+.ring-inspector .soul-actions button {
+  font:
+    10px "SimSun",
+    serif;
+  padding: 5px;
+  color: #d2dae8;
+  background: #283347;
+  border: 1px solid #596475;
+}
+.ring-inspector > .primary-button {
+  padding: 9px 3px;
+  font:
+    14px "SimSun",
+    serif;
+  min-height: 0;
+  border-radius: 3px;
+}
+.ring-status {
+  font:
+    9px/1.5 "SimSun",
+    serif;
+  color: #9ba8b9;
+  margin: 7px 0 0;
+  text-align: center;
+}
+.soul-growth-screen .level-footer {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 0 0;
+  margin-top: 6px;
+  border-top: 1px solid #bfa77d2a;
+}
+.soul-growth-screen .level-btn-group {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.soul-growth-screen .level-btn-group .primary-button {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 6px;
+  font:
+    18px "SimSun",
+    serif;
+  letter-spacing: 0.08em;
+  border-radius: 3px;
+  text-align: center;
+  white-space: nowrap;
+}
+.soul-growth-screen .level-btn-group .level-max-btn {
+  background: linear-gradient(135deg, #c79644, #f0c978);
+  color: #1a160d;
+  font-weight: 700;
+  border: 1px solid #fae29f;
+  box-shadow: 0 4px 16px rgba(199, 150, 68, 0.28);
+}
+.soul-growth-screen .level-btn-group .level-max-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #dbaa52, #ffd88b);
+  box-shadow: 0 4px 20px rgba(199, 150, 68, 0.45);
+}
+.soul-growth-screen .level-btn-group .level-max-btn:disabled {
+  opacity: 0.42;
+  background: #252834;
+  border-color: #454958;
+  color: #727686;
+  box-shadow: none;
+}
+.soul-growth-screen .level-cost-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.soul-growth-screen .level-cost-info > span {
+  font:
+    11px "SimSun",
+    serif;
+  color: #b7aa91;
+  letter-spacing: 0.02em;
+}
+.fate-panel {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.fate-stage {
+  position: relative;
+  flex: 1;
+  min-height: 130px;
+  width: min(100%, 420px);
+  margin: auto;
+}
+.fate-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.fate-star {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: grid;
+  justify-items: center;
+  padding: 0;
+  gap: 2px;
+  width: 64px;
+  border: 0;
+  background: transparent;
+  color: #9da3b6;
+  cursor: pointer;
+}
+.fate-star > span {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  font:
+    40px/1 Georgia,
+    serif;
+  color: #a6afc4;
+  border: 1px solid #ab937d55;
+  transform: rotate(45deg);
+  border-radius: 7px;
+  background: #192336;
+}
+.fate-star.lit > span {
+  color: #f2dbac;
+  box-shadow: 0 0 20px var(--star-color);
+  border-color: #cbb583;
+}
+.fate-star.selected > span {
+  outline: 1px solid #e2c68e;
+  outline-offset: 4px;
+  color: #fff0cb;
+}
+.fate-star b {
+  font:
+    12px "SimSun",
+    serif;
+  margin-top: 6px;
+  color: #d2c8b4;
+}
+.fate-star small {
+  font:
+    9px Georgia,
+    serif;
+}
+.fate-description {
+  flex: none;
+  border-top: 1px solid #b59b6a44;
+  padding: 10px 8px;
+  min-height: 72px;
+  background: #19233555;
+}
+.fate-description > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fate-description h3 {
+  font:
+    17px "SimSun",
+    serif;
+  margin: 0;
+  color: #e6d3af;
+}
+.fate-description small {
+  font-size: 10px;
+  color: #9aa7bf;
+}
+.fate-description p {
+  font-size: 12px;
+  line-height: 1.65;
+  margin: 8px 0 0;
+}
+.fate-activate {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0 0;
+  gap: 12px;
+  font-size: 11px;
+  color: #a3aabd;
+}
+.fate-activate .primary-button {
+  padding: 8px 12px;
+  font:
+    13px "SimSun",
+    serif;
+  border-radius: 3px;
+}
+.compact-skills,
+.compact-weapons {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+  gap: 12px;
+}
+.skill-selector {
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+  padding: 6px 0;
+}
+.skill-selector button {
+  display: grid;
+  justify-items: center;
+  gap: 7px;
+  background: none;
+  border: 0;
+  color: #afbad0;
+  cursor: pointer;
+}
+.skill-selector span {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border: 1px solid #8c7a6055;
+  border-radius: 50%;
+  font:
+    23px Georgia,
+    serif;
+  background: #25304788;
+}
+.skill-selector b {
+  font:
+    13px "SimSun",
+    serif;
+}
+.skill-selector button[aria-pressed="true"] {
+  color: #f3dfb8;
+}
+.skill-selector button[aria-pressed="true"] span {
+  border-color: #e6c78d;
+  box-shadow: 0 0 16px #d4b67d33;
+}
+.compact-skills article {
+  padding: 18px;
+  border-top: 1px solid #bba17955;
+  background: linear-gradient(#26324755, transparent);
+}
+.compact-skills article > small {
+  font-size: 11px;
+  color: #aeb9cb;
+}
+.compact-skills article h3 {
+  font:
+    23px "SimSun",
+    serif;
+  color: #e9dabc;
+  margin: 9px 0 16px;
+}
+.compact-skills article strong {
+  font:
+    29px Georgia,
+    serif;
+  color: #ddc08b;
+}
+.compact-skills article strong small {
+  font:
+    11px "SimSun",
+    serif;
+}
+.compact-skills p {
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 12px 0 0;
+}
+.panel-note {
+  font-size: 10px !important;
+  color: #8996ab;
+  line-height: 1.7;
+  margin-top: auto !important;
+  margin-bottom: 0;
+}
+.signature-display {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.signature-display > .equipment-art {
+  width: 145px;
+  height: 145px;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+  min-height: 0;
+  border: 0;
+  border-radius: 8px;
+}
+.signature-display > div {
+  flex: 1;
+  min-width: 0;
+}
+.signature-display h3,
+.weapon-picker h3 {
+  color: #e7d5b0;
+  font:
+    19px "SimSun",
+    serif;
+  margin: 8px 0;
+}
+.signature-display p,
+.weapon-picker p {
+  font-size: 11px;
+  color: #aeb9ce;
+  margin: 6px 0;
+}
+.signature-display small {
+  font:
+    10px "SimSun",
+    serif;
+  color: #b2a382;
+}
+.signature-display .primary-button {
+  padding: 7px;
+  font-size: 11px;
+}
+.weapon-picker {
+  padding: 12px;
+  border: 1px solid #a68e6a44;
+  background: #18233544;
+}
+.weapon-picker .page-controls {
+  margin-bottom: 9px;
+}
+.weapon-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.weapon-actions button {
+  padding: 8px 12px;
+  color: #ded0b5;
+  border: 1px solid #a78d6255;
+  background: #253047;
+  font-size: 12px;
+  cursor: pointer;
+}
+.scenic-gallery-modal,
+.character-bio-modal {
+  width: min(1080px, 94vw);
+  max-width: 94vw;
+  max-height: 92dvh;
+  padding: 18px;
+  overflow: hidden;
+  background: #101722;
+  color: #dfd8ca;
+  border: 1px solid #bca17688;
+  border-radius: 4px;
+}
+.scenic-gallery-modal::backdrop,
+.character-bio-modal::backdrop {
+  background: #02050de8;
+  backdrop-filter: blur(8px);
+}
+.scenic-gallery-modal header,
+.character-bio-modal header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.scenic-gallery-modal header button,
+.character-bio-modal header button {
+  padding: 6px 12px;
+  background: #253047;
+  color: #e6d8c2;
+  border: 1px solid #bca17655;
+  font-size: 12px;
+}
+.scenic-gallery-views {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  height: min(72dvh, 680px);
+}
+.scenic-gallery-views figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.scenic-gallery-views .character-art {
+  flex: 1;
+  min-height: 0;
+  aspect-ratio: auto;
+}
+.scenic-gallery-views figcaption {
+  text-align: center;
+  padding: 9px;
+  font:
+    12px "SimSun",
+    serif;
+}
+.scenic-gallery-modal > a {
+  display: inline-block;
+  font-size: 12px;
+  color: #d7bd8d;
+  margin-top: 10px;
+}
+.character-bio-modal {
+  width: min(570px, 94vw);
+  padding: 24px;
+}
+.character-bio-modal h2 {
+  font:
+    21px "SimSun",
+    serif;
+  margin: 0;
+}
+.character-bio-modal p {
+  font-size: 14px;
+  line-height: 2;
+}
+.character-bio-modal blockquote {
+  font:
+    14px/1.9 "SimSun",
+    serif;
+  color: #bda883;
+  margin: 20px 0 0;
+}
+.mobile-character-tabs {
+  display: none;
+}
+@media (min-width: 1700px) {
+  .ring-workspace .soul-node .equipment-art {
+    width: 60px;
+    height: 60px;
+  }
+  .ring-workspace .soul-node b {
+    font-size: 13px;
+  }
+  .ring-inspector {
+    padding: 22px 18px 12px;
+  }
+  .ring-inspector .soul-affixes > div {
+    padding: 13px 0;
+  }
+}
+@media (max-height: 800px) and (min-width: 761px) {
+  .soul-growth-screen .codex-detail {
+    padding: 12px 14px 8px;
+  }
+  .soul-growth-screen .detail-intro .growth-identity {
+    margin: 7px 0 4px;
+  }
+  .growth-identity b {
+    font-size: 33px;
+  }
+  .soul-growth-screen .epic-stats {
+    margin: 10px 0;
+    gap: 6px;
+  }
+  .soul-growth-screen .epic-stats > span {
+    padding: 8px;
+  }
+  .soul-growth-screen .epic-stats b {
+    font-size: 18px;
+  }
+  .soul-growth-screen .detail-tabs button {
+    padding: 9px 3px;
+    font-size: 16px;
+  }
+  .soul-growth-screen .section-label {
+    padding-top: 8px;
+  }
+  .ring-inspector {
+    padding: 10px 10px 5px;
+  }
+  .ring-inspector .soul-affixes > div {
+    padding: 6px 0;
+  }
+  .ring-inspector-heading .equipment-art {
+    width: 37px;
+    height: 37px;
+  }
+  .ring-full-name {
+    margin: 6px 0;
+    font-size: 9px;
+  }
+  .ring-level {
+    margin: 5px 0;
+  }
+  .ring-inspector h3 {
+    font-size: 15px;
+  }
+  .ring-inspector .soul-affixes {
+    margin: 6px 0;
+  }
+  .soul-growth-screen .level-btn-group .primary-button {
+    font-size: 15px;
+    padding: 8px 4px;
+    min-width: 0;
+  }
+  .signature-display > .equipment-art {
+    width: 110px;
+    height: 110px;
+  }
+  .compact-weapons {
+    gap: 7px;
+  }
+  .weapon-picker {
+    padding: 8px;
+  }
+  .compact-skills article {
+    padding: 12px;
+  }
+  .compact-skills article h3 {
+    margin: 7px 0;
+    font-size: 20px;
+  }
+}
+@media (max-width: 1150px) and (min-width: 761px) {
+  .soul-growth-screen .codex-layout {
+    grid-template-columns: 146px minmax(0, 0.75fr) minmax(0, 1.25fr);
+  }
+  .soul-growth-screen .codex-detail {
+    padding-inline: 10px;
+  }
+  .soul-growth-screen .codex-roster {
+    padding: 7px;
+  }
+  .soul-growth-screen .codex-roster-list {
+    gap: 6px;
+  }
+  .soul-growth-screen .codex-roster-list button > span {
+    display: grid;
+  }
+  .soul-growth-screen .epic-stats small {
+    font-size: 11px;
+  }
+  .soul-growth-screen .epic-stats b {
+    font-size: 17px;
+  }
+  .ring-workspace {
+    gap: 6px;
+    grid-template-columns: minmax(0, 1fr) minmax(150px, 0.85fr);
+  }
+  .ring-workspace .soul-node {
+    width: 52px;
+  }
+  .ring-workspace .soul-node .equipment-art {
+    width: 35px;
+    height: 35px;
+  }
+  .ring-workspace .soul-node b {
+    font-size: 10px;
+  }
+  .ring-map-core strong {
+    font-size: 26px;
+  }
+  .ring-map-core span {
+    font-size: 9px;
+  }
+  .soul-growth-screen .art-expand {
+    top: 50px;
+  }
+  .screen-companions .resources {
+    gap: 8px;
+  }
+  .screen-companions .resources span:last-child {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .screen-companions .topbar {
+    height: 52px;
+    padding: 0 10px;
+  }
+  .screen-companions .brand-text small,
+  .screen-companions .resources {
+    display: none;
+  }
+  .screen-companions .brand-text b {
+    font-size: 15px;
+  }
+  .screen-companions .brand-mark {
+    font-size: 24px;
+  }
+  .screen-companions .bottom-nav {
+    left: 40%;
+    right: 2px;
+    height: 52px;
+  }
+  .screen-companions .bottom-nav button {
+    font-size: 12px;
+  }
+  .screen-companions .screen-content {
+    inset: 52px 0 0;
+  }
+  .soul-growth-screen {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+  .mobile-character-tabs {
+    display: flex;
+    flex: none;
+    height: 34px;
+    gap: 6px;
+    margin-bottom: 5px;
+  }
+  .mobile-character-tabs button {
+    flex: 1;
+    border: 1px solid #c7ae7755;
+    background: #172131;
+    color: #a8b1c5;
+    font:
+      14px "SimSun",
+      serif;
+  }
+  .mobile-character-tabs button[aria-pressed="true"] {
+    background: #baa17c;
+    color: #141924;
+  }
+  .soul-growth-screen .codex-layout {
+    flex: 1;
+    min-height: 0;
+    grid-template-columns: 105px minmax(0, 1fr);
+  }
+  .soul-growth-screen .codex-roster {
+    padding: 5px;
+    gap: 4px;
+    grid-template-rows: 27px 30px 28px minmax(0, 1fr) 30px;
+  }
+  .roster-heading h1 {
+    font-size: 12px;
+  }
+  .roster-heading > span {
+    font-size: 10px;
+  }
+  .soul-growth-screen .codex-roster-list {
+    gap: 5px;
+    padding: 2px;
+  }
+  .soul-growth-screen .codex-roster-list button > span {
+    display: grid;
+    padding: 12px 2px 3px;
+  }
+  .soul-growth-screen .codex-roster-list b {
+    font-size: 10px;
+  }
+  .soul-growth-screen .codex-roster-list small {
+    font-size: 9px;
+  }
+  .soul-growth-screen .codex-art {
+    display: block;
+  }
+  .soul-growth-screen .codex-detail {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    padding: 9px;
+  }
+  .mobile-pane-art .codex-detail {
+    display: none;
+  }
+  .mobile-pane-details .codex-art {
+    display: none;
+  }
+  .soul-growth-screen .codex-name {
+    left: 14px;
+    right: 10px;
+    bottom: 18px;
+  }
+  .soul-growth-screen .codex-name p {
+    font-size: 10px;
+  }
+  .soul-growth-screen .codex-name span {
+    font-size: 10px;
+  }
+  .soul-growth-screen .art-view-controls {
+    left: 8px;
+    top: 8px;
+  }
+  .soul-growth-screen .art-view-controls button {
+    padding: 6px 9px;
+    font-size: 11px;
+  }
+  .soul-growth-screen .art-expand {
+    top: 46px;
+    right: 8px;
+    font-size: 9px;
+  }
+  .detail-tags {
+    gap: 3px;
+  }
+  .detail-tags > span {
+    font-size: 10px;
+    padding: 3px 5px;
+  }
+  .biography-button {
+    font-size: 9px;
+    padding: 4px;
+  }
+  .soul-growth-screen .detail-intro .growth-identity {
+    margin: 7px 0 4px;
+  }
+  .growth-identity b {
+    font-size: 30px;
+  }
+  .growth-identity > span {
+    font-size: 17px;
+  }
+  .soul-growth-screen .epic-stats {
+    margin: 8px 0;
+    gap: 4px;
+  }
+  .soul-growth-screen .epic-stats > span {
+    display: grid;
+    gap: 2px;
+    padding: 5px;
+  }
+  .soul-growth-screen .epic-stats b {
+    font-size: 15px;
+  }
+  .soul-growth-screen .epic-stats small {
+    font-size: 10px;
+  }
+  .soul-growth-screen .detail-tabs button {
+    padding: 8px 0;
+    min-width: 0;
+    font-size: 13px;
+  }
+  .soul-growth-screen .section-label {
+    padding: 7px 0 2px;
+  }
+  .soul-growth-screen .section-label h3 {
+    font-size: 12px;
+  }
+  .soul-growth-screen .section-label > span {
+    display: none;
+  }
+  .ring-workspace {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .ring-workspace .ring-map {
+    flex: 1;
+    min-height: 140px;
+    width: min(100%, 230px);
+  }
+  .ring-workspace .soul-node {
+    width: 45px;
+  }
+  .ring-workspace .soul-node .equipment-art {
+    width: 28px;
+    height: 28px;
+    outline-offset: 1px;
+  }
+  .ring-workspace .soul-node b {
+    font-size: 9px;
+  }
+  .ring-workspace .soul-node small {
+    display: none;
+  }
+  .ring-map-core strong {
+    font-size: 23px;
+  }
+  .ring-map-core span {
+    font-size: 9px;
+  }
+  .ring-inspector {
+    flex: none;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 8px;
+    padding: 8px;
+  }
+  .ring-inspector-heading {
+    gap: 5px;
+  }
+  .ring-inspector-heading .equipment-art {
+    width: 26px;
+    height: 26px;
+  }
+  .ring-inspector h3 {
+    font-size: 13px;
+    margin: 0;
+  }
+  .ring-inspector-heading small {
+    font-size: 9px;
+  }
+  .ring-full-name,
+  .ring-status {
+    display: none;
+  }
+  .ring-level {
+    font-size: 11px;
+    text-align: right;
+    margin: 0;
+  }
+  .ring-level strong {
+    font-size: 23px;
+  }
+  .ring-inspector > progress {
+    grid-column: 1/-1;
+    height: 3px;
+  }
+  .ring-inspector .soul-affixes {
+    grid-column: 1/-1;
+    display: flex;
+    gap: 8px;
+    margin: 0;
+  }
+  .ring-inspector .soul-affixes > div {
+    flex: 1;
+    display: grid;
+    gap: 2px;
+    padding: 4px 0;
+    font-size: 10px;
+  }
+  .ring-inspector .soul-affixes b,
+  .ring-inspector .soul-affixes .main-affix b {
+    font-size: 14px;
+  }
+  .ring-inspector .soul-affixes small {
+    font-size: 8px;
+  }
+  .ring-inspector > .primary-button,
+  .ring-inspector .soul-actions {
+    grid-column: 1/-1;
+    margin: 0;
+  }
+  .ring-inspector > .primary-button {
+    font-size: 12px;
+    padding: 6px;
+  }
+  .soul-growth-screen .level-footer {
+    padding-top: 6px;
+    gap: 5px;
+    margin-top: 4px;
+  }
+  .soul-growth-screen .level-btn-group .primary-button {
+    font-size: 13px;
+    padding: 7px 3px;
+    min-width: 0;
+  }
+  .soul-growth-screen .level-cost-info > span {
+    font-size: 9px;
+  }
+  .fate-star > span {
+    width: 30px;
+    height: 30px;
+    font-size: 28px;
+  }
+  .fate-star b {
+    font-size: 10px;
+  }
+  .fate-description {
+    padding: 7px;
+    min-height: 70px;
+  }
+  .fate-description h3 {
+    font-size: 14px;
+  }
+  .fate-description p {
+    font-size: 10px;
+  }
+  .fate-activate {
+    gap: 4px;
+    font-size: 9px;
+  }
+  .fate-activate .primary-button {
+    font-size: 10px;
+    padding: 6px;
+  }
+  .skill-selector {
+    gap: 3px;
+  }
+  .skill-selector span {
+    width: 33px;
+    height: 33px;
+    font-size: 18px;
+  }
+  .skill-selector b {
+    font-size: 10px;
+  }
+  .compact-skills article {
+    padding: 9px;
+  }
+  .compact-skills article h3 {
+    font-size: 18px;
+  }
+  .compact-skills p {
+    font-size: 11px;
+    line-height: 1.8;
+  }
+  .compact-skills article strong {
+    font-size: 24px;
+  }
+  .signature-display {
+    gap: 8px;
+  }
+  .signature-display > .equipment-art {
+    width: 90px;
+    height: 90px;
+  }
+  .signature-display h3,
+  .weapon-picker h3 {
+    font-size: 15px;
+  }
+  .signature-display p,
+  .weapon-picker p {
+    font-size: 10px;
+  }
+  .signature-display .primary-button {
+    font-size: 9px;
+    padding: 4px;
+  }
+  .weapon-picker {
+    padding: 8px;
+  }
+  .weapon-actions {
+    gap: 4px;
+  }
+  .weapon-actions button {
+    font-size: 10px;
+    padding: 6px;
+  }
+  .panel-note {
+    font-size: 9px !important;
+  }
+  .scenic-gallery-modal {
+    padding: 10px;
+  }
+  .scenic-gallery-modal header {
+    font-size: 11px;
+  }
+  .scenic-gallery-views {
+    height: 65dvh;
+    gap: 5px;
+    grid-template-columns: 1.3fr 1fr 1fr;
+  }
+}
+@media (min-height: 850px) and (min-width: 1200px) {
+  .ring-workspace .soul-node {
+    width: 80px;
+    gap: 5px;
+  }
+  .ring-workspace .soul-node .equipment-art {
+    width: 64px;
+    height: 64px;
+  }
+  .ring-workspace .soul-node b {
+    font-size: 14px;
+  }
+  .ring-workspace .soul-node small {
+    font-size: 11px;
+  }
+  .ring-map-core strong {
+    font-size: 43px;
+  }
+  .ring-map-core span {
+    font-size: 13px;
+  }
+  .ring-inspector {
+    padding: 22px 16px 13px;
+  }
+  .ring-inspector-heading .equipment-art {
+    width: 57px;
+    height: 57px;
+  }
+  .ring-inspector h3 {
+    font-size: 22px;
+  }
+  .ring-inspector-heading small {
+    font-size: 12px;
+  }
+  .ring-full-name {
+    font-size: 12px;
+    margin: 14px 0;
+  }
+  .ring-level {
+    font-size: 16px;
+  }
+  .ring-level strong {
+    font-size: 34px;
+  }
+  .ring-inspector .soul-affixes > div {
+    padding: 14px 0;
+    font-size: 15px;
+  }
+  .ring-inspector .soul-affixes small {
+    font-size: 10px;
+  }
+  .ring-inspector .soul-affixes b {
+    font-size: 20px;
+  }
+  .ring-inspector .soul-affixes .main-affix b {
+    font-size: 27px;
+  }
+  .ring-inspector > .primary-button {
+    font-size: 18px;
+    padding: 12px 3px;
+  }
+  .ring-status {
+    font-size: 10px;
+  }
+  .fate-star > span {
+    width: 56px;
+    height: 56px;
+    font-size: 48px;
+  }
+  .fate-star b {
+    font-size: 15px;
+  }
+  .fate-star small {
+    font-size: 11px;
+  }
+  .fate-description {
+    padding: 16px;
+    min-height: 94px;
+  }
+  .fate-description p {
+    font-size: 14px;
+  }
+}
+.soul-gem {
+  background: transparent !important;
+  border: 0 !important;
+  outline: 0 !important;
+  overflow: visible !important;
+  box-shadow: none !important;
+}
+.soul-gem > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.signature-art-v2 {
+  background: transparent !important;
+  overflow: hidden;
+}
+.signature-art-v2 > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.signature-model-description {
+  line-height: 1.65;
+  font-size: 12px;
+}
+.soul-node.selected .soul-gem {
+  filter: drop-shadow(0 0 7px #dfc782aa);
+}
+.soul-growth-screen .codex-roster-list button > span {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1px;
+}
+.soul-growth-screen .codex-roster-list button > span small {
+  justify-self: end;
+}
+@media (max-width: 760px) and (max-height: 740px) {
+  .ring-workspace .ring-map {
+    min-height: 96px;
+  }
+  .ring-workspace .soul-node .equipment-art {
+    width: 23px;
+    height: 23px;
+  }
+  .ring-workspace .soul-node b {
+    font-size: 8px;
+  }
+  .ring-map-core span {
+    display: none;
+  }
+  .ring-map-core strong {
+    font-size: 20px;
+  }
+  .ring-inspector {
+    padding: 6px;
+  }
+  .ring-inspector .soul-affixes small {
+    margin: 0;
+  }
+  .compact-skills {
+    gap: 6px;
+    padding: 7px 0;
+  }
+  .compact-skills article {
+    padding: 7px;
+  }
+  .compact-skills article h3 {
+    margin: 6px 0;
+  }
+  .compact-skills p {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+  .compact-weapons {
+    padding: 8px 0;
+    gap: 6px;
+  }
+  .signature-display > .equipment-art {
+    width: 76px;
+    height: 76px;
+  }
+  .signature-display p {
+    margin: 3px 0;
+  }
+  .weapon-picker {
+    padding: 6px;
+  }
+  .weapon-picker p {
+    margin: 3px 0;
+  }
+  .weapon-actions {
+    margin-top: 6px;
+  }
+}
+@media (max-width: 760px) and (max-height: 740px) {
+  .fate-stage {
+    min-height: 92px;
+  }
+  .fate-star > span {
+    width: 24px;
+    height: 24px;
+    font-size: 23px;
+  }
+  .fate-star b {
+    font-size: 9px;
+    margin-top: 3px;
+  }
+  .fate-star small {
+    display: none;
+  }
+}
+
+/* Isolate the weapon light on the same seamless backdrop as its display. */
+.equipment-art.roster-weapon-art {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  background: radial-gradient(ellipse at center, #19283d 0%, #0b1321 72%);
+}
+.roster-weapon-art > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  object-fit: contain;
+  mix-blend-mode: screen;
+}

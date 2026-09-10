@@ -1,0 +1,541 @@
+.soul-growth-screen {
+  --epic-ink: #e5e9f1;
+  --epic-border: #435066;
+  --epic-paper: #101927;
+  color: #e5e9f1;
+  background: radial-gradient(
+    ellipse at 35% 40%,
+    #23364c 0,
+    #121d2c 48%,
+    #0c1320 100%
+  );
+  padding: 22px 3vw 32px;
+}
+.soul-growth-screen .epic-heading {
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #b89b6045;
+}
+.soul-growth-screen .epic-heading h1 {
+  font-size: 26px;
+  color: #ebdfc6;
+  margin: 0;
+  letter-spacing: 0.12em;
+}
+.soul-growth-screen .epic-heading p {
+  margin: 6px 0 0;
+  color: #a8b4c5;
+  font-size: 12px;
+}
+.soul-growth-screen .codex-layout {
+  grid-template-columns: 172px minmax(230px, 0.85fr) minmax(400px, 1.2fr);
+  gap: 24px;
+}
+.soul-growth-screen .collection-count,
+.soul-growth-screen .collection-count b {
+  color: #cdb88f;
+}
+.soul-growth-screen .codex-roster input,
+.soul-growth-screen .codex-roster select {
+  background: #131e2f;
+  color: #c8d4e3;
+  border-color: #394559;
+}
+.soul-growth-screen .codex-roster-list {
+  max-height: 680px;
+  gap: 5px;
+}
+.soul-growth-screen .codex-roster-list > button {
+  background: #172335;
+  color: #c8d4e3;
+  border-radius: 3px;
+}
+.soul-growth-screen .codex-roster-list > button.chosen {
+  background: #2a3543;
+  outline: 1px solid #bca475;
+}
+.soul-growth-screen .codex-roster-list small {
+  color: #a9b6ca;
+}
+.soul-growth-screen .codex-art {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  top: 14px;
+}
+.soul-growth-screen .art-topline {
+  color: #cdb88f;
+}
+.soul-growth-screen .codex-name h2 {
+  color: #f4e8cd;
+  font-size: 35px;
+}
+.soul-growth-screen .codex-name p,
+.soul-growth-screen .codex-name span {
+  color: #bccbdd;
+}
+.soul-growth-screen .detail-intro h2 {
+  color: #dccba9;
+  margin: 6px 0;
+  font-size: 15px;
+}
+.soul-growth-screen .eyebrow {
+  color: #b0c1d6;
+}
+.character-biography {
+  font-size: 12px;
+  color: #aebccd;
+  margin: 10px 0;
+}
+.character-biography summary {
+  cursor: pointer;
+}
+.soul-growth-screen .detail-intro .growth-identity {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 23px;
+  letter-spacing: 0.08em;
+}
+.growth-identity span {
+  font:
+    18px Georgia,
+    serif;
+  color: #c3af88;
+  letter-spacing: 0;
+}
+.soul-growth-screen .art-view-controls button {
+  color: #bdcbdc;
+  background: #192638;
+  border-color: #465770;
+}
+.soul-growth-screen .art-view-controls button[aria-pressed="true"] {
+  color: #eeddbc;
+  background: #354253;
+}
+.screen-companions .topbar,
+.screen-companions .bottom-nav {
+  background: #101927;
+  border-color: #bda06a55;
+}
+.screen-companions .brand,
+.screen-companions .brand-text b,
+.screen-companions .resources b {
+  color: #e1d2b5;
+  -webkit-text-fill-color: #e1d2b5;
+}
+.screen-companions .resources,
+.screen-companions .brand-text small {
+  color: #a0aec1;
+}
+.screen-companions .bottom-nav button {
+  color: #a7b6ca;
+}
+.screen-companions .bottom-nav button.active {
+  color: #efdab3;
+  background: #baa06d20;
+}
+.soul-growth-screen .art-stage-button {
+  border: 1px solid #ad976550;
+  box-shadow: 0 14px 40px #050b1740;
+}
+.soul-growth-screen .recruit-card {
+  background: #1b293b;
+  border-color: #516178;
+}
+.soul-growth-screen .epic-stats {
+  margin: 12px 0;
+  padding: 12px 0;
+  gap: 16px 4px;
+}
+.soul-growth-screen .epic-stats b {
+  font-size: 21px;
+  color: #efe7d9;
+}
+.soul-growth-screen .epic-stats small {
+  font-size: 11px;
+  color: #9bacc3;
+}
+.soul-growth-screen .detail-tabs {
+  gap: 0;
+  border-bottom: 1px solid #b89b6055;
+}
+.soul-growth-screen .detail-tabs button {
+  flex: 1;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #a6b5c9;
+  padding: 12px 5px;
+  font-size: 14px;
+}
+.soul-growth-screen .detail-tabs button[aria-selected="true"] {
+  color: #efdab3;
+  background: linear-gradient(0deg, #b89b6020, transparent);
+  border-bottom-color: #d8bc82;
+}
+.soul-growth-screen .section-label {
+  margin: 16px 0 0;
+  color: #b2c0d1;
+}
+.soul-growth-screen .section-label h3 {
+  font-size: 14px;
+  color: #e5d6b8;
+}
+.soul-growth-screen .section-label span {
+  font-size: 11px;
+}
+.ring-map {
+  position: relative;
+  width: min(100%, 360px);
+  aspect-ratio: 1.12;
+  margin: 0 auto;
+  background: radial-gradient(circle at 50% 48%, #749bc91a, transparent 65%);
+}
+.ring-map::before,
+.ring-map::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #b69b6748;
+  border-radius: 50%;
+  width: 73%;
+  aspect-ratio: 1;
+  left: 13.5%;
+  top: 7%;
+  pointer-events: none;
+}
+.ring-map::after {
+  width: 47%;
+  left: 26.5%;
+  top: 22%;
+  border-style: dashed;
+  opacity: 0.55;
+}
+.ring-map-core {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  gap: 6px;
+  text-align: center;
+  color: #c6b58e;
+}
+.ring-map-core strong {
+  font:
+    34px Georgia,
+    serif;
+  color: #eee1c1;
+}
+.ring-map-core small {
+  font-size: 17px;
+  color: #8494aa;
+}
+.ring-map-core span {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+.soul-node {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%);
+  width: 76px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  display: grid;
+  justify-items: center;
+  gap: 3px;
+  color: #d9dfec;
+  cursor: pointer;
+}
+.soul-node .equipment-art {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #b7a275;
+  box-shadow: 0 0 16px #8bbfff25;
+  min-height: 0;
+}
+.soul-node.acquired .equipment-art {
+  border-color: #b99adb;
+  box-shadow: 0 0 15px #bb85ff35;
+}
+.soul-node b {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+.soul-node small {
+  font-size: 10px;
+  color: #a2b5cf;
+}
+.soul-node.locked {
+  opacity: 0.48;
+}
+.soul-node:hover,
+.soul-node:focus-visible {
+  opacity: 1;
+  filter: brightness(1.3);
+}
+.soul-total {
+  border-top: 1px solid #52617b55;
+  padding: 11px 0;
+  font-size: 11px;
+  color: #92a4bd;
+}
+.soul-total > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px 20px;
+  margin-top: 9px;
+}
+.soul-total > div > span {
+  display: flex;
+  justify-content: space-between;
+}
+.soul-total b {
+  color: #d3deec;
+  font-weight: 500;
+}
+.soul-growth-screen .primary-button,
+.soul-dialog .primary-button {
+  background: linear-gradient(110deg, #c6a86e, #efdfb6);
+  color: #251e13;
+  border: 1px solid #e3c68c;
+  box-shadow: 0 4px 20px #0003;
+}
+.soul-growth-screen .level-footer {
+  margin-top: 10px;
+  padding-top: 14px;
+  color: #d8c397;
+  border-color: #b89b6055;
+}
+.soul-growth-screen .signature-card,
+.soul-growth-screen .epic-weapon,
+.soul-growth-screen .epic-constellations article,
+.soul-growth-screen .skill-detail {
+  color: #dbe2ed;
+  background: #182437;
+  border-color: #4a5972;
+}
+.soul-growth-screen .signature-card p,
+.soul-growth-screen .epic-weapon small,
+.soul-growth-screen .fine-print {
+  color: #a9b7c9;
+}
+.soul-dialog {
+  width: min(430px, calc(100vw - 32px));
+  max-height: 85vh;
+  overflow: auto;
+  border: 1px solid #ad966c;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #1c2b40, #0f1724);
+  color: #dbe3ef;
+  padding: 24px;
+  box-shadow: 0 20px 90px #0009;
+}
+.soul-dialog::backdrop {
+  background: #030812b8;
+  backdrop-filter: blur(5px);
+}
+.soul-dialog header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.soul-dialog h2 {
+  margin: 5px 0;
+  font:
+    22px Georgia,
+    "SimSun",
+    serif;
+  color: #f1dfba;
+}
+.soul-dialog header small {
+  font-size: 10px;
+  color: #9baec6;
+}
+.soul-dialog button:not(.primary-button) {
+  background: #233149;
+  border: 1px solid #53617a;
+  border-radius: 4px;
+  padding: 7px 10px;
+  color: #d7e0ed;
+  font-size: 12px;
+}
+.soul-detail-art {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 0;
+}
+.soul-detail-art .equipment-art {
+  width: 82px;
+  height: 82px;
+  min-height: 0;
+  border-radius: 50%;
+  border: 1px solid #c7af7b;
+}
+.soul-detail-art strong {
+  font:
+    30px Georgia,
+    serif;
+  color: #eddfc3;
+}
+.soul-detail-art small {
+  font-size: 15px;
+  color: #8f9fb6;
+}
+.soul-detail-art p {
+  margin: 5px 0;
+  font-size: 12px;
+}
+.soul-dialog progress {
+  width: 100%;
+  height: 4px;
+  accent-color: #ceaf79;
+}
+.soul-affixes {
+  margin: 16px 0;
+}
+.soul-affixes > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+  border-bottom: 1px solid #3e4c6355;
+  font-size: 13px;
+}
+.soul-affixes small {
+  display: block;
+  font-size: 10px;
+  color: #9eafc5;
+  font-weight: 400;
+  margin: 3px 0;
+}
+.soul-affixes b {
+  text-align: right;
+  font-size: 17px;
+  font-weight: 500;
+}
+.soul-affixes .main-affix b {
+  color: #e8ce98;
+  font-size: 25px;
+}
+.soul-affixes .inactive {
+  opacity: 0.5;
+}
+.soul-rule,
+.soul-dialog details,
+.soul-dialog > p {
+  color: #a4b3c8;
+  font-size: 11px;
+  line-height: 1.8;
+}
+.soul-dialog .soul-actions {
+  margin: 16px 0;
+  font-size: 11px;
+  align-items: center;
+}
+.soul-dialog .wide {
+  margin-top: 16px;
+}
+.wish-wallet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--epic-border);
+}
+.wish-wallet > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+}
+.wish-wallet button {
+  padding: 7px 11px;
+  font-size: 11px;
+}
+.wish-unreleased {
+  min-height: 280px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 12px;
+  text-align: center;
+}
+@media (min-width: 1600px) {
+  .soul-growth-screen .codex-layout {
+    grid-template-columns: 190px minmax(320px, 0.95fr) minmax(440px, 1.15fr);
+  }
+  .ring-map {
+    width: 380px;
+  }
+}
+@media (max-width: 1100px) {
+  .soul-growth-screen .codex-layout {
+    grid-template-columns: 130px minmax(190px, 0.7fr) minmax(330px, 1fr);
+    gap: 14px;
+  }
+  .soul-growth-screen .codex-roster-list > button {
+    gap: 6px;
+  }
+}
+@media (max-width: 850px) {
+  .soul-growth-screen .codex-layout {
+    grid-template-columns: 140px 1fr;
+  }
+  .soul-growth-screen .codex-detail {
+    grid-column: 1/-1;
+  }
+  .soul-growth-screen .codex-art {
+    position: relative;
+    top: 0;
+  }
+  .soul-growth-screen .codex-roster-list {
+    max-height: 440px;
+  }
+}
+@media (max-width: 550px) {
+  .soul-growth-screen {
+    padding: 18px 14px;
+  }
+  .soul-growth-screen .codex-layout {
+    grid-template-columns: 1fr;
+  }
+  .soul-growth-screen .codex-roster {
+    grid-template-columns: 1fr 100px;
+  }
+  .soul-growth-screen .codex-art {
+    display: none;
+  }
+  .soul-growth-screen .epic-stats b {
+    font-size: 19px;
+  }
+  .soul-growth-screen .codex-detail {
+    grid-column: auto;
+  }
+  .soul-growth-screen .section-label span {
+    font-size: 10px;
+  }
+  .soul-node {
+    width: 62px;
+  }
+  .soul-node .equipment-art {
+    width: 40px;
+    height: 40px;
+  }
+  .soul-dialog {
+    padding: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .soul-growth-screen * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

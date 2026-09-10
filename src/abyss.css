@@ -1,0 +1,1065 @@
+.abyss-page {
+  --abyss-gold: #d6bd89;
+  --abyss-text: #ede5d6;
+  --abyss-muted: #a4b1c4;
+  --abyss-line: #c9ad7633;
+  min-height: 100%;
+  padding: 22px clamp(18px, 3vw, 48px) 36px;
+  color: var(--abyss-text);
+  background:
+    radial-gradient(ellipse at 45% 28%, #233448 0, transparent 56%), #0e1725;
+  font-family: var(--font-body, "Microsoft YaHei", sans-serif);
+}
+.abyss-page * {
+  box-sizing: border-box;
+}
+.abyss-page button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.abyss-page button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.abyss-page button:focus-visible,
+.abyss-page summary:focus-visible {
+  outline: 2px solid #f4d99d;
+  outline-offset: 4px;
+}
+.abyss-page svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.abyss-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--abyss-line);
+  margin-bottom: 20px;
+}
+.abyss-heading > div > span {
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  color: var(--abyss-gold);
+}
+.abyss-heading h1 {
+  font:
+    40px/1.25 "Noto Serif SC",
+    "Songti SC",
+    SimSun,
+    serif;
+  letter-spacing: 0.12em;
+  margin: 6px 0 0;
+  color: #f0dfbd;
+}
+.abyss-heading h1 span {
+  font-size: 15px;
+  letter-spacing: 0.14em;
+  margin-left: 28px;
+  color: #c4cad3;
+}
+.abyss-progress {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.abyss-progress > svg {
+  width: 34px;
+  height: 34px;
+  color: var(--abyss-gold);
+}
+.abyss-progress b {
+  font:
+    32px Georgia,
+    serif;
+}
+.abyss-progress small {
+  font-size: 17px;
+  color: var(--abyss-muted);
+}
+.abyss-progress div > span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--abyss-muted);
+  margin-top: 4px;
+}
+.abyss-regions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.abyss-regions button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 22px;
+  text-align: left;
+  background: #141f2e;
+  border: 1px solid #435065;
+  border-radius: 3px;
+  overflow: hidden;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.abyss-regions button[aria-pressed="true"] {
+  background: linear-gradient(110deg, #344456, #1c2c40);
+  border-color: #d1b889;
+  box-shadow: inset 0 0 20px #dfc58f0b;
+}
+.abyss-regions button > svg {
+  color: var(--abyss-gold);
+  width: 30px;
+  height: 30px;
+}
+.abyss-regions b {
+  display: block;
+  font:
+    23px "Noto Serif SC",
+    SimSun,
+    serif;
+  letter-spacing: 0.12em;
+}
+.abyss-regions div > span {
+  display: block;
+  color: var(--abyss-muted);
+  font-size: 11px;
+  margin-top: 7px;
+}
+.abyss-regions small {
+  margin-left: auto;
+  color: var(--abyss-gold);
+  font:
+    14px Georgia,
+    serif;
+  white-space: nowrap;
+}
+.abyss-regions i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--abyss-gold);
+}
+.abyss-region-summary {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0 18px;
+  margin-bottom: 4px;
+  font-size: 11px;
+  color: var(--abyss-muted);
+}
+.abyss-region-summary > span {
+  color: var(--abyss-gold);
+  white-space: nowrap;
+}
+.abyss-region-summary > span:last-child {
+  border-left: 1px solid var(--abyss-line);
+  padding-left: 18px;
+}
+.abyss-region-summary p {
+  margin: 0;
+  line-height: 1.7;
+  flex: 1;
+}
+.abyss-layout {
+  display: grid;
+  grid-template-columns: 190px minmax(260px, 1fr) minmax(340px, 0.9fr);
+  gap: 24px;
+  align-items: start;
+}
+.abyss-floors {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.abyss-nav-caption {
+  display: flex;
+  justify-content: space-between;
+  color: var(--abyss-gold);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  padding: 0 6px 12px;
+}
+.abyss-nav-caption span {
+  color: var(--abyss-muted);
+  font-size: 10px;
+}
+.abyss-floors button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #111d2d80;
+  border: 1px solid #55617635;
+  border-radius: 2px;
+  padding: 22px 12px;
+  text-align: left;
+  min-height: 80px;
+  transition: background 0.2s;
+}
+.abyss-floors button[aria-pressed="true"] {
+  border-color: var(--abyss-gold);
+  background: linear-gradient(90deg, #d6bd8926, #28364a80);
+  box-shadow: inset 3px 0 var(--abyss-gold);
+}
+.abyss-floor-number {
+  font:
+    22px Georgia,
+    serif;
+  color: #bda77f;
+}
+.abyss-floors button b {
+  display: block;
+  font:
+    16px SimSun,
+    serif;
+  color: #e8e0d0;
+}
+.abyss-floors button small {
+  display: block;
+  font-size: 10px;
+  color: var(--abyss-muted);
+  margin-top: 8px;
+}
+.abyss-floors button > svg {
+  width: 13px;
+  height: 13px;
+  margin-left: auto;
+  color: #bca681;
+}
+.abyss-nav-note {
+  font:
+    12px/2 SimSun,
+    serif;
+  color: #93a0b3;
+  padding: 22px 12px;
+  border-top: 1px solid var(--abyss-line);
+  margin: 16px 0 0;
+}
+.abyss-art-column {
+  min-width: 0;
+}
+.abyss-art-frame {
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+  height: clamp(510px, 43vw, 680px);
+  border: 1px solid #bca47740;
+  background: #101824;
+}
+.abyss-art-frame > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+  animation: abyss-appear 0.4s ease;
+}
+.abyss-art-caption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 76px 26px 25px;
+  background: linear-gradient(transparent, #0d1625f0 66%);
+  pointer-events: none;
+}
+.abyss-art-caption small {
+  color: #d8c399;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+.abyss-art-caption b {
+  display: block;
+  font:
+    clamp(20px, 1.8vw, 30px)/1.5 SimSun,
+    serif;
+  letter-spacing: 0.06em;
+  color: #f0e0c2;
+  margin: 6px 0;
+}
+.abyss-art-caption span {
+  font-size: 11px;
+  color: #b8c4d4;
+}
+.abyss-art-frame.is-dual {
+  display: flex;
+}
+.abyss-art-frame.is-dual > button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  width: 50%;
+  height: 100%;
+}
+.abyss-art-frame.is-dual > button[aria-pressed="true"] {
+  box-shadow: inset 0 3px var(--abyss-gold);
+}
+.abyss-art-frame.is-dual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.abyss-enemy-strip {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.abyss-enemy-strip button,
+.abyss-minion-preview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 120px;
+  padding: 5px;
+  border: 1px solid #72809540;
+  background: #152132;
+  text-align: left;
+}
+.abyss-enemy-strip button[aria-pressed="true"] {
+  border-color: var(--abyss-gold);
+}
+.abyss-enemy-strip img {
+  width: 44px;
+  height: 52px;
+  object-fit: cover;
+  object-position: center 25%;
+}
+.abyss-enemy-strip span {
+  font-size: 11px;
+  line-height: 1.6;
+}
+.abyss-enemy-strip small {
+  display: block;
+  font-size: 9px;
+  color: var(--abyss-muted);
+}
+.abyss-detail {
+  min-width: 0;
+  padding: 8px 0 0 2px;
+}
+.abyss-detail-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--abyss-gold);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+.abyss-detail-top b {
+  font-weight: 400;
+  border: 1px solid var(--abyss-line);
+  padding: 3px 7px;
+  margin-top: -3px;
+}
+.abyss-detail h2 {
+  font:
+    clamp(24px, 2.3vw, 36px)/1.5 "Noto Serif SC",
+    SimSun,
+    serif;
+  letter-spacing: 0.025em;
+  color: #f0dfbd;
+  margin: 16px 0 6px;
+}
+.abyss-subtitle {
+  font-size: 12px;
+  color: var(--abyss-muted);
+  margin: 0 0 24px;
+}
+.abyss-stats {
+  display: grid;
+  grid-template-columns: 1.4fr 1.15fr 0.7fr;
+  margin: 0;
+  border-block: 1px solid var(--abyss-line);
+  padding: 17px 0;
+}
+.abyss-stats > div + div {
+  border-left: 1px solid var(--abyss-line);
+  padding-left: 16px;
+}
+.abyss-stats dt {
+  font-size: 10px;
+  color: var(--abyss-muted);
+  margin-bottom: 10px;
+}
+.abyss-stats dd {
+  margin: 0;
+  font:
+    clamp(18px, 1.7vw, 28px) Georgia,
+    serif;
+  font-variant-numeric: tabular-nums;
+  color: #f1e9d7;
+}
+.abyss-weakness {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+  font-size: 12px;
+  border-bottom: 1px solid var(--abyss-line);
+}
+.abyss-weakness > svg {
+  color: var(--abyss-gold);
+}
+.abyss-weakness > b {
+  margin-left: 8px;
+  width: 29px;
+  height: 29px;
+  border: 1px solid #b09bce;
+  background: #6e558355;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #e4d0fd;
+}
+.abyss-weakness small {
+  margin-left: auto;
+  color: var(--abyss-muted);
+  font-size: 10px;
+}
+.abyss-rule {
+  padding: 17px 0 12px;
+}
+.abyss-rule h3,
+.abyss-rewards h3 {
+  font:
+    15px SimSun,
+    serif;
+  color: #dfc99f;
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.abyss-rule p,
+.abyss-intel p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #b7c2d1;
+  margin: 0;
+}
+.abyss-intel {
+  padding: 12px 0;
+  border-block: 1px solid var(--abyss-line);
+  font-size: 12px;
+}
+.abyss-intel summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  list-style: none;
+  color: #d1c5ae;
+}
+.abyss-intel summary span {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: var(--abyss-muted);
+  font-size: 10px;
+}
+.abyss-intel summary svg {
+  width: 13px;
+  height: 13px;
+}
+.abyss-intel[open] summary svg {
+  transform: rotate(90deg);
+}
+.abyss-intel p {
+  margin-top: 12px;
+  font-size: 11px;
+}
+.abyss-rewards {
+  padding-top: 19px;
+}
+.abyss-rewards h3 small {
+  margin-left: auto;
+  color: var(--abyss-muted);
+  font: 10px sans-serif;
+}
+.abyss-rewards > div {
+  display: flex;
+  gap: 9px;
+}
+.abyss-rewards > div > span {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 4px 8px;
+  background: linear-gradient(#2c3342, #141f30);
+  border: 1px solid #c1a87a45;
+}
+.abyss-rewards svg {
+  color: #d8c296;
+  width: 24px;
+  height: 24px;
+}
+.abyss-rewards b {
+  font:
+    16px Georgia,
+    serif;
+}
+.abyss-rewards small {
+  font-size: 9px;
+  color: #b1bdcd;
+  text-align: center;
+}
+.abyss-recommendation {
+  color: var(--abyss-muted);
+  font-size: 10px;
+  margin: 18px 0 12px;
+}
+.abyss-actions {
+  display: flex;
+  gap: 10px;
+}
+.abyss-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 53px;
+  border: 1px solid #b9a07966;
+  background: #1d293a;
+  font:
+    18px SimSun,
+    serif;
+  padding: 8px 14px;
+}
+.abyss-actions small {
+  font: 10px sans-serif;
+  opacity: 0.75;
+}
+.abyss-actions .abyss-challenge {
+  flex: 1;
+  border: 1px solid #efd4a0;
+  background: linear-gradient(115deg, #e9d9b7, #c9ad75);
+  color: #29303a;
+  box-shadow: inset 0 0 0 3px #19223217;
+}
+.abyss-notice {
+  min-height: 18px;
+  text-align: right;
+  font-size: 10px;
+  color: #a8b6c9;
+  margin: 10px 0 0;
+}
+.abyss-minions-stage {
+  position: absolute;
+  top: 24%;
+  right: 5%;
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+.abyss-minions-stage > div {
+  width: 105px;
+  border: 1px solid #bca67b77;
+  background: #101b2ddd;
+  padding: 4px;
+  color: #e5d6b9;
+}
+.abyss-minions-stage img {
+  width: 100%;
+  height: 125px;
+  object-fit: cover;
+  object-position: center 25%;
+}
+.abyss-minions-stage span {
+  display: block;
+  text-align: center;
+  font-size: 10px;
+}
+.abyss-minions-stage progress {
+  width: 100%;
+  height: 5px;
+  accent-color: #cbb485;
+}
+.abyss-minions-stage .defeated {
+  opacity: 0.25;
+  filter: grayscale(1);
+}
+@keyframes abyss-appear {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (min-width: 1700px) {
+  .abyss-layout {
+    grid-template-columns: 220px minmax(360px, 1fr) minmax(410px, 0.85fr);
+    gap: 32px;
+  }
+  .abyss-page {
+    padding-inline: 4vw;
+  }
+  .abyss-detail {
+    padding: 20px;
+  }
+  .abyss-rule p {
+    font-size: 14px;
+  }
+  .abyss-floors button {
+    min-height: 91px;
+  }
+}
+@media (max-width: 1100px) {
+  .abyss-layout {
+    grid-template-columns: 150px minmax(230px, 1fr) minmax(300px, 1fr);
+    gap: 16px;
+  }
+  .abyss-floors button {
+    padding: 20px 8px;
+    gap: 9px;
+  }
+  .abyss-floors button b {
+    font-size: 14px;
+  }
+  .abyss-region-summary > span:last-child {
+    display: none;
+  }
+  .abyss-actions button {
+    padding: 8px;
+    font-size: 15px;
+  }
+  .abyss-actions small {
+    display: none;
+  }
+  .abyss-stats > div + div {
+    padding-left: 8px;
+  }
+  .abyss-regions button {
+    padding: 16px 12px;
+    gap: 10px;
+  }
+  .abyss-regions b {
+    font-size: 20px;
+  }
+  .abyss-regions div > span {
+    font-size: 10px;
+  }
+  .abyss-art-frame {
+    height: 530px;
+  }
+}
+@media (max-width: 850px) {
+  .abyss-layout {
+    grid-template-columns: minmax(220px, 1fr) minmax(280px, 1fr);
+  }
+  .abyss-floors {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 6px;
+  }
+  .abyss-nav-caption,
+  .abyss-nav-note {
+    display: none;
+  }
+  .abyss-floors button {
+    padding: 12px 8px;
+    min-height: 66px;
+    gap: 8px;
+  }
+  .abyss-floor-number {
+    font-size: 16px;
+  }
+  .abyss-floors button small,
+  .abyss-floors button > svg {
+    display: none;
+  }
+  .abyss-floors button b {
+    font: 12px/1.6 sans-serif;
+  }
+  .abyss-heading h1 {
+    font-size: 32px;
+  }
+  .abyss-regions button > svg {
+    display: none;
+  }
+  .abyss-region-summary > span:first-child {
+    display: none;
+  }
+  .abyss-art-frame {
+    height: 570px;
+  }
+  .abyss-detail h2 {
+    font-size: 23px;
+  }
+}
+@media (max-width: 600px) {
+  .abyss-page {
+    padding: 18px 14px 30px;
+  }
+  .abyss-heading {
+    padding-bottom: 16px;
+    margin-bottom: 14px;
+  }
+  .abyss-heading h1 span {
+    display: block;
+    margin: 8px 0 0;
+    font-size: 12px;
+  }
+  .abyss-progress {
+    gap: 8px;
+  }
+  .abyss-progress b {
+    font-size: 26px;
+  }
+  .abyss-progress > svg {
+    width: 25px;
+  }
+  .abyss-regions {
+    gap: 6px;
+  }
+  .abyss-regions button {
+    display: block;
+    padding: 12px 9px;
+  }
+  .abyss-regions b {
+    font-size: 16px;
+    letter-spacing: 0;
+  }
+  .abyss-regions div > span {
+    font-size: 9px;
+    line-height: 1.7;
+    margin-top: 5px;
+  }
+  .abyss-regions small {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+  }
+  .abyss-region-summary {
+    padding: 12px 0;
+  }
+  .abyss-region-summary p {
+    font-size: 10px;
+  }
+  .abyss-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .abyss-floors {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .abyss-floors button {
+    min-height: 54px;
+  }
+  .abyss-art-column {
+    width: 100%;
+  }
+  .abyss-art-frame {
+    height: 450px;
+    min-height: 0;
+  }
+  .abyss-art-frame > img {
+    object-position: center 24%;
+  }
+  .abyss-art-caption {
+    padding: 70px 20px 20px;
+  }
+  .abyss-detail {
+    width: 100%;
+  }
+  .abyss-detail h2 {
+    font-size: 28px;
+  }
+  .abyss-stats dd {
+    font-size: 26px;
+  }
+  .abyss-actions button {
+    min-height: 54px;
+    font-size: 18px;
+  }
+  .abyss-actions small {
+    display: inline;
+    font-size: 10px;
+  }
+  .abyss-minions-stage {
+    top: 25%;
+    right: 1%;
+  }
+  .abyss-minions-stage > div {
+    width: 64px;
+  }
+  .abyss-minions-stage img {
+    height: 75px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .abyss-page * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+.screen-tower .topbar {
+  background: #0e1725;
+  border-bottom: 1px solid #c9ad7633;
+  color: #d6bd89;
+  height: 52px;
+}
+.screen-tower .brand,
+.screen-tower .brand b,
+.screen-tower .resources b {
+  color: #e5d3b1;
+}
+.screen-tower .resources,
+.screen-tower .brand small {
+  color: #a4b1c4;
+}
+.screen-tower .screen-content {
+  top: 52px;
+}
+.screen-tower .bottom-nav {
+  background: #101c2b;
+  border-top: 1px solid #c9ad7633;
+}
+.screen-tower .bottom-nav button {
+  color: #b9c4d2;
+}
+.screen-tower .more-menu {
+  background: #152132;
+  color: #e5d3b1;
+}
+.screen-tower .more-menu button {
+  color: #e5d3b1;
+}
+.screen-tower::after {
+  display: none !important;
+}
+@media (min-width: 851px) and (max-height: 850px) {
+  .abyss-page {
+    padding-top: 14px;
+  }
+  .abyss-heading {
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+  }
+  .abyss-heading h1 {
+    font-size: 30px;
+  }
+  .abyss-regions button {
+    padding-block: 12px;
+  }
+  .abyss-region-summary {
+    padding-block: 10px;
+  }
+  .abyss-layout {
+    gap: 18px;
+  }
+  .abyss-art-frame {
+    height: 480px;
+    min-height: 0;
+  }
+  .abyss-floors button {
+    min-height: 64px;
+    padding-block: 16px;
+  }
+  .abyss-detail h2 {
+    margin-top: 10px;
+  }
+  .abyss-subtitle {
+    margin-bottom: 14px;
+  }
+  .abyss-stats {
+    padding-block: 12px;
+  }
+  .abyss-rule {
+    padding-top: 12px;
+  }
+  .abyss-rule p {
+    font-size: 11px;
+  }
+  .abyss-rewards {
+    padding-top: 12px;
+  }
+  .abyss-rewards > div > span {
+    padding-top: 8px;
+  }
+  .abyss-recommendation {
+    margin-top: 12px;
+  }
+  .abyss-detail {
+    padding-top: 4px;
+  }
+}
+.screen-tower .brand-text b {
+  -webkit-text-fill-color: #e5d3b1;
+  background: none;
+}
+.screen-tower .screen-content {
+  bottom: 0;
+}
+.abyss-page {
+  padding-bottom: 120px;
+}
+.abyss-art-frame > img {
+  object-position: center top;
+}
+.abyss-actions {
+  position: fixed;
+  z-index: 46;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px clamp(18px, 3vw, 48px);
+  justify-content: flex-end;
+  border-top: 1px solid #c9ad7655;
+  background: #101c2bf5;
+  backdrop-filter: blur(16px);
+}
+.abyss-actions button {
+  min-width: 140px;
+}
+.abyss-actions .abyss-challenge {
+  flex: 0 1 290px;
+}
+.abyss-notice {
+  text-align: left;
+}
+@media (max-width: 600px) {
+  .abyss-actions {
+    padding: 10px 14px;
+  }
+  .abyss-actions button {
+    min-width: 95px;
+  }
+  .abyss-actions .abyss-challenge {
+    flex: 1;
+  }
+  .abyss-art-frame > img {
+    object-position: center top;
+  }
+}
+/* Preserve the entire portrait at every viewport, including crowns and weapons. */
+.abyss-art-frame {
+  display: flex;
+  flex-direction: column;
+  height: clamp(510px, 43vw, 680px);
+  min-height: 0;
+  background: radial-gradient(ellipse at 50% 45%, #263346, #101925 72%);
+}
+.abyss-art-frame > img {
+  display: block;
+  width: 100%;
+  height: calc(100% - 110px);
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+  flex: 1;
+}
+.abyss-art-caption {
+  position: static;
+  flex: 0 0 auto;
+  padding: 16px 22px 18px;
+  background: #0e1827;
+  border-top: 1px solid #c9ad7626;
+  min-height: 110px;
+}
+.abyss-art-caption b {
+  font-size: clamp(20px, 1.8vw, 28px);
+  margin: 4px 0;
+  line-height: 1.5;
+}
+.abyss-art-frame.is-dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+.abyss-art-frame.is-dual > button {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+.abyss-art-frame.is-dual img {
+  object-fit: contain;
+  object-position: center;
+}
+.abyss-art-frame.is-dual .abyss-art-caption {
+  grid-column: 1/-1;
+}
+@media (min-width: 851px) and (max-height: 850px) {
+  .abyss-art-frame {
+    height: 500px;
+  }
+}
+@media (max-width: 850px) {
+  .abyss-art-frame {
+    height: 570px;
+  }
+}
+@media (max-width: 600px) {
+  .abyss-art-frame {
+    height: 540px;
+  }
+  .abyss-art-frame > img {
+    object-fit: contain;
+    object-position: center;
+  }
+  .abyss-art-caption {
+    padding: 14px 18px;
+  }
+  .abyss-art-caption b {
+    font-size: 23px;
+  }
+}
+.formation-boss-figure.abyss-enemy {
+  aspect-ratio: 3/4;
+  background: #101925;
+}
+.formation-boss-figure.abyss-enemy img,
+.formation-boss-figure.abyss-enemy:hover img {
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
+.abyss-battle .illustrated-boss {
+  border-radius: 4px;
+  background: #101925;
+}
+.abyss-battle .illustrated-boss > img {
+  object-fit: contain;
+  object-position: center;
+}
+.abyss-minions-stage img {
+  object-fit: contain;
+  object-position: center;
+}
+.abyss-minions-stage {
+  right: 44%;
+  top: 22%;
+}
+.abyss-minions-stage > div {
+  width: 90px;
+}
+.abyss-minions-stage img {
+  height: 110px;
+}
+@media (max-width: 600px) {
+  .abyss-minions-stage {
+    right: 36%;
+    top: 26%;
+  }
+  .abyss-minions-stage > div {
+    width: 62px;
+  }
+  .abyss-minions-stage img {
+    height: 78px;
+  }
+}
