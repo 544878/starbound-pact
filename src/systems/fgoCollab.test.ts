@@ -139,8 +139,10 @@ describe("FGO Collaboration - Time Path Integration", () => {
     expect(nodes[5].effect).toContain("原初创世");
 
     const panel = combatPanel(gil, []);
-    expect(panel.attack).toBeGreaterThan(50_000);
-    expect(panel.hp).toBeGreaterThan(800_000);
+    expect(panel.attack).toBeGreaterThan(300);
+    expect(panel.attack).toBeLessThan(2000);
+    expect(panel.hp).toBeGreaterThan(3000);
+    expect(panel.hp).toBeLessThan(50000);
 
     // Max level 90 with maxed weapon and rings reaches ~200k attack
     const maxedGil = { ...gil, level: 90, rings: ["exclusive-7", "exclusive-8", "exclusive-9"] };
@@ -160,7 +162,8 @@ describe("FGO Collaboration - Time Path Integration", () => {
     expect(saberNodes[1].effect).toContain("遥远的理想乡");
     const saberPanel = combatPanel(saber, []);
     expect(saberPanel.defense).toBeGreaterThanOrEqual(400);
-    expect(saberPanel.hp).toBeGreaterThanOrEqual(2_000_000);
+    expect(saberPanel.hp).toBeGreaterThanOrEqual(6000);
+    expect(saberPanel.hp).toBeLessThan(50000);
 
     const maxedSaber = { ...saber, level: 90, rings: ["exclusive-7", "exclusive-8", "exclusive-9"] };
     const maxedSaberWeapon = {

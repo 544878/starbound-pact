@@ -259,6 +259,13 @@
   border: 0;
   background: transparent;
 }
+.soul-growth-screen .art-stage-button .character-art img,
+.soul-growth-screen .art-stage-button .character-art .skin-media {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+  object-position: center !important;
+}
 .soul-growth-screen .codex-art::after {
   content: "";
   position: absolute;
@@ -310,6 +317,28 @@
   text-shadow: 0 2px 4px #000;
   background: #101a2980;
   border-radius: 2px;
+}
+.soul-growth-screen .wardrobe-trigger {
+  position: absolute;
+  z-index: 3;
+  top: 54px;
+  left: 14px;
+  margin: 0;
+  padding: 6px 14px;
+  background: rgba(10, 19, 38, 0.88);
+  border: 1px solid rgba(222, 201, 169, 0.45);
+  border-radius: 4px;
+  color: #f4e8d0;
+  font: 12px "Microsoft YaHei", sans-serif;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.soul-growth-screen .wardrobe-trigger:hover {
+  background: rgba(22, 38, 70, 0.95);
+  border-color: #d4bd8d;
+  color: #ffffff;
 }
 .soul-growth-screen .codex-name {
   position: absolute;
@@ -1772,3 +1801,637 @@
   object-fit: contain;
   mix-blend-mode: screen;
 }
+
+/* ==========================================================================
+   天命星魂 · 灵契神座 (Trinity Astral Altar) & 立绘鉴赏 (Art Inspect Modal)
+   ========================================================================== */
+
+.v2-astral-constellation {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Subtab Switcher */
+.astral-tab-switcher {
+  display: flex;
+  gap: 8px;
+  padding: 4px;
+  background: rgba(11, 16, 26, 0.75);
+  border: 1px solid rgba(197, 160, 98, 0.25);
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+}
+.astral-tab-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: #9ea9be;
+  font: 13px "SimSun", serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.astral-tab-btn:hover {
+  color: #f2e3bc;
+  background: rgba(255, 255, 255, 0.05);
+}
+.astral-tab-btn.active {
+  background: linear-gradient(135deg, rgba(65, 45, 18, 0.7) 0%, rgba(26, 32, 45, 0.9) 100%);
+  border-color: rgba(224, 185, 105, 0.6);
+  color: #fceec5;
+  box-shadow: 0 0 12px rgba(212, 168, 83, 0.25);
+}
+.astral-tab-btn .tab-icon {
+  font-size: 14px;
+  color: #e5b967;
+}
+.astral-tab-btn .tab-badge {
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(224, 185, 105, 0.3);
+  color: #eed69b;
+}
+
+/* Altar Workspace */
+.astral-altar-workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.astral-altar-header {
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(24, 32, 50, 0.65) 0%, rgba(13, 17, 28, 0.9) 100%);
+  border: 1px solid rgba(197, 160, 98, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.altar-title-group h3 {
+  margin: 0 0 4px;
+  font: 16px "SimSun", serif;
+  font-weight: bold;
+  color: #f8e5b8;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 10px rgba(248, 229, 184, 0.35);
+}
+.altar-title-group p {
+  margin: 0;
+  font-size: 11px;
+  color: #9cb0c8;
+  line-height: 1.45;
+}
+.altar-character-lore {
+  margin: 0;
+  padding: 6px 10px;
+  border-left: 2px solid #e0ba69;
+  background: rgba(0, 0, 0, 0.3);
+  font: italic 12px "SimSun", serif;
+  color: #eedcb2;
+  line-height: 1.4;
+}
+.altar-character-lore .lore-mark {
+  color: #e0ba69;
+  font-size: 13px;
+}
+
+/* Astral Pedestal Grid & Cards */
+.astral-pedestal-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.astral-soul-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  background: linear-gradient(160deg, rgba(22, 29, 44, 0.92) 0%, rgba(11, 15, 23, 0.98) 100%);
+  border: 1px solid rgba(189, 163, 116, 0.32);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.astral-soul-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(224, 186, 105, 0.7) 50%, transparent 100%);
+}
+.astral-soul-card.exclusive-awakened {
+  border-color: rgba(235, 185, 85, 0.55);
+  box-shadow: 0 0 24px rgba(224, 175, 75, 0.18), inset 0 1px 0 rgba(255, 235, 175, 0.2);
+}
+.astral-soul-card.locked {
+  opacity: 0.85;
+}
+
+/* Card Header */
+.astral-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.card-slot-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.card-slot-badge .slot-num {
+  font: 13px "SimSun", serif;
+  font-weight: bold;
+  color: #f7e6b8;
+}
+.card-slot-badge .slot-type {
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(189, 163, 116, 0.15);
+  border: 1px solid rgba(189, 163, 116, 0.3);
+  color: #cfd8e6;
+}
+.status-pill {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+.status-pill.locked {
+  background: rgba(60, 68, 85, 0.5);
+  border: 1px solid rgba(120, 130, 150, 0.4);
+  color: #9aa5b5;
+}
+.status-pill.pending {
+  background: rgba(200, 140, 40, 0.2);
+  border: 1px solid rgba(220, 160, 50, 0.5);
+  color: #f3c368;
+}
+.status-pill.common {
+  background: rgba(64, 158, 255, 0.15);
+  border: 1px solid rgba(64, 158, 255, 0.4);
+  color: #79bbff;
+}
+.status-pill.exclusive {
+  background: linear-gradient(135deg, rgba(230, 162, 60, 0.3) 0%, rgba(180, 115, 20, 0.4) 100%);
+  border: 1px solid #ffd04b;
+  color: #ffe699;
+  text-shadow: 0 0 8px rgba(255, 208, 75, 0.5);
+}
+
+/* Stage & Pedestal */
+.astral-pedestal-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 6px;
+  background: radial-gradient(circle at 50% 45%, rgba(40, 52, 75, 0.4) 0%, rgba(10, 14, 22, 0.6) 75%);
+  border-radius: 6px;
+  border: 1px solid rgba(197, 160, 98, 0.15);
+}
+.pedestal-aurora {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 130px;
+  background: radial-gradient(circle, rgba(212, 168, 83, 0.2) 0%, rgba(64, 158, 255, 0.08) 50%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(8px);
+}
+.pedestal-plinth {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 22px;
+  background: radial-gradient(ellipse at center, rgba(224, 185, 105, 0.35) 0%, rgba(20, 25, 38, 0.8) 70%, transparent 100%);
+  border-radius: 50%;
+  border-top: 1px solid rgba(224, 185, 105, 0.45);
+  pointer-events: none;
+}
+
+/* Art Wrapper */
+.astral-art-wrapper {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation: astralFloat 4s ease-in-out infinite alternate;
+}
+@keyframes astralFloat {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+.astral-art-wrapper:hover {
+  transform: translateY(-7px) scale(1.04);
+}
+.astral-soul-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.65)) drop-shadow(0 0 10px rgba(224, 186, 105, 0.2));
+  transition: filter 0.3s ease;
+}
+.astral-art-wrapper:hover .astral-soul-image {
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 16px rgba(255, 215, 115, 0.45));
+}
+.art-magnify-hint {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10, 15, 25, 0.85);
+  border: 1px solid rgba(224, 186, 105, 0.5);
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 10px;
+  color: #f7e6b8;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+.astral-art-wrapper:hover .art-magnify-hint {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-2px);
+}
+
+/* Soul Titles */
+.astral-soul-names {
+  margin-top: 8px;
+  text-align: center;
+  z-index: 1;
+}
+.astral-soul-names .soul-title {
+  margin: 0;
+  font: 16px "SimSun", serif;
+  font-weight: bold;
+  color: #f9e9c3;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 8px rgba(249, 233, 195, 0.3);
+}
+.astral-soul-names .soul-category {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  color: #9cb0c8;
+}
+
+/* Awaken Controls */
+.astral-awaken-controls {
+  margin-top: 8px;
+  z-index: 1;
+}
+.level-hint {
+  margin: 0;
+  font-size: 11px;
+  color: #8b99ab;
+}
+.astral-btn-awaken {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font: 12px "SimSun", serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.astral-btn-awaken.common {
+  background: linear-gradient(135deg, rgba(35, 75, 120, 0.85) 0%, rgba(20, 45, 80, 0.95) 100%);
+  border: 1px solid rgba(90, 160, 240, 0.6);
+  color: #e2f0ff;
+  box-shadow: 0 0 10px rgba(64, 158, 255, 0.25);
+}
+.astral-btn-awaken.common:hover {
+  border-color: #79bbff;
+  box-shadow: 0 0 14px rgba(64, 158, 255, 0.4);
+}
+.astral-btn-awaken.exclusive {
+  background: linear-gradient(135deg, rgba(160, 100, 20, 0.9) 0%, rgba(100, 60, 10, 0.95) 100%);
+  border: 1px solid #ffd04b;
+  color: #fff2cc;
+  box-shadow: 0 0 12px rgba(255, 208, 75, 0.35);
+}
+.astral-btn-awaken.exclusive:hover {
+  background: linear-gradient(135deg, rgba(180, 115, 25, 1) 0%, rgba(120, 75, 15, 1) 100%);
+  box-shadow: 0 0 18px rgba(255, 208, 75, 0.6);
+}
+.astral-btn-upgrade-exclusive {
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(220, 150, 40, 0.2);
+  border: 1px solid rgba(240, 175, 50, 0.6);
+  color: #ffdf85;
+  font: 11px "SimSun", serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.astral-btn-upgrade-exclusive:hover {
+  background: rgba(220, 150, 40, 0.35);
+  border-color: #ffd04b;
+}
+
+/* Choices Section */
+.astral-choices-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.choices-label {
+  font-size: 11px;
+  color: #8fa0b5;
+  padding-left: 2px;
+}
+.choices-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.astral-choice-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: rgba(14, 19, 29, 0.7);
+  border: 1px solid rgba(189, 163, 116, 0.22);
+  cursor: pointer;
+  transition: all 0.22s ease;
+  min-height: 86px;
+  box-sizing: border-box;
+}
+.astral-choice-card:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.astral-choice-card:not(:disabled):hover {
+  border-color: rgba(224, 185, 105, 0.5);
+  background: rgba(22, 30, 46, 0.85);
+  transform: translateY(-1px);
+}
+.astral-choice-card.selected {
+  background: linear-gradient(145deg, rgba(65, 48, 20, 0.75) 0%, rgba(20, 24, 34, 0.95) 100%);
+  border-color: #ffd04b;
+  box-shadow: 0 0 12px rgba(255, 208, 75, 0.25), inset 0 0 10px rgba(255, 208, 75, 0.1);
+}
+.choice-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.choice-tag {
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #b0c0d5;
+}
+.astral-choice-card.selected .choice-tag {
+  background: rgba(255, 208, 75, 0.25);
+  color: #ffe699;
+}
+.choice-status {
+  font-size: 10px;
+  font-weight: bold;
+  color: #7b8a9e;
+}
+.astral-choice-card.selected .choice-status {
+  color: #ffd04b;
+}
+.choice-title {
+  font: 13px "SimSun", serif;
+  font-weight: bold;
+  color: #e5ecf5;
+  margin-bottom: 3px;
+}
+.astral-choice-card.selected .choice-title {
+  color: #fff1c7;
+}
+.choice-desc {
+  margin: 0;
+  font-size: 10.5px;
+  color: #92a2b7;
+  line-height: 1.35;
+}
+.astral-choice-card.selected .choice-desc {
+  color: #d8cbb0;
+}
+
+/* Clickable Weapon Art in Weapon Panel */
+.weapon-art-clickable {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+.weapon-art-clickable:hover {
+  filter: brightness(1.1);
+}
+.weapon-inspect-badge {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  background: rgba(8, 12, 20, 0.85);
+  border: 1px solid rgba(224, 185, 105, 0.5);
+  border-radius: 10px;
+  padding: 1px 6px;
+  font-size: 9px;
+  color: #f7e6b8;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   立绘全屏/居中鉴赏弹窗 (Art Inspect Modal)
+   ========================================================================== */
+
+.art-inspect-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  background: rgba(4, 7, 12, 0.85);
+  backdrop-filter: blur(14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  animation: modalFadeIn 0.25s ease-out;
+}
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.art-inspect-modal {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  background: linear-gradient(165deg, rgba(22, 28, 44, 0.96) 0%, rgba(9, 12, 18, 0.98) 100%);
+  border: 1px solid rgba(224, 185, 105, 0.55);
+  border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 30px rgba(224, 185, 105, 0.15);
+  padding: 20px 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: modalPopUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes modalPopUp {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.art-inspect-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cfd8e6;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.art-inspect-close:hover {
+  background: rgba(224, 185, 105, 0.2);
+  border-color: #e0ba69;
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+.art-inspect-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-right: 36px;
+}
+.art-inspect-tag {
+  align-self: flex-start;
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(224, 185, 105, 0.15);
+  border: 1px solid rgba(224, 185, 105, 0.35);
+  color: #f7e6b8;
+}
+.art-inspect-title {
+  margin: 0;
+  font: 20px "SimSun", serif;
+  font-weight: bold;
+  color: #fceec5;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 12px rgba(248, 229, 184, 0.4);
+}
+.art-inspect-subtitle {
+  margin: 0;
+  font-size: 12px;
+  color: #9cb0c8;
+}
+
+.art-inspect-viewport {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  max-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 50%, rgba(35, 48, 70, 0.45) 0%, rgba(8, 12, 18, 0.75) 80%);
+  border-radius: 8px;
+  border: 1px solid rgba(197, 160, 98, 0.2);
+  overflow: hidden;
+}
+.art-inspect-pedestal-glow {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(224, 185, 105, 0.25) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(12px);
+  pointer-events: none;
+}
+.art-inspect-image {
+  max-width: 90%;
+  max-height: 290px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 18px rgba(224, 186, 105, 0.25));
+  z-index: 1;
+}
+
+.art-inspect-quote {
+  margin: 0;
+  padding: 8px 12px;
+  border-left: 2px solid #e0ba69;
+  background: rgba(0, 0, 0, 0.35);
+  font: italic 13px "SimSun", serif;
+  color: #eeddb7;
+  line-height: 1.45;
+}
+.art-inspect-quote .quote-mark {
+  color: #e0ba69;
+  font-size: 14px;
+}
+
+.art-inspect-footer {
+  text-align: center;
+  font-size: 10.5px;
+  color: #7b8a9e;
+}
+

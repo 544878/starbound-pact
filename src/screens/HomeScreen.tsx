@@ -14,9 +14,10 @@ export function HomeScreen() {
   const [drawerOpen, setDrawerOpen] = useState(false)
   const [filterElement, setFilterElement] = useState<string>('all')
 
-  // Signboard companion (defaults to selene or selected)
+  // Signboard companion (defaults to selected, or lumi, or selene)
   const companion =
     state.companions.find((c) => c.id === state.selectedCompanionId) ??
+    state.companions.find((c) => c.id === 'lumi') ??
     state.companions.find((c) => c.id === 'selene') ??
     state.companions[0]
 

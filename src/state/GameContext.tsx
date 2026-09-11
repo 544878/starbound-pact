@@ -8,7 +8,7 @@ import {
 } from "react";
 import type { DropItem, GameState, PullResult, Screen } from "../domain/types";
 import { wishPayment, type WishPool } from "../systems/wishCurrency";
-import { performCharacterPulls, performPulls } from "../systems/gacha";
+import { performCharacterPulls, performPulls, performWeaponPulls } from "../systems/gacha";
 import {
   gameReducer,
   restoreGameState,
@@ -21,6 +21,7 @@ interface GameContextValue {
   state: GameState;
   navigate: (screen: Screen) => void;
   selectCompanion: (id: string) => void;
+  setWeaponTarget: (id: string) => void;
   setFormation: (formation: Array<string | null>) => void;
   startBattle: () => void;
   finishBattle: (drops?: DropItem[], victory?: boolean) => void;
@@ -56,14 +57,14 @@ const GameContext: ReturnType<typeof createContext<GameContextValue | null>> =
   createContext<GameContextValue | null>(null);
 if (import.meta.hot) import.meta.hot.data.gameContext = GameContext;
 
-export function GameProvider({ children }: { children: ReactNode }) {
+export function GameProvider({ children, previewState }: { children: ReactNode; previewState?: GameState }) {
   const [state, rawDispatch] = useReducer(gameReducer, undefined, () =>
-    restoreGameState(localStorage),
+    previewState ?? restoreGameState(localStorage),
   );
   const dispatch = (action: GameAction) => rawDispatch(action);
   useEffect(() => {
-    saveGameState(localStorage, state);
-  }, [state]);
+    if (!previewState) saveGameState(localStorage, state);
+  }, [state, previewState]);
 
   useEffect(() => {
     rawDispatch({ type: "REFRESH_PERIODS" });
@@ -79,6 +80,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
       dispatch,
       navigate: (screen) => dispatch({ type: "NAVIGATE", screen }),
       selectCompanion: (id) => dispatch({ type: "SELECT_COMPANION", id }),
+      setWeaponTarget: (id) => dispatch({ type: "SET_WEAPON_TARGET", id }),
       setFormation: (formation) =>
         dispatch({ type: "SET_FORMATION", formation }),
       startBattle: () => dispatch({ type: "START_BATTLE" }),
@@ -91,27 +93,28 @@ export function GameProvider({ children }: { children: ReactNode }) {
         }),
       summon: (kind, count, pool = "standard") => {
         if (
-          pool === "limited" ||
           !wishPayment(state, kind === "weapon" ? "weapon" : pool, count)
             .affordable
         )
           return [];
         const pity =
           kind === "companion"
-            ? pool === "collab"
-              ? (state.pityCollab ?? 0)
-              : state.pityCharacter
+            ? pool === "limited"
+              ? (state.pityLimited ?? 0)
+              : pool === "collab"
+                ? (state.pityCollab ?? 0)
+                : state.pityCharacter
             : state.pityWeapon;
         const outcome =
           kind === "companion"
             ? performCharacterPulls(
-                pool === "collab" ? "collab" : "standard",
+                pool === "weapon" ? "standard" : pool,
                 count,
                 pity,
                 state.limitedGuaranteed,
                 state.companions,
               )
-            : performPulls(kind, count, pity, state.companions, state.weapons);
+            : performWeaponPulls(count, pity, state.weaponTargetCompanionId ?? "yanhuang", state.weapons);
         dispatch({
           type: "APPLY_PULLS",
           pool,

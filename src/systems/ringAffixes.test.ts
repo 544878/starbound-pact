@@ -103,8 +103,9 @@ describe("restrained nine-ring growth", () => {
     const without = { ...c, rings: [], ringLevels: [] },
       p = combatPanel(c, []),
       base = combatPanel(without, []);
-    expect(p.attack).toBeGreaterThan(base.attack);
-    expect(p.hp).toBeGreaterThan(base.hp);
+    // Old random percentages are not multiplied into the V2 panel on migration.
+    expect(p.attack).toBe(base.attack);
+    expect(p.hp).toBe(base.hp);
     expect(stats(c).energyEfficiency).toBeGreaterThan(1);
     expect(stats(c).interval).toBeLessThan(1);
     expect(stats(c).soulBonus).toBe(0);

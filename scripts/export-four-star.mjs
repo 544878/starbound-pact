@@ -40,7 +40,7 @@ try {
     focused.members[2].constellation = rank
     budgetSweep.push({ rank, path: p.id, boss: b.id, ratio: simulateFormation(focused, teamBoss(b)).damage / simulateFormation(broad, teamBoss(b)).damage })
   }
-  const out = path.join(root, 'docs')
+  const out = path.join(root, 'docs', '历史档案')
   await mkdir(out, { recursive: true })
   const exported = { version: '0.3', combatPointScale: 250, levelProgression: null, baseline: '满级C0，武器满配，三个十万年红色魂环满配；六命另列', characters: characters.map(c => ({ ...c, equippedC0: equippedStats(c, c.specialties[0]) })), teams, verification: report, budgetSweep }
   await writeFile(path.join(out, '四星角色数值配置.json'), JSON.stringify(exported, (_, value) => typeof value === 'number' ? Number(value.toFixed(8)) : value, 2) + '\n', 'utf8')

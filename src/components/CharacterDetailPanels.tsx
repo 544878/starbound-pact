@@ -8,9 +8,12 @@ import { companionCatalog, weaponCatalog } from "../data/catalog";
 import { skillNames } from "../data/skillNames";
 import { numericKit } from "../systems/rosterCombat";
 import { EquipmentArt } from "./EquipmentArt";
-import { signatureArt, signatureDescription } from '../data/signatureArt';
+import { signatureArt, signatureDescription, getSignatureMetadata } from '../data/signatureArt';
+import { characterDesign } from '../systems/v2/catalog';
+import { ArtInspectModal, type ArtInspectData } from './ArtInspectModal';
+export { V2SkillPanel as SkillPanel } from './V2SkillPanel';
 
-export function SkillPanel({ companion: c }: { companion: Companion }) {
+export function LegacySkillPanel({ companion: c }: { companion: Companion }) {
   const [selected, setSelected] = useState(0),
     kit = numericKit(c),
     s = kit.skills[selected];
@@ -63,30 +66,62 @@ export function SkillPanel({ companion: c }: { companion: Companion }) {
     </section>
   );
 }
+
 export function WeaponPanel({ companion: c }: { companion: Companion }) {
   const { state, dispatch } = useGame();
   const [selected, setSelected] = useState(0);
+  const [inspectModal, setInspectModal] = useState<ArtInspectData | null>(null);
   const signature = weaponCatalog.find((w) => w.signatureFor === c.id)!;
   const owned = state.weapons.some((w) => w.id === signature.id);
   const equipped = state.weapons.find((w) => w.ownerId === c.id);
   const w = state.weapons[Math.min(selected, state.weapons.length - 1)];
+  const meta = getSignatureMetadata(c.id);
+  const weaponDisplayName = meta?.weapon || signature.name;
+  const weaponArtUrl = signatureArt(c.id, 'weapon');
+
   return (
     <section className="compact-weapons">
       <div className="signature-display">
-        <EquipmentArt
-          kind="weapon"
-          signatureFor={c.id}
-          path={c.path}
-          name={signature.name}
-        />
+        <div
+          className="weapon-art-clickable"
+          role="button"
+          tabIndex={0}
+          title={`点击放大鉴赏 ${weaponDisplayName}`}
+          onClick={() =>
+            setInspectModal({
+              title: `${c.name} · ${weaponDisplayName}`,
+              subtitle: '本命专属武器',
+              imageUrl: weaponArtUrl,
+              quote: meta?.quote,
+              tag: '本命武器',
+            })
+          }
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              setInspectModal({
+                title: `${c.name} · ${weaponDisplayName}`,
+                subtitle: '本命专属武器',
+                imageUrl: weaponArtUrl,
+                quote: meta?.quote,
+                tag: '本命武器',
+              });
+            }
+          }}
+        >
+          <EquipmentArt
+            kind="weapon"
+            signatureFor={c.id}
+            path={c.path}
+            name={weaponDisplayName}
+          />
+          <span className="weapon-inspect-badge">🔍 鉴赏</span>
+        </div>
         <div>
           <small>本命专武</small>
-          <h3>{signature.name}</h3>
-          {signatureArt(c.id, 'weapon') && <p className="signature-model-description">{signatureDescription(c.id)}</p>}
+          <h3>{weaponDisplayName}</h3>
+          {weaponArtUrl && <p className="signature-model-description">{signatureDescription(c.id)}</p>}
           <p>
-            {equipped?.signatureFor === c.id
-              ? "本命共鸣已生效"
-              : "本命共鸣未激活"}
+            {characterDesign(c.id).weapon.passive}
           </p>
           <p>当前：{equipped?.name ?? "未装备"}</p>
           {!owned && (
@@ -154,8 +189,11 @@ export function WeaponPanel({ companion: c }: { companion: Companion }) {
         <p>暂无武器</p>
       )}
       <p className="panel-note">
-        本命完整提供武器预算，异主保留85%。强化与精炼提升预算完成度。
+        武器提供物品自身属性，跨角色装备不扣面板；满足被动行为即可触发。精炼只放大标注的效果。
       </p>
+
+      {/* High-res Weapon Inspection Modal */}
+      <ArtInspectModal data={inspectModal} onClose={() => setInspectModal(null)} />
     </section>
   );
 }

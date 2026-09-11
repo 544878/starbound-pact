@@ -220,7 +220,7 @@ describe("shop checkout and persistent entitlement lifecycle", () => {
     expect(reduceCommerce(later, { type: "CLAIM_MONTHLY" }, now)).toBe(later);
   });
   it("keeps current catalogue empty but supports future skin purchase, equip, mismatch checks and retired ownership", () => {
-    expect(SKIN_CATALOG).toHaveLength(0);
+    expect(SKIN_CATALOG).toHaveLength(2);
     const s = createInitialState();
     expect(
       reduceCommerce(

@@ -5,7 +5,7 @@ import { EquippedSkinArt } from './SkinMedia';
 import { useGame } from '../state/GameContext';
 import { equippedSkin } from '../systems/commerce';
 
-export type SignboardStance = 'wide' | 'seated' | 'portrait' | 'chibi'
+export type SignboardStance = 'wide' | 'seated' | 'portrait' | 'chibi' | 'athletic' | 'messenger'
 
 interface DynamicSignboardProps {
   companion: Companion
@@ -23,6 +23,12 @@ function playAquaticChime() {
   audioEngine.playSfx('heal')
 }
 
+// Synthesize breeze flourish chime for Lumi
+function playWindChime() {
+  if (!audioEngine.getSettings().sfxEnabled) return
+  audioEngine.playSfx('skill')
+}
+
 export function DynamicSignboard({
   companion,
   onInteract,
@@ -33,6 +39,8 @@ export function DynamicSignboard({
   const { state } = useGame();
   const skin = equippedSkin(state, companion.id);
   const isSelene = companion.id === 'selene' && !skin;
+  const isLumi = companion.id === 'lumi';
+  const isDefaultLumi = isLumi && !skin;
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
   const containerRef = useRef<HTMLDivElement | null>(null)
 
@@ -77,7 +85,7 @@ export function DynamicSignboard({
     mouseRef.current.targetY = 0
   }, [])
 
-  // Canvas particle system (bubbles, stardust, click shockwaves)
+  // Canvas particle system (bubbles, stardust, wind petals, click shockwaves)
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
@@ -106,25 +114,47 @@ export function DynamicSignboard({
       maxAlpha: number
       wobbleSpeed: number
       wobbleDist: number
-      type: 'bubble' | 'sparkle'
+      angle: number
+      angularSpeed: number
+      type: 'bubble' | 'sparkle' | 'petal'
     }
 
     const particles: Particle[] = []
     const count = 48
     for (let i = 0; i < count; i++) {
-      const isBubble = Math.random() > 0.4
-      particles.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        radius: isBubble ? Math.random() * 4 + 1.5 : Math.random() * 2 + 0.8,
-        speedY: isBubble ? -(Math.random() * 0.8 + 0.3) : -(Math.random() * 0.3 + 0.1),
-        speedX: (Math.random() - 0.5) * 0.3,
-        alpha: Math.random() * 0.6 + 0.2,
-        maxAlpha: Math.random() * 0.5 + 0.3,
-        wobbleSpeed: Math.random() * 0.03 + 0.01,
-        wobbleDist: Math.random() * 1.5 + 0.5,
-        type: isBubble ? 'bubble' : 'sparkle',
-      })
+      if (isLumi) {
+        const isPetal = Math.random() > 0.45
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          radius: isPetal ? Math.random() * 4 + 3.5 : Math.random() * 2 + 0.8,
+          speedY: isPetal ? Math.random() * 0.7 + 0.35 : -(Math.random() * 0.35 + 0.1),
+          speedX: isPetal ? Math.random() * 0.8 + 0.3 : (Math.random() - 0.5) * 0.4,
+          alpha: Math.random() * 0.6 + 0.25,
+          maxAlpha: Math.random() * 0.4 + 0.4,
+          wobbleSpeed: Math.random() * 0.03 + 0.015,
+          wobbleDist: isPetal ? Math.random() * 2.2 + 1.2 : Math.random() * 1.5 + 0.5,
+          angle: Math.random() * Math.PI * 2,
+          angularSpeed: (Math.random() - 0.5) * 0.035,
+          type: isPetal ? 'petal' : 'sparkle',
+        })
+      } else {
+        const isBubble = Math.random() > 0.4
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          radius: isBubble ? Math.random() * 4 + 1.5 : Math.random() * 2 + 0.8,
+          speedY: isBubble ? -(Math.random() * 0.8 + 0.3) : -(Math.random() * 0.3 + 0.1),
+          speedX: (Math.random() - 0.5) * 0.3,
+          alpha: Math.random() * 0.6 + 0.2,
+          maxAlpha: Math.random() * 0.5 + 0.3,
+          wobbleSpeed: Math.random() * 0.03 + 0.01,
+          wobbleDist: Math.random() * 1.5 + 0.5,
+          angle: 0,
+          angularSpeed: 0,
+          type: isBubble ? 'bubble' : 'sparkle',
+        })
+      }
     }
 
     interface Shockwave {
@@ -161,10 +191,12 @@ export function DynamicSignboard({
         ctx.save()
         ctx.beginPath()
         ctx.arc(sw.x, sw.y, sw.radius, 0, Math.PI * 2)
-        ctx.strokeStyle = `rgba(130, 215, 255, ${sw.alpha})`
+        ctx.strokeStyle = isLumi
+          ? `rgba(140, 245, 195, ${sw.alpha})`
+          : `rgba(130, 215, 255, ${sw.alpha})`
         ctx.lineWidth = 2
         ctx.shadowBlur = 10
-        ctx.shadowColor = '#65d5ff'
+        ctx.shadowColor = isLumi ? '#72b893' : '#65d5ff'
         ctx.stroke()
         ctx.restore()
       }
@@ -173,20 +205,44 @@ export function DynamicSignboard({
       particles.forEach((p) => {
         p.y += p.speedY
         p.x += Math.sin(time * p.wobbleSpeed * 100) * p.wobbleDist * 0.2 + p.speedX
+        p.angle += p.angularSpeed
 
-        if (p.y < -10) {
-          p.y = height + 10
-          p.x = Math.random() * width
+        if (p.speedY > 0) {
+          if (p.y > height + 15) {
+            p.y = -15
+            p.x = Math.random() * width
+          }
+        } else {
+          if (p.y < -15) {
+            p.y = height + 15
+            p.x = Math.random() * width
+          }
         }
-        if (p.x < -10) p.x = width + 10
-        if (p.x > width + 10) p.x = -10
+        if (p.x < -20) p.x = width + 20
+        if (p.x > width + 20) p.x = -20
 
         const drawX = p.x + pxOffset * (p.type === 'bubble' ? 0.8 : 1.2)
         ctx.save()
-        ctx.beginPath()
-        ctx.arc(drawX, p.y, p.radius, 0, Math.PI * 2)
 
-        if (p.type === 'bubble') {
+        if (p.type === 'petal') {
+          // 3D Fluttering White Summer Jasmine / Flower Petal
+          ctx.translate(drawX, p.y)
+          ctx.rotate(p.angle)
+          const flip = Math.sin(time * p.wobbleSpeed * 50)
+          ctx.scale(flip, 1)
+          ctx.beginPath()
+          ctx.ellipse(0, 0, p.radius * 2.0, p.radius * 1.1, 0, 0, Math.PI * 2)
+          const grad = ctx.createLinearGradient(-p.radius, -p.radius, p.radius, p.radius)
+          grad.addColorStop(0, `rgba(255, 255, 255, ${p.alpha * 0.95})`)
+          grad.addColorStop(0.5, `rgba(242, 252, 246, ${p.alpha * 0.85})`)
+          grad.addColorStop(1, `rgba(205, 245, 222, ${p.alpha * 0.55})`)
+          ctx.fillStyle = grad
+          ctx.shadowBlur = 6
+          ctx.shadowColor = 'rgba(255, 255, 255, 0.55)'
+          ctx.fill()
+        } else if (p.type === 'bubble') {
+          ctx.beginPath()
+          ctx.arc(drawX, p.y, p.radius, 0, Math.PI * 2)
           // Luminous aquatic bubble
           ctx.strokeStyle = `rgba(175, 235, 255, ${p.alpha})`
           ctx.lineWidth = 1.2
@@ -204,13 +260,24 @@ export function DynamicSignboard({
           ctx.fillStyle = `rgba(255, 255, 255, ${p.alpha * 0.9})`
           ctx.fill()
         } else {
-          // Golden/Cyan stardust ember
+          ctx.beginPath()
+          ctx.arc(drawX, p.y, p.radius, 0, Math.PI * 2)
+          // Golden/Cyan or Emerald stardust ember
           const isGold = p.radius > 1.5
-          ctx.fillStyle = isGold
-            ? `rgba(255, 226, 140, ${p.alpha})`
-            : `rgba(150, 230, 255, ${p.alpha})`
-          ctx.shadowBlur = 8
-          ctx.shadowColor = isGold ? '#ffeaa7' : '#74b9ff'
+          if (isLumi) {
+            const isEmerald = !isGold
+            ctx.fillStyle = isEmerald
+              ? `rgba(140, 240, 190, ${p.alpha})`
+              : `rgba(255, 235, 140, ${p.alpha})`
+            ctx.shadowBlur = 8
+            ctx.shadowColor = isEmerald ? '#72b893' : '#ffeaa7'
+          } else {
+            ctx.fillStyle = isGold
+              ? `rgba(255, 226, 140, ${p.alpha})`
+              : `rgba(150, 230, 255, ${p.alpha})`
+            ctx.shadowBlur = 8
+            ctx.shadowColor = isGold ? '#ffeaa7' : '#74b9ff'
+          }
           ctx.fill()
         }
         ctx.restore()
@@ -238,12 +305,16 @@ export function DynamicSignboard({
       canvas.removeEventListener('click', handleCanvasClick)
       cancelAnimationFrame(animId)
     }
-  }, [])
+  }, [isLumi, isSelene])
 
   // Interaction feedback
   const handleInteraction = (e: React.MouseEvent) => {
     e.stopPropagation()
-    playAquaticChime()
+    if (isLumi) {
+      playWindChime()
+    } else {
+      playAquaticChime()
+    }
 
     const rect = containerRef.current?.getBoundingClientRect()
     if (rect) {
@@ -293,6 +364,8 @@ export function DynamicSignboard({
       >
         {isSelene ? (
           <div className="selene-widescreen-backdrop" />
+        ) : isLumi ? (
+          <div className={`lumi-widescreen-backdrop ${stance !== 'wide' ? 'soften-bg' : ''}`} />
         ) : (
           <div
             className="generic-companion-backdrop"
@@ -306,7 +379,8 @@ export function DynamicSignboard({
       </div>
 
       {/* God Rays & Caustic Light Shafts */}
-      <div className="signboard-light-rays" />
+      {isSelene && <div className="signboard-light-rays" />}
+      {isLumi && <div className="lumi-sun-rays" />}
 
       {/* Deep Ocean Whale Swimming Silhouette */}
       {isSelene && <div className="ambient-whale-shadow" />}
@@ -349,6 +423,46 @@ export function DynamicSignboard({
                   src="/assets/characters/selene-chibi.png"
                   alt="瑟琳 · Q版幻灵"
                   className="selene-seamless-art chibi-art"
+                  loading="eager"
+                />
+              </div>
+            )}
+          </div>
+        ) : isDefaultLumi ? (
+          <div className="lumi-character-wrapper">
+            {stance === 'wide' && (
+              <div className="lumi-wide-focus-glow" />
+            )}
+            {stance === 'athletic' && (
+              <img
+                src="/assets/characters/lumi-athletic.png"
+                alt="露弥 · 晨曦逐风"
+                className="lumi-seamless-art athletic-art"
+                loading="eager"
+              />
+            )}
+            {(stance === 'seated' || stance === 'messenger') && (
+              <img
+                src="/assets/characters/lumi-standing.png"
+                alt="露弥 · 踏风启程"
+                className="lumi-seamless-art standing-art"
+                loading="eager"
+              />
+            )}
+            {stance === 'portrait' && (
+              <img
+                src="/assets/characters/lumi-portrait.png"
+                alt="露弥 · 澄眸微风"
+                className="lumi-seamless-art portrait-art"
+                loading="eager"
+              />
+            )}
+            {stance === 'chibi' && (
+              <div className="chibi-hover-wrapper">
+                <img
+                  src="/assets/characters/lumi-chibi.png"
+                  alt="露弥 · 疾风信童"
+                  className="lumi-seamless-art chibi-art"
                   loading="eager"
                 />
               </div>
@@ -452,6 +566,72 @@ export function DynamicSignboard({
             title="萌趣幻灵形态"
           >
             ✨ 萌宠
+          </button>
+        </div>
+      )}
+
+      {isDefaultLumi && onStanceChange && (
+        <div className="stance-pill-selector lumi-stance-selector" role="group" aria-label="立绘形态">
+          <button
+            className={stance === 'wide' ? 'active' : ''}
+            onClick={() => onStanceChange('wide')}
+            title="全景 · 溯夏之约"
+          >
+            🌊 溯夏
+          </button>
+          <button
+            className={stance === 'athletic' ? 'active' : ''}
+            onClick={() => onStanceChange('athletic')}
+            title="活力 · 晨曦逐风"
+          >
+            🏃‍♀️ 逐风
+          </button>
+          <button
+            className={stance === 'seated' ? 'active' : ''}
+            onClick={() => onStanceChange('seated')}
+            title="经典 · 踏风启程"
+          >
+            🍃 信使
+          </button>
+          <button
+            className={stance === 'portrait' ? 'active' : ''}
+            onClick={() => onStanceChange('portrait')}
+            title="特写 · 澄眸微风"
+          >
+            💚 凝眸
+          </button>
+          <button
+            className={stance === 'chibi' ? 'active' : ''}
+            onClick={() => onStanceChange('chibi')}
+            title="萌趣 · 疾风信童"
+          >
+            ✨ 萌趣
+          </button>
+        </div>
+      )}
+
+      {isLumi && skin && onStanceChange && (
+        <div className="stance-pill-selector lumi-stance-selector" role="group" aria-label="立绘形态">
+          <button
+            className={stance === 'wide' || stance === 'seated' || stance === 'athletic' ? 'active' : ''}
+            onClick={() => onStanceChange('wide')}
+            title="全身立绘模式"
+          >
+            ✨ 全身
+          </button>
+          <button
+            className={stance === 'portrait' ? 'active' : ''}
+            onClick={() => onStanceChange('portrait')}
+            title="特写近景"
+          >
+            💚 凝眸
+          </button>
+          <button
+            className={stance === 'chibi' ? 'active' : ''}
+            onClick={() => onStanceChange('chibi')}
+            title="萌趣形态"
+          >
+            ✨ 萌趣
           </button>
         </div>
       )}

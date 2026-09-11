@@ -11,6 +11,8 @@ describe("inventory material presentation", () => {
       "shop_claimed_gold_free_2026-09-11": 1,
       "ring:lumi": 20,
       "soul:lumi": 4,
+      "V2魂转换券:lumi:0": 1,
+      "V2魂转换券:alden:1": 1,
       无效素材: NaN,
       坏数据: -1,
     });

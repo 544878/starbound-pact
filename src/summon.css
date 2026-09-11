@@ -1134,3 +1134,596 @@
     margin-top: 8px;
   }
 }
+
+/* ========================================================
+   武器池自选定轨系统样式 (Weapon Banner Targeting & Selector)
+   ======================================================== */
+
+.summon-weapon-action-group {
+  margin-top: 18px;
+}
+
+.summon-change-target-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, rgba(235, 214, 171, 0.18), rgba(214, 170, 87, 0.28));
+  border: 1px solid #ebd6ab;
+  color: #fff4dc;
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35), 0 0 12px rgba(235, 214, 171, 0.2);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.summon-change-target-cta:hover {
+  background: linear-gradient(135deg, rgba(235, 214, 171, 0.3), rgba(214, 170, 87, 0.45));
+  border-color: #fff1d0;
+  box-shadow: 0 6px 22px rgba(235, 214, 171, 0.35);
+  transform: translateY(-1px);
+}
+
+.summon-change-target-cta .cta-icon {
+  color: #f7d583;
+  font-size: 14px;
+}
+
+.summon-pity-highlight {
+  color: #ebd6ab;
+  font-weight: 500;
+}
+
+/* 武器定轨右侧信息面板 */
+.summon-weapon-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.summon-weapon-target-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  background: rgba(14, 23, 37, 0.85);
+  border: 1px solid rgba(235, 214, 171, 0.3);
+  border-radius: 10px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.summon-weapon-target-avatar {
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(235, 214, 171, 0.4);
+}
+
+.summon-weapon-target-avatar .portrait {
+  width: 100%;
+  height: 100%;
+}
+
+.summon-weapon-target-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.summon-weapon-target-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.summon-weapon-target-header b {
+  font-size: 17px;
+  color: #fdf3e2;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rarity-tag,
+.rarity-pill {
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.rarity-5星 {
+  background: linear-gradient(135deg, rgba(235, 175, 45, 0.25), rgba(255, 215, 0, 0.4));
+  color: #ffdf79;
+  border: 1px solid #ffd70088;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+.rarity-4星 {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(192, 132, 252, 0.4));
+  color: #e9d5ff;
+  border: 1px solid #c084fc88;
+  box-shadow: 0 0 8px rgba(192, 132, 252, 0.3);
+}
+
+.summon-weapon-target-owner {
+  font-size: 12px;
+  color: #aeb8cc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.summon-weapon-target-status {
+  margin-top: 2px;
+}
+
+.tag-owned {
+  display: inline-block;
+  font-size: 11px;
+  color: #8ce4a7;
+  background: rgba(46, 125, 50, 0.2);
+  border: 1px solid rgba(76, 175, 80, 0.35);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.tag-unowned {
+  display: inline-block;
+  font-size: 11px;
+  color: #f9d989;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.summon-change-weapon-cta {
+  width: 100%;
+  margin-top: 4px;
+  padding: 12px;
+  background: linear-gradient(180deg, #32435c, #222f42);
+  border: 1px solid #d5bd8c66;
+  border-radius: 8px;
+  color: #fdf6e6;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.summon-change-weapon-cta:hover {
+  background: linear-gradient(180deg, #415878, #2a3b53);
+  border-color: #f5e4bd;
+  box-shadow: 0 0 16px rgba(235, 214, 171, 0.25);
+}
+
+/* 自选神兵定轨弹窗 */
+.summon-weapon-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px 0 0;
+}
+
+.summon-weapon-modal-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 16px;
+  background: rgba(19, 30, 48, 0.7);
+  border: 1px solid rgba(235, 214, 171, 0.25);
+  border-radius: 8px;
+}
+
+.summon-weapon-modal-summary > span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: #f5e5c9;
+}
+
+.summon-weapon-modal-summary small {
+  font-size: 12px;
+  color: #9da9bf;
+  line-height: 1.5;
+}
+
+.summon-weapon-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.summon-weapon-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.summon-filter-tab {
+  background: rgba(20, 31, 48, 0.8);
+  border: 1px solid rgba(168, 172, 185, 0.35);
+  border-radius: 6px;
+  color: #c4ccdc;
+  padding: 6px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.summon-filter-tab:hover {
+  border-color: #ebd6ab;
+  color: #fff;
+}
+
+.summon-filter-tab[aria-pressed="true"] {
+  background: rgba(235, 214, 171, 0.2);
+  border-color: #ebd6ab;
+  color: #fffaea;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(235, 214, 171, 0.25);
+}
+
+.summon-weapon-search-input {
+  min-width: 240px;
+  max-width: 320px;
+  flex: 1;
+}
+
+.summon-weapon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  max-height: 420px;
+  overflow-y: auto;
+  padding: 6px 4px 10px;
+}
+
+.summon-weapon-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: rgba(16, 25, 39, 0.85);
+  border: 1px solid rgba(161, 173, 191, 0.3);
+  border-radius: 8px;
+  padding: 10px 12px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.summon-weapon-card:hover {
+  border-color: #ebd6ab;
+  background: rgba(28, 43, 66, 0.85);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.summon-weapon-card.is-selected {
+  border-color: #ffdf88;
+  background: rgba(45, 62, 90, 0.95);
+  box-shadow: inset 0 0 0 1px #ffdf88, 0 0 16px rgba(255, 223, 136, 0.3);
+}
+
+.summon-weapon-card.is-active-target {
+  border-color: #ebd6ab88;
+}
+
+.summon-weapon-card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.summon-weapon-card-top .portrait {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.summon-weapon-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.summon-weapon-name-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.summon-weapon-name-badge b {
+  font-size: 14px;
+  color: #fff1d4;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.summon-weapon-char-title {
+  font-size: 12px;
+  color: #a3adc2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.summon-weapon-state-text {
+  font-size: 11px;
+  color: #c9d0df;
+  margin-top: 2px;
+}
+
+.current-target-indicator {
+  position: absolute;
+  top: -6px;
+  right: 8px;
+  font-size: 10px;
+  background: linear-gradient(135deg, #b8860b, #d4aa57);
+  color: #1a1505;
+  font-weight: bold;
+  padding: 1px 6px;
+  border-radius: 10px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.summon-empty-tip {
+  text-align: center;
+  padding: 30px;
+  color: #929db5;
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   限定池一：盛夏谐律 · 戏浪豪赌
+   ========================================================================== */
+.summon-pool-limited {
+  --summon-gold: #ffe099;
+}
+
+.summon-pool-limited .summon-backdrop {
+  background: #091422 url("/assets/hsr-summer-resort.jpg") center center / cover no-repeat;
+  filter: brightness(0.2) saturate(1.25);
+}
+
+.summon-limited-feature {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: stretch;
+}
+
+.summon-limited-visual-box {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow:
+    0 16px 45px rgba(0, 0, 0, 0.75),
+    0 0 35px rgba(56, 189, 248, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #0b1523;
+}
+
+.summon-limited-main-visual {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  z-index: 0;
+  transition: transform 0.5s ease;
+}
+
+.summon-limited-visual-box:hover .summon-limited-main-visual {
+  transform: scale(1.02);
+}
+
+.summon-limited-top-overlay {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 24px 20px 16px;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 17, 34, 0.88) 0%,
+    rgba(6, 17, 34, 0.6) 55%,
+    rgba(6, 17, 34, 0) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summon-limited-tag {
+  display: inline-block;
+  font-family: Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  color: #fed7aa;
+  background: rgba(180, 83, 9, 0.35);
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  padding: 3px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.summon-limited-title {
+  font-size: clamp(34px, 3.4vw, 54px);
+  font-weight: 600;
+  color: #fff4d6;
+  letter-spacing: 0.08em;
+  margin: 0;
+  white-space: nowrap;
+  text-shadow:
+    0 3px 15px rgba(0, 0, 0, 0.9),
+    0 0 25px rgba(251, 191, 36, 0.45);
+}
+
+.summon-limited-sub {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #bae6fd;
+  margin: 6px 0 0;
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.9),
+    0 0 12px rgba(56, 189, 248, 0.6);
+}
+
+.summon-limited-bottom-bar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: linear-gradient(
+    0deg,
+    rgba(7, 16, 29, 0.94) 0%,
+    rgba(7, 16, 29, 0.72) 60%,
+    rgba(7, 16, 29, 0) 100%
+  );
+  gap: 16px;
+}
+
+.summon-limited-desc {
+  font-size: 14px;
+  color: #e2e8f0;
+  margin: 0;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+.summon-limited-poem {
+  font-size: 13px;
+  color: #fde047;
+  letter-spacing: 0.15em;
+  font-style: italic;
+  white-space: nowrap;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.summon-limited-panel {
+  border-color: rgba(96, 165, 250, 0.35);
+  box-shadow:
+    inset 0 0 30px rgba(37, 99, 235, 0.12),
+    0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.summon-limited-panel header h2 {
+  color: #bfdbfe;
+}
+
+.summon-limited-up-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.summon-limited-up-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: rgba(14, 25, 45, 0.85);
+  border: 1px solid rgba(147, 197, 253, 0.25);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease;
+}
+
+.summon-limited-up-card:hover {
+  border-color: rgba(253, 224, 71, 0.6);
+  background: rgba(20, 36, 65, 0.9);
+  transform: translateY(-1px);
+}
+
+.summon-limited-avatar-wrap {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1.5px solid rgba(250, 204, 21, 0.7);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.summon-limited-avatar-wrap .portrait {
+  width: 100%;
+  height: 100%;
+}
+
+.summon-limited-up-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.summon-limited-up-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.summon-limited-up-name-row b {
+  font-size: 15px;
+  color: #f8fafc;
+  letter-spacing: 0.04em;
+}
+
+.summon-limited-up-title {
+  font-size: 12px;
+  color: #7dd3fc;
+}
+
+.summon-limited-up-status {
+  font-size: 11px;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+.summon-limited-guarantee-tip {
+  margin-top: 14px;
+  padding: 10px 12px;
+  background: rgba(15, 33, 58, 0.75);
+  border-left: 3px solid #38bdf8;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.55;
+  color: #bae6fd;
+}
+

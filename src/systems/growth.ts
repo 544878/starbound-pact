@@ -2,6 +2,8 @@ import type { Companion, Weapon } from "../domain/types";
 import { RINGS, RULES } from "../data/advancedRules";
 import { ringBonuses } from "./ringAffixes";
 import { HERO_LORE } from "../data/epic";
+import { characterPanel } from './v2/catalog';
+import { damage as resolveDamage } from './v2/math';
 export type Ring = {
   id: string;
   name: string;
@@ -53,35 +55,19 @@ export function activeRings(c: Companion) {
 }
 export function stats(c: Companion, weapons: Weapon[] = []) {
   const rings = activeRings(c);
-  const bonus = ringBonuses(c);
+  const build = characterPanel(c, weapons);
   const w = weapons.find((w) => w.ownerId === c.id);
   const cons = Math.max(0, Math.min(6, c.constellation));
   const signature = !!w && w.signatureFor === c.id;
 
   return {
-    hp: Math.round(
-      (600 + c.level * 12 + (c.role === "guardian" ? 350 : 0)) * (1 + bonus.hp),
-    ),
-    attack: Math.round(
-      (55 +
-        c.level * 2 +
-        cons * 7 +
-        (55 + c.level * 2) * bonus.attack +
-        (w ? w.level + w.refinement * 5 : 0)) *
-        (signature ? 1.18 : 1),
-    ),
-    defense: (18 + (c.role === "guardian" ? 25 : 0)) * (1 + bonus.defense),
-    interval: 1 / (1 + bonus.speed),
-    energyEfficiency: 1 + bonus.energy,
-    crit: bonus.crit,
-    critDamage: bonus.critDamage,
+    ...build.stats,
+    interval: 100 / build.stats.speed,
     effects: rings.map((r) => r.effect),
-    healing:
-      (rings.some((r) => r.effect === "healing") ? 1.2 : 1) *
-      (signature && c.path === "desire" ? 1.1 : 1),
+    healing: 1 + (build.bonuses.healing ?? 0),
     signaturePath: signature ? c.path : undefined,
     signature,
-    soulBonus: signature ? 0.08 : 0,
+    soulBonus: 0,
   };
 }
 export type UnitStats = ReturnType<typeof stats>;
@@ -91,12 +77,7 @@ export function damage(
   hp: number,
   hits: number,
   multiplier = 1,
+  modeMultiplier = 1,
 ) {
-  let amount =
-    a.attack * multiplier * (1 + a.soulBonus) -
-    d.defense * (a.effects.includes("pierce") ? 0.65 : 1);
-  if (a.effects.includes("execute") && hp < d.hp / 2) amount *= 1.15;
-  if (a.effects.includes("echo") && hits % 3 === 0) amount *= 1.25;
-  if (d.effects.includes("guard")) amount *= 0.92;
-  return Math.max(1, Math.round(amount));
+  return Math.round(resolveDamage(a, { attack: multiplier }, { defense: d.defense, reduction: a.effects.includes('pierce') ? .35 : 0, mitigation: d.effects.includes('guard') ? .08 : 0 }, { pvpMultiplier: modeMultiplier }));
 }

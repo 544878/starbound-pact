@@ -26,8 +26,8 @@ const start = (kind: "story" | "tower", id: string) =>
   );
 describe("web edition campaign and progression", () => {
   it("has complete named heroes, signature weapons, soul identities and chapters", () => {
-    expect(companionCatalog).toHaveLength(51);
-    expect(new Set(companionCatalog.map((c) => c.id)).size).toBe(51);
+    expect(companionCatalog).toHaveLength(53);
+    expect(new Set(companionCatalog.map((c) => c.id)).size).toBe(53);
     for (const c of companionCatalog) {
       expect(c.realm).toBeTruthy();
       expect(c.soulName).toBeTruthy();
@@ -108,7 +108,7 @@ describe("web edition campaign and progression", () => {
       "xuanzhao",
     );
     expect(stats(hero, restored.weapons).signature).toBe(true);
-    expect(stats(hero, restored.weapons).soulBonus).toBeCloseTo(0.08);
+    expect(stats(hero, restored.weapons).soulBonus).toBe(0);
     expect(activeRings(hero).some((r) => r.name.includes(hero.soulName!))).toBe(
       true,
     );
@@ -340,4 +340,3 @@ describe("signature and tower differentiation", () => {
     expect(hydrated.formationPresetPaths).toHaveLength(9);
   });
 });
-

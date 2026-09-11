@@ -6,6 +6,8 @@ export function inventoryMaterials(materials: Record<string, number>) {
         !name.startsWith("ring:") &&
         !name.startsWith("soul:") &&
         !name.startsWith("shop_claimed_") &&
+        !name.startsWith("V2魂转换券:") &&
+        !name.includes(":") &&
         Number.isFinite(count) &&
         count >= 0,
     )

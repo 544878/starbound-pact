@@ -1,8 +1,60 @@
 import type { SkinDefinition } from "../domain/commerce";
 
 // Patch entry point: add an imported skin pack here. Stable IDs must never be reused.
-// The empty catalogue is intentional: no unreleased skin is purchasable.
-export const SKIN_CATALOG: readonly SkinDefinition[] = [];
+export const SKIN_CATALOG: readonly SkinDefinition[] = [
+  {
+    id: "skin-lumi-athletic",
+    characterId: "lumi",
+    name: "晨曦逐风",
+    description:
+      "换上轻便利落的墨绿运动装，在晨曦飞瀑前的露台扎起马尾。去更远的地方，和更喜欢的自己相遇。",
+    version: 1,
+    status: "listed",
+    price: 0,
+    assets: {
+      illustration: {
+        src: "/assets/characters/lumi-athletic.png",
+      },
+      portrait: {
+        src: "/assets/characters/lumi-portrait.png",
+      },
+      chibi: {
+        src: "/assets/characters/lumi-chibi.png",
+      },
+      dynamic: {
+        src: "/assets/characters/lumi-athletic.png",
+        type: "image",
+        poster: "/assets/characters/lumi-athletic.png",
+      },
+    },
+  },
+  {
+    id: "skin-lumi-summer",
+    characterId: "lumi",
+    name: "溯夏之约",
+    description:
+      "蔚蓝海风轻拂白金薄纱，露弥在碧波与繁花盛开的宫殿露台，向你发出深情邀约：「和我一起，去看更远的海吧？」",
+    version: 1,
+    status: "listed",
+    price: 0,
+    assets: {
+      illustration: {
+        src: "/assets/characters/lumi-summer.jpg",
+      },
+      portrait: {
+        src: "/assets/characters/lumi-portrait.png",
+      },
+      chibi: {
+        src: "/assets/characters/lumi-chibi.png",
+      },
+      dynamic: {
+        src: "/assets/characters/lumi-summer.jpg",
+        type: "image",
+        poster: "/assets/characters/lumi-summer.jpg",
+      },
+    },
+  },
+];
 
 export function validateSkinCatalog(catalog: readonly SkinDefinition[]) {
   const ids = new Set<string>();

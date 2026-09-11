@@ -19,6 +19,7 @@ import { PLAYABLE_TEAMS } from "../data/expansion";
 import { companionCatalog } from "../data/catalog";
 import { getBossOptimalRecommendation } from "../data/bossRecommendation";
 import type { PathId } from "../domain/combat";
+import { encounterDesign, encounterKey, PATH_SUBTITLES } from '../systems/v2/catalog';
 
 const PRESET_COUNT = 9;
 
@@ -39,6 +40,7 @@ export function FormationScreen() {
 
   const count = state.formation.filter(Boolean).length;
   const e = getEncounter(state.encounter);
+  const v2Encounter = encounterDesign(encounterKey(state.encounter));
   const activePath: PathId = (state.formationPath ?? e.path) as PathId;
   const activeTheme = FORMATION_THEMES[activePath] ?? FORMATION_THEMES.mortal;
 
@@ -253,7 +255,7 @@ export function FormationScreen() {
         <div>
           <span className="eyebrow">FORMATION & ASTROLABE / 乾坤星契集结</span>
           <h1>{e.title} · 迎战备战</h1>
-          <p>排布乾坤阵位，调谐八大专属阵法与角色专精，激活全队星轨共鸣。</p>
+          <p>五人自由编队。角色保留自身技能，速度决定行动顺序；队伍开场4战技点，上限7点。</p>
         </div>
         <div
           className={`formation-team-count-badge ${count >= 5 ? "is-full" : ""}`}
@@ -277,13 +279,13 @@ export function FormationScreen() {
             </div>
           </div>
 
-          <h2 className="formation-boss-name">{e.boss.name}</h2>
-          <p className="formation-boss-hint">{e.boss.hint}</p>
+          <h2 className="formation-boss-name">{v2Encounter.enemies.map(e => e.name).join(' / ')}</h2>
+          <p className="formation-boss-hint">攻击目标、护盾和韧性分别结算。预告重击可用拆招、削韧或保护技能应对。</p>
 
           <div className="formation-boss-metrics">
             <div>
               <span>生命总额</span>
-              <b>{(e.boss.hp * 250).toLocaleString()}</b>
+              <b>{v2Encounter.enemies.reduce((sum, e) => sum + e.hp, 0).toLocaleString()}</b>
             </div>
             <div>
               <span>出战消耗</span>
@@ -294,7 +296,7 @@ export function FormationScreen() {
           {/* 本期Boss最优克制情报与推荐 */}
           <div className="formation-boss-tactic-card">
             <div className="boss-tactic-header">
-              <span className="tactic-title-tag">✦ 本期最优克制</span>
+              <span className="tactic-title-tag">✦ 编队参考</span>
               <span
                 className="tactic-path-pill"
                 style={{
@@ -303,10 +305,10 @@ export function FormationScreen() {
                   backgroundColor: `${counterTheme.color}20`,
                 }}
               >
-                {counterTheme.rune} {counterTheme.name} · {bossRecommendation.strategyTitle}
+                {counterTheme.rune} {counterTheme.name} · {PATH_SUBTITLES[counterTheme.id]}
               </span>
             </div>
-            <p className="boss-tactic-reason">{bossRecommendation.reason}</p>
+            <p className="boss-tactic-reason">参考队伍可自由调整。注意战技点收支、治疗和护盾覆盖；跨体系角色不会受到面板折扣。</p>
             <div className="boss-tactic-core-row">
               <span className="core-label">推荐核心：</span>
               <span className="core-names">
@@ -511,7 +513,7 @@ export function FormationScreen() {
                     <span className="path-card-rune">{theme.rune}</span>
                     <div className="path-card-info">
                       <span className="path-card-name">{theme.name} · {theme.formationName}</span>
-                      <span className="path-card-formation">{theme.trait}</span>
+                      <span className="path-card-formation">{PATH_SUBTITLES[p.id]} · 角色自身机制</span>
                     </div>
                     <span className={`path-card-count ${matchCount > 0 ? "has-resonance" : ""}`}>
                       {matchCount}/5
@@ -529,9 +531,9 @@ export function FormationScreen() {
                   <h3>{activeTheme.formationName}</h3>
                   <span>{activeTheme.subTitle}</span>
                 </div>
-                <p className="formation-details-passive">{activeTheme.passive}</p>
+                <p className="formation-details-passive">{PATH_SUBTITLES[activePath]}体系：通过角色各自的技能循环配合；切换队伍标签不改变角色属性。</p>
                 <span className="formation-details-sub">
-                  右侧迎敌站位 · 匹配体系角色将获得最高 100% 灵气加成
+                  站位只决定排列，不改变角色技能，不额外赠送属性。
                 </span>
               </div>
             </div>
@@ -576,7 +578,7 @@ export function FormationScreen() {
             >
               <span className="recommend-icon">🎯</span>
               <div className="recommend-btn-content">
-                <span className="recommend-btn-title">本期Boss最优角色推荐</span>
+                <span className="recommend-btn-title">使用参考队伍</span>
                 <span className="recommend-btn-sub">
                   克制【{e.boss.name}】· 推荐{counterTheme.name}体系
                 </span>

@@ -200,7 +200,7 @@ export const GOLD_GOODS: ShopGoodItem[] = [
 
 export const SUPPLY_GOODS: ShopGoodItem[] = [
   { id: "wish_water", name: "造化之水", desc: "常驻角色与本命神兵祈愿，每次消耗1份", price: 160, currency: "crystals", material: "造化之水", count: 1, icon: "◈", category: "supplies" },
-  { id: "wish_lotus", name: "造化青莲", desc: "联动与限定五星祈愿，每次消耗1朵；限定五星尚未开放", price: 160, currency: "crystals", material: "造化青莲", count: 1, icon: "✧", category: "supplies" },
+  { id: "wish_lotus", name: "造化青莲", desc: "联动与限定五星祈愿，每次消耗1朵", price: 160, currency: "crystals", material: "造化青莲", count: 1, icon: "✧", category: "supplies" },
   {
     id: "stamina",
     name: "灵泉甘露",

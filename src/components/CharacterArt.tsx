@@ -10,6 +10,7 @@ const views = [
   { id: 4, label: "头像" },
   { id: 3, label: "Q版" },
 ];
+
 export function CharacterArt({
   companion,
   view = 0,
@@ -22,24 +23,40 @@ export function CharacterArt({
   defaultAppearance?: boolean;
 }) {
   const current = views.some((v) => v.id === view) ? view : 0;
-  const original = hasScenicArt(companion.id) ? <ScenicArt id={companion.id} view={current} /> : fgoArtIndex(companion.id) >= 0 ? <FgoCharacterArt id={companion.id} view={current} /> : <CollabCharacterArt id={companion.id} view={current} />;
+  const original = hasScenicArt(companion.id) ? (
+    <ScenicArt id={companion.id} view={current} />
+  ) : fgoArtIndex(companion.id) >= 0 ? (
+    <FgoCharacterArt id={companion.id} view={current} />
+  ) : (
+    <CollabCharacterArt id={companion.id} view={current} />
+  );
+
   return (
     <div
       className={`character-art view-${current} ${className}`}
       role="img"
       aria-label={`${companion.name}·${views.find((v) => v.id === current)?.label}`}
     >
-      {defaultAppearance ? original : <EquippedSkinArt characterId={companion.id} view={current}>{original}</EquippedSkinArt>}
+      {defaultAppearance ? (
+        original
+      ) : (
+        <EquippedSkinArt characterId={companion.id} view={current}>
+          {original}
+        </EquippedSkinArt>
+      )}
     </div>
   );
 }
+
 export function ArtGallery({ companion }: { companion: Companion }) {
   const [view, setView] = useState(0);
   const dialog = useRef<HTMLDialogElement>(null);
+
   useEffect(() => {
     setView(0);
     dialog.current?.close();
   }, [companion.id]);
+
   return (
     <>
       <div className="art-view-controls" role="group" aria-label="立绘视角">
@@ -74,7 +91,7 @@ export function ArtGallery({ companion }: { companion: Companion }) {
         }}
       >
         <header>
-          <b>{companion.name} · 正面 / 头像 / Q版</b>
+          <b>{companion.name} · 原画赏析与立绘合集</b>
           <button
             autoFocus
             onClick={() => dialog.current?.close()}
@@ -91,14 +108,35 @@ export function ArtGallery({ companion }: { companion: Companion }) {
             </figure>
           ))}
         </div>
-        {hasScenicArt(companion.id) && (
-          <a
-            href={scenicSource(companion.id)}
-            download={`${companion.name}-正面头像Q版.png`}
-          >
-            下载原图
-          </a>
-        )}
+        <div className="scenic-gallery-downloads">
+          {hasScenicArt(companion.id) && (
+            <a
+              href={scenicSource(companion.id)}
+              download={`${companion.name}-经典原画.png`}
+              className="download-link"
+            >
+              下载经典原画
+            </a>
+          )}
+          {companion.id === "lumi" && (
+            <>
+              <a
+                href="/assets/characters/lumi-athletic.png"
+                download="露弥-晨曦逐风.png"
+                className="download-link"
+              >
+                下载晨曦逐风立绘
+              </a>
+              <a
+                href="/assets/characters/lumi-summer.jpg"
+                download="露弥-溯夏之约.jpg"
+                className="download-link"
+              >
+                下载溯夏之约原画
+              </a>
+            </>
+          )}
+        </div>
       </dialog>
     </>
   );

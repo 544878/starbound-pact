@@ -16,6 +16,8 @@ export type Rarity = "4星" | "5星";
 export type Realm = "神" | "半神" | "帝" | "神使" | "大尊" | "主角团";
 
 export interface Companion {
+  v2FunctionalSouls?: import("../systems/v2/functionalSouls").FunctionalSouls;
+  v2Souls?: import("../systems/v2/souls").Soul[];
   numericId?: string;
   id: string;
   name: string;
@@ -165,6 +167,7 @@ export interface TowerFloor {
 
 
 export interface GameState {
+  battleRulesVersion?: number;
   commerce?: import('./commerce').CommerceState;
   wardrobe?: import('./commerce').WardrobeState;
   formationPath?: import("./combat").PathId;
@@ -190,6 +193,7 @@ export interface GameState {
   weapons: Weapon[];
   formation: Array<string | null>;
   selectedCompanionId: string;
+  weaponTargetCompanionId?: string;
   battleSeed: number;
   hasSeenTutorial: boolean;
 

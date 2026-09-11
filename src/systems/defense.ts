@@ -189,15 +189,15 @@ export function tickDefense(s: Defense, dt: number): Defense {
   const total = 4 + s.wave * 2
   if (n.spawnTimer <= 0 && n.spawned < total) {
     const elite = n.spawned === total - 1
-    const hp = 220 + s.wave * 85 + (elite ? 220 : 0)
+    const hp = 1000 + s.wave * 200 + (elite ? 1000 : 0)
     n.enemies.push({
       id: n.nextId++,
       progress: 0,
       hp,
       maxHp: hp,
       speed: elite ? 0.35 : 0.5,
-      attack: 30 + s.wave * 14,
-      defense: 10 + s.wave * 3,
+      attack: 200 + s.wave * 50,
+      defense: 300 + s.wave * 30,
       timer: 0,
     })
     n.spawned++
@@ -218,7 +218,7 @@ export function tickDefense(s: Defense, dt: number): Defense {
       e.timer -= dt
       if (e.timer <= 0) {
         blocker.hp -=
-          Math.max(1, e.attack - blocker.stats.defense) *
+          damage({ ...blocker.stats, attack: e.attack, crit: 0, effects: [], soulBonus: 0 }, blocker.stats, blocker.hp, 0) *
           (blocker.skill > 0 ? 0.5 : 1) *
           (blocker.stats.effects.includes('guard') ? 0.92 : 1)
         e.timer = 1

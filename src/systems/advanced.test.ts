@@ -34,7 +34,8 @@ describe('advanced growth and save migration', () => {
         rings: ['common-7', 'exclusive-8', 'common-9'],
       }),
       b = stats({ ...companions[1], level: 1 })
-    expect(a.hp).toBeGreaterThan(stats({ ...companions[0], level: 1 }).hp)
+    // Rear soul appearance no longer grants a free stat budget in V2.
+    expect(a.hp).toBe(stats({ ...companions[0], level: 1 }).hp)
     expect(damage(a, b, b.hp, 3)).toBe(damage(a, b, b.hp, 2))
     expect(a.effects).not.toContain("echo")
   })

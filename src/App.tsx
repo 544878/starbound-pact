@@ -4,7 +4,7 @@ import { AppShell } from './components/AppShell'
 import { audioEngine } from './audio/audioEngine'
 import { HomeScreen } from './screens/HomeScreen'
 import { FormationScreen } from './screens/FormationScreen'
-import { BattleScreen } from './screens/BattleScreen'
+import { BattleScreen } from './screens/BattleV2Screen'
 import { CompanionsScreen } from './screens/CompanionsScreen'
 import { SummonScreen } from './screens/SummonScreen'
 import { InventoryScreen } from './screens/InventoryScreen'
@@ -39,5 +39,4 @@ export function App() {
   }[state.screen]
   return <AppShell hideNav={state.screen === 'battle' || state.screen === 'home' || state.screen === 'tower'}>{screen}</AppShell>
 }
-
 

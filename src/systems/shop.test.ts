@@ -106,4 +106,88 @@ describe("Shop and Economy System", () => {
     expect(hydrated.rechargedTiers?.["recharge_648"]).toBeUndefined();
     expect(hydrated.totalRechargedRmb).toBe(98);
   });
+
+  describe("Batch Purchasing (批量购买)", () => {
+    it("handles batch purchase of materials with correct costs and quantities", () => {
+      const initial = { ...createInitialState(), gold: 20000 };
+      const prismCountBefore = initial.materials["折光棱晶"] ?? 0;
+      const count = 5;
+
+      const updated = gameReducer(initial, {
+        type: "BUY_GOODS",
+        id: "prism",
+        count,
+      });
+
+      // prism costs 900 gold per purchase, gives 3 units
+      expect(updated.gold).toBe(initial.gold - 900 * count);
+      expect(updated.materials["折光棱晶"]).toBe(prismCountBefore + 3 * count);
+    });
+
+    it("handles batch purchase of wish currency (造化之水)", () => {
+      const initial = { ...createInitialState(), crystals: 5000 };
+      const waterBefore = initial.materials["造化之水"] ?? 0;
+      const count = 10;
+
+      const updated = gameReducer(initial, {
+        type: "BUY_GOODS",
+        id: "wish_water",
+        count,
+      });
+
+      // wish_water costs 160 crystals each, gives 1 unit
+      expect(updated.crystals).toBe(initial.crystals - 160 * count);
+      expect(updated.materials["造化之水"]).toBe(waterBefore + count);
+    });
+
+    it("handles batch purchase of gold goods using crystals", () => {
+      const initial = { ...createInitialState(), crystals: 3000, gold: 1000 };
+      const count = 3;
+
+      // gold_xlarge costs 600 crystals each, gives 48,000 gold
+      const updated = gameReducer(initial, {
+        type: "BUY_GOODS",
+        id: "gold_xlarge",
+        count,
+      });
+
+      expect(updated.crystals).toBe(initial.crystals - 600 * count);
+      expect(updated.gold).toBe(initial.gold + 48000 * count);
+    });
+
+    it("rejects batch purchase if crystals or gold are insufficient for total cost", () => {
+      const poorState = { ...createInitialState(), crystals: 200 };
+      // 2 units of wish_water would cost 320 crystals
+      const attempted = gameReducer(poorState, {
+        type: "BUY_GOODS",
+        id: "wish_water",
+        count: 2,
+      });
+
+      expect(attempted.crystals).toBe(poorState.crystals);
+      expect(attempted.materials["造化之水"]).toBe(poorState.materials["造化之水"]);
+    });
+
+    it("prevents batch purchasing stamina exceeding the 240 cap", () => {
+      const state = { ...createInitialState(), stamina: 150, crystals: 1000 };
+      // 2 bottles would give 120 stamina, 150 + 120 = 270 > 240
+      const attempted = gameReducer(state, {
+        type: "BUY_GOODS",
+        id: "stamina",
+        count: 2,
+      });
+
+      expect(attempted.stamina).toBe(150);
+      expect(attempted.crystals).toBe(1000);
+
+      // 1 bottle gives 60 stamina, 150 + 60 = 210 <= 240, should succeed
+      const successful = gameReducer(state, {
+        type: "BUY_GOODS",
+        id: "stamina",
+        count: 1,
+      });
+      expect(successful.stamina).toBe(210);
+      expect(successful.crystals).toBe(1000 - 80);
+    });
+  });
 });

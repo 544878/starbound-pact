@@ -2,6 +2,7 @@ import { epicCompanions, HERO_LORE, signatureWeapons } from "./epic";
 import { expansionCompanions, LEGACY_NUMERIC_IDS } from './expansion';
 import { fgoCompanions, FGO_HERO_LORE } from "./fgoCollab";
 import { wuwaCompanions, WUWA_HERO_LORE } from "./wuwaCollab";
+import { hsrCompanions, HSR_HERO_LORE } from "./hsrCollab";
 import { epicChapters } from "./chronicles";
 import type {
   Companion,
@@ -33,10 +34,15 @@ export const companions: Companion[] = [
     biography:
       "穿梭于天穹裂隙与边境焦土的风之信使。虽然总是笑盈盈地与人聊起今天的天气，但包裹里每一封沾血的求救信，她都誓死送达。风神不渡的苦难，由她来飞渡。",
     quotes: [
+      "「和我一起，去看更远的海吧？」",
+      "“去更远的地方，和更喜欢的自己相遇。”",
+      "“夏日的风，也在回应着你的名字。”",
+      "“仍有无数的世界，等待我们一起抵达。To a Brighter Tomorrow.”",
       "“神谕可以迟到，但求救的声音，绝对不可以。”",
       "“风从天裂的缝隙里吹来，它在提醒我，还有人在等信呢。”",
       "“别害怕，只要微风还在吹拂，我们就绝没有迷失方向。”",
       "“无论前路通向何方，露弥会一直为您守好后背哦！”",
+      "「风会记得每一次相遇。旅人，与我一同启程吧！」",
     ],
   },
   {
@@ -185,8 +191,9 @@ export const companions: Companion[] = [
 
 Object.assign(HERO_LORE, FGO_HERO_LORE);
 Object.assign(HERO_LORE, WUWA_HERO_LORE);
+Object.assign(HERO_LORE, HSR_HERO_LORE);
 companions.forEach((c) => Object.assign(c, HERO_LORE[c.id]));
-export const companionCatalog = [...companions, ...epicCompanions, ...expansionCompanions, ...fgoCompanions, ...wuwaCompanions];
+export const companionCatalog = [...companions, ...epicCompanions, ...expansionCompanions, ...fgoCompanions, ...wuwaCompanions, ...hsrCompanions];
 companionCatalog.forEach(c => { c.numericId ??= LEGACY_NUMERIC_IDS[c.id]; });
 
 export function getCompanionById(id: string) {
@@ -248,7 +255,7 @@ export const materialCatalog: Record<
   { name: string; icon: string; rarity: "4星" | "5星"; desc: string }
 > = {
   造化之水: {name:'造化之水',icon:'◈',rarity:'5星',desc:'常驻角色与本命神兵祈愿资源，每份160星晶。'},
-  造化青莲: {name:'造化青莲',icon:'✧',rarity:'5星',desc:'联动与未来限定五星祈愿资源，每份160星晶；限定五星尚未开放。'},
+  造化青莲: {name:'造化青莲',icon:'✧',rarity:'5星',desc:'联动与限定五星祈愿资源，每份160星晶。'},
   风灵花蜜: {
     name: "风灵花蜜",
     icon: "❀",

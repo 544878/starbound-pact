@@ -133,8 +133,8 @@ export function fightWar(s: War, owned: Companion[], weapons: Weapon[] = []): Wa
         hp: v.hp * u.rank,
       }
     })
-  let enemyHp = 800 + s.round * 300,
-    enemyAttack = 75 + s.round * 22
+  let enemyHp = 8000 + s.round * 3000,
+    enemyAttack = 750 + s.round * 220
   const log: string[] = []
   const synergy = bonds(s).filter((b) => b.count >= 2).length
   for (
@@ -157,8 +157,8 @@ export function fightWar(s: War, owned: Companion[], weapons: Weapon[] = []): Wa
           u.stats,
           {
             ...u.stats,
-            hp: 800 + s.round * 300,
-            defense: 20 + s.round * 3,
+            hp: 8000 + s.round * 3000,
+            defense: 400 + s.round * 30,
             effects: [],
           },
           enemyHp,
@@ -176,7 +176,7 @@ export function fightWar(s: War, owned: Companion[], weapons: Weapon[] = []): Wa
     const target = units.find((u) => u.zone === 'front' && u.hp > 0)
     if (target)
       target.hp -=
-        Math.max(1, enemyAttack - target.stats.defense) *
+        damage({ ...target.stats, attack: enemyAttack, crit: 0, effects: [], soulBonus: 0 }, target.stats, target.hp, 0) *
         (target.stats.effects.includes('guard') ? 0.92 : 1)
     if (tick % 3 === 0)
       log.unshift(

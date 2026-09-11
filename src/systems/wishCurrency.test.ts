@@ -82,24 +82,22 @@ describe("wish resource routing", () => {
     expect(after.pullHistory[0].pool).toBe("collab");
     expect(wishPayment(after, "standard", 1).affordable).toBe(true);
   });
-  it("does not release limited five-stars and excludes collab five-stars from standard", () => {
+  it("releases limited pool 1 with Robin & Aventurine and excludes collab/limited five-stars from standard", () => {
     expect(COLLAB_IDS).toHaveLength(10);
     expect(STANDARD_FIVE_IDS).toContain("astra");
     expect(STANDARD_FIVE_IDS.some((id) => COLLAB_IDS.includes(id))).toBe(false);
-    const s = createInitialState();
-    expect(
-      performCharacterPulls("limited", 1, 79, true, []).results,
-    ).toHaveLength(0);
-    expect(
-      gameReducer(s, {
-        type: "APPLY_PULLS",
-        kind: "companion",
-        pool: "limited",
-        count: 1,
-        results: [],
-        pity: 0,
-      }),
-    ).toEqual(s);
+    expect(STANDARD_FIVE_IDS).not.toContain("robin_lovesong");
+    expect(STANDARD_FIVE_IDS).not.toContain("aventurine_waves");
+
+    const limitedPulls = performCharacterPulls("limited", 1, 79, true, []);
+    expect(limitedPulls.results).toHaveLength(1);
+    expect(limitedPulls.results[0].rarity).toBe("5星");
+    expect(["robin_lovesong", "aventurine_waves"]).toContain(
+      limitedPulls.results[0].id,
+    );
+    expect(limitedPulls.pity).toBe(0);
+    expect(limitedPulls.guaranteed).toBe(false);
+
     expect(
       performCharacterPulls("collab", 1, 0, false, [], () => 0.99).results[0]
         .rarity,

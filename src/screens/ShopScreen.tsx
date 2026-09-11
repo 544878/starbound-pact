@@ -27,6 +27,7 @@ export function ShopScreen() {
   const [history, setHistory] = useState(false);
   const [skin, setSkin] = useState<SkinDefinition | null>(null);
   const [goods, setGoods] = useState<ShopGoodItem | null>(null);
+  const [buyCount, setBuyCount] = useState(1);
   const [supplyFilter, setSupplyFilter] = useState("all");
   const day = shopDay();
   const monthly = state.commerce?.monthly;
@@ -34,28 +35,58 @@ export function ShopScreen() {
   const claimed = (monthly?.lastClaimDay ?? -1) >= day;
   const listed = SKIN_CATALOG.filter((s) => s.status === "listed");
   const buy = (ref: ProductRef) => setProduct(ref);
-  const goodsBlocked = (item: ShopGoodItem) => {
-    if (
-      item.dailyLimit &&
-      (state.materials[`shop_claimed_${item.id}_${state.taskPeriods?.day}`] ??
-        0) >= item.dailyLimit
-    )
-      return "今日已领取";
-    if (state[item.currency] < item.price)
+
+  const getMaxAffordable = (item: ShopGoodItem) => {
+    let max = item.price > 0 ? Math.floor(state[item.currency] / item.price) : 99;
+    if (item.dailyLimit) {
+      const claimedToday =
+        state.materials[`shop_claimed_${item.id}_${state.taskPeriods?.day}`] ?? 0;
+      max = Math.min(max, Math.max(0, item.dailyLimit - claimedToday));
+    }
+    if (item.stamina) {
+      const remainingStamina = Math.max(0, 240 - state.stamina);
+      const maxByStamina = Math.floor(remainingStamina / item.stamina);
+      max = Math.min(max, maxByStamina);
+    }
+    return Math.max(0, Math.min(999, max));
+  };
+
+  const goodsBlocked = (item: ShopGoodItem, count = 1) => {
+    if (item.dailyLimit) {
+      const claimedToday =
+        state.materials[`shop_claimed_${item.id}_${state.taskPeriods?.day}`] ?? 0;
+      if (claimedToday >= item.dailyLimit) return "今日已领取";
+      if (claimedToday + count > item.dailyLimit)
+        return `限购仅剩 ${item.dailyLimit - claimedToday} 次`;
+    }
+    if (state[item.currency] < item.price * count)
       return `${item.currency === "gold" ? "金币" : "星晶"}不足`;
-    if (item.stamina && state.stamina + item.stamina > 240)
+    if (item.stamina && state.stamina + item.stamina * count > 240)
       return "体力空间不足";
     return "";
   };
-  const buyGoods = (item: ShopGoodItem) => {
-    const error = goodsBlocked(item);
+
+  const buyGoods = (item: ShopGoodItem, count = 1) => {
+    const error = goodsBlocked(item, count);
     if (error) {
       setMessage(error);
       setGoods(null);
       return;
     }
-    dispatch({ type: "BUY_GOODS", id: item.id });
-    setMessage(`${item.name}已入库。`);
+    dispatch({ type: "BUY_GOODS", id: item.id, count });
+    if (count > 1) {
+      if (item.gold) {
+        setMessage(`已成功购买 ${item.name} ×${count}，获得 ${(item.gold * count).toLocaleString()} 金币。`);
+      } else if (item.stamina) {
+        setMessage(`已成功购买 ${item.name} ×${count}，恢复 ${item.stamina * count} 体力。`);
+      } else if (item.material) {
+        setMessage(`已成功购买 ${item.name} ×${count}，获得 ${item.material} ×${(item.count ?? 1) * count}。`);
+      } else {
+        setMessage(`已成功批量购买 ${item.name} ×${count}。`);
+      }
+    } else {
+      setMessage(`${item.name}已入库。`);
+    }
     setGoods(null);
   };
   return (
@@ -310,34 +341,63 @@ export function ShopScreen() {
           <div className="store-goods">
             {SHOP_GOODS.filter(
               (g) => supplyFilter === "all" || g.category === supplyFilter,
-            ).map((g) => (
-              <article key={g.id}>
-                <MaterialArt
-                  name={
-                    g.material ??
-                    (g.stamina
-                      ? "灵泉甘露"
-                      : g.id === "gold_free"
-                        ? "商会礼盒"
-                        : (g.gold ?? 0) >= 22000
-                          ? "金币宝箱"
-                          : "金币")
-                  }
-                />
-                <h3>{g.name}</h3>
-                <p>{g.desc}</p>
-                <button
-                  className="store-price-button"
-                  disabled={!!goodsBlocked(g)}
-                  onClick={() => (g.price === 0 ? buyGoods(g) : setGoods(g))}
-                >
-                  {goodsBlocked(g) ||
-                    (g.price === 0
-                      ? "免费领取"
-                      : `${g.price.toLocaleString()} ${g.currency === "gold" ? "金币" : "星晶"} · 兑换`)}
-                </button>
-              </article>
-            ))}
+            ).map((g) => {
+              const blockedSingle = goodsBlocked(g, 1);
+              const maxAfford = getMaxAffordable(g);
+              const canBatch = g.price > 0 && !g.dailyLimit;
+              return (
+                <article key={g.id}>
+                  <MaterialArt
+                    name={
+                      g.material ??
+                      (g.stamina
+                        ? "灵泉甘露"
+                        : g.id === "gold_free"
+                          ? "商会礼盒"
+                          : (g.gold ?? 0) >= 22000
+                            ? "金币宝箱"
+                            : "金币")
+                    }
+                  />
+                  <h3>{g.name}</h3>
+                  <p>{g.desc}</p>
+                  <div className="store-card-actions">
+                    <button
+                      className="store-price-button"
+                      disabled={!!blockedSingle}
+                      onClick={() => {
+                        if (g.price === 0) {
+                          buyGoods(g, 1);
+                        } else {
+                          setBuyCount(1);
+                          setGoods(g);
+                        }
+                      }}
+                    >
+                      {blockedSingle ||
+                        (g.price === 0
+                          ? "免费领取"
+                          : `${g.price.toLocaleString()} ${g.currency === "gold" ? "金币" : "星晶"} · 兑换`)}
+                    </button>
+                    {canBatch && (
+                      <button
+                        className="store-batch-button"
+                        disabled={!!blockedSingle}
+                        onClick={() => {
+                          const initial = Math.min(10, Math.max(1, maxAfford));
+                          setBuyCount(initial);
+                          setGoods(g);
+                        }}
+                        title={`批量购买 ${g.name}`}
+                        aria-label={`批量购买 ${g.name}`}
+                      >
+                        批量购买
+                      </button>
+                    )}
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </>
       )}
@@ -410,23 +470,140 @@ export function ShopScreen() {
         <Checkout product={product} onClose={() => setProduct(null)} />
       )}
       {goods && (
-        <ShopDialog title="确认兑换" onClose={() => setGoods(null)}>
+        <ShopDialog
+          title={buyCount > 1 ? `批量兑换 · ${goods.name}` : "确认兑换"}
+          onClose={() => setGoods(null)}
+        >
           <MaterialArt
             name={goods.material ?? (goods.stamina ? "灵泉甘露" : "金币")}
             size={120}
           />
           <h3>{goods.name}</h3>
           <p>{goods.desc}</p>
-          <p>
-            消耗 {goods.price.toLocaleString()}{" "}
-            {goods.currency === "gold" ? "金币" : "星晶"}
-          </p>
+          {goods.price > 0 ? (
+            <>
+              <div className="store-quantity-selector">
+                <div className="quantity-header">
+                  <span>购买数量</span>
+                  <span className="quantity-available">
+                    可购上限: <strong>{getMaxAffordable(goods)}</strong> 件
+                  </span>
+                </div>
+                <div className="store-quantity-controls">
+                  <button
+                    type="button"
+                    className="qty-step-btn"
+                    disabled={buyCount <= 1}
+                    onClick={() => setBuyCount((c) => Math.max(1, c - 1))}
+                    aria-label="减少1件"
+                  >
+                    −
+                  </button>
+                  <input
+                    type="number"
+                    className="qty-input"
+                    min={1}
+                    max={Math.max(1, getMaxAffordable(goods))}
+                    value={buyCount}
+                    onChange={(e) => {
+                      const v = parseInt(e.target.value, 10);
+                      if (Number.isNaN(v)) {
+                        setBuyCount(1);
+                      } else {
+                        const max = Math.max(1, getMaxAffordable(goods));
+                        setBuyCount(Math.min(max, Math.max(1, v)));
+                      }
+                    }}
+                    aria-label="购买数量"
+                  />
+                  <button
+                    type="button"
+                    className="qty-step-btn"
+                    disabled={
+                      buyCount >= getMaxAffordable(goods) ||
+                      getMaxAffordable(goods) === 0
+                    }
+                    onClick={() =>
+                      setBuyCount((c) =>
+                        Math.min(Math.max(1, getMaxAffordable(goods)), c + 1),
+                      )
+                    }
+                    aria-label="增加1件"
+                  >
+                    +
+                  </button>
+                  <button
+                    type="button"
+                    className="qty-quick-btn"
+                    disabled={
+                      buyCount + 10 > getMaxAffordable(goods) &&
+                      buyCount >= getMaxAffordable(goods)
+                    }
+                    onClick={() =>
+                      setBuyCount((c) =>
+                        Math.min(
+                          Math.max(1, getMaxAffordable(goods)),
+                          c + 10,
+                        ),
+                      )
+                    }
+                  >
+                    +10
+                  </button>
+                  <button
+                    type="button"
+                    className="qty-quick-btn max-btn"
+                    disabled={
+                      buyCount >= getMaxAffordable(goods) ||
+                      getMaxAffordable(goods) === 0
+                    }
+                    onClick={() =>
+                      setBuyCount(Math.max(1, getMaxAffordable(goods)))
+                    }
+                  >
+                    最大
+                  </button>
+                </div>
+              </div>
+              <div className="store-dialog-cost-summary">
+                <p>
+                  消耗合计:{" "}
+                  <strong>
+                    {(goods.price * buyCount).toLocaleString()}
+                  </strong>{" "}
+                  {goods.currency === "gold" ? "金币" : "星晶"}
+                </p>
+                <small>
+                  当前拥有: {state[goods.currency].toLocaleString()}{" "}
+                  {goods.currency === "gold" ? "金币" : "星晶"}
+                  {state[goods.currency] >= goods.price * buyCount && (
+                    <span>
+                      {" "}
+                      · 兑换后剩余:{" "}
+                      {(
+                        state[goods.currency] -
+                        goods.price * buyCount
+                      ).toLocaleString()}
+                    </span>
+                  )}
+                </small>
+              </div>
+            </>
+          ) : (
+            <p>
+              消耗 {goods.price.toLocaleString()}{" "}
+              {goods.currency === "gold" ? "金币" : "星晶"}
+            </p>
+          )}
           <button
             className="store-button"
-            disabled={!!goodsBlocked(goods)}
-            onClick={() => buyGoods(goods)}
+            disabled={!!goodsBlocked(goods, buyCount)}
+            onClick={() => buyGoods(goods, buyCount)}
           >
-            确认兑换
+            {goodsBlocked(goods, buyCount) ||
+              (buyCount > 1
+                ? `确认批量兑换 (${buyCount}件)`
+                : "确认兑换")}
           </button>
         </ShopDialog>
       )}

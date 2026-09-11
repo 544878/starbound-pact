@@ -158,7 +158,7 @@ export function getCompanionResonance(c: Companion, activePath: PathId): Resonan
     return {
       type: 'specialty',
       label: '★ 专精共鸣',
-      bonus: '专精阵法 · 100% 潜能加成',
+      bonus: '原生体系 · 使用角色自身技能',
       percent: 100,
       badgeClass: 'resonance-specialty',
     };
@@ -168,8 +168,8 @@ export function getCompanionResonance(c: Companion, activePath: PathId): Resonan
     return {
       type: 'adapted',
       label: '✦ 体系适配',
-      bonus: '协同适配 · 65% 灵气加成',
-      percent: 65,
+      bonus: '跨队协同 · 完整保留面板',
+      percent: 100,
       badgeClass: 'resonance-adapted',
     };
   }
@@ -177,8 +177,8 @@ export function getCompanionResonance(c: Companion, activePath: PathId): Resonan
   return {
     type: 'none',
     label: '中立出战',
-    bonus: '基础战力入阵',
-    percent: 0,
+    bonus: '自由编队 · 完整保留面板',
+    percent: 100,
     badgeClass: 'resonance-none',
   };
 }

@@ -11,7 +11,8 @@ import {
   ringUnlocked,
 } from "../systems/ringAffixes";
 import { RULES } from "../data/advancedRules";
-export function RingConstellation({ companion: c }: { companion: Companion }) {
+export { V2SoulPanel as RingConstellation } from './V2SoulPanel';
+export function LegacyRingConstellation({ companion: c }: { companion: Companion }) {
   const { state, dispatch } = useGame();
   const [i, setSelected] = useState(0);
   const count = RING_NAMES.filter((_, i) => ringUnlocked(c, i)).length;

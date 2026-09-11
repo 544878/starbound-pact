@@ -1,4 +1,6 @@
 import { ascensionStage, ascensionCost, levelCap, skillCost } from "../systems/progression";
+import { createSoul, soulFor, upgradeSoul, hydrateSouls, type Soul, type SoulStat } from "../systems/v2/souls";
+import { hydrateFunctionalSouls, type FunctionalSoulChoice } from "../systems/v2/functionalSouls";
 import { resourceDungeon, resourceDrops } from "../data/resourceDungeons";
 import { STANDARD_FIVE_IDS } from "../systems/gacha";
 import { reduceCommerce, hydrateCommerce, hydrateWardrobe, emptyCommerce, emptyWardrobe, type CommerceAction } from '../systems/commerce';
@@ -39,13 +41,17 @@ export const OLD_STORAGE_KEY = "starbound-pact-v1";
 export const SAVE_VERSION = 10;
 
 export type GameAction =
+  | { type: "UPGRADE_V2_SOUL"; id: string; slot: number }
+  | { type: "SET_V2_FUNCTIONAL_SOUL"; id: string; slot: 6 | 7 | 8; choice: FunctionalSoulChoice }
+  | { type: "SET_V2_SOUL_MAIN"; id: string; slot: number; main: SoulStat }
+  | { type: "FOCUS_V2_SOUL"; id: string; slot: number; focus: Soul["focus"] }
   | CommerceAction
   | { type: "CLAIM_STANDARD_SELECTOR"; id: string }
   | { type: "REFRESH_PERIODS" }
   | { type: "BUY_SOUL"; id: string }
   | { type: "ACTIVATE_CONSTELLATION"; id: string }
   | { type: "SET_PATH"; path: import("../domain/combat").PathId }
-  | { type: "BUY_GOODS"; id: string }
+  | { type: "BUY_GOODS"; id: string; count?: number }
   | { type: "RECHARGE"; tierId: string }
   | { type: "ADD_GOLD"; amount: number }
   | { type: "RECRUIT"; id: string }
@@ -68,6 +74,7 @@ export type GameAction =
   | { type: "PULL_RING"; id: string; slot: number; roll: number }
   | { type: "NAVIGATE"; screen: Screen }
   | { type: "SELECT_COMPANION"; id: string }
+  | { type: "SET_WEAPON_TARGET"; id: string }
   | { type: "SET_FORMATION"; formation: Array<string | null> }
   | { type: "START_BATTLE" }
   | {
@@ -132,7 +139,12 @@ export function createInitialState(): GameState {
     pityWeapon: 12,
     playerLevel: 35,
     playerExp: 2450,
-    companions: companions.map((companion) => ({ ...companion })),
+    battleRulesVersion: 2,
+    companions: companions.map((companion) => ({
+      ...companion,
+      v2Souls: [0, 1, 2, 3, 4, 5].map((slot) => createSoul(companion.id, slot)),
+      v2FunctionalSouls: {},
+    })),
     weapons: weapons.map((weapon) => ({ ...weapon })),
     formation: [
       "lumi",
@@ -146,6 +158,7 @@ export function createInitialState(): GameState {
       null,
     ],
     selectedCompanionId: "selene",
+    weaponTargetCompanionId: "yanhuang",
     battleSeed: 7,
     hasSeenTutorial: true,
 
@@ -272,39 +285,48 @@ function coreReducer(state: GameState, action: GameAction): GameState {
     }
     case "BUY_GOODS": {
       const item = SHOP_GOODS.find((g) => g.id === action.id);
-      if (
-        !item ||
-        state[item.currency] < item.price ||
-        (item.id === "stamina" && state.stamina > 180)
-      )
+      const count = Math.max(1, Math.floor(action.count ?? 1));
+      if (!item) return state;
+
+      const totalPrice = item.price * count;
+      if (state[item.currency] < totalPrice) return state;
+
+      if (item.stamina && state.stamina + item.stamina * count > 240) {
         return state;
+      }
+      if (item.id === "stamina" && state.stamina > 180) {
+        return state;
+      }
+
       const todayKey = `shop_claimed_${item.id}_${state.taskPeriods?.day ?? "today"}`;
+      const claimedSoFar = state.materials[todayKey] ?? 0;
       if (
         item.dailyLimit &&
-        (state.materials[todayKey] ?? 0) >= item.dailyLimit
+        claimedSoFar + count > item.dailyLimit
       ) {
         return state;
       }
+
       const next = {
         ...state,
-        [item.currency]: state[item.currency] - item.price,
+        [item.currency]: state[item.currency] - totalPrice,
       };
       if ("stamina" in item && typeof item.stamina === "number")
-        next.stamina += item.stamina;
+        next.stamina += item.stamina * count;
       if ("gold" in item && typeof item.gold === "number")
-        next.gold += item.gold;
+        next.gold += item.gold * count;
       if (
         "material" in item &&
         typeof item.material === "string" &&
         typeof item.count === "number"
       )
         next.materials = addMaterials(next.materials, [
-          { name: item.material, count: item.count },
+          { name: item.material, count: item.count * count },
         ]);
       if (item.dailyLimit) {
         next.materials = {
           ...next.materials,
-          [todayKey]: (next.materials[todayKey] ?? 0) + 1,
+          [todayKey]: claimedSoFar + count,
         };
       }
       return next;
@@ -575,9 +597,99 @@ function coreReducer(state: GameState, action: GameAction): GameState {
           action.screen === "battle" ? state.battleTicket : undefined,
       };
 
+    case "UPGRADE_V2_SOUL": {
+      const c = state.companions.find((comp) => comp.id === action.id);
+      if (!c || !Number.isInteger(action.slot) || action.slot < 0 || action.slot > 5) return state;
+      const currentSoul = soulFor(c, action.slot);
+      const cost = 200 + currentSoul.level * 50;
+      if (currentSoul.level >= 20 || state.gold < cost) return state;
+      const upgraded = upgradeSoul(c.id, currentSoul);
+      const existingSouls = c.v2Souls ?? [0, 1, 2, 3, 4, 5].map((s) => createSoul(c.id, s));
+      const newSouls = [0, 1, 2, 3, 4, 5].map((s) =>
+        s === action.slot ? upgraded : (existingSouls.find((x) => x.slot === s) ?? createSoul(c.id, s)),
+      );
+      return {
+        ...state,
+        gold: state.gold - cost,
+        companions: state.companions.map((comp) =>
+          comp.id === action.id ? { ...comp, v2Souls: newSouls } : comp,
+        ),
+      };
+    }
+
+    case "SET_V2_FUNCTIONAL_SOUL": {
+      const c = state.companions.find((comp) => comp.id === action.id);
+      if (!c || ![6, 7, 8].includes(action.slot)) return state;
+      const current = c.v2FunctionalSouls ?? {};
+      return {
+        ...state,
+        companions: state.companions.map((comp) =>
+          comp.id === action.id
+            ? {
+                ...comp,
+                v2FunctionalSouls: { ...current, [action.slot]: action.choice },
+              }
+            : comp,
+        ),
+      };
+    }
+
+    case "SET_V2_SOUL_MAIN": {
+      const c = state.companions.find((comp) => comp.id === action.id);
+      if (!c || !Number.isInteger(action.slot) || action.slot < 0 || action.slot > 5) return state;
+      const voucherKey = `V2魂转换券:${c.id}:${action.slot}`;
+      const voucherCount = state.materials[voucherKey] ?? 0;
+      const soulShards = state.materials["魂片"] ?? 0;
+      if (voucherCount < 1 && soulShards < 60) return state;
+      const currentSoul = soulFor(c, action.slot);
+      const refund = Math.floor(
+        (currentSoul.level * 200 + 50 * ((currentSoul.level * (currentSoul.level - 1)) / 2)) * 0.9,
+      );
+      const resetSoul = createSoul(c.id, action.slot, action.main);
+      const existingSouls = c.v2Souls ?? [0, 1, 2, 3, 4, 5].map((s) => createSoul(c.id, s));
+      const newSouls = [0, 1, 2, 3, 4, 5].map((s) =>
+        s === action.slot ? resetSoul : (existingSouls.find((x) => x.slot === s) ?? createSoul(c.id, s)),
+      );
+      return {
+        ...state,
+        gold: state.gold + refund,
+        materials: {
+          ...state.materials,
+          ...(voucherCount > 0
+            ? { [voucherKey]: voucherCount - 1 }
+            : { 魂片: soulShards - 60 }),
+        },
+        companions: state.companions.map((comp) =>
+          comp.id === action.id ? { ...comp, v2Souls: newSouls } : comp,
+        ),
+      };
+    }
+
+    case "FOCUS_V2_SOUL": {
+      const c = state.companions.find((comp) => comp.id === action.id);
+      if (!c || !Number.isInteger(action.slot) || action.slot < 0 || action.slot > 5) return state;
+      const currentSoul = soulFor(c, action.slot);
+      const updatedSoul = { ...currentSoul, focus: action.focus };
+      const existingSouls = c.v2Souls ?? [0, 1, 2, 3, 4, 5].map((s) => createSoul(c.id, s));
+      const newSouls = [0, 1, 2, 3, 4, 5].map((s) =>
+        s === action.slot ? updatedSoul : (existingSouls.find((x) => x.slot === s) ?? createSoul(c.id, s)),
+      );
+      return {
+        ...state,
+        companions: state.companions.map((comp) =>
+          comp.id === action.id ? { ...comp, v2Souls: newSouls } : comp,
+        ),
+      };
+    }
+
     case "SELECT_COMPANION":
       return state.companions.some((item) => item.id === action.id)
         ? { ...state, selectedCompanionId: action.id, assistantQuoteIndex: 0 }
+        : state;
+
+    case "SET_WEAPON_TARGET":
+      return companionCatalog.some((item) => item.id === action.id)
+        ? { ...state, weaponTargetCompanionId: action.id }
         : state;
 
     case "SET_FORMATION":
@@ -721,7 +833,9 @@ function coreReducer(state: GameState, action: GameAction): GameState {
           crystals: Math.max(0, state.crystals - cost),
           materials,
           pityCharacter:
-            action.pool === "collab" ? state.pityCharacter : action.pity,
+            action.pool === "collab" || action.pool === "limited"
+              ? state.pityCharacter
+              : action.pity,
           pityCollab: action.pool === "collab" ? action.pity : state.pityCollab,
           pityLimited:
             action.pool === "limited" ? action.pity : state.pityLimited,
@@ -1300,6 +1414,8 @@ function hydrateCompanions(value: unknown, fallback: Companion[]) {
         ascension: Math.max(0, Math.min(8, Math.floor(finiteNumber(saved.ascension, Math.ceil(finiteNumber(saved.level, definition.level) / 10) - 1)))),
         skillLevels: Array.from({ length: 3 }, (_, i) => Math.max(1, Math.min(10, Math.floor(finiteNumber(Array.isArray(saved.skillLevels) ? saved.skillLevels[i] : 1, 1))))),
         power: finiteNumber(saved.power, definition.power),
+        v2Souls: hydrateSouls(saved.v2Souls) ?? [0, 1, 2, 3, 4, 5].map((s) => createSoul(definition.id, s)),
+        v2FunctionalSouls: hydrateFunctionalSouls(saved.v2FunctionalSouls),
         constellation: Math.max(
           0,
           Math.min(
@@ -1558,10 +1674,16 @@ export function hydrateGameState(value: unknown): GameState {
     formationPath: COMBAT_PATHS.some((p) => p.id === candidate.formationPath)
       ? (candidate.formationPath as GameState["formationPath"])
       : undefined,
+    battleRulesVersion: finiteNumber(candidate.battleRulesVersion, 2),
     companions: restoredCompanions,
     weapons: restoredWeapons,
     formation: normalizeFormation(candidate.formation, restoredCompanions),
     selectedCompanionId: selectedId,
+    weaponTargetCompanionId:
+      typeof candidate.weaponTargetCompanionId === "string" &&
+      companionCatalog.some((c) => c.id === candidate.weaponTargetCompanionId)
+        ? candidate.weaponTargetCompanionId
+        : "yanhuang",
     battleSeed: finiteNumber(candidate.battleSeed, initial.battleSeed),
     hasSeenTutorial:
       typeof candidate.hasSeenTutorial === "boolean"
@@ -1652,7 +1774,34 @@ export function restoreGameState(storage: ReadStorage): GameState {
       storage.getItem(OLD_STORAGE_KEY);
     if (!saved) return createInitialState();
     const parsed = JSON.parse(saved);
+    const candidate = parsed?.state ?? parsed;
+    const battleRulesVersion = candidate?.battleRulesVersion ?? 1;
+    let didMigrateV2 = false;
+    let refundGold = 0;
+    if (battleRulesVersion < 2) {
+      try {
+        (storage as any).setItem?.(`${STORAGE_KEY}:before-battle-v2`, saved);
+        didMigrateV2 = true;
+        if (Array.isArray(candidate.companions)) {
+          for (const comp of candidate.companions) {
+            if (Array.isArray(comp.ringLevels)) {
+              for (const lvl of comp.ringLevels) {
+                if (typeof lvl === "number" && lvl > 0) {
+                  refundGold += lvl * 200 + 50 * ((lvl * (lvl - 1)) / 2);
+                }
+              }
+            }
+          }
+        }
+      } catch {
+        // If backup throws, do not apply migration refund
+      }
+    }
     const hydrated = hydrateGameState(parsed);
+    if (didMigrateV2) {
+      hydrated.gold += refundGold;
+      hydrated.battleRulesVersion = 2;
+    }
     if (!parsed?.version || parsed.version < 9) {
       if (hydrated.companions.some((c) => c.id === "selene")) {
         hydrated.selectedCompanionId = "selene";
@@ -1665,6 +1814,7 @@ export function restoreGameState(storage: ReadStorage): GameState {
 }
 
 export function saveGameState(storage: WriteStorage, state: GameState) {
+  if (state.battleRulesVersion && state.battleRulesVersion < 2) return;
   try {
     storage.setItem(
       STORAGE_KEY,

@@ -143,8 +143,10 @@ describe("Wuthering Waves Collaboration - End Path Integration", () => {
     expect(nodes[5].effect).toContain("永恒的乐章");
 
     const panel = combatPanel(phrolova, []);
-    expect(panel.attack).toBeGreaterThan(50_000);
-    expect(panel.hp).toBeGreaterThan(800_000);
+    expect(panel.attack).toBeGreaterThan(300);
+    expect(panel.attack).toBeLessThan(2000);
+    expect(panel.hp).toBeGreaterThan(3000);
+    expect(panel.hp).toBeLessThan(50000);
 
     const maxedPhrolova = {
       ...phrolova,
@@ -167,7 +169,8 @@ describe("Wuthering Waves Collaboration - End Path Integration", () => {
     expect(yunoNodes[1].effect).toContain("弦月生辉");
     const yunoPanel = combatPanel(yuno, []);
     expect(yunoPanel.defense).toBeGreaterThanOrEqual(400);
-    expect(yunoPanel.hp).toBeGreaterThanOrEqual(2_000_000);
+    expect(yunoPanel.hp).toBeGreaterThanOrEqual(6000);
+    expect(yunoPanel.hp).toBeLessThan(50000);
 
     const maxedYuno = {
       ...yuno,

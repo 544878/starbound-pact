@@ -472,6 +472,42 @@
   font: 13px sans-serif !important;
   justify-content: center;
 }
+.store-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  align-items: stretch;
+}
+.store-card-actions .store-price-button {
+  margin-top: 0;
+  flex: 1;
+}
+.store-batch-button {
+  padding: 8px 12px;
+  border: 1px solid #a68b4c;
+  background: #274b3d;
+  color: #fff0cf;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+.store-batch-button:hover:not(:disabled) {
+  background: #365d4c;
+  box-shadow: 0 2px 8px #173a3530;
+}
+.store-batch-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  border-color: #8c826e;
+  background: #47544d;
+  color: #b0aa9b;
+}
 .skin-empty {
   text-align: center;
   padding: 38px 20px 46px;
@@ -581,6 +617,116 @@
 .store-dialog .store-button {
   width: 100%;
   margin-top: 18px;
+}
+.store-quantity-selector {
+  margin: 16px 0 10px;
+  padding: 14px;
+  background: #eee5d3;
+  border: 1px solid #d8caa7;
+  border-radius: 6px;
+}
+.store-quantity-selector .quantity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #4a4538;
+}
+.store-quantity-selector .quantity-available {
+  font-size: 12px;
+  color: #7b7360;
+}
+.store-quantity-selector .quantity-available strong {
+  color: #274b3d;
+  font-size: 14px;
+}
+.store-quantity-controls {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.store-quantity-controls .qty-step-btn {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #c3b18c;
+  background: #fbf7ee;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #383327;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s;
+}
+.store-quantity-controls .qty-step-btn:hover:not(:disabled) {
+  background: #ebdcc0;
+}
+.store-quantity-controls .qty-step-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.store-quantity-controls .qty-input {
+  flex: 1;
+  min-width: 50px;
+  height: 38px;
+  text-align: center;
+  border: 1px solid #c3b18c;
+  background: #fffdf8;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #274b3d;
+}
+.store-quantity-controls .qty-quick-btn {
+  padding: 0 10px;
+  height: 38px;
+  border: 1px solid #c3b18c;
+  background: #f4ecdc;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4b4231;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.store-quantity-controls .qty-quick-btn:hover:not(:disabled) {
+  background: #ebdcc0;
+}
+.store-quantity-controls .qty-quick-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.store-quantity-controls .max-btn {
+  background: #274b3d;
+  color: #faebd2;
+  border-color: #a68b4c;
+}
+.store-quantity-controls .max-btn:hover:not(:disabled) {
+  background: #365d4c;
+}
+.store-dialog-cost-summary {
+  margin: 10px 0 4px;
+  padding: 10px 14px;
+  background: #f5eedf;
+  border-radius: 4px;
+  border: 1px dashed #d1c19b;
+}
+.store-dialog-cost-summary p {
+  margin: 0 0 4px;
+  font-size: 14px;
+  color: #332d20;
+}
+.store-dialog-cost-summary p strong {
+  font-size: 18px;
+  color: #b04e22;
+}
+.store-dialog-cost-summary small {
+  display: block;
+  font-size: 11px;
+  color: #7b7463;
 }
 .checkout-product {
   display: flex;
@@ -1008,6 +1154,24 @@
   }
   .store-goods .store-price-button {
     font-size: 11px !important;
+  }
+  .store-card-actions {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .store-batch-button {
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+  .store-quantity-controls .qty-step-btn,
+  .store-quantity-controls .qty-input,
+  .store-quantity-controls .qty-quick-btn {
+    height: 34px;
+  }
+  .store-quantity-controls .qty-quick-btn {
+    padding: 0 6px;
+    font-size: 11px;
   }
   .store-filters {
     gap: 4px;

@@ -212,7 +212,7 @@ export function CompanionsScreen() {
             <>
               <div className="detail-tabs" role="tablist" aria-label="角色养成">
                 {[
-                  ["rings", "魂环"],
+                  ["rings", "星魂"],
                   ["weapon", "专武"],
                   ["skills", "技能"],
                   ["constellation", "命座"],

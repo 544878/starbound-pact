@@ -61,6 +61,60 @@
   pointer-events: none;
 }
 
+/* =========================================================
+   Lumi Widescreen Backdrop & Coastal Palace Aesthetic
+   ========================================================= */
+.lumi-widescreen-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/assets/lumi-home-widescreen.jpg") center center / cover no-repeat;
+  filter: contrast(1.05) saturate(1.08) brightness(1.0);
+  image-rendering: high-quality;
+  image-rendering: -webkit-optimize-contrast;
+  transition: filter 0.4s ease;
+}
+
+.lumi-widescreen-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 95% 85% at 50% 45%, transparent 36%, rgba(5, 18, 14, 0.42) 70%, rgba(3, 10, 8, 0.9) 100%),
+    linear-gradient(180deg, rgba(3, 12, 10, 0.72) 0%, rgba(3, 12, 10, 0.08) 18%, transparent 68%, rgba(2, 10, 7, 0.95) 100%),
+    linear-gradient(90deg, rgba(2, 10, 8, 0.8) 0%, transparent 20%, transparent 80%, rgba(2, 10, 8, 0.8) 100%);
+  pointer-events: none;
+}
+
+/* Soften background in non-wide stance to let foreground character pop */
+.lumi-widescreen-backdrop.soften-bg {
+  filter: contrast(0.96) saturate(0.85) brightness(0.68) blur(3px);
+}
+
+/* Lumi Golden Sun Rays & Summer Breeze Flares */
+.lumi-sun-rays {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background:
+    radial-gradient(ellipse 80% 50% at 75% 0%, rgba(255, 240, 180, 0.22), transparent 70%),
+    linear-gradient(135deg, rgba(255, 250, 210, 0.12) 0%, transparent 45%, rgba(114, 184, 147, 0.08) 75%, transparent 100%);
+  animation: lumiSunPulse 6.5s ease-in-out infinite alternate;
+}
+
+@keyframes lumiSunPulse {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.98) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.02) translateY(6px);
+  }
+}
+
 /* Generic Fallback for Other Companions */
 .generic-companion-backdrop {
   position: absolute;
@@ -217,6 +271,62 @@
   50% {
     transform: translateY(-16px) rotate(1.8deg);
   }
+}
+
+/* =========================================================
+   Lumi Character Presentation & Dynamic Stances
+   ========================================================= */
+.lumi-character-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  animation: characterBreathe 5.5s ease-in-out infinite;
+}
+
+.lumi-wide-focus-glow {
+  position: absolute;
+  width: 620px;
+  height: 750px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 50% 55%, rgba(114, 184, 147, 0.22), rgba(255, 235, 160, 0.12) 40%, transparent 70%);
+  pointer-events: none;
+}
+
+.lumi-seamless-art {
+  max-height: 86vh;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 45px rgba(2, 16, 10, 0.75)) brightness(1.02);
+  mask-image: linear-gradient(180deg, black 82%, rgba(0, 0, 0, 0.85) 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(180deg, black 82%, rgba(0, 0, 0, 0.85) 92%, transparent 100%);
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.lumi-seamless-art.athletic-art {
+  max-height: 88vh;
+  transform: translateY(2%);
+  border-radius: 18px;
+  filter: drop-shadow(0 24px 50px rgba(3, 18, 12, 0.82)) brightness(1.03);
+}
+
+.lumi-seamless-art.standing-art {
+  max-height: 86vh;
+  transform: translateY(2%);
+}
+
+.lumi-seamless-art.portrait-art {
+  max-height: 88vh;
+  transform: translateY(4%) scale(1.08);
+}
+
+.lumi-seamless-art.chibi-art {
+  max-height: 72vh;
+  filter: drop-shadow(0 16px 36px rgba(4, 20, 14, 0.7));
 }
 
 /* Generic Companion Fallback Art */
@@ -438,6 +548,62 @@
   color: #ffffff;
   font-weight: 600;
   box-shadow: 0 2px 10px rgba(25, 100, 180, 0.5);
+}
+
+/* Lumi Wind-Emerald Themed Stance Selector */
+.lumi-stance-selector {
+  border: 1px solid rgba(114, 184, 147, 0.45);
+  box-shadow: 0 10px 30px rgba(2, 14, 10, 0.6), 0 0 20px rgba(114, 184, 147, 0.2);
+}
+
+.lumi-stance-selector button.active {
+  background: linear-gradient(135deg, rgba(114, 184, 147, 0.9), rgba(65, 145, 105, 0.95));
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(114, 184, 147, 0.6);
+  border-color: rgba(180, 245, 215, 0.7);
+}
+
+.lumi-stance-selector button:hover:not(.active) {
+  background: rgba(114, 184, 147, 0.2);
+  color: #c4f7dc;
+}
+
+/* Lumi Character Art & Gallery Standalone Styles */
+.lumi-standalone-art {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.65));
+}
+
+.lumi-standalone-art.widescreen-art {
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.scenic-gallery-downloads {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  justify-content: center;
+}
+
+.scenic-gallery-downloads .download-link {
+  color: #72b893;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: rgba(114, 184, 147, 0.15);
+  border: 1px solid rgba(114, 184, 147, 0.4);
+  transition: all 0.2s ease;
+}
+
+.scenic-gallery-downloads .download-link:hover {
+  background: rgba(114, 184, 147, 0.35);
+  color: #fff;
 }
 
 /* =========================================================

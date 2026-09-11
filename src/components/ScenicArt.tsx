@@ -22,6 +22,8 @@ const originals = new Set([
   "phrolova",
   "cantarella",
   "xinyuehu",
+  "robin_lovesong",
+  "aventurine_waves",
 ]);
 export const hasScenicArt = (id: string) =>
   originals.has(id) || /^R[45]-/.test(id);

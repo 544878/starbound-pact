@@ -317,3 +317,27 @@ describe('companion one-click level up (LEVEL_UP_MAX)', () => {
   })
 })
 
+
+describe('weapon banner targeted selection (SET_WEAPON_TARGET)', () => {
+  it('updates weaponTargetCompanionId when valid companion id is provided', () => {
+    const initial = createInitialState()
+    expect(initial.weaponTargetCompanionId).toBe('yanhuang')
+    const next = gameReducer(initial, { type: 'SET_WEAPON_TARGET', id: 'saber' })
+    expect(next.weaponTargetCompanionId).toBe('saber')
+  })
+
+  it('ignores invalid companion ids', () => {
+    const initial = createInitialState()
+    const next = gameReducer(initial, { type: 'SET_WEAPON_TARGET', id: 'invalid-hero' })
+    expect(next.weaponTargetCompanionId).toBe('yanhuang')
+  })
+
+  it('preserves weaponTargetCompanionId on state restoration', () => {
+    const storage = createMemoryStorage()
+    const initial = createInitialState()
+    const modified = { ...initial, weaponTargetCompanionId: 'shorekeeper' }
+    saveGameState(storage, modified)
+    const restored = restoreGameState(storage)
+    expect(restored.weaponTargetCompanionId).toBe('shorekeeper')
+  })
+})

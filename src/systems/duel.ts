@@ -1,5 +1,7 @@
 import type { Companion, Weapon } from '../domain/types'
 import { damage, stats, type UnitStats } from './growth'
+/** Explicit mode parameter; PvP balancing is independent from PvE encounter data. */
+export const PVP_DAMAGE_MULTIPLIER = 1;
 export interface Fighter {
   id: string
   character: Companion
@@ -82,6 +84,7 @@ export function duelAction(
       t.hp,
       a.hits,
       (skill ? 1.35 : 1) * (a.stats.effects.includes('haste') ? 1.1 : 1),
+      PVP_DAMAGE_MULTIPLIER,
     )
     t.hp = Math.max(0, t.hp - value)
     if (a.stats.effects.includes('leech'))

@@ -6,6 +6,7 @@ import { WUWA_CHARACTERS_MAP } from "../data/wuwaCollab";
 import { COMBAT_POINT_SCALE } from "../data/combatScale";
 import { characterMember } from "./fourStarCharacters";
 import { normalizeStats } from "./combatMath";
+import { characterPanel } from './v2/catalog';
 import type { Companion, Weapon } from "../domain/types";
 import type { PathId } from "../domain/combat";
 
@@ -68,12 +69,12 @@ export function combatMember(c: Companion, weapons: Weapon[], path: PathId) {
   return member;
 }
 export function combatPanel(c: Companion, weapons: Weapon[]) {
-  const s = combatMember(c, weapons, c.path ?? numericKit(c).mechanicPath)
-    .combatKit!.stats;
+  const s = characterPanel(c, weapons).stats;
   return {
+    pursuit: 0, dot: 0, vulnerability: 0, reflect: 0, lifesteal: 0,
     ...s,
-    attack: Math.round(s.attack * COMBAT_POINT_SCALE),
-    hp: Math.round(s.hp * COMBAT_POINT_SCALE),
+    attack: Math.round(s.attack),
+    hp: Math.round(s.hp),
     defense: Math.round(s.defense),
   };
 }
