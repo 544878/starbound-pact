@@ -9,7 +9,7 @@ export const LIMITED_POOL_1_IDS = [
   "robin_lovesong",
   "aventurine_waves",
 ] as const;
-export const LIMITED_FIVE_IDS = [...LIMITED_POOL_1_IDS];
+export const LIMITED_FIVE_IDS: readonly string[] = [...LIMITED_POOL_1_IDS];
 export const COLLAB_IDS = [
   ...Object.keys(FGO_CHARACTERS_MAP),
   ...Object.keys(WUWA_CHARACTERS_MAP),

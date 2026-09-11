@@ -428,11 +428,6 @@ export function SummonScreen() {
                   {pool === "weapon" && currentWeapon.rarity === "5星" && (
                     <span className="summon-pity-highlight"> · 100% 必得当前定轨神兵</span>
                   )}
-                  {pool === "limited" && (
-                    <span className="summon-pity-highlight">
-                      {" "}· {state.limitedGuaranteed ? "大保底已就绪 · 本次必出当期限定" : "小保底 · 50% 概率出当期限定"}
-                    </span>
-                  )}
                 </p>
               </section>
 
@@ -551,45 +546,6 @@ export function SummonScreen() {
                   <small className="summon-once">
                     已开放全角色专属神兵定轨。更换定轨目标不清除已有保底。
                   </small>
-                </section>
-              ) : pool === "limited" ? (
-                <section className="summon-panel summon-limited-panel">
-                  <header>
-                    <h2>当期限定UP</h2>
-                    <small>盛夏特别企划 · 双五星概率提升</small>
-                  </header>
-                  <div className="summon-limited-up-list">
-                    {[
-                      companionCatalog.find((c) => c.id === "robin_lovesong")!,
-                      companionCatalog.find((c) => c.id === "aventurine_waves")!,
-                    ].map((comp) => {
-                      const owned = state.companions.find((c) => c.id === comp.id);
-                      return (
-                        <div key={comp.id} className="summon-limited-up-card">
-                          <div className="summon-limited-avatar-wrap">
-                            <Portrait companion={comp} />
-                          </div>
-                          <div className="summon-limited-up-info">
-                            <div className="summon-limited-up-name-row">
-                              <b>{comp.name}</b>
-                              <span className="rarity-tag rarity-5星">5星限定</span>
-                            </div>
-                            <small className="summon-limited-up-title">{comp.title}</small>
-                            <span className="summon-limited-up-status">
-                              {owned ? `已拥有 · ${owned.constellation} 重命座` : "未拥有 · 限时概率UP"}
-                            </span>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                  <div className="summon-limited-guarantee-tip">
-                    <span>
-                      {state.limitedGuaranteed
-                        ? "✦ 大保底已就绪：抽中5星必定为【知更鸟情歌】或【砂金戏浪】！"
-                        : "✧ 小保底：抽中5星有50%概率为限定UP，若未命中则下次必出！"}
-                    </span>
-                  </div>
                 </section>
               ) : (
                 <section className="summon-panel summon-pool-info">
